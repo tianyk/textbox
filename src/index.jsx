@@ -27,7 +27,7 @@ function App() {
 
 	function onTextStyleChange(newTextStyle) {
 		console.log('\nonTextStyleChange: %o', newTextStyle);
-		
+
 		setTextStyle({
 			...textStyle,
 			...newTextStyle
@@ -44,8 +44,14 @@ function App() {
 				{text}
 			</pre>
 
-			<Textbox text={text} textStyle={textStyle} onContentChange={onContentChange} />
-			<Editor textStyle={textStyle} onTextStyleChange={onTextStyleChange} />
+			<div style={{ display: 'inline-block' }}>
+				<Textbox style={{ display: 'inline-block' }} text={text} textStyle={textStyle} onContentChange={onContentChange} />
+			</div>
+			
+			<div style={{ display: 'inline-block' }}>
+				<Editor textStyle={textStyle} onTextStyleChange={onTextStyleChange} />
+			</div>
+
 		</div>
 	);
 }

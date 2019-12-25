@@ -1,4 +1,4 @@
-import './index.less';
+import './input-number.less';
 
 import { Component } from 'react';
 import PropTypes from 'prop-types';

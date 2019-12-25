@@ -1,4 +1,4 @@
-import './index.less';
+import './input-color.less';
 
 import { Component } from 'react';
 import '@simonwep/pickr/dist/themes/nano.min.css';
@@ -22,6 +22,13 @@ class InputColor extends Component {
 			default: (this.props?.value || '#333'),
 
 			theme: 'nano',
+			// 位置 下-居中
+			position: 'bottom-middle',
+			// 是否一直显示 默认fasle，点击别的区域后会隐藏。初始就显示
+			showAlways: true,
+			// 重新定位
+			autoReposition: true,
+			appClass: 'pickr-fix-position',
 			swatches: [
 				(this.props?.value || '#333'),
 				'rgba(244, 67, 54, 1)',
@@ -62,6 +69,19 @@ class InputColor extends Component {
 		});
 
 		pickr
+			.on('init', () => {
+				// 由于 showAlways 为 true ，默认显示。初始化完成先将其隐藏
+				pickr.hide();
+				pickr.__isShow = false;
+			})
+			.on('show', () => {
+				console.log('[show]');
+				pickr.__isShow = true;
+			})
+			.on('hide', () => {
+				console.log('[hide]');
+				pickr.__isShow = false;
+			})
 			.on('save', (color) => {
 				pickr.hide();
 				this.onChange(color.toHEXA().toString(0));
@@ -75,8 +95,13 @@ class InputColor extends Component {
 		this.pickr && this.pickr.destroyAndRemove();
 	}
 
+	// 隐藏显示选色卡
 	pickColor() {
-		this.pickr.show();
+		if (this.pickr.__isShow) {
+			this.pickr.hide();
+		} else {
+			this.pickr.show()
+		}
 	}
 
 	onChange(val) {
@@ -90,6 +115,7 @@ class InputColor extends Component {
 					<img src={FontColorImage}></img>
 					<div className="font-color-bar" style={{ backgroundColor: this.props.value }}></div>
 				</div>
+				
 				<div className="font-color-collapse">
 					<img src={FontColorCollapseImage}></img>
 				</div>
