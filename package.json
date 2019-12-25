@@ -2,9 +2,9 @@
   "name": "react-textbox",
   "version": "1.0.0",
   "scripts": {
-    "dev": "npx webpack-dev-server",
+    "dev": "npx webpack-dev-server --display-modules",
     "ws": "npx nodemon ws.js",
-    "build:dev": "npx webpack --mode=development",
+    "build:dev": "npx webpack --mode=development --display-modules",
     "build:prod": "npx webpack --mode=production",
     "build": "npm run build:prod"
   },
@@ -35,7 +35,7 @@
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.3",
     "url-loader": "^3.0.0",
-    "webpack": "^4.39.2",
+    "webpack": "^4.41.4",
     "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0"

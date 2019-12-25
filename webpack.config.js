@@ -75,14 +75,18 @@ module.exports = {
 	},
 	resolve: {
 		extensions: ['.js', '.jsx', '.tsx', '.ts'],
+		alias: {
+			'@assets': path.resolve(__dirname, 'assets'),
+			'@commons': path.resolve(__dirname, 'src/commons')
+		}
 	},
 	target: 'web',
 	// 插件
 	plugins: [
-		new BundleAnalyzerPlugin({  
+		new BundleAnalyzerPlugin({
 			generateStatsFile: true,
 			analyzerMode: 'static',
-			openAnalyzer: false 
+			openAnalyzer: false
 		}),
 		new webpack.ProgressPlugin(),
 		new CleanWebpackPlugin(),
