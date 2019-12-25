@@ -1,9 +1,10 @@
-import './index.less';
+import './editor.less';
 
 import { Component } from 'react';
 import InputNumber from '../input-number';
 import InputColor from '../input-color';
 import FontStyleButtonGroup from '../font-style-button-group';
+import FontLayoutButtonGroup from '../font-layout-button-group';
 
 
 class TextboxEditor extends Component {
@@ -21,7 +22,7 @@ class TextboxEditor extends Component {
 
 	render() {
 		return (
-			<div className="coursebox-textbox" style={{ maxWidth: '800px', border: '1px solid #aaa' }}>
+			<div className="coursebox-editor">
 				<label htmlFor="font-size-style">文字</label>
 
 				<div id="font-style">
@@ -47,6 +48,7 @@ class TextboxEditor extends Component {
 
 				<label htmlFor="font-layout-style">布局</label>
 				<div id="font-layout-style">
+					<FontLayoutButtonGroup></FontLayoutButtonGroup>
 				</div>
 
 				<label htmlFor="font-opacity-style">不透明度</label>
