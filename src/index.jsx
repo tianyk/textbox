@@ -13,6 +13,7 @@ function App() {
 
 		// 最好使用 b i 标签
 		fontWeight: 'normal', /* 400 800 */
+		lineHeight: 1.4,
 		// fontWeight: 'bold', /* 400 800 */
 		// fontStyle: 'normal', /* italic */
 		// fontStyle: 'italic',
@@ -28,15 +29,15 @@ function App() {
 	function onTextStyleChange(newTextStyle) {
 		console.log('\nonTextStyleChange: %o', newTextStyle);
 
-		setTextStyle({
-			...textStyle,
+		setTextStyle(prevTextStyle => Object.assign({
+			...prevTextStyle,
 			...newTextStyle
-		});
+		}));
 	}
 
 	return (
 		<div>
-			<pre>
+			<pre className="code">
 				{JSON.stringify(textStyle, null, 2)}
 
 				<br />

@@ -6,23 +6,23 @@ import InputColor from '../input-color';
 import FontStyleButtonGroup from '../font-style-button-group';
 import FontLayoutButtonGroup from '../font-layout-button-group';
 
+const debug = require('../../commons/debug')('textbox:editor');
+import ImageLineHeight from '@assets/images/行间距_正常@2x.png';
+import ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png';
+import ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';
 
 class TextboxEditor extends Component {
 	constructor(props) {
 		super(props);
 
 		this.onTextStyleChange = this.onTextStyleChange.bind(this);
-		this.onFontLayoutChange = this.onFontLayoutChange.bind(this);
 	}
 
 	onTextStyleChange(field, value) {
+		debug('onTextStyleChange', field, value)
 		this.props.onTextStyleChange && this.props.onTextStyleChange({
 			[field]: value
 		});
-	}
-
-	onFontLayoutChange(textAlign) {
-		this.onTextStyleChange('textAlign', textAlign);
 	}
 
 	render() {
@@ -40,6 +40,7 @@ class TextboxEditor extends Component {
 						value={this.props.textStyle.fontSize}
 						min={12}
 						max={100}
+						unit="px"
 						onChange={(fontSize) => this.onTextStyleChange('fontSize', fontSize)}
 					></InputNumber>
 
@@ -53,7 +54,48 @@ class TextboxEditor extends Component {
 
 				<label htmlFor="font-layout-style">布局</label>
 				<div id="font-layout-style">
-					<FontLayoutButtonGroup textAlign={this.props.textStyle.textAlign} onFontLayoutChange={this.onFontLayoutChange}></FontLayoutButtonGroup>
+					{/* 对齐方式 */}
+					<FontLayoutButtonGroup
+						textAlign={this.props.textStyle.textAlign}
+						onFontLayoutChange={(textAlign) => this.onTextStyleChange('textAlign', textAlign)}
+					></FontLayoutButtonGroup>
+
+					{/* 行高 */}
+					<InputNumber
+						min={0.8}
+						max={5}
+						step={0.1}
+						unit="倍"
+						icon={ImageLineHeight}
+						value={this.props.textStyle.lineHeight}
+						onChange={(lineHeight) => this.onTextStyleChange('lineHeight', lineHeight)}
+					></InputNumber>
+
+					{/* 上下内边距 */}
+					<InputNumber
+						min={0}
+						max={100}
+						unit="px"
+						icon={ImagePaddingTopAndBottom}
+						value={this.props.textStyle.paddingTop}
+						onChange={(padding) => {
+							this.onTextStyleChange('paddingTop', padding);
+							this.onTextStyleChange('paddingBottom', padding);
+						}}
+					></InputNumber>
+
+					{/* 左右内边距 */}
+					<InputNumber
+						min={0}
+						max={100}
+						unit="px"
+						icon={ImagePaddingLeftAndRight}
+						value={this.props.textStyle.paddingLeft}
+						onChange={(padding) => {
+							this.onTextStyleChange('paddingLeft', padding);
+							this.onTextStyleChange('paddingRight', padding)
+						}}
+					></InputNumber>
 				</div>
 
 				<label htmlFor="font-opacity-style">不透明度</label>

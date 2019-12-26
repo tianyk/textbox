@@ -12,7 +12,7 @@ const debug = require('../../commons/debug')('textbox:input-number');
 class InputNumber extends Component {
 	constructor(props) {
 		super(props);
-
+		debug('props: %j', props);
 		this.onChange = this.onChange.bind(this);
 	}
 
@@ -32,7 +32,13 @@ class InputNumber extends Component {
 	render() {
 		return (
 			<div className="coursebox-input-number">
+				{
+					this.props.icon ? <img className="icon" src={this.props.icon}></img> : null
+				}
 				<input className="input-number" type="number" min={this.props.min} max={this.props.max} step={this.props.step} value={this.props.value} onChange={this.onChange} />
+				{
+					this.props.unit ? <span className="unit">{this.props.unit}</span> : null
+				}
 				<div className="number-up-down">
 					<img className="block number-up" role="button" src={ImageUp} onClick={() => { this.incr(this.props.step) }}></img>
 					<img className="block number-down" role="button" src={ImageDown} onClick={() => { this.incr(-this.props.step) }}></img>
@@ -53,7 +59,12 @@ InputNumber.propTypes = {
 	min: PropTypes.number,
 	max: PropTypes.number,
 	setp: PropTypes.number,
-	value: PropTypes.number
+	// 值
+	value: PropTypes.number,
+	// 图标
+	icon: PropTypes.string,
+	// 单位
+	unit: PropTypes.string
 }
 
 export default InputNumber;

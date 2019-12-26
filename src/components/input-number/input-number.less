@@ -1,9 +1,9 @@
 .coursebox-input-number {
-	display       : inline-block;
+	display: inline-block;
 
-	height      : 32px;
-	width       : 42px;
-	padding-left: 10px;
+	// 组件不从外设置宽度 从内到外撑开宽度
+	height : 32px;
+	padding: 0 10px;
 
 	border       : 1px solid #E8E8E8;
 	border-radius: 2px;
@@ -14,13 +14,25 @@
 		margin            : 0;
 	}
 
-	.block {
-		display: block;
+	.icon {
+		display       : inline-block;
+		vertical-align: middle;
+		width         : 14px;
+		height        : 14px;
+		padding       : 2px;
+		margin-right  : 7px;
+	}
+
+	.unit {
+		font-size     : 12px;
+		vertical-align: middle;
+		margin-left   : 1px;
 	}
 
 	// 输input入框
 	.input-number {
 		background-color: #fff;
+		text-align      : center;
 
 		height : 100%;
 		width  : 22px;
@@ -32,17 +44,18 @@
 	}
 
 	.number-up-down {
-		display     : inline-block;
-		width       : 6px;
-		float       : right;
-		margin-right: 10px;
-		// height   : 100%;
+		display: inline-block;
+		float  : right;
+
+		width: 6px;
+		// 距离input间隔
+		margin-left: 7px;
 
 		.number-up,
 		.number-down {
-			width     : 100%;
-			// padding: 1px;
-			border    : 1px solid transparent;
+			width  : 100%;
+			display: block;
+			border : 1px solid transparent;
 
 			// 禁止选中
 			-moz-user-select: none;

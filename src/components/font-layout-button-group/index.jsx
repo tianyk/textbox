@@ -2,7 +2,7 @@ import './font-layout-button-group.less';
 
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import ButtonIcon from '../button-icon';
+import SelectButton from '../select-button';
 import ImageFontLayoutLeft from '@assets/images/左对齐_正常@2x.png';
 import ImageFontLayoutCenter from '@assets/images/居中对齐_正常@2x.png';
 import ImageFontLayoutRight from '@assets/images/右对齐_正常@2x.png';
@@ -33,29 +33,29 @@ class FontLayoutButtonGroup extends Component {
 	render() {
 		return (
 			<div className="coursebox-font-layout-button-group">
-				<ButtonIcon
+				<SelectButton
 					selected={this.props.textAlign === 'left'}
 					icon={this.props.textAlign === 'left' ? ImageFontLayoutLeftSelected : ImageFontLayoutLeft}
 					onSelected={this.onFontLayoutChange('left')}
-				></ButtonIcon>
+				></SelectButton>
 
-				<ButtonIcon
+				<SelectButton
 					selected={this.props.textAlign === 'center'}
 					icon={this.props.textAlign === 'center' ? ImageFontLayoutCenterSelected : ImageFontLayoutCenter}
 					onSelected={this.onFontLayoutChange('center')}
-				></ButtonIcon>
+				></SelectButton>
 
-				<ButtonIcon
+				<SelectButton
 					selected={this.props.textAlign === 'right'}
 					icon={this.props.textAlign === 'right' ? ImageFontLayoutRightSelected : ImageFontLayoutRight}
 					onSelected={this.onFontLayoutChange('right')}
-				></ButtonIcon>
+				></SelectButton>
 
-				<ButtonIcon
+				<SelectButton
 					selected={this.props.textAlign === 'justify'}
 					icon={this.props.textAlign === 'justify' ? ImageFontLayoutJustifySelected : ImageFontLayoutJustify}
 					onSelected={this.onFontLayoutChange('justify')}
-				></ButtonIcon>
+				></SelectButton>
 			</div>
 		);
 	}

@@ -1,4 +1,4 @@
-import './button-icon.less';
+import './select-button.less';
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 

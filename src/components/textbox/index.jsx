@@ -1,4 +1,8 @@
-import { Component } from 'react';
+import './textbox.less';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+const debug = require('../../commons/debug')('textbox:textbox');
 
 class Textbox extends Component {
 	constructor(props) {
@@ -10,17 +14,54 @@ class Textbox extends Component {
 			contentEditable: 'plaintext-only'
 		};
 
+		// 输入框的引用
+		this.textboxRef = React.createRef();
 		this.onContentChange = this.onContentChange.bind(this);
+		this.onSelectionChange = this.onSelectionChange.bind(this);
 	}
+
+	componentDidMount() {
+		debug('addEventListener selectionchange');
+		document.addEventListener('selectionchange', this.onSelectionChange);
+	}
+
+	componentWillUnmount() {
+		debug('removeEventListener selectionchange')
+		document.removeEventListener('selectionchange', this.onSelectionChange);
+	}
+
 
 	onContentChange(evt) {
 		this.props.onContentChange && this.props.onContentChange(evt.target.innerText || evt.target.textContent);
 	}
 
+	onSelectionChange(evt) {
+		debug(evt, '-----------');
+		debug('text', document.getSelection().toString());
+		debug('anchorNode', document.getSelection().anchorNode);
+		debug('anchorOffset', document.getSelection().anchorOffset);
+		debug('focusNode', document.getSelection().focusNode);
+		debug('focusOffset', document.getSelection().focusOffset);
+		debug('rangeCount', document.getSelection().rangeCount);
+
+
+	}
+
 	render() {
+		const defaultStyle = {
+			marign: 0,
+			minWidth: '1em',
+			minHeight: '1em',
+			width: 400,
+			height: 400
+		};
+
 		return (
-			<div className="rb-textbox" style={{ display: 'inline-block', border: '1px dashed #aaa' }} >
-				<p ref="input-text" style={{ ...(this.props.textStyle || {}), margin: 0, minWidth: '1em', minHeight: '1em' }}
+			<div className="coursebox-textbox">
+			{/* caret-color: red; */}
+				<p className="textbox"
+					ref={this.textboxRef}
+					style={{ ...(this.props.textStyle || {}), ...defaultStyle }}
 					contentEditable={this.state.contentEditable}
 					suppressContentEditableWarning={true}
 					spellCheck={false}
@@ -37,5 +78,20 @@ class Textbox extends Component {
 		)
 	}
 }
+
+Textbox.defaultProps = {
+	min: -Infinity,
+	max: Infinity,
+	step: 1
+}
+
+Textbox.propTypes = {
+	onChange: PropTypes.func.isRequired,
+	min: PropTypes.number,
+	max: PropTypes.number,
+	setp: PropTypes.number,
+	value: PropTypes.number
+}
+
 
 export default Textbox;

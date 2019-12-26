@@ -2,7 +2,7 @@ import './font-style-button-group.less';
 
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import ButtonIcon from '../button-icon';
+import SelectButton from '../select-button';
 import ImageFontWeight from '@assets/images/粗体@2x.png';
 import ImageFontFontStyle from '@assets/images/斜体@2x.png';
 import ImageFontTextDecoration from '@assets/images/下划线@2x.png';
@@ -37,21 +37,21 @@ class FontStyleButtonGroup extends Component {
 	render() {
 		return (
 			<div className="coursebox-font-style-button-group">
-				<ButtonIcon
+				<SelectButton
 					selected={this.props.fontWeight === 'bold'}
 					icon={ImageFontWeight}
 					onSelected={this.onFontStyleChange('fontWeight')}
-				></ButtonIcon>
-				<ButtonIcon
+				></SelectButton>
+				<SelectButton
 					selected={this.props.fontStyle === 'italic'}
 					icon={ImageFontFontStyle}
 					onSelected={this.onFontStyleChange('fontStyle')}
-				></ButtonIcon>
-				<ButtonIcon
+				></SelectButton>
+				<SelectButton
 					selected={this.props.textDecoration === 'underline'}
 					icon={ImageFontTextDecoration}
 					onSelected={this.onFontStyleChange('textDecoration')}
-				></ButtonIcon>
+				></SelectButton>
 			</div>
 		);
 	}
