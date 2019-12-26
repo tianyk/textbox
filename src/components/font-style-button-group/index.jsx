@@ -1,7 +1,7 @@
 import './font-style-button-group.less';
 
 import { Component } from 'react';
-
+import PropTypes from 'prop-types';
 import ButtonIcon from '../button-icon';
 import ImageFontWeight from '@assets/images/粗体@2x.png';
 import ImageFontFontStyle from '@assets/images/斜体@2x.png';
@@ -13,22 +13,22 @@ class FontStyleButtonGroup extends Component {
 	constructor(props) {
 		super(props);
 
-		this.onClick = this.onClick.bind(this);
+		this.onFontStyleChange = this.onFontStyleChange.bind(this);
 	}
 
-	onClick(filed) {
+	onFontStyleChange(filed) {
 		return (val) => {
-			debug('selected', filed, val);
+			debug('onFontStyleChange', filed, val);
 
 			switch (filed) {
 				case 'fontWeight':
-					this.props.onClick(filed, val ? 'bold' : 'normal')
+					this.props.onFontStyleChange(filed, val ? 'bold' : 'normal')
 					break;
 				case 'fontStyle':
-					this.props.onClick(filed, val ? 'italic' : 'normal');
+					this.props.onFontStyleChange(filed, val ? 'italic' : 'normal');
 					break;
 				case 'textDecoration':
-					this.props.onClick(filed, val ? 'underline' : 'none');
+					this.props.onFontStyleChange(filed, val ? 'underline' : 'none');
 					break;
 			}
 		}
@@ -37,14 +37,37 @@ class FontStyleButtonGroup extends Component {
 	render() {
 		return (
 			<div className="coursebox-font-style-button-group">
-				<ButtonIcon selected={this.props.fontWeight === 'bold'} icon={ImageFontWeight} onClick={this.onClick('fontWeight')}></ButtonIcon>
-				<ButtonIcon selected={this.props.fontStyle === 'italic'} icon={ImageFontFontStyle} onClick={this.onClick('fontStyle')}></ButtonIcon>
-				<ButtonIcon selected={this.props.textDecoration === 'underline'} icon={ImageFontTextDecoration} onClick={this.onClick('textDecoration')}></ButtonIcon>
+				<ButtonIcon
+					selected={this.props.fontWeight === 'bold'}
+					icon={ImageFontWeight}
+					onSelected={this.onFontStyleChange('fontWeight')}
+				></ButtonIcon>
+				<ButtonIcon
+					selected={this.props.fontStyle === 'italic'}
+					icon={ImageFontFontStyle}
+					onSelected={this.onFontStyleChange('fontStyle')}
+				></ButtonIcon>
+				<ButtonIcon
+					selected={this.props.textDecoration === 'underline'}
+					icon={ImageFontTextDecoration}
+					onSelected={this.onFontStyleChange('textDecoration')}
+				></ButtonIcon>
 			</div>
 		);
 	}
 }
 
+FontStyleButtonGroup.defaultProps = {
+	fontWeight: 'normal',
+	fontStyle: 'normal',
+	textDecoration: 'none'
+};
 
+FontStyleButtonGroup.propTypes = {
+	fontWeight: PropTypes.string,
+	fontStyle: PropTypes.string,
+	textDecoration: PropTypes.string,
+	onFontStyleChange: PropTypes.func.isRequired
+}
 
 export default FontStyleButtonGroup;

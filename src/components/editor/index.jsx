@@ -12,12 +12,17 @@ class TextboxEditor extends Component {
 		super(props);
 
 		this.onTextStyleChange = this.onTextStyleChange.bind(this);
+		this.onFontLayoutChange = this.onFontLayoutChange.bind(this);
 	}
 
 	onTextStyleChange(field, value) {
 		this.props.onTextStyleChange && this.props.onTextStyleChange({
 			[field]: value
 		});
+	}
+
+	onFontLayoutChange(textAlign) {
+		this.onTextStyleChange('textAlign', textAlign);
 	}
 
 	render() {
@@ -42,13 +47,13 @@ class TextboxEditor extends Component {
 						fontWeight={this.props.textStyle.fontWeight}
 						fontStyle={this.props.textStyle.fontStyle}
 						textDecoration={this.props.textStyle.textDecoration}
-						onClick={(field, val) => { this.onTextStyleChange(field, val) }}
+						onFontStyleChange={(field, val) => { this.onTextStyleChange(field, val) }}
 					></FontStyleButtonGroup>
 				</div>
 
 				<label htmlFor="font-layout-style">布局</label>
 				<div id="font-layout-style">
-					<FontLayoutButtonGroup></FontLayoutButtonGroup>
+					<FontLayoutButtonGroup textAlign={this.props.textStyle.textAlign} onFontLayoutChange={this.onFontLayoutChange}></FontLayoutButtonGroup>
 				</div>
 
 				<label htmlFor="font-opacity-style">不透明度</label>
