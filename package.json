@@ -42,6 +42,7 @@
   },
   "description": "React Textbox",
   "dependencies": {
-    "@simonwep/pickr": "^1.4.8"
+    "@simonwep/pickr": "^1.4.8",
+    "ContentEdit": "^1.3.4"
   }
 }

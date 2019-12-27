@@ -11,7 +11,7 @@ class Textbox extends Component {
 		this.state = {
 			// 隔离循环刷新
 			text: props.text,
-			contentEditable: 'plaintext-only'
+			contentEditable: true /*'plaintext-only'*/
 		};
 
 		// 输入框的引用
@@ -32,19 +32,16 @@ class Textbox extends Component {
 
 
 	onContentChange(evt) {
-		this.props.onContentChange && this.props.onContentChange(evt.target.innerText || evt.target.textContent);
+		this.props.onContentChange && this.props.onContentChange(evt.target.innerHTML);
 	}
 
 	onSelectionChange(evt) {
-		debug(evt, '-----------');
 		debug('text', document.getSelection().toString());
 		debug('anchorNode', document.getSelection().anchorNode);
 		debug('anchorOffset', document.getSelection().anchorOffset);
 		debug('focusNode', document.getSelection().focusNode);
 		debug('focusOffset', document.getSelection().focusOffset);
 		debug('rangeCount', document.getSelection().rangeCount);
-
-
 	}
 
 	render() {
@@ -58,7 +55,7 @@ class Textbox extends Component {
 
 		return (
 			<div className="coursebox-textbox">
-			{/* caret-color: red; */}
+				{/* caret-color: red; */}
 				<p className="textbox"
 					ref={this.textboxRef}
 					style={{ ...(this.props.textStyle || {}), ...defaultStyle }}
@@ -73,7 +70,11 @@ class Textbox extends Component {
 					onPaste={this.onContentChange}
 					onCopy={this.onContentChange}
 					onCut={this.onContentChange}
-					onMouseUp={this.onContentChange} >{this.state.text || this.props.text || ''}</p>
+					onMouseUp={this.onContentChange}
+					// dangerouslySetInnerHTML={{ __html: this.state.text }}
+				>
+					{this.state.text || this.props.text || ''}
+				</p>
 			</div>
 		)
 	}

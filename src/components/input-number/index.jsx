@@ -1,6 +1,6 @@
 import './input-number.less';
 
-import { Component } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { isSyntheticEvent } from '@commons/utils';
@@ -13,6 +13,8 @@ class InputNumber extends Component {
 	constructor(props) {
 		super(props);
 		debug('props: %j', props);
+
+		this.inputRef = React.createRef();
 		this.onChange = this.onChange.bind(this);
 	}
 
@@ -31,11 +33,20 @@ class InputNumber extends Component {
 
 	render() {
 		return (
-			<div className="coursebox-input-number">
+			<div className="coursebox-input-number" onClick={() => this.inputRef?.current.focus()}>
 				{
 					this.props.icon ? <img className="icon" src={this.props.icon}></img> : null
 				}
-				<input className="input-number" type="number" min={this.props.min} max={this.props.max} step={this.props.step} value={this.props.value} onChange={this.onChange} />
+				<input
+					type="number"
+					ref={this.inputRef}
+					className="input-number"
+					min={this.props.min}
+					max={this.props.max}
+					step={this.props.step}
+					value={this.props.value}
+					onChange={this.onChange}
+				/>
 				{
 					this.props.unit ? <span className="unit">{this.props.unit}</span> : null
 				}
