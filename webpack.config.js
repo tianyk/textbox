@@ -103,7 +103,8 @@ module.exports = {
 	externals: {
 		react: 'React',
 		'react-dom': 'ReactDOM',
-		'prop-types': 'PropTypes'
+		'prop-types': 'PropTypes',
+		'medium-editor': 'MediumEditor'
 	},
 	devtool: 'source-map',
 	devServer: {
