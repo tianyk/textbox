@@ -21,6 +21,8 @@ class InputNumber extends Component {
 	onChange(evt) {
 		debug('[onChange]: %o', evt);
 		let val = parseFloat(isSyntheticEvent(evt) ? evt.target.value : evt);
+
+		// 校验
 		if (val > parseFloat(this.props.max)) val = parseFloat(this.props.max);
 		if (val < parseFloat(this.props.min)) val = parseFloat(this.props.min);
 
