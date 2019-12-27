@@ -7,20 +7,68 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 
-	<script src="https://cdn.jsdelivr.net/npm/medium-editor@5.23.2/dist/js/medium-editor.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/medium-editor@5.23.2/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+	<script crossorigin="anonymous" integrity="sha384-aW+nY1aiG1K4u3n4AHw3qdsa1khwO2IE3bI+mBWpffP2NJ1nr5jSpj30xGo1tqHX"
+		src="https://lib.baomitu.com/medium-editor/5.23.3/js/medium-editor.js"></script>
+	<link crossorigin="anonymous" integrity="sha384-gNiwz66InRaccEkEfCzdhoK+24vIKm9CXST7duCQQwYZl7srDrvBfs0LWf0TZs1K"
+		href="https://lib.baomitu.com/medium-editor/5.23.3/css/medium-editor.css" rel="stylesheet">
+	<link crossorigin="anonymous" integrity="sha384-qbe1+IVx6xE4Nob4lqpziXNCeZczDFEJgoSuNHpNqWcLEGXnDVRk66y/5rzFBETi"
+		href="https://lib.baomitu.com/medium-editor/5.23.3/css/themes/default.css" rel="stylesheet">
 </head>
 
 <body>
 
-	<div class="textbox">ssss</div>
+	<div class="toolbar"></div>
+	<div class="textbox">
+
+		<h2>将进酒</h2>
+		<small>唐代：李白</small>
+
+		<p>君不见，黄河之水天上来，奔流到海不复回。</p>
+		<p>君不见，高堂明镜悲白发，朝如青丝暮成雪。</p>
+		<p>人生得意须尽欢，莫使金樽空对月。</p>
+		<p>天生我材必有用，千金散尽还复来。</p>
+		<p>烹羊宰牛且为乐，会须一饮三百杯。</p>
+		<p>岑夫子，丹丘生，将进酒，杯莫停。</p>
+		<p>与君歌一曲，请君为我倾耳听。(倾耳听 一作：侧耳听)</p>
+		<p>钟鼓馔玉不足贵，但愿长醉不愿醒。(不足贵 一作：何足贵；不愿醒 一作：不复醒)</p>
+		<p>古来圣贤皆寂寞，惟有饮者留其名。(古来 一作：自古；惟 通：唯)</p>
+		<p>陈王昔时宴平乐，斗酒十千恣欢谑。</p>
+		<p>主人何为言少钱，径须沽取对君酌。</p>
+		<p>五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。</p>
+	</div>
 
 	<script>
-	var editor = new MediumEditor('.textbox');
+		var editor = new MediumEditor('.textbox', {
+			activeButtonClass: 'medium-editor-button-active', // 加粗、斜体 等按钮处于激活状态时 样式
+			imageDragging: false, // 禁止拖入图片
+			buttonLabels: false, // fontawesome 使用 fontawesome icon
+			delay: 1000,
+			disableReturn: false, // 禁用 return 可以禁止换行
+			disableDoubleReturn: false, // 设置此参数为 true 后只允许后面有一个空行
+			disableExtraSpaces: false, // 设置为true 后禁止开头结尾有空格，禁止两个单词间超过两个空格
+			disableEditing: false, // 禁止编辑 但会出来编辑 toolbar 
+			// elementsContainer: document.querySelector('.toolbar'), // 设置toolbar 容器
+			// extensions
+			// ownerDocument: document 对象
+			spellcheck: false, // 拼写检查
+			targetBlank: true, // 超链接新窗口打开
+			toolbar: {
+				allowMultiParagraphSelection: true, // 选择时允许（true）垮段落 p 选择
+				// toolbar button 列表
+				buttons: ['bold', 'italic', 'underline', 'anchor', 'h2', 'h3', 'quote'], 
+				// diffLeft: 0, // 相对于原始位置便宜值
+				// diffTop: -10, // 相对于原始位置便宜值
+				// firstButtonClass: 'medium-editor-button-first', // toolbar 第一个 button 位置
+				// lastButtonClass: 'medium-editor-button-last', // toolbar 最后 button 位置 
+				// relativeContainer: toolbar 相对于那个原始定位 
+				standardizeSelectionStart: true,
+				static: true, // static 布局
+			}
+		});
 
 		// editor.destroy 销毁
 		// editor.setup 重新初始化
-		</script>
+	</script>
 </body>
 
 </html>
