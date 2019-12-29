@@ -1,7 +1,8 @@
 import './textbox.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import Editor from 'react-medium-editor';
+import { isSyntheticEvent } from '@commons/utils';
 const debug = require('../../commons/debug')('textbox:textbox');
 
 class Textbox extends Component {
@@ -30,9 +31,8 @@ class Textbox extends Component {
 		document.removeEventListener('selectionchange', this.onSelectionChange);
 	}
 
-
 	onContentChange(evt) {
-		this.props.onContentChange && this.props.onContentChange(evt.target.innerHTML);
+		this.props.onContentChange && this.props.onContentChange(isSyntheticEvent(evt) ? evt.target.innerHTML : evt);
 	}
 
 	onSelectionChange(evt) {
@@ -55,26 +55,13 @@ class Textbox extends Component {
 
 		return (
 			<div className="coursebox-textbox">
-				{/* caret-color: red; */}
-				<p className="textbox"
-					ref={this.textboxRef}
+				<Editor
+					className="textbox"
 					style={{ ...(this.props.textStyle || {}), ...defaultStyle }}
-					contentEditable={this.state.contentEditable}
-					suppressContentEditableWarning={true}
-					spellCheck={false}
-					autoComplete="off"
-					autoCorrect="off"
-					autoCapitalize="off"
-					onBlur={this.onContentChange}
-					onKeyUp={this.onContentChange}
-					onPaste={this.onContentChange}
-					onCopy={this.onContentChange}
-					onCut={this.onContentChange}
-					onMouseUp={this.onContentChange}
-					// dangerouslySetInnerHTML={{ __html: this.state.text }}
-				>
-					{this.state.text || this.props.text || ''}
-				</p>
+					text={this.state.text || this.props.text}
+					onChange={this.onContentChange} />
+
+				
 			</div>
 		)
 	}

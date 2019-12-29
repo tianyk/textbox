@@ -6,3 +6,4 @@ function isSyntheticEvent(evt) {
 export {
 	isSyntheticEvent
 };
+

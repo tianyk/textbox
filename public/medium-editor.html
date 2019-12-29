@@ -19,7 +19,6 @@
 
 	<div class="toolbar"></div>
 	<div class="textbox">
-
 		<h2>将进酒</h2>
 		<small>唐代：李白</small>
 
@@ -37,12 +36,28 @@
 		<p>五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。</p>
 	</div>
 
+	<button id="btn">btn</button>
+
 	<script>
+		var EditedExtension = MediumEditor.Extension.extend({
+			name: 'edited',
+			init: function() {
+				console.log('init')
+			},
+			checkState: function (node) {
+				console.log(node)
+				console.log('-------------')
+			}
+		});
+
+		var editedExt = new EditedExtension();
+
+		// https://github.com/yabwe/medium-editor/issues/523
 		var editor = new MediumEditor('.textbox', {
+			delay: 10000,
 			activeButtonClass: 'medium-editor-button-active', // 加粗、斜体 等按钮处于激活状态时 样式
 			imageDragging: false, // 禁止拖入图片
 			buttonLabels: false, // fontawesome 使用 fontawesome icon
-			delay: 1000,
 			disableReturn: false, // 禁用 return 可以禁止换行
 			disableDoubleReturn: false, // 设置此参数为 true 后只允许后面有一个空行
 			disableExtraSpaces: false, // 设置为true 后禁止开头结尾有空格，禁止两个单词间超过两个空格
@@ -50,19 +65,40 @@
 			// elementsContainer: document.querySelector('.toolbar'), // 设置toolbar 容器
 			// extensions
 			// ownerDocument: document 对象
+			// https://github.com/yabwe/medium-editor/blob/master/src/js/events.js#L290
+			// externalInteraction
 			spellcheck: false, // 拼写检查
 			targetBlank: true, // 超链接新窗口打开
 			toolbar: {
 				allowMultiParagraphSelection: true, // 选择时允许（true）垮段落 p 选择
 				// toolbar button 列表
-				buttons: ['bold', 'italic', 'underline', 'anchor', 'h2', 'h3', 'quote'], 
-				// diffLeft: 0, // 相对于原始位置便宜值
-				// diffTop: -10, // 相对于原始位置便宜值
+				buttons: [{
+					name: 'h2',
+					aria: '标题',
+					tagNames: ['h2'],
+					contentDefault: '<b>标题</b>', // 可以设置工具栏里按钮的内容
+				}, 'bold', 'italic', 'underline', 'anchor', 'h1', 'h3', 'quote', 'fontname'],
+				diffLeft: 0, // 相对于原始位置便宜值
+				diffTop: 10, // 相对于原始位置便宜值
 				// firstButtonClass: 'medium-editor-button-first', // toolbar 第一个 button 位置
 				// lastButtonClass: 'medium-editor-button-last', // toolbar 最后 button 位置 
 				// relativeContainer: toolbar 相对于那个原始定位 
 				standardizeSelectionStart: true,
-				static: true, // static 布局
+				static: false, // static 布局
+				// 当static为trus时才有效，用来设置工具栏的对齐方式
+				align: 'center',
+				// 当static为true时有效，设置工具栏在视窗固定位置且一直可见
+				sticky: false,
+				// 当static为true时有效，设置空选区（没有选区，只有光标）时是否更新工具栏按钮状态
+				updateOnEmptySelection: true
+			},
+			// hover超链接时的预览框配置
+			anchorPreview: {
+				hideDelay: 500,
+				previewValueSelector: 'a'
+			},
+			extensions: {
+				// 'edited': editedExt
 			}
 		});
 
