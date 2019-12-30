@@ -22,6 +22,8 @@ function App() {
 		// textDecoration: 'line-through', /* underline line-through */
 	});
 
+	window.setText = setText;
+
 	function onContentChange(val) {
 		setText(val);
 	}
@@ -39,16 +41,15 @@ function App() {
 		<div>
 			<pre className="code">
 				{JSON.stringify(textStyle, null, 2)}
-
-				<br />
-
-				{text}
 			</pre>
+
+			<textarea value={text} onChange={(evt) => onContentChange(evt.target.value)}>
+			</textarea>
 
 			<div style={{ display: 'inline-block' }}>
 				<Textbox style={{ display: 'inline-block' }} text={text} textStyle={textStyle} onContentChange={onContentChange} />
 			</div>
-			
+
 			<div style={{ display: 'inline-block' }}>
 				<Editor textStyle={textStyle} onTextStyleChange={onTextStyleChange} />
 			</div>
