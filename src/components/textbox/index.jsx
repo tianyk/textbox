@@ -133,7 +133,7 @@ class Textbox extends Component {
 		// If we don't have a 'valid' selection -> hide toolbar
 		if (!MediumEditor.selection.selectionContainsContent(this.options.ownerDocument) ||
 			(this.allowMultiParagraphSelection === false && this.multipleBlockElementsSelected())) {
-				return debug('hideToolbar')
+				return debug('hideToolbar');
 		}
 
 		debug('showAndUpdateToolbar');
