@@ -6,7 +6,7 @@ import { Textbox, Editor } from './components';
 
 function App() {
 	// 命名参考 ReactNative https://facebook.github.io/react-native/docs/text-style-props
-	const [text, setText] = useState('中国Abc');
+	const [text, setText] = useState('<p>中国Abc</p>');
 	const [textStyle, setTextStyle] = useState({
 		fontSize: 34,
 		color: "#33bb33",

@@ -2,6 +2,7 @@ import './textbox.less';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MediumEditor from 'medium-editor';
+import { getSelectionRange, getSelectedNodes, rangeSelectsIsSingleNode } from '@commons/selection';
 const debug = require('../../commons/debug')('textbox:textbox');
 
 
@@ -54,9 +55,6 @@ class Textbox extends Component {
 		this.medium.restoreSelection();
 	}
 
-	subscribe(...args) {
-		this.medium.subscribe(...args);
-	}
 
 	attachEventHandlers() {
 		// MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements
@@ -74,80 +72,124 @@ class Textbox extends Component {
 
 
 	handleFocus() {
-		this.checkState.bind(this.medium)();
+		this.checkSelection();
 	}
 
 	handleDocumentMouseup(event) {
-		// Do not trigger checkState when mouseup fires over the toolbar
+		// Do not trigger checkSelection when mouseup fires over the toolbar
 		// if (event &&
 		// 	event.target &&
 		// 	MediumEditor.util.isDescendant(this.getToolbarElement(), event.target)) {
 		// 	return false;
 		// }
-		this.checkState.bind(this.medium)();
+		this.checkSelection();
 	}
 
 	handleEditableClick() {
-		// Delay the call to checkState to handle bug where selection is empty
+		// Delay the call to checkSelection to handle bug where selection is empty
 		// immediately after clicking inside a pre-existing selection
 		setTimeout(function () {
-			this.checkState.bind(this.medium)();
+			this.checkSelection();
 		}.bind(this), 0);
 	}
 
-	checkState() {
-		debug('checkState', this);
+	isAlreadyApplied(node) {
+		var isMatch = false,
+			tagNames = this.getTagNames(),
+			styleVals,
+			computedStyle;
+
+		if (this.knownState === false || this.knownState === true) {
+			return this.knownState;
+		}
+
+		if (tagNames && tagNames.length > 0) {
+			isMatch = tagNames.indexOf(node.nodeName.toLowerCase()) !== -1;
+		}
+
+		if (!isMatch && this.style) {
+			styleVals = this.style.value.split('|');
+			computedStyle = this.window.getComputedStyle(node, null).getPropertyValue(this.style.prop);
+			styleVals.forEach(function (val) {
+				if (!this.knownState) {
+					isMatch = (computedStyle.indexOf(val) !== -1);
+					// text-decoration is not inherited by default
+					// so if the computed style for text-decoration doesn't match
+					// don't write to knownState so we can fallback to other checks
+					if (isMatch || this.style.prop !== 'text-decoration') {
+						this.knownState = isMatch;
+					}
+				}
+			}, this);
+		}
+
+		return isMatch;
+	}
+
+	checkSelection() {
+		debug('checkSelection');
 
 		// 'window': instance.options.contentWindow,
 		// 'document': instance.options.ownerDocument,
 		// 'base': instance
 
-		if (this.preventSelectionUpdates) {
-			return;
+
+
+		const range = getSelectionRange(this.medium.options.ownerDocument);
+		if (range) debug('rangeSelectsIsSingleNode', rangeSelectsIsSingleNode(range));
+
+		if (range) {
+			debug(getSelectedNodes(this.medium.options.ownerDocument));
+		} else {
+			debug(document.activeElement);
 		}
 
-		// If no editable has focus OR selection is inside contenteditable = false
-		// hide toolbar
-		if (!this.getFocusedElement() ||
-			MediumEditor.selection.selectionInContentEditableFalse(this.options.contentWindow)) {
-			return debug('hideToolbar');
-		}
+		// if (this.medium.preventSelectionUpdates) {
+		// 	return;
+		// }
 
-		// If there's no selection element, selection element doesn't belong to this editor
-		// or toolbar is disabled for this selection element
-		// hide toolbar
-		var selectionElement = MediumEditor.selection.getSelectionElement(this.options.contentWindow);
-		if (!selectionElement ||
-			this.elements.indexOf(selectionElement) === -1 ||
-			selectionElement.getAttribute('data-disable-toolbar')) {
-			return debug('hideToolbar');
-		}
+		// // If no editable has focus OR selection is inside contenteditable = false
+		// // hide toolbar
+		// if (!this.medium.getFocusedElement() ||
+		// 	MediumEditor.selection.selectionInContentEditableFalse(this.medium.options.contentWindow)) {
+		// 	return debug('hideToolbar');
+		// }
 
-		// Now we know there's a focused editable with a selection
+		// // If there's no selection element, selection element doesn't belong to this editor
+		// // or toolbar is disabled for this selection element
+		// // hide toolbar
+		// var selectionElement = MediumEditor.selection.getSelectionElement(this.medium.options.contentWindow);
+		// if (!selectionElement ||
+		// 	this.medium.elements.indexOf(selectionElement) === -1 ||
+		// 	selectionElement.getAttribute('data-disable-toolbar')) {
+		// 	return debug('hideToolbar');
+		// }
 
-		// If the updateOnEmptySelection option is true, show the toolbar
-		if (this.updateOnEmptySelection && this.static) {
-			return debug('showAndUpdateToolbar');
-		}
+		// // Now we know there's a focused editable with a selection
 
-		// If we don't have a 'valid' selection -> hide toolbar
-		if (!MediumEditor.selection.selectionContainsContent(this.options.ownerDocument) ||
-			(this.allowMultiParagraphSelection === false && this.multipleBlockElementsSelected())) {
-				return debug('hideToolbar');
-		}
+		// // If the updateOnEmptySelection option is true, show the toolbar
+		// if (this.medium.updateOnEmptySelection && this.medium.static) {
+		// 	return debug('showAndUpdateToolbar');
+		// }
 
-		debug('showAndUpdateToolbar');
+		// // If we don't have a 'valid' selection -> hide toolbar
+		// if (!MediumEditor.selection.selectionContainsContent(this.medium.options.ownerDocument) ||
+		// 	(this.medium.allowMultiParagraphSelection === false && this.medium.multipleBlockElementsSelected())) {
+		// 		return debug('hideToolbar');
+		// }
+
+		// debug('showAndUpdateToolbar');
 	}
 
 	handleEditableKeyup() {
-		this.checkState.bind(this.medium)();
+		this.checkSelection();
 	}
 
 	handleFocus() {
-		this.checkState.bind(this.medium)();
+		this.checkSelection();
 	}
 
-	handleBlur () {
+	handleBlur() {
 		debug('hideToolbar')
 	}
 
