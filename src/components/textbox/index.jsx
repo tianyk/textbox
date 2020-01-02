@@ -66,8 +66,7 @@ class Textbox extends Component {
 		this.medium.subscribe('editableKeyup', this.handleEditableKeyup.bind(this));
 
 		// Handle mouseup on document for updating the selection in the toolbar
-		// this.medium.on(this.medium.document.documentElement, 'mouseup', this.handleDocumentMouseup.bind(this));
-		debug(this.medium);
+		this.medium.on(this.medium.options.ownerDocument.documentElement, 'mouseup', this.handleDocumentMouseup.bind(this));
 	}
 
 
@@ -88,9 +87,9 @@ class Textbox extends Component {
 	handleEditableClick() {
 		// Delay the call to checkSelection to handle bug where selection is empty
 		// immediately after clicking inside a pre-existing selection
-		setTimeout(function () {
+		setTimeout(() => {
 			this.checkSelection();
-		}.bind(this), 0);
+		}, 0);
 	}
 
 	isAlreadyApplied(node) {
@@ -129,16 +128,11 @@ class Textbox extends Component {
 	checkSelection() {
 		debug('checkSelection');
 
-		// 'window': instance.options.contentWindow,
-		// 'document': instance.options.ownerDocument,
-		// 'base': instance
-
-
-
 		const range = getSelectionRange(this.medium.options.ownerDocument);
 		if (range) debug('rangeSelectsIsSingleNode', rangeSelectsIsSingleNode(range));
 
 		if (range) {
+			getSelection
 			debug(getSelectedNodes(this.medium.options.ownerDocument));
 		} else {
 			debug(document.activeElement);

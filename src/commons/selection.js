@@ -1,6 +1,31 @@
+/**
+ * 获取 selection 
+ * 
+ * 会忽略掉开始等于结束的。默认情况下双击两下 rangeCount 会为 1
+ *
+ * @param {*} [ownerDocument=document]
+ * @returns
+ */
 function getSelectionRange(ownerDocument = document) {
 	const selection = ownerDocument.getSelection();
 	if (selection.rangeCount > 0 && !selection.isCollapsed) {
+		return selection;
+	} else {
+		return null;
+	}
+}
+
+
+/**
+ * 获取 range 
+ *
+ * @param {*} [ownerDocument=document]
+ * @returns
+ */
+function getSelectionRange(ownerDocument = document) {
+	const selection = getSelectionRange(ownerDocument);
+
+	if (selection) {
 		return selection.getRangeAt(0);
 	} else {
 		return null;
@@ -46,8 +71,14 @@ function getRangeSelectedNodes(range) {
 	return rangeNodes;
 }
 
+/**
+ * 获取选择的 nodes 
+ *
+ * @param {*} [ownerDocument=document]
+ * @returns
+ */
 function getSelectedNodes(ownerDocument = document) {
-	const range = getSelectionRange(ownerDocument)
+	const range = getSelectionRange(ownerDocument);
 	if (!range) return null;
 	else return getRangeSelectedNodes(range);
 }
@@ -82,5 +113,6 @@ function getSelectedParentElement(range) {
 export {
 	rangeSelectsIsSingleNode,
 	getSelectionRange,
-	getSelectedNodes
+	getSelectedNodes,
+	getSelectedParentElement
 }
