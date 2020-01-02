@@ -6,7 +6,7 @@
  * @param {*} [ownerDocument=document]
  * @returns
  */
-function getSelectionRange(ownerDocument = document) {
+function getSelection(ownerDocument = document) {
 	const selection = ownerDocument.getSelection();
 	if (selection.rangeCount > 0 && !selection.isCollapsed) {
 		return selection;
@@ -23,7 +23,7 @@ function getSelectionRange(ownerDocument = document) {
  * @returns
  */
 function getSelectionRange(ownerDocument = document) {
-	const selection = getSelectionRange(ownerDocument);
+	const selection = getSelection(ownerDocument);
 
 	if (selection) {
 		return selection.getRangeAt(0);
@@ -46,12 +46,12 @@ function nextNode(node) {
 	}
 }
 
-function getRangeSelectedNodes(range) {
+function getSelectedNodesFromRange(range) {
 	var node = range.startContainer;
 	var endNode = range.endContainer;
 
 	// Special case for a range that is contained within a single node
-	if (node == endNode) {
+	if (node === endNode) {
 		return [node];
 	}
 
@@ -69,18 +69,6 @@ function getRangeSelectedNodes(range) {
 	}
 
 	return rangeNodes;
-}
-
-/**
- * 获取选择的 nodes 
- *
- * @param {*} [ownerDocument=document]
- * @returns
- */
-function getSelectedNodes(ownerDocument = document) {
-	const range = getSelectionRange(ownerDocument);
-	if (!range) return null;
-	else return getRangeSelectedNodes(range);
 }
 
 function rangeSelectsIsSingleNode(range) {
@@ -111,8 +99,9 @@ function getSelectedParentElement(range) {
 }
 
 export {
+	getSelection,
 	rangeSelectsIsSingleNode,
 	getSelectionRange,
-	getSelectedNodes,
+	getSelectedNodesFromRange,
 	getSelectedParentElement
 }

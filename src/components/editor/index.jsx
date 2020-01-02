@@ -6,7 +6,9 @@ import InputColor from '../input-color';
 import FontStyleButtonGroup from '../font-style-button-group';
 import FontLayoutButtonGroup from '../font-layout-button-group';
 
-const debug = require('../../commons/debug')('textbox:editor');
+const debug = require('@commons/debug')('textbox:editor');
+import { getSelection, getSelectionRange, getSelectedNodesFromRange, rangeSelectsIsSingleNode } from '@commons/selection';
+
 import ImageLineHeight from '@assets/images/行间距_正常@2x.png';
 import ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png';
 import ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';
@@ -26,6 +28,11 @@ class TextboxEditor extends Component {
 	}
 
 	render() {
+		debug(this.props.selection)
+		if (this.props.selection) {
+			const nodes = getSelectedNodesFromRange(this.props.selection.getRangeAt(0))
+			debug(nodes)
+		}
 		return (
 			<div className="coursebox-editor">
 				<label htmlFor="font-size-style">文字</label>

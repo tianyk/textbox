@@ -22,6 +22,8 @@ function App() {
 		// textDecoration: 'line-through', /* underline line-through */
 	});
 
+	const [selection, setSelection] = useState(null);
+
 	window.setText = setText;
 
 	function onContentChange(val) {
@@ -47,11 +49,14 @@ function App() {
 			</textarea>
 
 			<div style={{ display: 'inline-block' }}>
-				<Textbox style={{ display: 'inline-block' }} text={text} textStyle={textStyle} onContentChange={onContentChange} />
+				<Textbox style={{ display: 'inline-block' }} text={text} textStyle={textStyle} onSelection={selection => {
+					console.log(selection);
+					setSelection(selection)
+				}} onContentChange={onContentChange} />
 			</div>
 
 			<div style={{ display: 'inline-block' }}>
-				<Editor textStyle={textStyle} onTextStyleChange={onTextStyleChange} />
+				<Editor textStyle={textStyle} selection={selection} onTextStyleChange={onTextStyleChange} />
 			</div>
 
 		</div>
