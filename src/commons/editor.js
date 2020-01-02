@@ -2,7 +2,7 @@
     'use strict';
 
     var Toolbar = MediumEditor.Extension.extend({
-        name: 'editor',
+        name: 'textbox-editor',
 
         /* Toolbar Options */
 
@@ -83,7 +83,7 @@
             //     }
             // });
 
-            // this.attachEventHandlers();
+            this.attachEventHandlers();
 
             // return toolbar;
         },
@@ -248,10 +248,12 @@
 
         // Hiding/showing toolbar
 
+        // 是否是显示的
         isDisplayed: function () {
             return this.getToolbarElement().classList.contains('medium-editor-toolbar-active');
         },
 
+        // 显示toolbar
         showToolbar: function () {
             clearTimeout(this.hideTimeout);
             if (!this.isDisplayed()) {
@@ -260,6 +262,7 @@
             }
         },
 
+        // 隐藏toolbar
         hideToolbar: function () {
             if (this.isDisplayed()) {
                 this.getToolbarElement().classList.remove('medium-editor-toolbar-active');
@@ -468,172 +471,176 @@
 
         // Positioning toolbar
 
-        // positionToolbarIfShown: function () {
-        //     if (this.isDisplayed()) {
-        //         this.setToolbarPosition();
-        //     }
-        // },
+        positionToolbarIfShown: function () {
+            // if (this.isDisplayed()) {
+            //     this.setToolbarPosition();
+            // }
+        },
 
-        // setToolbarPosition: function () {
-        //     var container = this.base.getFocusedElement(),
-        //         selection = this.window.getSelection();
+        // toolbar 定位
+        setToolbarPosition: function () {
+            // var container = this.base.getFocusedElement(),
+            //     selection = this.window.getSelection();
 
-        //     // If there isn't a valid selection, bail
-        //     if (!container) {
-        //         return this;
-        //     }
+            // // If there isn't a valid selection, bail
+            // if (!container) {
+            //     return this;
+            // }
 
-        //     if (this.static || !selection.isCollapsed) {
-        //         this.showToolbar();
+            // if (this.static || !selection.isCollapsed) {
+            //     this.showToolbar();
 
-        //         // we don't need any absolute positioning if relativeContainer is set
-        //         if (!this.relativeContainer) {
-        //             if (this.static) {
-        //                 this.positionStaticToolbar(container);
-        //             } else {
-        //                 this.positionToolbar(selection);
-        //             }
-        //         }
+            //     // we don't need any absolute positioning if relativeContainer is set
+            //     // 相对绝对位置
+            //     if (!this.relativeContainer) {
+            //         if (this.static) {
+            //             this.positionStaticToolbar(container);
+            //         } else {
+            //             this.positionToolbar(selection);
+            //         }
+            //     }
 
-        //         this.trigger('positionedToolbar', {}, this.base.getFocusedElement());
-        //     }
-        // },
+            //     this.trigger('positionedToolbar', {}, this.base.getFocusedElement());
+            // }
+        },
 
-        // positionStaticToolbar: function (container) {
-        //     // position the toolbar at left 0, so we can get the real width of the toolbar
-        //     this.getToolbarElement().style.left = '0';
+        // 设置 toolbar 绝对位置
+        positionStaticToolbar: function (container) {
+            // // position the toolbar at left 0, so we can get the real width of the toolbar
+            // this.getToolbarElement().style.left = '0';
 
-        //     // document.documentElement for IE 9
-        //     var scrollTop = (this.document.documentElement && this.document.documentElement.scrollTop) || this.document.body.scrollTop,
-        //         windowWidth = this.window.innerWidth,
-        //         toolbarElement = this.getToolbarElement(),
-        //         containerRect = container.getBoundingClientRect(),
-        //         containerTop = containerRect.top + scrollTop,
-        //         containerCenter = (containerRect.left + (containerRect.width / 2)),
-        //         toolbarHeight = toolbarElement.offsetHeight,
-        //         toolbarWidth = toolbarElement.offsetWidth,
-        //         halfOffsetWidth = toolbarWidth / 2,
-        //         targetLeft;
+            // // document.documentElement for IE 9
+            // var scrollTop = (this.document.documentElement && this.document.documentElement.scrollTop) || this.document.body.scrollTop,
+            //     windowWidth = this.window.innerWidth,
+            //     toolbarElement = this.getToolbarElement(),
+            //     containerRect = container.getBoundingClientRect(),
+            //     containerTop = containerRect.top + scrollTop,
+            //     containerCenter = (containerRect.left + (containerRect.width / 2)),
+            //     toolbarHeight = toolbarElement.offsetHeight,
+            //     toolbarWidth = toolbarElement.offsetWidth,
+            //     halfOffsetWidth = toolbarWidth / 2,
+            //     targetLeft;
 
-        //     if (this.sticky) {
-        //         // If it's beyond the height of the editor, position it at the bottom of the editor
-        //         if (scrollTop > (containerTop + container.offsetHeight - toolbarHeight - this.stickyTopOffset)) {
-        //             toolbarElement.style.top = (containerTop + container.offsetHeight - toolbarHeight) + 'px';
-        //             toolbarElement.classList.remove('medium-editor-sticky-toolbar');
-        //         // Stick the toolbar to the top of the window
-        //         } else if (scrollTop > (containerTop - toolbarHeight - this.stickyTopOffset)) {
-        //             toolbarElement.classList.add('medium-editor-sticky-toolbar');
-        //             toolbarElement.style.top = this.stickyTopOffset + 'px';
-        //         // Normal static toolbar position
-        //         } else {
-        //             toolbarElement.classList.remove('medium-editor-sticky-toolbar');
-        //             toolbarElement.style.top = containerTop - toolbarHeight + 'px';
-        //         }
-        //     } else {
-        //         toolbarElement.style.top = containerTop - toolbarHeight + 'px';
-        //     }
+            // if (this.sticky) {
+            //     // If it's beyond the height of the editor, position it at the bottom of the editor
+            //     if (scrollTop > (containerTop + container.offsetHeight - toolbarHeight - this.stickyTopOffset)) {
+            //         toolbarElement.style.top = (containerTop + container.offsetHeight - toolbarHeight) + 'px';
+            //         toolbarElement.classList.remove('medium-editor-sticky-toolbar');
+            //     // Stick the toolbar to the top of the window
+            //     } else if (scrollTop > (containerTop - toolbarHeight - this.stickyTopOffset)) {
+            //         toolbarElement.classList.add('medium-editor-sticky-toolbar');
+            //         toolbarElement.style.top = this.stickyTopOffset + 'px';
+            //     // Normal static toolbar position
+            //     } else {
+            //         toolbarElement.classList.remove('medium-editor-sticky-toolbar');
+            //         toolbarElement.style.top = containerTop - toolbarHeight + 'px';
+            //     }
+            // } else {
+            //     toolbarElement.style.top = containerTop - toolbarHeight + 'px';
+            // }
 
-        //     switch (this.align) {
-        //         case 'left':
-        //             targetLeft = containerRect.left;
-        //             break;
+            // switch (this.align) {
+            //     case 'left':
+            //         targetLeft = containerRect.left;
+            //         break;
 
-        //         case 'right':
-        //             targetLeft = containerRect.right - toolbarWidth;
-        //             break;
+            //     case 'right':
+            //         targetLeft = containerRect.right - toolbarWidth;
+            //         break;
 
-        //         case 'center':
-        //             targetLeft = containerCenter - halfOffsetWidth;
-        //             break;
-        //     }
+            //     case 'center':
+            //         targetLeft = containerCenter - halfOffsetWidth;
+            //         break;
+            // }
 
-        //     if (targetLeft < 0) {
-        //         targetLeft = 0;
-        //     } else if ((targetLeft + toolbarWidth) > windowWidth) {
-        //         targetLeft = (windowWidth - Math.ceil(toolbarWidth) - 1);
-        //     }
+            // if (targetLeft < 0) {
+            //     targetLeft = 0;
+            // } else if ((targetLeft + toolbarWidth) > windowWidth) {
+            //     targetLeft = (windowWidth - Math.ceil(toolbarWidth) - 1);
+            // }
 
-        //     toolbarElement.style.left = targetLeft + 'px';
-        // },
+            // toolbarElement.style.left = targetLeft + 'px';
+        },
 
+        // 设置 toolbar 相对的位置
         positionToolbar: function (selection) {
-            // position the toolbar at left 0, so we can get the real width of the toolbar
-            this.getToolbarElement().style.left = '0';
-            this.getToolbarElement().style.right = 'initial';
+            // // position the toolbar at left 0, so we can get the real width of the toolbar
+            // this.getToolbarElement().style.left = '0';
+            // this.getToolbarElement().style.right = 'initial';
 
-            var range = selection.getRangeAt(0),
-                boundary = range.getBoundingClientRect();
+            // var range = selection.getRangeAt(0),
+            //     boundary = range.getBoundingClientRect();
 
-            // Handle selections with just images
-            if (!boundary || ((boundary.height === 0 && boundary.width === 0) && range.startContainer === range.endContainer)) {
-                // If there's a nested image, use that for the bounding rectangle
-                if (range.startContainer.nodeType === 1 && range.startContainer.querySelector('img')) {
-                    boundary = range.startContainer.querySelector('img').getBoundingClientRect();
-                } else {
-                    boundary = range.startContainer.getBoundingClientRect();
-                }
-            }
+            // // Handle selections with just images
+            // if (!boundary || ((boundary.height === 0 && boundary.width === 0) && range.startContainer === range.endContainer)) {
+            //     // If there's a nested image, use that for the bounding rectangle
+            //     if (range.startContainer.nodeType === 1 && range.startContainer.querySelector('img')) {
+            //         boundary = range.startContainer.querySelector('img').getBoundingClientRect();
+            //     } else {
+            //         boundary = range.startContainer.getBoundingClientRect();
+            //     }
+            // }
 
-            var containerWidth = this.window.innerWidth,
-                toolbarElement = this.getToolbarElement(),
-                toolbarHeight = toolbarElement.offsetHeight,
-                toolbarWidth = toolbarElement.offsetWidth,
-                halfOffsetWidth = toolbarWidth / 2,
-                buttonHeight = 50,
-                defaultLeft = this.diffLeft - halfOffsetWidth,
-                elementsContainer = this.getEditorOption('elementsContainer'),
-                elementsContainerAbsolute = ['absolute', 'fixed'].indexOf(window.getComputedStyle(elementsContainer).getPropertyValue('position')) > -1,
-                positions = {},
-                relativeBoundary = {},
-                middleBoundary, elementsContainerBoundary;
+            // var containerWidth = this.window.innerWidth,
+            //     toolbarElement = this.getToolbarElement(),
+            //     toolbarHeight = toolbarElement.offsetHeight,
+            //     toolbarWidth = toolbarElement.offsetWidth,
+            //     halfOffsetWidth = toolbarWidth / 2,
+            //     buttonHeight = 50,
+            //     defaultLeft = this.diffLeft - halfOffsetWidth,
+            //     elementsContainer = this.getEditorOption('elementsContainer'),
+            //     elementsContainerAbsolute = ['absolute', 'fixed'].indexOf(window.getComputedStyle(elementsContainer).getPropertyValue('position')) > -1,
+            //     positions = {},
+            //     relativeBoundary = {},
+            //     middleBoundary, elementsContainerBoundary;
 
-            // If container element is absolute / fixed, recalculate boundaries to be relative to the container
-            if (elementsContainerAbsolute) {
-                elementsContainerBoundary = elementsContainer.getBoundingClientRect();
-                ['top', 'left'].forEach(function (key) {
-                    relativeBoundary[key] = boundary[key] - elementsContainerBoundary[key];
-                });
+            // // If container element is absolute / fixed, recalculate boundaries to be relative to the container
+            // if (elementsContainerAbsolute) {
+            //     elementsContainerBoundary = elementsContainer.getBoundingClientRect();
+            //     ['top', 'left'].forEach(function (key) {
+            //         relativeBoundary[key] = boundary[key] - elementsContainerBoundary[key];
+            //     });
 
-                relativeBoundary.width = boundary.width;
-                relativeBoundary.height = boundary.height;
-                boundary = relativeBoundary;
+            //     relativeBoundary.width = boundary.width;
+            //     relativeBoundary.height = boundary.height;
+            //     boundary = relativeBoundary;
 
-                containerWidth = elementsContainerBoundary.width;
+            //     containerWidth = elementsContainerBoundary.width;
 
-                // Adjust top position according to container scroll position
-                positions.top = elementsContainer.scrollTop;
-            } else {
-                // Adjust top position according to window scroll position
-                positions.top = this.window.pageYOffset;
-            }
+            //     // Adjust top position according to container scroll position
+            //     positions.top = elementsContainer.scrollTop;
+            // } else {
+            //     // Adjust top position according to window scroll position
+            //     positions.top = this.window.pageYOffset;
+            // }
 
-            middleBoundary = boundary.left + boundary.width / 2;
-            positions.top += boundary.top - toolbarHeight;
+            // middleBoundary = boundary.left + boundary.width / 2;
+            // positions.top += boundary.top - toolbarHeight;
 
-            if (boundary.top < buttonHeight) {
-                toolbarElement.classList.add('medium-toolbar-arrow-over');
-                toolbarElement.classList.remove('medium-toolbar-arrow-under');
-                positions.top += buttonHeight + boundary.height - this.diffTop;
-            } else {
-                toolbarElement.classList.add('medium-toolbar-arrow-under');
-                toolbarElement.classList.remove('medium-toolbar-arrow-over');
-                positions.top += this.diffTop;
-            }
+            // if (boundary.top < buttonHeight) {
+            //     toolbarElement.classList.add('medium-toolbar-arrow-over');
+            //     toolbarElement.classList.remove('medium-toolbar-arrow-under');
+            //     positions.top += buttonHeight + boundary.height - this.diffTop;
+            // } else {
+            //     toolbarElement.classList.add('medium-toolbar-arrow-under');
+            //     toolbarElement.classList.remove('medium-toolbar-arrow-over');
+            //     positions.top += this.diffTop;
+            // }
 
-            if (middleBoundary < halfOffsetWidth) {
-                positions.left = defaultLeft + halfOffsetWidth;
-                positions.right = 'initial';
-            } else if ((containerWidth - middleBoundary) < halfOffsetWidth) {
-                positions.left = 'auto';
-                positions.right = 0;
-            } else {
-                positions.left = defaultLeft + middleBoundary;
-                positions.right = 'initial';
-            }
+            // if (middleBoundary < halfOffsetWidth) {
+            //     positions.left = defaultLeft + halfOffsetWidth;
+            //     positions.right = 'initial';
+            // } else if ((containerWidth - middleBoundary) < halfOffsetWidth) {
+            //     positions.left = 'auto';
+            //     positions.right = 0;
+            // } else {
+            //     positions.left = defaultLeft + middleBoundary;
+            //     positions.right = 'initial';
+            // }
 
-            ['top', 'left', 'right'].forEach(function (key) {
-                toolbarElement.style[key] = positions[key] + (isNaN(positions[key]) ? '' : 'px');
-            });
+            // ['top', 'left', 'right'].forEach(function (key) {
+            //     toolbarElement.style[key] = positions[key] + (isNaN(positions[key]) ? '' : 'px');
+            // });
         }
     });
 
