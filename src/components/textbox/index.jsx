@@ -5,6 +5,14 @@ import MediumEditor from 'medium-editor';
 import { getSelection, getSelectionRange, getSelectedNodes, rangeSelectsIsSingleNode } from '@commons/selection';
 const debug = require('../../commons/debug')('textbox:textbox');
 
+const STYLES = ['font-weight',
+	'font-style',
+	'text-decoration',
+	'text-decoration',
+	'text-align',
+	'text-align',
+	'text-align',
+	'text-align'];
 
 class Textbox extends Component {
 	constructor(props) {
@@ -74,38 +82,38 @@ class Textbox extends Component {
 		this.checkSelection();
 	}
 
-	isAlreadyApplied(node) {
-		var isMatch = false,
-			tagNames = this.getTagNames(),
-			styleVals,
-			computedStyle;
+	// isAlreadyApplied(node) {
+	// 	var isMatch = false,
+	// 		tagNames = this.getTagNames(),
+	// 		styleVals,
+	// 		computedStyle;
 
-		if (this.knownState === false || this.knownState === true) {
-			return this.knownState;
-		}
+	// 	if (this.knownState === false || this.knownState === true) {
+	// 		return this.knownState;
+	// 	}
 
-		if (tagNames && tagNames.length > 0) {
-			isMatch = tagNames.indexOf(node.nodeName.toLowerCase()) !== -1;
-		}
+	// 	if (tagNames && tagNames.length > 0) {
+	// 		isMatch = tagNames.indexOf(node.nodeName.toLowerCase()) !== -1;
+	// 	}
 
-		if (!isMatch && this.style) {
-			styleVals = this.style.value.split('|');
-			computedStyle = this.window.getComputedStyle(node, null).getPropertyValue(this.style.prop);
-			styleVals.forEach(function (val) {
-				if (!this.knownState) {
-					isMatch = (computedStyle.indexOf(val) !== -1);
-					// text-decoration is not inherited by default
-					// so if the computed style for text-decoration doesn't match
-					// don't write to knownState so we can fallback to other checks
-					if (isMatch || this.style.prop !== 'text-decoration') {
-						this.knownState = isMatch;
-					}
-				}
-			}, this);
-		}
+	// 	if (!isMatch && this.style) {
+	// 		styleVals = this.style.value.split('|');
+	// 		computedStyle = this.window.getComputedStyle(node, null).getPropertyValue(this.style.prop);
+	// 		styleVals.forEach(function (val) {
+	// 			if (!this.knownState) {
+	// 				isMatch = (computedStyle.indexOf(val) !== -1);
+	// 				// text-decoration is not inherited by default
+	// 				// so if the computed style for text-decoration doesn't match
+	// 				// don't write to knownState so we can fallback to other checks
+	// 				if (isMatch || this.style.prop !== 'text-decoration') {
+	// 					this.knownState = isMatch;
+	// 				}
+	// 			}
+	// 		}, this);
+	// 	}
 
-		return isMatch;
-	}
+	// 	return isMatch;
+	// }
 
 	handleEditableKeyup() {
 		this.checkSelection();
@@ -123,13 +131,35 @@ class Textbox extends Component {
 
 	checkSelection() {
 		debug('checkSelection');
-		const selection = getSelection(this.medium.options.ownerDocument);
+		const selectionRange = MediumEditor.selection.getSelectionRange(this.medium.options.ownerDocument);
+		if (!selectionRange) return;
 
-		if (selection) {
-			this.props.onSelection(selection, false);
-		} else {
-			this.props.onSelection(null);
+		let parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange);
+		// Make sure the selection parent isn't outside of the contenteditable
+		if (!this.medium.elements.some(function (element) {
+			return MediumEditor.util.isDescendant(element, parentNode, true);
+		})) {
+			return;
 		}
+
+		let combinationStyle = {};
+		// Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node
+		while (parentNode) {
+			const computedStyle =  this.medium.options.contentWindow.getComputedStyle(parentNode, null);
+			STYLES.forEach((style) => {
+				const value = computedStyle.getPropertyValue(style);
+				combinationStyle[style] = value;
+			});
+
+			const tagNames = parentNode.nodeName.toLowerCase();
+			// debug(parentNode, tagNames, this.medium.options.contentWindow.getComputedStyle(parentNode, null));
+			// we can abort the search upwards if we leave the contentEditable element
+			if (MediumEditor.util.isMediumEditorElement(parentNode)) {
+				break;
+			}
+			parentNode = parentNode.parentNode;
+		}
+		debug('combinationStyle %o', combinationStyle);
 	}
 
 	handleComposition(evt) {
