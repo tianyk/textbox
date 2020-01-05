@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { Textbox, Editor } from './components';
 
@@ -6,8 +6,7 @@ import { Textbox, Editor } from './components';
 
 function App() {
 	// 命名参考 ReactNative https://facebook.github.io/react-native/docs/text-style-props
-	const [buttonState, setButtonState] = useState({});
-	const [text, setText] = useState('<p>中国Abc</p>');
+	const [text, setText] = useState('<p style="text-align: right">中国<font color="#ffeedd" size=18>A</font>bc</p>');
 	const [textStyle, setTextStyle] = useState({
 		fontSize: 34,
 		color: "#33bb33",
@@ -23,6 +22,7 @@ function App() {
 		// textDecoration: 'line-through', /* underline line-through */
 	});
 
+	const textboxRef = useRef(null);
 
 	window.setText = setText;
 
@@ -39,12 +39,6 @@ function App() {
 		}));
 	}
 
-	function onStateChange(newState) {
-		setButtonState(prevState => Object.assign({
-			...prevState,
-			...newState
-		}));
-	}
 
 	return (
 		<div>
@@ -56,11 +50,11 @@ function App() {
 			</textarea>
 
 			<div style={{ display: 'inline-block' }}>
-				<Textbox text={text} onStateChange={onStateChange} onContentChange={onContentChange} />
+				<Textbox ref={textboxRef} className="textbox" style={{ border: '1px dashed #aaa'}} text={text} onStateChange={onTextStyleChange} onContentChange={onContentChange} />
 			</div>
 
 			<div style={{ display: 'inline-block' }}>
-				<Editor textStyle={textStyle} onTextStyleChange={onTextStyleChange} />
+				<Editor textbox={textboxRef} textStyle={textStyle} onTextStyleChange={onTextStyleChange} />
 			</div>
 
 		</div>

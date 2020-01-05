@@ -68,6 +68,7 @@ class Textbox extends Component {
 		// MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements
 		this.medium.subscribe('blur', this.handleBlur.bind(this));
 		this.medium.subscribe('focus', this.handleFocus.bind(this));
+		this.medium.subscribe('positionToolbar', this.checkSelection.bind(this))
 
 		// Updating the state of the toolbar as things change
 		this.medium.subscribe('editableClick', this.handleEditableClick.bind(this));
@@ -186,14 +187,14 @@ class Textbox extends Component {
 			contentEditable,
 			dangerouslySetInnerHTML,
 			...props
-		  } = this.props;
-		  props.dangerouslySetInnerHTML = { __html: this.state.text };
-	  
-		  if (this.medium) {
+		} = this.props;
+		props.dangerouslySetInnerHTML = { __html: this.state.text };
+
+		if (this.medium) {
 			this.medium.saveSelection();
-		  }
-	  
-		  return React.createElement(tag, props);
+		}
+
+		return React.createElement(tag, props);
 	}
 }
 

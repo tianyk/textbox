@@ -20,13 +20,47 @@ class TextboxEditor extends Component {
 
 	onTextStyleChange(field, value) {
 		debug('onTextStyleChange', field, value)
-		this.props.onTextStyleChange && this.props.onTextStyleChange({
-			[field]: value
-		});
+		// this.props.onTextStyleChange && this.props.onTextStyleChange({
+		// 	[field]: value
+		// });
+
+		const medium = this.props.textbox?.current?.medium;
+		if (medium) {
+			switch (field) {
+				case 'fontWeight':
+					medium.execAction('bold');
+					break;
+				case 'fontStyle':
+					medium.execAction('italic');
+					break;
+				case 'textDecoration':
+					medium.execAction('underline');
+					break;
+				case 'color':
+					medium.execAction('foreColor', { value });
+					break;
+			}
+		}
 	}
 
+	// function changeFont() {
+	// 	document.execCommand("fontSize", false, "7");
+	// 	var fontElements = document.getElementsByTagName("font");
+	// 	for (var i = 0, len = fontElements.length; i < len; ++i) {
+	// 		if (fontElements[i].size == "7") {
+	// 			fontElements[i].removeAttribute("size");
+	// 			fontElements[i].style.fontSize = "30px";
+	// 		}
+	// 	}
+	// }
+
 	render() {
-		debug(this.props.selection)
+		// debug(this.props.selection)
+		console.log(this.props.textbox?.current?.medium);
+
+		let fontSize = this.props.textStyle.fontSize;
+		if (typeof fontSize === 'string' && fontSize.endsWith('px')) fontSize = parseFloat(fontSize);
+
 		return (
 			<div className="coursebox-editor">
 				<label htmlFor="font-size-style">文字</label>
@@ -38,7 +72,7 @@ class TextboxEditor extends Component {
 					></InputColor>
 
 					<InputNumber
-						value={this.props.textStyle.fontSize}
+						value={fontSize}
 						min={12}
 						max={100}
 						unit="px"
