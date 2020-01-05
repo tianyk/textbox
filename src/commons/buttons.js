@@ -212,6 +212,7 @@ function computedState(currentState = {}, node, currentWindow = window) {
 		if (!isMatch && config.style) {
 			const styleVals = config.style.value.split('|');
 			const computedStyle = currentWindow.getComputedStyle(node, null).getPropertyValue(config.style.prop);
+			console.log('line-height', currentWindow.getComputedStyle(node, null).getPropertyValue('line-height'));
 
 			for (let styleVal of styleVals) {
 				isMatch = (computedStyle.indexOf(styleVal) !== -1);

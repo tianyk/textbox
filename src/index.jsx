@@ -6,6 +6,7 @@ import { Textbox, Editor } from './components';
 
 function App() {
 	// 命名参考 ReactNative https://facebook.github.io/react-native/docs/text-style-props
+	const [buttonState, setButtonState] = useState({});
 	const [text, setText] = useState('<p>中国Abc</p>');
 	const [textStyle, setTextStyle] = useState({
 		fontSize: 34,
@@ -22,7 +23,6 @@ function App() {
 		// textDecoration: 'line-through', /* underline line-through */
 	});
 
-	const [selection, setSelection] = useState(null);
 
 	window.setText = setText;
 
@@ -39,6 +39,13 @@ function App() {
 		}));
 	}
 
+	function onStateChange(newState) {
+		setButtonState(prevState => Object.assign({
+			...prevState,
+			...newState
+		}));
+	}
+
 	return (
 		<div>
 			<pre className="code">
@@ -49,14 +56,11 @@ function App() {
 			</textarea>
 
 			<div style={{ display: 'inline-block' }}>
-				<Textbox style={{ display: 'inline-block' }} text={text} textStyle={textStyle} onSelection={selection => {
-					console.log(selection);
-					setSelection(selection)
-				}} onContentChange={onContentChange} />
+				<Textbox text={text} onStateChange={onStateChange} onContentChange={onContentChange} />
 			</div>
 
 			<div style={{ display: 'inline-block' }}>
-				<Editor textStyle={textStyle} selection={selection} onTextStyleChange={onTextStyleChange} />
+				<Editor textStyle={textStyle} onTextStyleChange={onTextStyleChange} />
 			</div>
 
 		</div>

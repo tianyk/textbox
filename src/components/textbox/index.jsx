@@ -1,9 +1,9 @@
 import './textbox.less';
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import MediumEditor from 'medium-editor';
 
-import HyphenateStyleName from 'hyphenate-style-name';
 import { computedState } from '@commons/buttons';
 const debug = require('../../commons/debug')('textbox:textbox');
 
@@ -27,20 +27,21 @@ class Textbox extends Component {
 		this.editorRef = React.createRef();
 		this.handleComposition = this.handleComposition.bind(this);
 		this.onContentChange = this.onContentChange.bind(this);
-		this.onSelectionChange = this.onSelectionChange.bind(this);
 	}
 
 	componentDidMount() {
 		debug('componentDidMount');
 
-		this.medium = new MediumEditor(this.editorRef.current, Object.assign(DEFAULT_OPTIONS, this.props.options));
-		this.medium.subscribe('editableInput', evt => {
-			if (!this._isComposing) this.onContentChange(this.editorRef.current.innerHTML);
+		const dom = ReactDOM.findDOMNode(this);
+
+		this.medium = new MediumEditor(dom, Object.assign(DEFAULT_OPTIONS, this.props.options));
+		this.medium.subscribe('editableInput', () => {
+			if (!this._isComposing) this.onContentChange(dom.innerHTML);
 		});
 
-		this.medium.on(this.editorRef.current, 'compositionend', this.handleComposition);
-		this.medium.on(this.editorRef.current, 'compositionupdate', this.handleComposition);
-		this.medium.on(this.editorRef.current, 'compositionend', this.handleComposition);
+		this.medium.on(dom, 'compositionend', this.handleComposition);
+		this.medium.on(dom, 'compositionupdate', this.handleComposition);
+		this.medium.on(dom, 'compositionend', this.handleComposition);
 
 		this.attachEventHandlers();
 	}
@@ -87,7 +88,6 @@ class Textbox extends Component {
 
 	handleFocus() {
 		this.checkSelection();
-		// this.props.onFocus();
 	}
 
 	handleBlur() {
@@ -121,9 +121,13 @@ class Textbox extends Component {
 		}
 
 		debug('buttonState %o', buttonState);
+
+		this.props.onStateChange(buttonState);
 	}
 
 	handleComposition(evt) {
+		const dom = ReactDOM.findDOMNode(this);
+
 		if (evt.type === 'compositionend') {
 			// composition is end
 			this._isComposing = false;
@@ -138,7 +142,7 @@ class Textbox extends Component {
 			// }
 
 			// chrome safari 渲染 compositionend 在input 事件后触发
-			this.medium.trigger('editableInput', evt, this.editorRef.current);
+			this.medium.trigger('editableInput', evt, dom);
 		} else {
 			// in composition
 			this._isComposing = true;
@@ -149,37 +153,52 @@ class Textbox extends Component {
 		this.props.onContentChange && this.props.onContentChange(text);
 	}
 
-	onSelectionChange(evt) {
-	}
-
 	render() {
-		const defaultStyle = {
-			marign: 0,
-			minWidth: '1em',
-			minHeight: '1em',
-			width: 400,
-			height: 400
-		};
+		// const defaultStyle = {
+		// 	marign: 0,
+		// 	minWidth: '1em',
+		// 	minHeight: '1em',
+		// 	width: 400,
+		// 	height: 400
+		// };
 
-		if (this.medium) {
+		// if (this.medium) {
+		// 	this.medium.saveSelection();
+		// }
+
+		// return (
+		// 	<div className="coursebox-textbox">
+		// 		{this.state.text}
+		// 		<div
+		// 			className="textbox"
+		// 			ref={this.editorRef}
+		// 			style={{ ...(this.props.textStyle || {}), ...defaultStyle }}
+		// 			dangerouslySetInnerHTML={{ __html: this.state.text }}>
+		// 		</div>
+		// 	</div>
+		// )
+
+
+		const {
+			options,
+			text,
+			tag,
+			contentEditable,
+			dangerouslySetInnerHTML,
+			...props
+		  } = this.props;
+		  props.dangerouslySetInnerHTML = { __html: this.state.text };
+	  
+		  if (this.medium) {
 			this.medium.saveSelection();
-		}
-
-		return (
-			<div className="coursebox-textbox">
-				{this.state.text}
-				<div
-					className="textbox"
-					ref={this.editorRef}
-					style={{ ...(this.props.textStyle || {}), ...defaultStyle }}
-					dangerouslySetInnerHTML={{ __html: this.state.text }}>
-				</div>
-			</div>
-		)
+		  }
+	  
+		  return React.createElement(tag, props);
 	}
 }
 
 Textbox.defaultProps = {
+	tag: 'div',
 	options: {}
 }
 
