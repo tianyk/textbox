@@ -8,7 +8,7 @@ import FontLayoutButtonGroup from '../font-layout-button-group';
 import ImageLineHeight from '@assets/images/行间距_正常@2x.png';
 import ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png';
 import ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';
-
+import { computedState } from '@commons/buttons';
 const debug = require('@commons/debug')('textbox:editor');
 
 class TextboxEditor extends Component {
@@ -16,6 +16,99 @@ class TextboxEditor extends Component {
 		super(props);
 
 		this.onTextStyleChange = this.onTextStyleChange.bind(this);
+		this.state = {
+			textStyle: {}
+		}
+	}
+
+
+	componentDidMount() {
+		debug('componentDidMount');
+		if (this.getEditor() && !this.attachedEvent) this.attachEventHandlers();
+	}
+
+	componentWillUnmount() {
+		debug('componentWillUnmount');
+	}
+
+	componentDidUpdate() {
+		debug('componentDidUpdate');
+		if (this.getEditor() && !this.attachedEvent) this.attachEventHandlers();
+	}
+
+
+	attachEventHandlers() {
+		if (!this.attachedEvent) {
+			debug('attachEventHandlers');
+			this.attachedEvent = true;
+
+			// MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements
+			this.getEditor().subscribe('blur', this.handleBlur.bind(this));
+			this.getEditor().subscribe('focus', this.handleFocus.bind(this));
+			this.getEditor().subscribe('positionToolbar', this.checkSelection.bind(this))
+
+			// Updating the state of the toolbar as things change
+			this.getEditor().subscribe('editableClick', this.handleEditableClick.bind(this));
+			this.getEditor().subscribe('editableKeyup', this.handleEditableKeyup.bind(this));
+		}
+	}
+
+	handleFocus() {
+		this.checkSelection();
+	}
+
+	handleEditableClick() {
+		this.checkSelection();
+	}
+
+	handleEditableKeyup() {
+		this.checkSelection();
+	}
+
+	handleFocus() {
+		this.checkSelection();
+	}
+
+	handleBlur() {
+		debug('hideToolbar');
+	}
+
+	checkSelection() {
+		debug('checkSelection');
+		const selectionRange = MediumEditor.selection.getSelectionRange(this.getEditor().options?.ownerDocument);
+		if (!selectionRange) return;
+
+		let parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange);
+		// Make sure the selection parent isn't outside of the contenteditable
+		if (!this.getEditor().elements.some(function (element) {
+			return MediumEditor.util.isDescendant(element, parentNode, true);
+		})) {
+			return;
+		}
+
+		const textStyle = {};
+		// Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node
+		while (parentNode) {
+			computedState(textStyle, parentNode, this.getEditor().options?.contentWindow);
+
+			// we can abort the search upwards if we leave the contentEditable element
+			if (MediumEditor.util.isMediumEditorElement(parentNode)) {
+				break;
+			}
+			parentNode = parentNode.parentNode;
+		}
+
+		debug('textStyle %o', textStyle);
+
+		this.setState({
+			textStyle
+		});
+	}
+
+	getEditor() {
+		debug('------------------',this.props?.editorRef);
+
+		return this.props?.editorRef?.current?.medium;
 	}
 
 	onTextStyleChange(field, value) {
@@ -24,7 +117,7 @@ class TextboxEditor extends Component {
 		// 	[field]: value
 		// });
 
-		const medium = this.props.textbox?.current?.medium;
+		const medium = this.getEditor();
 		if (medium) {
 			switch (field) {
 				case 'fontWeight':
@@ -55,10 +148,7 @@ class TextboxEditor extends Component {
 	// }
 
 	render() {
-		// debug(this.props.selection)
-		console.log(this.props.textbox?.current?.medium);
-
-		let fontSize = this.props.textStyle.fontSize;
+		let fontSize = this.state.textStyle.fontSize;
 		if (typeof fontSize === 'string' && fontSize.endsWith('px')) fontSize = parseFloat(fontSize);
 
 		return (
@@ -67,7 +157,7 @@ class TextboxEditor extends Component {
 
 				<div id="font-style">
 					<InputColor
-						value={this.props.textStyle.color}
+						value={this.state.textStyle.color}
 						onChange={(color) => this.onTextStyleChange('color', color)}
 					></InputColor>
 
@@ -80,9 +170,9 @@ class TextboxEditor extends Component {
 					></InputNumber>
 
 					<FontStyleButtonGroup
-						fontWeight={this.props.textStyle.fontWeight}
-						fontStyle={this.props.textStyle.fontStyle}
-						textDecoration={this.props.textStyle.textDecoration}
+						fontWeight={this.state.textStyle?.fontWeight}
+						fontStyle={this.state.textStyle.fontStyle}
+						textDecoration={this.state.textStyle.textDecoration}
 						onFontStyleChange={(field, val) => { this.onTextStyleChange(field, val) }}
 					></FontStyleButtonGroup>
 				</div>
@@ -91,7 +181,7 @@ class TextboxEditor extends Component {
 				<div id="font-layout-style">
 					{/* 对齐方式 */}
 					<FontLayoutButtonGroup
-						textAlign={this.props.textStyle.textAlign}
+						textAlign={this.state.textStyle.textAlign}
 						onFontLayoutChange={(textAlign) => this.onTextStyleChange('textAlign', textAlign)}
 					></FontLayoutButtonGroup>
 
@@ -102,7 +192,7 @@ class TextboxEditor extends Component {
 						step={0.1}
 						unit="倍"
 						icon={ImageLineHeight}
-						value={this.props.textStyle.lineHeight}
+						value={this.state.textStyle.lineHeight}
 						onChange={(lineHeight) => this.onTextStyleChange('lineHeight', lineHeight)}
 					></InputNumber>
 
@@ -112,7 +202,7 @@ class TextboxEditor extends Component {
 						max={100}
 						unit="px"
 						icon={ImagePaddingTopAndBottom}
-						value={this.props.textStyle.paddingTop}
+						value={this.state.textStyle.paddingTop}
 						onChange={(padding) => {
 							this.onTextStyleChange('paddingTop', padding);
 							this.onTextStyleChange('paddingBottom', padding);
@@ -125,7 +215,7 @@ class TextboxEditor extends Component {
 						max={100}
 						unit="px"
 						icon={ImagePaddingLeftAndRight}
-						value={this.props.textStyle.paddingLeft}
+						value={this.state.textStyle.paddingLeft}
 						onChange={(padding) => {
 							this.onTextStyleChange('paddingLeft', padding);
 							this.onTextStyleChange('paddingRight', padding)
@@ -133,10 +223,10 @@ class TextboxEditor extends Component {
 					></InputNumber>
 				</div>
 
-				<label htmlFor="font-opacity-style">不透明度</label>
+				{/* <label htmlFor="font-opacity-style">不透明度</label>
 				<div id="font-opacity-style">
 
-				</div>
+				</div> */}
 			</div>
 		);
 	}

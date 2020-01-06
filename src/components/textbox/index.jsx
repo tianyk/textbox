@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import MediumEditor from 'medium-editor';
 
-import { computedState } from '@commons/buttons';
 const debug = require('../../commons/debug')('textbox:textbox');
 
 const DEFAULT_OPTIONS = {
@@ -31,7 +30,6 @@ class Textbox extends Component {
 
 	componentDidMount() {
 		debug('componentDidMount');
-
 		const dom = ReactDOM.findDOMNode(this);
 
 		this.medium = new MediumEditor(dom, Object.assign(DEFAULT_OPTIONS, this.props.options));
@@ -42,8 +40,6 @@ class Textbox extends Component {
 		this.medium.on(dom, 'compositionend', this.handleComposition);
 		this.medium.on(dom, 'compositionupdate', this.handleComposition);
 		this.medium.on(dom, 'compositionend', this.handleComposition);
-
-		this.attachEventHandlers();
 	}
 
 	componentWillUnmount() {
@@ -61,69 +57,6 @@ class Textbox extends Component {
 		}
 
 		this.medium.restoreSelection();
-	}
-
-
-	attachEventHandlers() {
-		// MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements
-		this.medium.subscribe('blur', this.handleBlur.bind(this));
-		this.medium.subscribe('focus', this.handleFocus.bind(this));
-		this.medium.subscribe('positionToolbar', this.checkSelection.bind(this))
-
-		// Updating the state of the toolbar as things change
-		this.medium.subscribe('editableClick', this.handleEditableClick.bind(this));
-		this.medium.subscribe('editableKeyup', this.handleEditableKeyup.bind(this));
-	}
-
-	handleFocus() {
-		this.checkSelection();
-	}
-
-	handleEditableClick() {
-		this.checkSelection();
-	}
-
-	handleEditableKeyup() {
-		this.checkSelection();
-	}
-
-	handleFocus() {
-		this.checkSelection();
-	}
-
-	handleBlur() {
-		debug('hideToolbar');
-	}
-
-
-	checkSelection() {
-		debug('checkSelection');
-		const selectionRange = MediumEditor.selection.getSelectionRange(this?.medium?.options?.ownerDocument);
-		if (!selectionRange) return;
-
-		let parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange);
-		// Make sure the selection parent isn't outside of the contenteditable
-		if (!this.medium.elements.some(function (element) {
-			return MediumEditor.util.isDescendant(element, parentNode, true);
-		})) {
-			return;
-		}
-
-		const buttonState = {};
-		// Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node
-		while (parentNode) {
-			computedState(buttonState, parentNode, this?.medium?.options?.contentWindow);
-
-			// we can abort the search upwards if we leave the contentEditable element
-			if (MediumEditor.util.isMediumEditorElement(parentNode)) {
-				break;
-			}
-			parentNode = parentNode.parentNode;
-		}
-
-		debug('buttonState %o', buttonState);
-
-		this.props.onStateChange(buttonState);
 	}
 
 	handleComposition(evt) {

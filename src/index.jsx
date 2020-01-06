@@ -49,12 +49,12 @@ function App() {
 			<textarea value={text} onChange={(evt) => onContentChange(evt.target.value)}>
 			</textarea>
 
-			<div style={{ display: 'inline-block' }}>
-				<Textbox ref={textboxRef} className="textbox" style={{ border: '1px dashed #aaa'}} text={text} onStateChange={onTextStyleChange} onContentChange={onContentChange} />
+			<div>
+				<Textbox ref={textboxRef} className="textbox" style={{ border: '1px dashed #aaa'}} text={text} onContentChange={onContentChange} />
 			</div>
-
-			<div style={{ display: 'inline-block' }}>
-				<Editor textbox={textboxRef} textStyle={textStyle} onTextStyleChange={onTextStyleChange} />
+			
+			<div>
+				<Editor editorRef={textboxRef} onTextStyleChange={onTextStyleChange} />
 			</div>
 
 		</div>
