@@ -12,6 +12,9 @@ import ImageLineHeight from '@assets/images/行间距_正常@2x.png';
 import ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png';
 import ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';
 import { computedState } from '@commons/buttons';
+import throttle from '@commons/throttle';
+import debounce from '@commons/debounce';
+
 const debug = require('@commons/debug')('textbox:editor');
 
 class TextboxEditor extends Component {
@@ -23,7 +26,7 @@ class TextboxEditor extends Component {
 		}
 
 		this.onTextStyleChange = this.onTextStyleChange.bind(this);
-		this.checkState = this.checkState.bind(this);
+		this.throttleCheckState = throttle(this.checkState, 200).bind(this);
 	}
 
 	componentDidMount() {
@@ -48,12 +51,13 @@ class TextboxEditor extends Component {
 
 			// MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements
 			// this.getEditor().subscribe('blur', this.handleBlur.bind(this));
-			this.getEditor().subscribe('focus', this.checkState);
-			this.getEditor().subscribe('positionToolbar', this.checkState);
+			this.getEditor().subscribe('focus', this.throttleCheckState);
+			this.getEditor().subscribe('positionToolbar', this.throttleCheckState);
+			this.getEditor().subscribe('editableInput', this.throttleCheckState);
 
 			// Updating the state of the toolbar as things change
-			this.getEditor().subscribe('editableClick', this.checkState);
-			this.getEditor().subscribe('editableKeyup', this.checkState);
+			this.getEditor().subscribe('editableClick', this.throttleCheckState);
+			this.getEditor().subscribe('editableKeyup', this.throttleCheckState);
 		}
 	}
 

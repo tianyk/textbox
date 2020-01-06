@@ -53,11 +53,11 @@ class Textbox extends Component {
 	componentDidUpdate() {
 		debug('componentDidUpdate');
 
-		if (this.props.text !== this.state.text) {
-			this.setState({ text: this.props.text }, () => {
-				this.medium.restoreSelection();
-			});
-		}
+		// if (this.props.text !== this.state.text) {
+		// 	this.setState({ text: this.props.text }, () => {
+		// 		this.medium.restoreSelection();
+		// 	});
+		// }
 
 		this.medium.restoreSelection();
 	}
