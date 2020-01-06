@@ -2,59 +2,32 @@ import { useState, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { Textbox, Editor } from './components';
 
-// console.log(Textbox, Editor)
-
 function App() {
 	// 命名参考 ReactNative https://facebook.github.io/react-native/docs/text-style-props
-	const [text, setText] = useState('<p style="text-align: right">中国<font color="#ffeedd" size=18>A</font>bc</p>');
-	const [textStyle, setTextStyle] = useState({
-		fontSize: 34,
-		color: "#33bb33",
+	const [text, setText] = useState('<p>中国<font color="#ffeedd" size="5">A</font>bc</p>');
 
-		// 最好使用 b i 标签
-		fontWeight: 'normal', /* 400 800 */
-		lineHeight: 1.4,
-		// fontWeight: 'bold', /* 400 800 */
-		// fontStyle: 'normal', /* italic */
-		// fontStyle: 'italic',
-		// textDecoration: 'none', /* underline line-through */
-		// textDecoration: 'underline', /* underline line-through */
-		// textDecoration: 'line-through', /* underline line-through */
-	});
-
-	const textboxRef = useRef(null);
-
-	window.setText = setText;
+	const [editor, setEditor] = useState(null);
+	const editorRef = useRef(null);
 
 	function onContentChange(val) {
 		setText(val);
 	}
 
-	function onTextStyleChange(newTextStyle) {
-		console.log('\nonTextStyleChange: %o', newTextStyle);
-
-		setTextStyle(prevTextStyle => Object.assign({
-			...prevTextStyle,
-			...newTextStyle
-		}));
+	function onInit() {
+		setEditor(editorRef);
 	}
-
 
 	return (
 		<div>
-			<pre className="code">
-				{JSON.stringify(textStyle, null, 2)}
-			</pre>
-
 			<textarea value={text} onChange={(evt) => onContentChange(evt.target.value)}>
 			</textarea>
 
 			<div>
-				<Textbox ref={textboxRef} className="textbox" style={{ border: '1px dashed #aaa'}} text={text} onContentChange={onContentChange} />
+				<Editor editorRef={editor} />
 			</div>
-			
+
 			<div>
-				<Editor editorRef={textboxRef} onTextStyleChange={onTextStyleChange} />
+				<Textbox ref={editorRef} className="textbox" style={{ border: '1px dashed #aaa', textAlign: 'center', lineHeight: '1.4' }} text={text} onInit={onInit} onContentChange={onContentChange} />
 			</div>
 
 		</div>

@@ -4,6 +4,7 @@ import { Component } from 'react';
 import '@simonwep/pickr/dist/themes/nano.min.css';
 import Pickr from '@simonwep/pickr';
 
+import throttle from '@commons/throttle';
 import FontColorImage from '@assets/images/文字颜色@2x.png';
 import FontColorCollapseImage from '@assets/images/三角形_收起@2x.png';
 
@@ -12,6 +13,7 @@ class InputColor extends Component {
 		super(props);
 
 		this.pickColor = this.pickColor.bind(this);
+		this.throttleOnChange = throttle(this.onChange, 100).bind(this);
 	}
 
 	componentDidMount() {
@@ -84,10 +86,10 @@ class InputColor extends Component {
 			})
 			.on('save', (color) => {
 				pickr.hide();
-				this.onChange(color.toHEXA().toString(0));
+				this.throttleOnChange(color.toHEXA().toString(0));
 			})
 			.on('change', (color) => {
-				this.onChange(color.toHEXA().toString(0));
+				this.throttleOnChange(color.toHEXA().toString(0));
 			});
 	}
 

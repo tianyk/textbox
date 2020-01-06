@@ -2,7 +2,10 @@ import './editor.less';
 
 import { Component } from 'react';
 import InputNumber from '../input-number';
+import InputSelect from '../input-select';
+import ReactDOM from 'react-dom';
 import InputColor from '../input-color';
+import MediumEditor from 'medium-editor';
 import FontStyleButtonGroup from '../font-style-button-group';
 import FontLayoutButtonGroup from '../font-layout-button-group';
 import ImageLineHeight from '@assets/images/行间距_正常@2x.png';
@@ -15,12 +18,13 @@ class TextboxEditor extends Component {
 	constructor(props) {
 		super(props);
 
-		this.onTextStyleChange = this.onTextStyleChange.bind(this);
 		this.state = {
 			textStyle: {}
 		}
-	}
 
+		this.onTextStyleChange = this.onTextStyleChange.bind(this);
+		this.checkState = this.checkState.bind(this);
+	}
 
 	componentDidMount() {
 		debug('componentDidMount');
@@ -43,38 +47,18 @@ class TextboxEditor extends Component {
 			this.attachedEvent = true;
 
 			// MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements
-			this.getEditor().subscribe('blur', this.handleBlur.bind(this));
-			this.getEditor().subscribe('focus', this.handleFocus.bind(this));
-			this.getEditor().subscribe('positionToolbar', this.checkSelection.bind(this))
+			// this.getEditor().subscribe('blur', this.handleBlur.bind(this));
+			this.getEditor().subscribe('focus', this.checkState);
+			this.getEditor().subscribe('positionToolbar', this.checkState);
 
 			// Updating the state of the toolbar as things change
-			this.getEditor().subscribe('editableClick', this.handleEditableClick.bind(this));
-			this.getEditor().subscribe('editableKeyup', this.handleEditableKeyup.bind(this));
+			this.getEditor().subscribe('editableClick', this.checkState);
+			this.getEditor().subscribe('editableKeyup', this.checkState);
 		}
 	}
 
-	handleFocus() {
-		this.checkSelection();
-	}
-
-	handleEditableClick() {
-		this.checkSelection();
-	}
-
-	handleEditableKeyup() {
-		this.checkSelection();
-	}
-
-	handleFocus() {
-		this.checkSelection();
-	}
-
-	handleBlur() {
-		debug('hideToolbar');
-	}
-
-	checkSelection() {
-		debug('checkSelection');
+	checkState() {
+		debug('checkState');
 		const selectionRange = MediumEditor.selection.getSelectionRange(this.getEditor().options?.ownerDocument);
 		if (!selectionRange) return;
 
@@ -105,18 +89,21 @@ class TextboxEditor extends Component {
 		});
 	}
 
-	getEditor() {
-		debug('------------------',this.props?.editorRef);
+	getEditorDOM() {
+		if (this.props.editorRef && this.props.editorRef.current) {
+			return ReactDOM.findDOMNode(this.props.editorRef.current);
+		}
+	}
 
-		return this.props?.editorRef?.current?.medium;
+	getEditor() {
+		const dom = this.getEditorDOM();
+		return dom ? MediumEditor.getEditorFromElement(dom) : null;
 	}
 
 	onTextStyleChange(field, value) {
 		debug('onTextStyleChange', field, value)
-		// this.props.onTextStyleChange && this.props.onTextStyleChange({
-		// 	[field]: value
-		// });
 
+		const dom = this.getEditorDOM();
 		const medium = this.getEditor();
 		if (medium) {
 			switch (field) {
@@ -130,26 +117,47 @@ class TextboxEditor extends Component {
 					medium.execAction('underline');
 					break;
 				case 'color':
+					// fix <font color></font>
+					medium.options.ownerDocument.execCommand('styleWithCSS', false, true);
 					medium.execAction('foreColor', { value });
+					medium.options.ownerDocument.execCommand('styleWithCSS', false, false);
+					break;
+
+				case 'fontSize':
+					medium.execAction('fontSize', { value: 7 });
+					if (dom) {
+						const nodes = dom.querySelectorAll('font[size="7"]');
+						for (let node of nodes) {
+							node.removeAttribute('size');
+							node.style.fontSize = `${value}px`;
+						}
+						medium.trigger('editableInput', null, dom);
+					}
+					break;
+
+				case 'textAlign':
+					if (value === 'center') {
+						medium.execAction('justifyCenter');
+					} else if (value === 'left') {
+						medium.execAction('justifyLeft');
+					} else if (value === 'right') {
+						medium.execAction('justifyRight');
+					} else if (value === 'justify') {
+						medium.execAction('justifyFull');
+					}
+					this.checkState();
+					medium.trigger('editableInput', null, dom);
 					break;
 			}
 		}
 	}
 
-	// function changeFont() {
-	// 	document.execCommand("fontSize", false, "7");
-	// 	var fontElements = document.getElementsByTagName("font");
-	// 	for (var i = 0, len = fontElements.length; i < len; ++i) {
-	// 		if (fontElements[i].size == "7") {
-	// 			fontElements[i].removeAttribute("size");
-	// 			fontElements[i].style.fontSize = "30px";
-	// 		}
-	// 	}
-	// }
-
 	render() {
-		let fontSize = this.state.textStyle.fontSize;
+		let { fontSize, paddingTop, paddingLeft, lineHeight } = this.state.textStyle;
 		if (typeof fontSize === 'string' && fontSize.endsWith('px')) fontSize = parseFloat(fontSize);
+		if (typeof paddingTop === 'string' && paddingTop.endsWith('px')) paddingTop = parseFloat(paddingTop);
+		if (typeof paddingLeft === 'string' && paddingLeft.endsWith('px')) paddingLeft = parseFloat(paddingLeft);
+		if (typeof lineHeight === 'string' && lineHeight.endsWith('px')) lineHeight = (parseFloat(lineHeight) / fontSize).toFixed(1);
 
 		return (
 			<div className="coursebox-editor">
@@ -161,13 +169,12 @@ class TextboxEditor extends Component {
 						onChange={(color) => this.onTextStyleChange('color', color)}
 					></InputColor>
 
-					<InputNumber
+					<InputSelect
 						value={fontSize}
-						min={12}
-						max={100}
+						options={[12, 13, 14, 16, 18, 20, 28, 36, 48, 72]}
 						unit="px"
 						onChange={(fontSize) => this.onTextStyleChange('fontSize', fontSize)}
-					></InputNumber>
+					></InputSelect>
 
 					<FontStyleButtonGroup
 						fontWeight={this.state.textStyle?.fontWeight}
@@ -192,7 +199,7 @@ class TextboxEditor extends Component {
 						step={0.1}
 						unit="倍"
 						icon={ImageLineHeight}
-						value={this.state.textStyle.lineHeight}
+						value={lineHeight}
 						onChange={(lineHeight) => this.onTextStyleChange('lineHeight', lineHeight)}
 					></InputNumber>
 
@@ -202,7 +209,7 @@ class TextboxEditor extends Component {
 						max={100}
 						unit="px"
 						icon={ImagePaddingTopAndBottom}
-						value={this.state.textStyle.paddingTop}
+						value={paddingTop}
 						onChange={(padding) => {
 							this.onTextStyleChange('paddingTop', padding);
 							this.onTextStyleChange('paddingBottom', padding);
@@ -215,7 +222,7 @@ class TextboxEditor extends Component {
 						max={100}
 						unit="px"
 						icon={ImagePaddingLeftAndRight}
-						value={this.state.textStyle.paddingLeft}
+						value={paddingLeft}
 						onChange={(padding) => {
 							this.onTextStyleChange('paddingLeft', padding);
 							this.onTextStyleChange('paddingRight', padding)

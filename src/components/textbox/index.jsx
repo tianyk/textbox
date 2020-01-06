@@ -4,11 +4,12 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import MediumEditor from 'medium-editor';
 
+
 const debug = require('../../commons/debug')('textbox:textbox');
 
 const DEFAULT_OPTIONS = {
 	toolbar: {
-		buttons: ['bold', 'italic', 'underline'],
+		buttons: ['bold', 'italic', 'underline', 'fontsize'],
 	}
 }
 
@@ -40,6 +41,8 @@ class Textbox extends Component {
 		this.medium.on(dom, 'compositionend', this.handleComposition);
 		this.medium.on(dom, 'compositionupdate', this.handleComposition);
 		this.medium.on(dom, 'compositionend', this.handleComposition);
+
+		this.props.onInit();
 	}
 
 	componentWillUnmount() {
@@ -88,31 +91,6 @@ class Textbox extends Component {
 	}
 
 	render() {
-		// const defaultStyle = {
-		// 	marign: 0,
-		// 	minWidth: '1em',
-		// 	minHeight: '1em',
-		// 	width: 400,
-		// 	height: 400
-		// };
-
-		// if (this.medium) {
-		// 	this.medium.saveSelection();
-		// }
-
-		// return (
-		// 	<div className="coursebox-textbox">
-		// 		{this.state.text}
-		// 		<div
-		// 			className="textbox"
-		// 			ref={this.editorRef}
-		// 			style={{ ...(this.props.textStyle || {}), ...defaultStyle }}
-		// 			dangerouslySetInnerHTML={{ __html: this.state.text }}>
-		// 		</div>
-		// 	</div>
-		// )
-
-
 		const {
 			options,
 			text,

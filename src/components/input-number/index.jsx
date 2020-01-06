@@ -16,6 +16,11 @@ class InputNumber extends Component {
 
 		this.inputRef = React.createRef();
 		this.onChange = this.onChange.bind(this);
+		this.onMouseDown = this.onMouseDown.bind(this);
+	}
+
+	onMouseDown(evt) {
+		evt.preventDefault();
 	}
 
 	onChange(evt) {
@@ -35,7 +40,7 @@ class InputNumber extends Component {
 
 	render() {
 		return (
-			<div className="coursebox-input-number" onClick={() => this.inputRef?.current.focus()}>
+			<div className="coursebox-input-number" onMouseDown={this.onMouseDown} onClick={() => this.inputRef?.current.focus()}>
 				{
 					this.props.icon ? <img className="icon" src={this.props.icon}></img> : null
 				}
@@ -47,6 +52,7 @@ class InputNumber extends Component {
 					max={this.props.max}
 					step={this.props.step}
 					value={this.props.value}
+					onMouseDown={this.onMouseDown}
 					onChange={this.onChange}
 				/>
 				{

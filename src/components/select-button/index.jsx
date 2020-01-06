@@ -9,8 +9,13 @@ class ButtonIcon extends Component {
 		super(props);
 
 		this.onClick = this.onClick.bind(this);
+		this.onMouseDown = this.onMouseDown.bind(this);
 	}
 
+	onMouseDown(evt) {
+		evt.preventDefault();
+	}
+	
 	onClick() {
 		this.props?.onSelected(!this.props.selected);
 	}
@@ -22,7 +27,7 @@ class ButtonIcon extends Component {
 		].join(' ');
 
 		return (
-			<button className={className} onClick={this.onClick}>
+			<button className={className} onClick={this.onClick} onMouseDown={this.onMouseDown}>
 				<img className="icon" src={this.props.icon}></img>
 			</button>
 		);
