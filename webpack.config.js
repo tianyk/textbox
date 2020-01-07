@@ -9,7 +9,7 @@ const pkg = require('./package.json');
 const COMPONENT_NAME = camelCase(pkg.name, { pascalCase: true });
 
 module.exports = {
-	entry: './src/index.jsx',
+	entry: './src/components/index.js',
 	output: {
 		filename: `${pkg.name}.js`,
 		library: COMPONENT_NAME,
@@ -96,8 +96,8 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({
 			template: 'public/index.html',
-			inject: 'body',
-			COMPONENT_NAME: COMPONENT_NAME
+			inject: 'head',
+			COMPONENT_NAME: JSON.stringify(COMPONENT_NAME)
 		})
 	],
 	externals: {

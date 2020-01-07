@@ -17,10 +17,53 @@
 		href="https://lib.baomitu.com/medium-editor/5.23.3/css/medium-editor.css" rel="stylesheet">
 	<link crossorigin="anonymous" integrity="sha384-qbe1+IVx6xE4Nob4lqpziXNCeZczDFEJgoSuNHpNqWcLEGXnDVRk66y/5rzFBETi"
 		href="https://lib.baomitu.com/medium-editor/5.23.3/css/themes/default.css" rel="stylesheet">
+	<script crossorigin="anonymous" integrity="sha384-JSLRmxt+roLKbENSYQdxlXq4DbLGx492b22anlRj7R5X6tw+f6MtV/jc6Cu1CCt9"
+		src="https://lib.baomitu.com/babel-standalone/7.0.0-beta.3/babel.min.js"></script>
 </head>
 
 <body>
 	<div id="root"></div>
+	<script type="text/babel">
+		const { useState, useRef } = React;
+		const { Textbox, Editor } = window[<%= htmlWebpackPlugin.options.COMPONENT_NAME %>];
+
+		function App() {
+			// 命名参考 ReactNative https://facebook.github.io/react-native/docs/text-style-props
+			const [text, setText] = useState('<p style="margin: 0">中国<font color="#ffeedd" size="5">A</font>bc</p>');
+
+			const [editor, setEditor] = useState(null);
+			const editorRef = useRef(null);
+
+			function onContentChange(val) {
+				setText(val);
+			}
+
+			function onInit() {
+				setEditor(editorRef);
+			}
+
+			return (
+				<div>
+					<textarea value={text} onChange={(evt) => onContentChange(evt.target.value)}>
+					</textarea>
+
+					<div>
+						<Editor editorRef={editor} />
+					</div>
+
+					<div>
+						<Textbox ref={editorRef} className="textbox" style={{ border: '1px dashed #aaa', lineHeight: '1.4' }} text={text} onInit={onInit} onContentChange={onContentChange} />
+					</div>
+
+				</div>
+			);
+		}
+
+		ReactDOM.render(
+			<App />,
+			document.getElementById('root')
+		);
+	</script>
 </body>
 
 </html>
