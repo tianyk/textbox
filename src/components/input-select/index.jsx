@@ -1,6 +1,7 @@
 import './input-select.less';
 
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import SelectCollapseImage from '@assets/images/三角形_收起@2x.png';
 
@@ -15,11 +16,36 @@ class InputSelect extends Component {
 		this.onChange = this.onChange.bind(this);
 		this.onMouseDown = this.onMouseDown.bind(this);
 		this.showOptions = this.showOptions.bind(this);
+		this.hideOptions = this.hideOptions.bind(this);
 
 		this.state = {
 			showOptions: false
 		}
 	}
+
+	componentDidMount() {
+		document.addEventListener('mouseup', this.hideOptions)
+	}
+
+	componentWillUnmount() {
+		document.removeEventListener('mouseup', this.hideOptions);
+	}
+
+	hideOptions(evt) {
+		const dom = ReactDOM.findDOMNode(this);
+		const target = evt.target;
+		if (dom === target) return;
+
+		let parent = target.parentNode;
+		while(parent) {
+			if (parent === dom) return;
+			parent = parent.parentNode;
+		}
+
+		this.setState({
+			showOptions: false
+		})
+	};
 
 	onMouseDown(evt) {
 		evt.preventDefault();
@@ -34,7 +60,7 @@ class InputSelect extends Component {
 		this.props?.onChange(key, value);
 	}
 
-	showOptions() {
+	showOptions(evt) {
 		this.setState((prevState) => ({ showOptions: !prevState.showOptions }));
 	}
 
@@ -60,11 +86,17 @@ class InputSelect extends Component {
 				<div className="select-collapse">
 					<img src={SelectCollapseImage}></img>
 				</div>
-				<div className="options" style={{ display: this.state.showOptions ? 'block' : 'none' }}>
-					<ul>
-						{options}
-					</ul>
-				</div>
+				{
+					this.state.showOptions
+						?
+						<div className="options">
+							<ul>
+								{options}
+							</ul>
+						</div>
+						: null
+				}
+
 			</div>
 		);
 	}
