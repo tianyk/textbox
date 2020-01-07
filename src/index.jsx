@@ -27,7 +27,7 @@ function App() {
 			</div>
 
 			<div>
-				<Textbox ref={editorRef} className="textbox" style={{ border: '1px dashed #aaa', textAlign: 'center', lineHeight: '1.4' }} text={text} onInit={onInit} onContentChange={onContentChange} />
+				<Textbox ref={editorRef} className="textbox" style={{ border: '1px dashed #aaa', lineHeight: '1.4' }} text={text} onInit={onInit} onContentChange={onContentChange} />
 			</div>
 
 		</div>

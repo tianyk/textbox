@@ -13,9 +13,22 @@ import ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png'
 import ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';
 import { computedState } from '@commons/buttons';
 import throttle from '@commons/throttle';
-import debounce from '@commons/debounce';
 
 const debug = require('@commons/debug')('textbox:editor');
+
+function removeStyle(element, ...styleNames) {
+	for (let styleName of styleNames) {
+		element.style[styleName] = null;
+	}
+
+	const children = element.children;
+	if (children.length === 0) return;
+
+	for (let child of children) {
+		removeStyle(child, ...styleNames);
+	}
+}
+
 
 class TextboxEditor extends Component {
 	constructor(props) {
@@ -26,7 +39,7 @@ class TextboxEditor extends Component {
 		}
 
 		this.onTextStyleChange = this.onTextStyleChange.bind(this);
-		this.throttleCheckState = throttle(this.checkState, 200).bind(this);
+		this.throttleCheckState = throttle(this.checkState, 250).bind(this);
 	}
 
 	componentDidMount() {
@@ -48,9 +61,10 @@ class TextboxEditor extends Component {
 		if (!this.attachedEvent) {
 			debug('attachEventHandlers');
 			this.attachedEvent = true;
+			// this.throttleCheckState();
 
 			// MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements
-			// this.getEditor().subscribe('blur', this.handleBlur.bind(this));
+			// this.getEditor().subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
 			this.getEditor().subscribe('focus', this.throttleCheckState);
 			this.getEditor().subscribe('positionToolbar', this.throttleCheckState);
 			this.getEditor().subscribe('editableInput', this.throttleCheckState);
@@ -107,8 +121,12 @@ class TextboxEditor extends Component {
 	onTextStyleChange(field, value) {
 		debug('onTextStyleChange', field, value)
 
-		const dom = this.getEditorDOM();
+		const editorDOM = this.getEditorDOM();
 		const medium = this.getEditor();
+		const selection = medium.options.ownerDocument.getSelection();
+		const selectionRange = MediumEditor.selection.getSelectionRange(medium.options.ownerDocument);
+		let parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange);
+
 		if (medium) {
 			switch (field) {
 				case 'fontWeight':
@@ -129,13 +147,13 @@ class TextboxEditor extends Component {
 
 				case 'fontSize':
 					medium.execAction('fontSize', { value: 7 });
-					if (dom) {
-						const nodes = dom.querySelectorAll('font[size="7"]');
+					if (editorDOM) {
+						const nodes = editorDOM.querySelectorAll('font[size="7"]');
 						for (let node of nodes) {
 							node.removeAttribute('size');
 							node.style.fontSize = `${value}px`;
 						}
-						medium.trigger('editableInput', null, dom);
+						medium.trigger('editableInput', null, editorDOM);
 					}
 					break;
 
@@ -150,7 +168,35 @@ class TextboxEditor extends Component {
 						medium.execAction('justifyFull');
 					}
 					this.checkState();
-					medium.trigger('editableInput', null, dom);
+					medium.trigger('editableInput', null, editorDOM);
+					break;
+
+				case 'lineHeight':
+					// 没有选中时
+					if (selection.isCollapsed) {
+						while (parentNode) {
+							if (parentNode.parentNode === editorDOM) break;
+							parentNode = parentNode.parentNode;
+						}
+					}
+					if (!parentNode) break;
+					removeStyle(parentNode, 'lineHeight');
+					parentNode.style.lineHeight = value;
+					medium.trigger('editableInput', null, editorDOM);
+					break;
+				case 'paddingTop':
+				case 'paddingBottom':
+				case 'paddingLeft':
+				case 'paddingRight':
+					while (parentNode) {
+						if (parentNode.parentNode === editorDOM) break;
+						parentNode = parentNode.parentNode;
+					}
+					if (!parentNode) break;
+					removeStyle(parentNode, field);
+
+					parentNode.style[field] = value;
+					medium.trigger('editableInput', null, editorDOM);
 					break;
 			}
 		}
@@ -197,7 +243,7 @@ class TextboxEditor extends Component {
 					></FontLayoutButtonGroup>
 
 					{/* 行高 */}
-					<InputNumber
+					{/* <InputNumber
 						min={0.8}
 						max={5}
 						step={0.1}
@@ -205,33 +251,40 @@ class TextboxEditor extends Component {
 						icon={ImageLineHeight}
 						value={lineHeight}
 						onChange={(lineHeight) => this.onTextStyleChange('lineHeight', lineHeight)}
-					></InputNumber>
+					></InputNumber> */}
+
+					<InputSelect
+						icon={ImageLineHeight}
+						value={lineHeight}
+						options={[1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2, 2.4, 2.6, 2.8, 3.0]}
+						unit="倍"
+						onChange={(lineHeight) => this.onTextStyleChange('lineHeight', lineHeight)}
+					></InputSelect>
 
 					{/* 上下内边距 */}
-					<InputNumber
-						min={0}
-						max={100}
-						unit="px"
+					<InputSelect
 						icon={ImagePaddingTopAndBottom}
 						value={paddingTop}
+						options={[5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30]}
+						unit="px"
 						onChange={(padding) => {
-							this.onTextStyleChange('paddingTop', padding);
-							this.onTextStyleChange('paddingBottom', padding);
+							this.onTextStyleChange('paddingTop', `${padding}px`);
+							this.onTextStyleChange('paddingBottom', `${padding}px`);
 						}}
-					></InputNumber>
+					></InputSelect>
 
 					{/* 左右内边距 */}
-					<InputNumber
-						min={0}
-						max={100}
-						unit="px"
+					<InputSelect
 						icon={ImagePaddingLeftAndRight}
 						value={paddingLeft}
+						options={[5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30]}
+						unit="px"
 						onChange={(padding) => {
-							this.onTextStyleChange('paddingLeft', padding);
-							this.onTextStyleChange('paddingRight', padding)
+							this.onTextStyleChange('paddingLeft', `${padding}px`);
+							this.onTextStyleChange('paddingRight', `${padding}px`);
 						}}
-					></InputNumber>
+					></InputSelect>
+
 				</div>
 
 				{/* <label htmlFor="font-opacity-style">不透明度</label>

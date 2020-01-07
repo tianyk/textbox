@@ -34,7 +34,7 @@ class FontLayoutButtonGroup extends Component {
 		return (
 			<div className="coursebox-font-layout-button-group">
 				<SelectButton
-					selected={this.props.textAlign === 'left'}
+					selected={this.props.textAlign === 'left' || this.props.textAlign === 'start'}
 					icon={this.props.textAlign === 'left' ? ImageFontLayoutLeftSelected : ImageFontLayoutLeft}
 					onSelected={this.onFontLayoutChange('left')}
 				></SelectButton>

@@ -37,7 +37,7 @@ class InputSelect extends Component {
 		if (dom === target) return;
 
 		let parent = target.parentNode;
-		while(parent) {
+		while (parent) {
 			if (parent === dom) return;
 			parent = parent.parentNode;
 		}
@@ -60,17 +60,21 @@ class InputSelect extends Component {
 		this.props?.onChange(key, value);
 	}
 
-	showOptions(evt) {
+	showOptions() {
 		this.setState((prevState) => ({ showOptions: !prevState.showOptions }));
 	}
 
 	render() {
+		const selectValue = this.props.value;
 		const options = this.props.options.map(option => {
+			let selected = false;
 			if (option.key && option.value) {
-				return <li data-key={option.key} data-value={option.value} onClick={this.onChange}>{option.value}</li>
+				if (selectValue) selected = ((selectValue).toString() === (option.key).toString());
+				return <li className={selected ? 'selected' : ''} data-key={option.key} data-value={option.value} onClick={this.onChange}>{option.value}</li>
 			} else {
 				option = option.toString();
-				return <li data-key={option} data-value={option} onClick={this.onChange}>{option}</li>
+				if (selectValue) selected = ((selectValue).toString() === option);
+				return <li className={selected ? 'selected' : ''}  data-key={option} data-value={option} onClick={this.onChange}>{option}</li>
 			}
 		});
 
@@ -79,7 +83,7 @@ class InputSelect extends Component {
 				{
 					this.props.icon ? <img className="icon" src={this.props.icon}></img> : null
 				}
-				<span className="select-value">{this.props.value}</span>
+				<span className="select-value">{selectValue}</span>
 				{
 					this.props.unit ? <span className="unit">{this.props.unit}</span> : null
 				}
