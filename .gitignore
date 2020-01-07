@@ -63,4 +63,4 @@ public/sharp-libvips/
 eslint/
 .git-rewrite/
 data/*/chrome
-dist/
+# dist/
