@@ -31,8 +31,10 @@ class FontLayoutButtonGroup extends Component {
 	}
 
 	render() {
+		const className = this.props.className;
+
 		return (
-			<div className="coursebox-font-layout-button-group">
+			<div className={`coursebox-font-layout-button-group ${className}`}>
 				<SelectButton
 					selected={this.props.textAlign === 'left' || this.props.textAlign === 'start'}
 					icon={this.props.textAlign === 'left' ? ImageFontLayoutLeftSelected : ImageFontLayoutLeft}
@@ -51,18 +53,19 @@ class FontLayoutButtonGroup extends Component {
 					onSelected={this.onFontLayoutChange('right')}
 				></SelectButton>
 
-				<SelectButton
+				{/* <SelectButton
 					selected={this.props.textAlign === 'justify'}
 					icon={this.props.textAlign === 'justify' ? ImageFontLayoutJustifySelected : ImageFontLayoutJustify}
 					onSelected={this.onFontLayoutChange('justify')}
-				></SelectButton>
+				></SelectButton> */}
 			</div>
 		);
 	}
 }
 
 PropTypes.defaultProps = {
-	textAlign: 'start'
+	textAlign: 'start',
+	'className': ''
 };
 
 PropTypes.propTypes = {

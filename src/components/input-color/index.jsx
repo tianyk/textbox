@@ -111,8 +111,10 @@ class InputColor extends Component {
 	}
 
 	render() {
+		const className = this.props.className || '';
+		
 		return (
-			<button className="coursebox-input-color" onClick={this.pickColor}>
+			<button className={`coursebox-input-color ${className}`} onClick={this.pickColor}>
 				<div className="font-color-icon">
 					<img src={FontColorImage}></img>
 					<div className="font-color-bar" style={{ backgroundColor: this.props.value }}></div>

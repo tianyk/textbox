@@ -21,13 +21,10 @@ class ButtonIcon extends Component {
 	}
 
 	render() {
-		const className = [
-			'coursebox-button-icon',
-			this.props.selected ? 'selected' : ''
-		].join(' ');
+		const className = this.props.className;
 
 		return (
-			<button className={className} onClick={this.onClick} onMouseDown={this.onMouseDown}>
+			<button className={`coursebox-button-icon ${className} ${this.props.selected ? 'selected' : ''}`} onClick={this.onClick} onMouseDown={this.onMouseDown}>
 				<img className="icon" src={this.props.icon}></img>
 			</button>
 		);

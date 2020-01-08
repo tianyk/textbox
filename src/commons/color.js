@@ -305,8 +305,3 @@ export function parseToHSVA(str) {
 
 	return { values: null, type: null };
 }
-
-// export function rgbToHex(r, g, b) {
-// 	// hsvToHex()
-// 	// return hsvToHex(...rgbToHsv(r, g, b))
-// }

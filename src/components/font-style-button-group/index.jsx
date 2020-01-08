@@ -35,8 +35,9 @@ class FontStyleButtonGroup extends Component {
 	}
 
 	render() {
+		const className = this.props.className;
 		return (
-			<div className="coursebox-font-style-button-group">
+			<div className={`coursebox-font-style-button-group ${className}`}>
 				<SelectButton
 					selected={this.props.fontWeight === 'bold'}
 					icon={ImageFontWeight}
@@ -60,12 +61,14 @@ class FontStyleButtonGroup extends Component {
 FontStyleButtonGroup.defaultProps = {
 	fontWeight: 'normal',
 	fontStyle: 'normal',
-	textDecoration: 'none'
+	textDecoration: 'none',
+	className: ''
 };
 
 FontStyleButtonGroup.propTypes = {
 	fontWeight: PropTypes.string,
 	fontStyle: PropTypes.string,
+	className: PropTypes.string,
 	textDecoration: PropTypes.string,
 	onFontStyleChange: PropTypes.func.isRequired
 }

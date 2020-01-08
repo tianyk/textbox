@@ -9,7 +9,7 @@ const debug = require('../../commons/debug')('textbox:textbox');
 
 const DEFAULT_OPTIONS = {
 	toolbar: {
-		buttons: ['bold', 'italic', 'underline', 'fontsize'],
+		buttons: ['bold', 'italic', 'underline', 'justifyLeft', 'justifyCenter', 'justifyRight'],
 	}
 }
 
@@ -42,7 +42,9 @@ class Textbox extends Component {
 		this.medium.on(dom, 'compositionupdate', this.handleComposition);
 		this.medium.on(dom, 'compositionend', this.handleComposition);
 
-		this.props.onInit();
+		setTimeout(() => {
+			this.props.onInit();
+		}, 0);
 	}
 
 	componentWillUnmount() {
@@ -104,7 +106,6 @@ class Textbox extends Component {
 		if (this.medium) {
 			this.medium.saveSelection();
 		}
-
 		return React.createElement(tag, props);
 	}
 }

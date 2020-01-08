@@ -120,9 +120,10 @@ class TextboxEditor extends Component {
 
 	onTextStyleChange(field, value) {
 		debug('onTextStyleChange', field, value)
+		const medium = this.getEditor();
+		if (!medium) return;
 
 		const editorDOM = this.getEditorDOM();
-		const medium = this.getEditor();
 		const selection = medium.options.ownerDocument.getSelection();
 		const selectionRange = MediumEditor.selection.getSelectionRange(medium.options.ownerDocument);
 		let parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange);
@@ -215,11 +216,13 @@ class TextboxEditor extends Component {
 
 				<div id="font-style">
 					<InputColor
+						className="__font-color"
 						value={this.state.textStyle.color}
 						onChange={(color) => this.onTextStyleChange('color', color)}
 					></InputColor>
 
 					<InputSelect
+						className="__font-size"
 						value={fontSize}
 						options={[12, 13, 14, 16, 18, 20, 28, 36, 48, 72]}
 						unit="px"
@@ -227,6 +230,7 @@ class TextboxEditor extends Component {
 					></InputSelect>
 
 					<FontStyleButtonGroup
+						className="__font-style"
 						fontWeight={this.state.textStyle?.fontWeight}
 						fontStyle={this.state.textStyle.fontStyle}
 						textDecoration={this.state.textStyle.textDecoration}
@@ -238,6 +242,7 @@ class TextboxEditor extends Component {
 				<div id="font-layout-style">
 					{/* 对齐方式 */}
 					<FontLayoutButtonGroup
+						className="__font-layout"
 						textAlign={this.state.textStyle.textAlign}
 						onFontLayoutChange={(textAlign) => this.onTextStyleChange('textAlign', textAlign)}
 					></FontLayoutButtonGroup>
@@ -253,16 +258,18 @@ class TextboxEditor extends Component {
 						onChange={(lineHeight) => this.onTextStyleChange('lineHeight', lineHeight)}
 					></InputNumber> */}
 
-					<InputSelect
+					{/* <InputSelect
+						className="__font-line-height"
 						icon={ImageLineHeight}
 						value={lineHeight}
 						options={[1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2, 2.4, 2.6, 2.8, 3.0]}
 						unit="倍"
 						onChange={(lineHeight) => this.onTextStyleChange('lineHeight', lineHeight)}
-					></InputSelect>
+					></InputSelect> */}
 
 					{/* 上下内边距 */}
-					<InputSelect
+					{/* <InputSelect
+						className="__font-padding-top-bottom"
 						icon={ImagePaddingTopAndBottom}
 						value={paddingTop}
 						options={[5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30]}
@@ -271,10 +278,11 @@ class TextboxEditor extends Component {
 							this.onTextStyleChange('paddingTop', `${padding}px`);
 							this.onTextStyleChange('paddingBottom', `${padding}px`);
 						}}
-					></InputSelect>
+					></InputSelect> */}
 
 					{/* 左右内边距 */}
-					<InputSelect
+					{/* <InputSelect
+						className="__font-padding-left-right"
 						icon={ImagePaddingLeftAndRight}
 						value={paddingLeft}
 						options={[5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30]}
@@ -283,7 +291,7 @@ class TextboxEditor extends Component {
 							this.onTextStyleChange('paddingLeft', `${padding}px`);
 							this.onTextStyleChange('paddingRight', `${padding}px`);
 						}}
-					></InputSelect>
+					></InputSelect> */}
 
 				</div>
 

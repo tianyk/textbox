@@ -39,8 +39,10 @@ class InputNumber extends Component {
 	}
 
 	render() {
+		const className = this.props.className || '';
+
 		return (
-			<div className="coursebox-input-number" onMouseDown={this.onMouseDown} onClick={() => this.inputRef?.current.focus()}>
+			<div className={`coursebox-input-number ${className}`} onMouseDown={this.onMouseDown} onClick={() => this.inputRef?.current.focus()}>
 				{
 					this.props.icon ? <img className="icon" src={this.props.icon}></img> : null
 				}

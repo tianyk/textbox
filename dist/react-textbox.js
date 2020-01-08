@@ -595,7 +595,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".coursebox-editor {\n  width: 194px;\n  padding: 3px;\n  border: 1px solid #E8E8E8;\n}\n", ""]);
+exports.push([module.i, ".coursebox-editor {\n  width: 194px;\n  padding: 3px;\n  font-size: 14px;\n}\n.coursebox-editor #font-style,\n.coursebox-editor #font-layout-style {\n  margin-top: 5px;\n}\n.coursebox-editor #font-style .__font-color,\n.coursebox-editor #font-style .__font-size,\n.coursebox-editor #font-style .__font-style {\n  margin: 0 3px 5px 0;\n}\n.coursebox-editor #font-layout-style .__font-layout,\n.coursebox-editor #font-layout-style .__font-line-height,\n.coursebox-editor #font-layout-style .__font-padding-top-bottom,\n.coursebox-editor #font-layout-style .__font-padding-left-right {\n  margin: 0 3px 5px 0;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -11598,22 +11598,16 @@ module.exports.formatError = function(err) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computedState", function() { return computedState; });
-/* harmony import */ var _color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./color */ "./src/commons/color.js");
 var debug = __webpack_require__(/*! ./debug */ "./src/commons/debug.js")('textbox:commons:button');
 
-
-
 function rgba2hex(orig) {
-  var a,
-      isPercent,
+  var a = '',
       rgb = orig.replace(/\s/g, '').match(/^rgba?\((\d+),(\d+),(\d+),?([^,\s)]+)?/i),
       alpha = (rgb && rgb[4] || "").trim(),
       hex = rgb ? (rgb[1] | 1 << 8).toString(16).slice(1) + (rgb[2] | 1 << 8).toString(16).slice(1) + (rgb[3] | 1 << 8).toString(16).slice(1) : orig;
 
-  if (alpha !== "") {
-    a = alpha;
-  } else {
-    a = 'FF';
+  if (alpha !== '') {
+    a = (255 * parseFloat(alpha)).toString(16);
   }
 
   hex = hex + a;
@@ -11746,377 +11740,6 @@ function computedState() {
 }
 
 
-
-/***/ }),
-
-/***/ "./src/commons/color.js":
-/*!******************************!*\
-  !*** ./src/commons/color.js ***!
-  \******************************/
-/*! exports provided: hsvToRgb, hsvToHex, hsvToCmyk, hsvToHsl, parseToHSVA */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hsvToRgb", function() { return hsvToRgb; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hsvToHex", function() { return hsvToHex; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hsvToCmyk", function() { return hsvToCmyk; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hsvToHsl", function() { return hsvToHsl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseToHSVA", function() { return parseToHSVA; });
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
-// Shorthands
-var min = Math.min,
-    max = Math.max,
-    floor = Math.floor,
-    round = Math.round;
-/**
- * Tries to convert a color name to rgb/a hex representation
- * @param name
- * @returns {string | CanvasGradient | CanvasPattern}
- */
-
-function standardizeColor(name) {
-  // Since invalid color's will be parsed as black, filter them out
-  if (name.toLowerCase() === 'black') {
-    return '#000';
-  }
-
-  var ctx = document.createElement('canvas').getContext('2d');
-  ctx.fillStyle = name;
-  return ctx.fillStyle === '#000' ? null : ctx.fillStyle;
-}
-/**
- * Convert HSV spectrum to RGB.
- * @param h Hue
- * @param s Saturation
- * @param v Value
- * @returns {number[]} Array with rgb values.
- */
-
-
-function hsvToRgb(h, s, v) {
-  h = h / 360 * 6;
-  s /= 100;
-  v /= 100;
-  var i = floor(h);
-  var f = h - i;
-  var p = v * (1 - s);
-  var q = v * (1 - f * s);
-  var t = v * (1 - (1 - f) * s);
-  var mod = i % 6;
-  var r = [v, q, p, p, t, v][mod];
-  var g = [t, v, v, q, p, p][mod];
-  var b = [p, p, t, v, v, q][mod];
-  return [r * 255, g * 255, b * 255];
-}
-/**
- * Convert HSV spectrum to Hex.
- * @param h Hue
- * @param s Saturation
- * @param v Value
- * @returns {string[]} Hex values
- */
-
-function hsvToHex(h, s, v) {
-  return hsvToRgb(h, s, v).map(function (v) {
-    return round(v).toString(16).padStart(2, '0');
-  });
-}
-/**
- * Convert HSV spectrum to CMYK.
- * @param h Hue
- * @param s Saturation
- * @param v Value
- * @returns {number[]} CMYK values
- */
-
-function hsvToCmyk(h, s, v) {
-  var rgb = hsvToRgb(h, s, v);
-  var r = rgb[0] / 255;
-  var g = rgb[1] / 255;
-  var b = rgb[2] / 255;
-  var k, c, m, y;
-  k = min(1 - r, 1 - g, 1 - b);
-  c = k === 1 ? 0 : (1 - r - k) / (1 - k);
-  m = k === 1 ? 0 : (1 - g - k) / (1 - k);
-  y = k === 1 ? 0 : (1 - b - k) / (1 - k);
-  return [c * 100, m * 100, y * 100, k * 100];
-}
-/**
- * Convert HSV spectrum to HSL.
- * @param h Hue
- * @param s Saturation
- * @param v Value
- * @returns {number[]} HSL values
- */
-
-function hsvToHsl(h, s, v) {
-  s /= 100, v /= 100;
-  var l = (2 - s) * v / 2;
-
-  if (l !== 0) {
-    if (l === 1) {
-      s = 0;
-    } else if (l < 0.5) {
-      s = s * v / (l * 2);
-    } else {
-      s = s * v / (2 - l * 2);
-    }
-  }
-
-  return [h, s * 100, l * 100];
-}
-/**
- * Convert RGB to HSV.
- * @param r Red
- * @param g Green
- * @param b Blue
- * @return {number[]} HSV values.
- */
-
-function rgbToHsv(r, g, b) {
-  r /= 255, g /= 255, b /= 255;
-  var h, s, v;
-  var minVal = min(r, g, b);
-  var maxVal = max(r, g, b);
-  var delta = maxVal - minVal;
-  v = maxVal;
-
-  if (delta === 0) {
-    h = s = 0;
-  } else {
-    s = delta / maxVal;
-    var dr = ((maxVal - r) / 6 + delta / 2) / delta;
-    var dg = ((maxVal - g) / 6 + delta / 2) / delta;
-    var db = ((maxVal - b) / 6 + delta / 2) / delta;
-
-    if (r === maxVal) {
-      h = db - dg;
-    } else if (g === maxVal) {
-      h = 1 / 3 + dr - db;
-    } else if (b === maxVal) {
-      h = 2 / 3 + dg - dr;
-    }
-
-    if (h < 0) {
-      h += 1;
-    } else if (h > 1) {
-      h -= 1;
-    }
-  }
-
-  return [h * 360, s * 100, v * 100];
-}
-/**
- * Convert CMYK to HSV.
- * @param c Cyan
- * @param m Magenta
- * @param y Yellow
- * @param k Key (Black)
- * @return {number[]} HSV values.
- */
-
-
-function cmykToHsv(c, m, y, k) {
-  c /= 100;
-  m /= 100;
-  y /= 100;
-  k /= 100;
-  var r = (1 - min(1, c * (1 - k) + k)) * 255;
-  var g = (1 - min(1, m * (1 - k) + k)) * 255;
-  var b = (1 - min(1, y * (1 - k) + k)) * 255;
-  return _toConsumableArray(rgbToHsv(r, g, b));
-}
-/**
- * Convert HSL to HSV.
- * @param h Hue
- * @param s Saturation
- * @param l Lightness
- * @return {number[]} HSV values.
- */
-
-
-function hslToHsv(h, s, l) {
-  s /= 100;
-  l /= 100;
-  s *= l < 0.5 ? l : 1 - l;
-  var ns = 2 * s / (l + s) * 100;
-  var v = (l + s) * 100;
-  return [h, ns, v];
-}
-/**
- * Convert HEX to HSV.
- * @param hex Hexadecimal string of rgb colors, can have length 3 or 6.
- * @return {number[]} HSV values.
- */
-
-
-function hexToHsv(hex) {
-  return rgbToHsv.apply(void 0, _toConsumableArray(hex.match(/.{2}/g).map(function (v) {
-    return parseInt(v, 16);
-  })));
-}
-/**
- * Try's to parse a string which represents a color to a HSV array.
- * Current supported types are cmyk, rgba, hsla and hexadecimal.
- * @param str
- * @return {*}
- */
-
-
-function parseToHSVA(str) {
-  // Check if string is a color-name
-  str = str.match(/^[a-zA-Z]+$/) ? standardizeColor(str) : str; // Regular expressions to match different types of color represention
-
-  var regex = {
-    cmyk: /^cmyk[\D]+([\d.]+)[\D]+([\d.]+)[\D]+([\d.]+)[\D]+([\d.]+)/i,
-    rgba: /^((rgba)|rgb)[\D]+([\d.]+)[\D]+([\d.]+)[\D]+([\d.]+)[\D]*?([\d.]+|$)/i,
-    hsla: /^((hsla)|hsl)[\D]+([\d.]+)[\D]+([\d.]+)[\D]+([\d.]+)[\D]*?([\d.]+|$)/i,
-    hsva: /^((hsva)|hsv)[\D]+([\d.]+)[\D]+([\d.]+)[\D]+([\d.]+)[\D]*?([\d.]+|$)/i,
-    hexa: /^#?(([\dA-Fa-f]{3,4})|([\dA-Fa-f]{6})|([\dA-Fa-f]{8}))$/i
-  };
-  /**
-   * Takes an Array of any type, convert strings which represents
-   * a number to a number an anything else to undefined.
-   * @param array
-   * @return {*}
-   */
-
-  var numarize = function numarize(array) {
-    return array.map(function (v) {
-      return /^(|\d+)\.\d+|\d+$/.test(v) ? Number(v) : undefined;
-    });
-  };
-
-  var match;
-
-  invalid: for (var type in regex) {
-    // Check if current scheme passed
-    if (!(match = regex[type].exec(str))) continue; // match[2] does only contain a truly value if rgba, hsla, or hsla got matched
-
-    var alphaValid = function alphaValid(a) {
-      return !!match[2] === (typeof a === 'number');
-    }; // Try to convert
-
-
-    switch (type) {
-      case 'cmyk':
-        {
-          var _numarize = numarize(match),
-              _numarize2 = _slicedToArray(_numarize, 5),
-              c = _numarize2[1],
-              m = _numarize2[2],
-              y = _numarize2[3],
-              k = _numarize2[4];
-
-          if (c > 100 || m > 100 || y > 100 || k > 100) break invalid;
-          return {
-            values: cmykToHsv(c, m, y, k),
-            type: type
-          };
-        }
-
-      case 'rgba':
-        {
-          var _numarize3 = numarize(match),
-              _numarize4 = _slicedToArray(_numarize3, 7),
-              r = _numarize4[3],
-              g = _numarize4[4],
-              b = _numarize4[5],
-              a = _numarize4[6];
-
-          if (r > 255 || g > 255 || b > 255 || a < 0 || a > 1 || !alphaValid(a)) break invalid;
-          return {
-            values: [].concat(_toConsumableArray(rgbToHsv(r, g, b)), [a]),
-            a: a,
-            type: type
-          };
-        }
-
-      case 'hexa':
-        {
-          var _match = match,
-              _match2 = _slicedToArray(_match, 2),
-              hex = _match2[1];
-
-          if (hex.length === 4 || hex.length === 3) {
-            hex = hex.split('').map(function (v) {
-              return v + v;
-            }).join('');
-          }
-
-          var raw = hex.substring(0, 6);
-
-          var _a = hex.substring(6); // Convert 0 - 255 to 0 - 1 for opacity
-
-
-          _a = _a ? parseInt(_a, 16) / 255 : undefined;
-          return {
-            values: [].concat(_toConsumableArray(hexToHsv(raw)), [_a]),
-            a: _a,
-            type: type
-          };
-        }
-
-      case 'hsla':
-        {
-          var _numarize5 = numarize(match),
-              _numarize6 = _slicedToArray(_numarize5, 7),
-              h = _numarize6[3],
-              s = _numarize6[4],
-              l = _numarize6[5],
-              _a2 = _numarize6[6];
-
-          if (h > 360 || s > 100 || l > 100 || _a2 < 0 || _a2 > 1 || !alphaValid(_a2)) break invalid;
-          return {
-            values: [].concat(_toConsumableArray(hslToHsv(h, s, l)), [_a2]),
-            a: _a2,
-            type: type
-          };
-        }
-
-      case 'hsva':
-        {
-          var _numarize7 = numarize(match),
-              _numarize8 = _slicedToArray(_numarize7, 7),
-              _h = _numarize8[3],
-              _s2 = _numarize8[4],
-              v = _numarize8[5],
-              _a3 = _numarize8[6];
-
-          if (_h > 360 || _s2 > 100 || v > 100 || _a3 < 0 || _a3 > 1 || !alphaValid(_a3)) break invalid;
-          return {
-            values: [_h, _s2, v, _a3],
-            a: _a3,
-            type: type
-          };
-        }
-    }
-  }
-
-  return {
-    values: null,
-    type: null
-  };
-} // export function rgbToHex(r, g, b) {
-// 	// hsvToHex()
-// 	// return hsvToHex(...rgbToHsv(r, g, b))
-// }
 
 /***/ }),
 
@@ -12438,8 +12061,9 @@ function (_Component) {
     key: "onTextStyleChange",
     value: function onTextStyleChange(field, value) {
       debug('onTextStyleChange', field, value);
-      var editorDOM = this.getEditorDOM();
       var medium = this.getEditor();
+      if (!medium) return;
+      var editorDOM = this.getEditorDOM();
       var selection = medium.options.ownerDocument.getSelection();
       var selectionRange = medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.selection.getSelectionRange(medium.options.ownerDocument);
       var parentNode = medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.selection.getSelectedParentElement(selectionRange);
@@ -12573,11 +12197,13 @@ function (_Component) {
       }, "\u6587\u5B57"), React.createElement("div", {
         id: "font-style"
       }, React.createElement(_input_color__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        className: "__font-color",
         value: this.state.textStyle.color,
         onChange: function onChange(color) {
           return _this2.onTextStyleChange('color', color);
         }
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        className: "__font-size",
         value: fontSize,
         options: [12, 13, 14, 16, 18, 20, 28, 36, 48, 72],
         unit: "px",
@@ -12585,6 +12211,7 @@ function (_Component) {
           return _this2.onTextStyleChange('fontSize', fontSize);
         }
       }), React.createElement(_font_style_button_group__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        className: "__font-style",
         fontWeight: (_this$state$textStyle2 = this.state.textStyle) === null || _this$state$textStyle2 === void 0 ? void 0 : _this$state$textStyle2.fontWeight,
         fontStyle: this.state.textStyle.fontStyle,
         textDecoration: this.state.textStyle.textDecoration,
@@ -12596,37 +12223,10 @@ function (_Component) {
       }, "\u5E03\u5C40"), React.createElement("div", {
         id: "font-layout-style"
       }, React.createElement(_font_layout_button_group__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        className: "__font-layout",
         textAlign: this.state.textStyle.textAlign,
         onFontLayoutChange: function onFontLayoutChange(textAlign) {
           return _this2.onTextStyleChange('textAlign', textAlign);
-        }
-      }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__["default"],
-        value: lineHeight,
-        options: [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2, 2.4, 2.6, 2.8, 3.0],
-        unit: "\u500D",
-        onChange: function onChange(lineHeight) {
-          return _this2.onTextStyleChange('lineHeight', lineHeight);
-        }
-      }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__["default"],
-        value: paddingTop,
-        options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],
-        unit: "px",
-        onChange: function onChange(padding) {
-          _this2.onTextStyleChange('paddingTop', "".concat(padding, "px"));
-
-          _this2.onTextStyleChange('paddingBottom', "".concat(padding, "px"));
-        }
-      }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__["default"],
-        value: paddingLeft,
-        options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],
-        unit: "px",
-        onChange: function onChange(padding) {
-          _this2.onTextStyleChange('paddingLeft', "".concat(padding, "px"));
-
-          _this2.onTextStyleChange('paddingRight', "".concat(padding, "px"));
         }
       })));
     }
@@ -12758,8 +12358,9 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var className = this.props.className;
       return React.createElement("div", {
-        className: "coursebox-font-layout-button-group"
+        className: "coursebox-font-layout-button-group ".concat(className)
       }, React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
         selected: this.props.textAlign === 'left' || this.props.textAlign === 'start',
         icon: this.props.textAlign === 'left' ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_8__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_4__["default"],
@@ -12772,10 +12373,6 @@ function (_Component) {
         selected: this.props.textAlign === 'right',
         icon: this.props.textAlign === 'right' ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__["default"],
         onSelected: this.onFontLayoutChange('right')
-      }), React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        selected: this.props.textAlign === 'justify',
-        icon: this.props.textAlign === 'justify' ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_7__["default"],
-        onSelected: this.onFontLayoutChange('justify')
       }));
     }
   }]);
@@ -12784,7 +12381,8 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.defaultProps = {
-  textAlign: 'start'
+  textAlign: 'start',
+  'className': ''
 };
 prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.propTypes = {
   textAlign: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
@@ -12917,8 +12515,9 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var className = this.props.className;
       return React.createElement("div", {
-        className: "coursebox-font-style-button-group"
+        className: "coursebox-font-style-button-group ".concat(className)
       }, React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
         selected: this.props.fontWeight === 'bold',
         icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_4__["default"],
@@ -12941,11 +12540,13 @@ function (_Component) {
 FontStyleButtonGroup.defaultProps = {
   fontWeight: 'normal',
   fontStyle: 'normal',
-  textDecoration: 'none'
+  textDecoration: 'none',
+  className: ''
 };
 FontStyleButtonGroup.propTypes = {
   fontWeight: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
   fontStyle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
+  className: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
   textDecoration: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
   onFontStyleChange: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired
 };
@@ -13121,8 +12722,9 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var className = this.props.className || '';
       return React.createElement("button", {
-        className: "coursebox-input-color",
+        className: "coursebox-input-color ".concat(className),
         onClick: this.pickColor
       }, React.createElement("div", {
         className: "font-color-icon"
@@ -13273,8 +12875,9 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
+      var className = this.props.className || '';
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "coursebox-input-number",
+        className: "coursebox-input-number ".concat(className),
         onMouseDown: this.onMouseDown,
         onClick: function onClick() {
           var _this2$inputRef;
@@ -13496,6 +13099,7 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
+      var className = this.props.className || '';
       var selectValue = this.props.value;
       var options = this.props.options.map(function (option) {
         var selected = false;
@@ -13520,7 +13124,7 @@ function (_Component) {
         }
       });
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "coursebox-input-select",
+        className: "coursebox-input-select ".concat(className),
         onClick: this.showOptions,
         onMouseDown: this.onMouseDown
       }, this.props.icon ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -13659,9 +13263,9 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var className = ['coursebox-button-icon', this.props.selected ? 'selected' : ''].join(' ');
+      var className = this.props.className;
       return React.createElement("button", {
-        className: className,
+        className: "coursebox-button-icon ".concat(className, " ").concat(this.props.selected ? 'selected' : ''),
         onClick: this.onClick,
         onMouseDown: this.onMouseDown
       }, React.createElement("img", {
@@ -13770,7 +13374,7 @@ var debug = __webpack_require__(/*! ../../commons/debug */ "./src/commons/debug.
 
 var DEFAULT_OPTIONS = {
   toolbar: {
-    buttons: ['bold', 'italic', 'underline', 'fontsize']
+    buttons: ['bold', 'italic', 'underline', 'justifyLeft', 'justifyCenter', 'justifyRight']
   }
 };
 
@@ -13813,7 +13417,9 @@ function (_Component) {
       this.medium.on(dom, 'compositionend', this.handleComposition);
       this.medium.on(dom, 'compositionupdate', this.handleComposition);
       this.medium.on(dom, 'compositionend', this.handleComposition);
-      this.props.onInit();
+      setTimeout(function () {
+        _this2.props.onInit();
+      }, 0);
     }
   }, {
     key: "componentWillUnmount",

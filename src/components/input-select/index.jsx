@@ -65,6 +65,7 @@ class InputSelect extends Component {
 	}
 
 	render() {
+		const className = this.props.className || '';
 		const selectValue = this.props.value;
 		const options = this.props.options.map(option => {
 			let selected = false;
@@ -79,7 +80,7 @@ class InputSelect extends Component {
 		});
 
 		return (
-			<div className="coursebox-input-select" onClick={this.showOptions} onMouseDown={this.onMouseDown}>
+			<div className={`coursebox-input-select ${className}`} onClick={this.showOptions} onMouseDown={this.onMouseDown}>
 				{
 					this.props.icon ? <img className="icon" src={this.props.icon}></img> : null
 				}
