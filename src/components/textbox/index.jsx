@@ -41,10 +41,6 @@ class Textbox extends Component {
 		this.medium.on(dom, 'compositionend', this.handleComposition);
 		this.medium.on(dom, 'compositionupdate', this.handleComposition);
 		this.medium.on(dom, 'compositionend', this.handleComposition);
-
-		setTimeout(() => {
-			this.props.onInit();
-		}, 0);
 	}
 
 	componentWillUnmount() {

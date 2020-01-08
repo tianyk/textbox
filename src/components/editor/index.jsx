@@ -1,18 +1,19 @@
 import './editor.less';
 
 import { Component } from 'react';
-import InputNumber from '../input-number';
+// import InputNumber from '../input-number';
 import InputSelect from '../input-select';
 import ReactDOM from 'react-dom';
 import InputColor from '../input-color';
 import MediumEditor from 'medium-editor';
 import FontStyleButtonGroup from '../font-style-button-group';
 import FontLayoutButtonGroup from '../font-layout-button-group';
-import ImageLineHeight from '@assets/images/行间距_正常@2x.png';
-import ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png';
-import ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';
-import { computedState } from '@commons/buttons';
+// import ImageLineHeight from '@assets/images/行间距_正常@2x.png';
+// import ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png';
+// import ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';
+import { computedState } from '@commons/computed_state';
 import throttle from '@commons/throttle';
+import { isReactComponentInstance, isElement} from '@commons/utils';
 
 const debug = require('@commons/debug')('textbox:editor');
 
@@ -44,7 +45,7 @@ class TextboxEditor extends Component {
 
 	componentDidMount() {
 		debug('componentDidMount');
-		if (this.getEditor() && !this.attachedEvent) this.attachEventHandlers();
+		if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();
 	}
 
 	componentWillUnmount() {
@@ -53,7 +54,7 @@ class TextboxEditor extends Component {
 
 	componentDidUpdate() {
 		debug('componentDidUpdate');
-		if (this.getEditor() && !this.attachedEvent) this.attachEventHandlers();
+		if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();
 	}
 
 
@@ -64,25 +65,25 @@ class TextboxEditor extends Component {
 			// this.throttleCheckState();
 
 			// MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements
-			// this.getEditor().subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
-			this.getEditor().subscribe('focus', this.throttleCheckState);
-			this.getEditor().subscribe('positionToolbar', this.throttleCheckState);
-			this.getEditor().subscribe('editableInput', this.throttleCheckState);
+			// this.getTextbox().subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
+			this.getTextbox().subscribe('focus', this.throttleCheckState);
+			this.getTextbox().subscribe('positionToolbar', this.throttleCheckState);
+			this.getTextbox().subscribe('editableInput', this.throttleCheckState);
 
 			// Updating the state of the toolbar as things change
-			this.getEditor().subscribe('editableClick', this.throttleCheckState);
-			this.getEditor().subscribe('editableKeyup', this.throttleCheckState);
+			this.getTextbox().subscribe('editableClick', this.throttleCheckState);
+			this.getTextbox().subscribe('editableKeyup', this.throttleCheckState);
 		}
 	}
 
 	checkState() {
 		debug('checkState');
-		const selectionRange = MediumEditor.selection.getSelectionRange(this.getEditor().options?.ownerDocument);
+		const selectionRange = MediumEditor.selection.getSelectionRange(this.getTextbox().options?.ownerDocument);
 		if (!selectionRange) return;
 
 		let parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange);
 		// Make sure the selection parent isn't outside of the contenteditable
-		if (!this.getEditor().elements.some(function (element) {
+		if (!this.getTextbox().elements.some(function (element) {
 			return MediumEditor.util.isDescendant(element, parentNode, true);
 		})) {
 			return;
@@ -91,7 +92,7 @@ class TextboxEditor extends Component {
 		const textStyle = {};
 		// Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node
 		while (parentNode) {
-			computedState(textStyle, parentNode, this.getEditor().options?.contentWindow);
+			computedState(textStyle, parentNode, this.getTextbox().options?.contentWindow);
 
 			// we can abort the search upwards if we leave the contentEditable element
 			if (MediumEditor.util.isMediumEditorElement(parentNode)) {
@@ -107,23 +108,31 @@ class TextboxEditor extends Component {
 		});
 	}
 
-	getEditorDOM() {
-		if (this.props.editorRef && this.props.editorRef.current) {
-			return ReactDOM.findDOMNode(this.props.editorRef.current);
+	getTextboxDOM() {
+		debug('getTextboxDOM', this.props.textboxDOM);
+		if (this.props.textboxDOM) {
+			const textboxDOM = this.props.textboxDOM;
+			if (isReactComponentInstance(textboxDOM)) {
+				return ReactDOM.findDOMNode(textboxDOM);
+			} else if (isElement(textboxDOM)) {
+				return textboxDOM;
+			} else {
+				throw new Error('`textboxDOM` 必须是一个 HTMLElement 或者 React Component 实例');
+			}
 		}
 	}
 
-	getEditor() {
-		const dom = this.getEditorDOM();
+	getTextbox() {
+		const dom = this.getTextboxDOM();
 		return dom ? MediumEditor.getEditorFromElement(dom) : null;
 	}
 
 	onTextStyleChange(field, value) {
 		debug('onTextStyleChange', field, value)
-		const medium = this.getEditor();
+		const medium = this.getTextbox();
 		if (!medium) return;
 
-		const editorDOM = this.getEditorDOM();
+		const textboxDOM = this.getTextboxDOM();
 		const selection = medium.options.ownerDocument.getSelection();
 		const selectionRange = MediumEditor.selection.getSelectionRange(medium.options.ownerDocument);
 		let parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange);
@@ -148,13 +157,13 @@ class TextboxEditor extends Component {
 
 				case 'fontSize':
 					medium.execAction('fontSize', { value: 7 });
-					if (editorDOM) {
-						const nodes = editorDOM.querySelectorAll('font[size="7"]');
+					if (textboxDOM) {
+						const nodes = textboxDOM.querySelectorAll('font[size="7"]');
 						for (let node of nodes) {
 							node.removeAttribute('size');
 							node.style.fontSize = `${value}px`;
 						}
-						medium.trigger('editableInput', null, editorDOM);
+						medium.trigger('editableInput', null, textboxDOM);
 					}
 					break;
 
@@ -169,35 +178,35 @@ class TextboxEditor extends Component {
 						medium.execAction('justifyFull');
 					}
 					this.checkState();
-					medium.trigger('editableInput', null, editorDOM);
+					medium.trigger('editableInput', null, textboxDOM);
 					break;
 
 				case 'lineHeight':
 					// 没有选中时
 					if (selection.isCollapsed) {
 						while (parentNode) {
-							if (parentNode.parentNode === editorDOM) break;
+							if (parentNode.parentNode === textboxDOM) break;
 							parentNode = parentNode.parentNode;
 						}
 					}
 					if (!parentNode) break;
 					removeStyle(parentNode, 'lineHeight');
 					parentNode.style.lineHeight = value;
-					medium.trigger('editableInput', null, editorDOM);
+					medium.trigger('editableInput', null, textboxDOM);
 					break;
 				case 'paddingTop':
 				case 'paddingBottom':
 				case 'paddingLeft':
 				case 'paddingRight':
 					while (parentNode) {
-						if (parentNode.parentNode === editorDOM) break;
+						if (parentNode.parentNode === textboxDOM) break;
 						parentNode = parentNode.parentNode;
 					}
 					if (!parentNode) break;
 					removeStyle(parentNode, field);
 
 					parentNode.style[field] = value;
-					medium.trigger('editableInput', null, editorDOM);
+					medium.trigger('editableInput', null, textboxDOM);
 					break;
 			}
 		}

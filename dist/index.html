@@ -24,7 +24,7 @@
 <body>
 	<div id="root"></div>
 	<script type="text/babel">
-		const { useState, useRef } = React;
+		const { useState, useRef, useEffect, Component } = React;
 		const { Textbox, Editor } = window["ReactTextbox"];
 
 		function App() {
@@ -44,15 +44,18 @@
 
 			return (
 				<div>
-					<textarea value={text} onChange={(evt) => onContentChange(evt.target.value)}>
-					</textarea>
-
 					<div>
-						<Editor editorRef={editor} />
+						<Editor textboxDOM={editorRef.current} />
 					</div>
 
+					<button>
+					
+						</button>
+
 					<div>
-						<Textbox ref={editorRef} className="textbox" style={{ border: '1px dashed #aaa', lineHeight: '1.4' }} text={text} onInit={onInit} onContentChange={onContentChange} />
+						<Textbox ref={editorRef} className="textbox" style={{ border: '1px dashed #aaa', lineHeight: '1.4' }} text={text} onContentChange={onContentChange} />
+
+						<Textbox ref={editorRef} className="textbox" style={{ border: '1px dashed #aaa', lineHeight: '1.4' }} text={text} onContentChange={onContentChange} />
 					</div>
 
 				</div>
