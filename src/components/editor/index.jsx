@@ -50,6 +50,7 @@ class TextboxEditor extends Component {
 
 	componentWillUnmount() {
 		debug('componentWillUnmount');
+		this.detachEventHandlers();
 	}
 
 	componentDidUpdate() {
@@ -57,6 +58,22 @@ class TextboxEditor extends Component {
 		if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();
 	}
 
+
+	detachEventHandlers() {
+		if (this.attachedEvent) {
+			debug('detachEventHandlers');
+			this.attachedEvent = true;
+
+			// this.getTextbox().subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
+			this.getTextbox().unsubscribe('focus', this.throttleCheckState);
+			this.getTextbox().unsubscribe('positionToolbar', this.throttleCheckState);
+			this.getTextbox().unsubscribe('editableInput', this.throttleCheckState);
+
+			// Updating the state of the toolbar as things change
+			this.getTextbox().unsubscribe('editableClick', this.throttleCheckState);
+			this.getTextbox().unsubscribe('editableKeyup', this.throttleCheckState);
+		}
+	}
 
 	attachEventHandlers() {
 		if (!this.attachedEvent) {
