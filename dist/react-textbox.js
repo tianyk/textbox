@@ -187,6 +187,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./assets/images/两侧对齐_不可点@2x.png":
+/*!***************************************!*\
+  !*** ./assets/images/两侧对齐_不可点@2x.png ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEXIyMj////Z2dkLxbXWAAAAG0lEQVQI12MIhQAGDDqBgYGBE4nGpW6wqocAANBpNxWy3VjNAAAAAElFTkSuQmCC");
+
+/***/ }),
+
 /***/ "./assets/images/两侧对齐_正常@2x.png":
 /*!**************************************!*\
   !*** ./assets/images/两侧对齐_正常@2x.png ***!
@@ -213,6 +226,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./assets/images/右对齐_不可点@2x.png":
+/*!**************************************!*\
+  !*** ./assets/images/右对齐_不可点@2x.png ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEXIyMj////Z2dkLxbXWAAAAI0lEQVQI12MIhQAGDLqBgYFBFYnGpQ5ON0DVNRCnntbmQwAAMe86SduSxhsAAAAASUVORK5CYII=");
+
+/***/ }),
+
 /***/ "./assets/images/右对齐_正常@2x.png":
 /*!*************************************!*\
   !*** ./assets/images/右对齐_正常@2x.png ***!
@@ -236,6 +262,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEVHcExdYWdcYGYAUvvjAAAAAnRSTlMAtc2YijsAAAAfSURBVAjXY2DABbJWrVo1AYkmCLKg6rKIU09r8yEAAB3GFRkFFNVBAAAAAElFTkSuQmCC");
+
+/***/ }),
+
+/***/ "./assets/images/居中对齐_不可点@2x.png":
+/*!***************************************!*\
+  !*** ./assets/images/居中对齐_不可点@2x.png ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEXIyMj////Z2dkLxbXWAAAAI0lEQVQI12MIhQAGDLqBgYFBFYnGpQ5ON0DVNRCnntbmQwAAMe86SduSxhsAAAAASUVORK5CYII=");
 
 /***/ }),
 
@@ -288,6 +327,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAM1BMVEVHcExBv5Up4KtcYGdcYWcp4Kpab29cYWZjY2t4lohdYGYr4KxdYGZdYGZeYWcq4KtcYGbG/xYOAAAAEHRSTlMAFOS4+/wz4B8E02zvkFSLeh/uLAAAAFxJREFUKM9jYBg4wMaHnQ0GXAKMWNlgwC7AgZWNEOBkY8MtycDDg0enAAuNJTkZwd7hZmVlZWJElWRjAgry45Fk4oaYyUk311JTkoGZGY8kjvjkZUZic3EOXHoFAJW+Br/53vS3AAAAAElFTkSuQmCC");
+
+/***/ }),
+
+/***/ "./assets/images/左对齐_不可点@2x.png":
+/*!**************************************!*\
+  !*** ./assets/images/左对齐_不可点@2x.png ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEVHcEzJycnIyMjG7L31AAAAAnRSTlMAtc2YijsAAAAfSURBVAjXY2DABdhWrVq1EokmBNigytiIU05z8yEAAAZDEsEx8RsbAAAAAElFTkSuQmCC");
 
 /***/ }),
 
@@ -779,7 +831,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".coursebox-font-layout-button-group {\n  display: inline-block;\n  vertical-align: bottom;\n  padding: 3px;\n  border-radius: 2px;\n  border: 1px solid #E8E8E8;\n}\n.coursebox-font-layout-button-group .coursebox-button-icon {\n  margin: 0 6px;\n}\n.coursebox-font-layout-button-group .coursebox-button-icon:first-child {\n  margin-left: 0;\n}\n.coursebox-font-layout-button-group .coursebox-button-icon:last-child {\n  margin-right: 0;\n}\n", ""]);
+exports.push([module.i, ".coursebox-font-layout-button-group {\n  display: inline-block;\n  vertical-align: bottom;\n  padding: 3px;\n  border-radius: 2px;\n  border: 1px solid #E8E8E8;\n  background-color: #fff;\n}\n.coursebox-font-layout-button-group .coursebox-button-icon {\n  margin: 0 6px;\n}\n.coursebox-font-layout-button-group .coursebox-button-icon:first-child {\n  margin-left: 0;\n}\n.coursebox-font-layout-button-group .coursebox-button-icon:last-child {\n  margin-right: 0;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -12537,14 +12589,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _select_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../select-button */ "./src/components/select-button/index.jsx");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @assets/images/左对齐_正常@2x.png */ "./assets/images/左对齐_正常@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @assets/images/居中对齐_正常@2x.png */ "./assets/images/居中对齐_正常@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @assets/images/右对齐_正常@2x.png */ "./assets/images/右对齐_正常@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @assets/images/两侧对齐_正常@2x.png */ "./assets/images/两侧对齐_正常@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @assets/images/左对齐_选中@2x.png */ "./assets/images/左对齐_选中@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @assets/images/居中对齐_选中@2x.png */ "./assets/images/居中对齐_选中@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @assets/images/右对齐_选中@2x.png */ "./assets/images/右对齐_选中@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @assets/images/两侧对齐_选中@2x.png */ "./assets/images/两侧对齐_选中@2x.png");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @assets/images/左对齐_正常@2x.png */ "./assets/images/左对齐_正常@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @assets/images/居中对齐_正常@2x.png */ "./assets/images/居中对齐_正常@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @assets/images/右对齐_正常@2x.png */ "./assets/images/右对齐_正常@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @assets/images/两侧对齐_正常@2x.png */ "./assets/images/两侧对齐_正常@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @assets/images/左对齐_选中@2x.png */ "./assets/images/左对齐_选中@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @assets/images/居中对齐_选中@2x.png */ "./assets/images/居中对齐_选中@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @assets/images/右对齐_选中@2x.png */ "./assets/images/右对齐_选中@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @assets/images/两侧对齐_选中@2x.png */ "./assets/images/两侧对齐_选中@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @assets/images/左对齐_不可点@2x.png */ "./assets/images/左对齐_不可点@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @assets/images/居中对齐_不可点@2x.png */ "./assets/images/居中对齐_不可点@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @assets/images/右对齐_不可点@2x.png */ "./assets/images/右对齐_不可点@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @assets/images/两侧对齐_不可点@2x.png */ "./assets/images/两侧对齐_不可点@2x.png");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12562,6 +12620,11 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
 
 
 
@@ -12608,20 +12671,30 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var className = this.props.className;
+      var disabled = this.props.disabled;
+      debug('disabled', disabled);
+      var className = classnames__WEBPACK_IMPORTED_MODULE_4___default()('coursebox-font-layout-button-group', this.props.className, {
+        disabled: disabled
+      });
       return React.createElement("div", {
-        className: "coursebox-font-layout-button-group ".concat(className)
+        className: className
       }, React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        disabled: disabled,
         selected: this.props.textAlign === 'left' || this.props.textAlign === 'start',
-        icon: this.props.textAlign === 'left' ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_8__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_4__["default"],
+        icon: this.props.textAlign === 'left' ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__["default"],
+        disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_13__["default"],
         onSelected: this.onFontLayoutChange('left')
       }), React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        disabled: disabled,
         selected: this.props.textAlign === 'center',
-        icon: this.props.textAlign === 'center' ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__["default"],
+        icon: this.props.textAlign === 'center' ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__["default"],
+        disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_14__["default"],
         onSelected: this.onFontLayoutChange('center')
       }), React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        disabled: disabled,
         selected: this.props.textAlign === 'right',
-        icon: this.props.textAlign === 'right' ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__["default"],
+        icon: this.props.textAlign === 'right' ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_7__["default"],
+        disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_15__["default"],
         onSelected: this.onFontLayoutChange('right')
       }));
     }
@@ -12630,11 +12703,13 @@ function (_Component) {
   return FontLayoutButtonGroup;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
-prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.defaultProps = {
+FontLayoutButtonGroup.defaultProps = {
+  disabled: true,
   textAlign: 'start',
   'className': ''
 };
-prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.propTypes = {
+FontLayoutButtonGroup.propTypes = {
+  disabled: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
   textAlign: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
   onFontLayoutChange: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired
 };

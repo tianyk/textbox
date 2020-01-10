@@ -4,9 +4,9 @@
   "warnings": [
   ],
   "version": "4.41.4",
-  "hash": "b674e58503632fe45a3f",
-  "time": 177,
-  "builtAt": 1578640964529,
+  "hash": "02923aa0e3bce1b011af",
+  "time": 162,
+  "builtAt": 1578641598098,
   "publicPath": "",
   "outputPath": "/Users/doog/Documents/Workspaces/node/textbox/dist",
   "assetsByChunkName": {
@@ -29,7 +29,7 @@
     },
     {
       "name": "react-textbox.js",
-      "size": 559112,
+      "size": 563216,
       "chunks": [
         "main"
       ],
@@ -42,7 +42,7 @@
     },
     {
       "name": "react-textbox.js.map",
-      "size": 593888,
+      "size": 596510,
       "chunks": [
         "main"
       ],
@@ -92,7 +92,7 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 491059,
+      "size": 492668,
       "names": [
         "main"
       ],
@@ -100,7 +100,7 @@
         "react-textbox.js",
         "react-textbox.js.map"
       ],
-      "hash": "be0c9d6dbccdeb8bd3f0",
+      "hash": "59560138dbfc1c1b583c",
       "siblings": [
       ],
       "parents": [
@@ -115,7 +115,7 @@
           "identifier": "multi /Users/doog/Documents/Workspaces/node/textbox/node_modules/webpack-dev-server/client/index.js?http://localhost:9999 ./src/components/index.js",
           "name": "multi (webpack)-dev-server/client?http://localhost:9999 ./src/components/index.js",
           "index": 0,
-          "index2": 99,
+          "index2": 103,
           "size": 40,
           "built": false,
           "optional": false,
@@ -405,8 +405,8 @@
           "id": "./assets/images/上下边距_不可点@2x.png",
           "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/上下边距_不可点@2x.png",
           "name": "./assets/images/上下边距_不可点@2x.png",
-          "index": 98,
-          "index2": 95,
+          "index": 102,
+          "index2": 99,
           "size": 339,
           "cacheable": true,
           "built": false,
@@ -467,8 +467,8 @@
           "id": "./assets/images/上下边距_正常@2x.png",
           "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/上下边距_正常@2x.png",
           "name": "./assets/images/上下边距_正常@2x.png",
-          "index": 97,
-          "index2": 94,
+          "index": 101,
+          "index2": 98,
           "size": 319,
           "cacheable": true,
           "built": false,
@@ -660,6 +660,64 @@
           "source": "export default \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAJFBMVEVHcEzIyMjR0dHQ0NDJycnKysrJycnKysrKysrJycnJycnIyMgi8PNQAAAAC3RSTlMA5hQatV/QM4b4ixD6QUsAAABbSURBVBjTY2CgLmiBE2AgbQAjaMzNLgASsxVgXO8ABgb2jXBnRAsxMLDtgnNZNgaxZwvBuczeu2dvLED4gTV74wIUTykQ6/tGQTAQgbliNxjA3MGkBAYKpIYpAL+PFrHX3dVVAAAAAElFTkSuQmCC\""
         },
         {
+          "id": "./assets/images/两侧对齐_不可点@2x.png",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/两侧对齐_不可点@2x.png",
+          "name": "./assets/images/两侧对齐_不可点@2x.png",
+          "index": 96,
+          "index2": 92,
+          "size": 179,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "issuerId": "./src/components/font-layout-button-group/index.jsx",
+          "issuerName": "./src/components/font-layout-button-group/index.jsx",
+          "issuerPath": [
+            {
+              "id": "./src/components/index.js",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/index.js",
+              "name": "./src/components/index.js"
+            },
+            {
+              "id": "./src/components/editor/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
+              "name": "./src/components/editor/index.jsx"
+            },
+            {
+              "id": "./src/components/font-layout-button-group/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+              "name": "./src/components/font-layout-button-group/index.jsx"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": "./src/components/font-layout-button-group/index.jsx",
+              "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+              "module": "./src/components/font-layout-button-group/index.jsx",
+              "moduleName": "./src/components/font-layout-button-group/index.jsx",
+              "type": "harmony side effect evaluation",
+              "userRequest": "@assets/images/两侧对齐_不可点@2x.png",
+              "loc": "35:0-76"
+            }
+          ],
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [
+          ],
+          "depth": 4,
+          "source": "export default \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEXIyMj////Z2dkLxbXWAAAAG0lEQVQI12MIhQAGDDqBgYGBE4nGpW6wqocAANBpNxWy3VjNAAAAAElFTkSuQmCC\""
+        },
+        {
           "id": "./assets/images/两侧对齐_正常@2x.png",
           "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/两侧对齐_正常@2x.png",
           "name": "./assets/images/两侧对齐_正常@2x.png",
@@ -706,7 +764,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/两侧对齐_正常@2x.png",
-              "loc": "26:0-67"
+              "loc": "27:0-67"
             }
           ],
           "providedExports": [
@@ -764,7 +822,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/两侧对齐_选中@2x.png",
-              "loc": "30:0-75"
+              "loc": "31:0-75"
             }
           ],
           "providedExports": [
@@ -774,6 +832,73 @@
           ],
           "depth": 4,
           "source": "export default \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEVHcExdYWdcYGYAUvvjAAAAAnRSTlMAtc2YijsAAAAZSURBVAjXY2DABaRWrVq1BIkmBAabeggAADnWFeGWsPsoAAAAAElFTkSuQmCC\""
+        },
+        {
+          "id": "./assets/images/右对齐_不可点@2x.png",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/右对齐_不可点@2x.png",
+          "name": "./assets/images/右对齐_不可点@2x.png",
+          "index": 95,
+          "index2": 91,
+          "size": 191,
+          "cacheable": true,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "issuerId": "./src/components/font-layout-button-group/index.jsx",
+          "issuerName": "./src/components/font-layout-button-group/index.jsx",
+          "issuerPath": [
+            {
+              "id": "./src/components/index.js",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/index.js",
+              "name": "./src/components/index.js"
+            },
+            {
+              "id": "./src/components/editor/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
+              "name": "./src/components/editor/index.jsx"
+            },
+            {
+              "id": "./src/components/font-layout-button-group/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+              "name": "./src/components/font-layout-button-group/index.jsx"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": "./src/components/font-layout-button-group/index.jsx",
+              "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+              "module": "./src/components/font-layout-button-group/index.jsx",
+              "moduleName": "./src/components/font-layout-button-group/index.jsx",
+              "type": "harmony side effect evaluation",
+              "userRequest": "@assets/images/右对齐_不可点@2x.png",
+              "loc": "34:0-73"
+            },
+            {
+              "moduleId": "./src/components/font-layout-button-group/index.jsx",
+              "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+              "module": "./src/components/font-layout-button-group/index.jsx",
+              "moduleName": "./src/components/font-layout-button-group/index.jsx",
+              "type": "harmony import specifier",
+              "userRequest": "@assets/images/右对齐_不可点@2x.png",
+              "loc": "92:22-50"
+            }
+          ],
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [
+          ],
+          "depth": 4,
+          "source": "export default \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEXIyMj////Z2dkLxbXWAAAAI0lEQVQI12MIhQAGDLqBgYFBFYnGpQ5ON0DVNRCnntbmQwAAMe86SduSxhsAAAAASUVORK5CYII=\""
         },
         {
           "id": "./assets/images/右对齐_正常@2x.png",
@@ -822,7 +947,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/右对齐_正常@2x.png",
-              "loc": "25:0-64"
+              "loc": "26:0-64"
             },
             {
               "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -831,7 +956,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/右对齐_正常@2x.png",
-              "loc": "77:80-100"
+              "loc": "91:80-100"
             }
           ],
           "providedExports": [
@@ -889,7 +1014,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/右对齐_选中@2x.png",
-              "loc": "29:0-72"
+              "loc": "30:0-72"
             },
             {
               "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -898,7 +1023,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/右对齐_选中@2x.png",
-              "loc": "77:49-77"
+              "loc": "91:49-77"
             }
           ],
           "providedExports": [
@@ -908,6 +1033,73 @@
           ],
           "depth": 4,
           "source": "export default \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEVHcExdYWdcYGYAUvvjAAAAAnRSTlMAtc2YijsAAAAfSURBVAjXY2DABbJWrVo1AYkmCLKg6rKIU09r8yEAAB3GFRkFFNVBAAAAAElFTkSuQmCC\""
+        },
+        {
+          "id": "./assets/images/居中对齐_不可点@2x.png",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/居中对齐_不可点@2x.png",
+          "name": "./assets/images/居中对齐_不可点@2x.png",
+          "index": 94,
+          "index2": 90,
+          "size": 191,
+          "cacheable": true,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "issuerId": "./src/components/font-layout-button-group/index.jsx",
+          "issuerName": "./src/components/font-layout-button-group/index.jsx",
+          "issuerPath": [
+            {
+              "id": "./src/components/index.js",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/index.js",
+              "name": "./src/components/index.js"
+            },
+            {
+              "id": "./src/components/editor/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
+              "name": "./src/components/editor/index.jsx"
+            },
+            {
+              "id": "./src/components/font-layout-button-group/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+              "name": "./src/components/font-layout-button-group/index.jsx"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": "./src/components/font-layout-button-group/index.jsx",
+              "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+              "module": "./src/components/font-layout-button-group/index.jsx",
+              "moduleName": "./src/components/font-layout-button-group/index.jsx",
+              "type": "harmony side effect evaluation",
+              "userRequest": "@assets/images/居中对齐_不可点@2x.png",
+              "loc": "33:0-75"
+            },
+            {
+              "moduleId": "./src/components/font-layout-button-group/index.jsx",
+              "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+              "module": "./src/components/font-layout-button-group/index.jsx",
+              "moduleName": "./src/components/font-layout-button-group/index.jsx",
+              "type": "harmony import specifier",
+              "userRequest": "@assets/images/居中对齐_不可点@2x.png",
+              "loc": "86:22-51"
+            }
+          ],
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [
+          ],
+          "depth": 4,
+          "source": "export default \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEXIyMj////Z2dkLxbXWAAAAI0lEQVQI12MIhQAGDLqBgYFBFYnGpQ5ON0DVNRCnntbmQwAAMe86SduSxhsAAAAASUVORK5CYII=\""
         },
         {
           "id": "./assets/images/居中对齐_正常@2x.png",
@@ -956,7 +1148,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/居中对齐_正常@2x.png",
-              "loc": "24:0-66"
+              "loc": "25:0-66"
             },
             {
               "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -965,7 +1157,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/居中对齐_正常@2x.png",
-              "loc": "73:82-103"
+              "loc": "85:82-103"
             }
           ],
           "providedExports": [
@@ -1023,7 +1215,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/居中对齐_选中@2x.png",
-              "loc": "28:0-74"
+              "loc": "29:0-74"
             },
             {
               "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -1032,7 +1224,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/居中对齐_选中@2x.png",
-              "loc": "73:50-79"
+              "loc": "85:50-79"
             }
           ],
           "providedExports": [
@@ -1047,8 +1239,8 @@
           "id": "./assets/images/左右边距_不可点@2x.png",
           "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/左右边距_不可点@2x.png",
           "name": "./assets/images/左右边距_不可点@2x.png",
-          "index": 96,
-          "index2": 93,
+          "index": 100,
+          "index2": 97,
           "size": 343,
           "cacheable": true,
           "built": false,
@@ -1109,8 +1301,8 @@
           "id": "./assets/images/左右边距_正常@2x.png",
           "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/左右边距_正常@2x.png",
           "name": "./assets/images/左右边距_正常@2x.png",
-          "index": 95,
-          "index2": 92,
+          "index": 99,
+          "index2": 96,
           "size": 359,
           "cacheable": true,
           "built": false,
@@ -1168,6 +1360,73 @@
           "source": "export default \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAM1BMVEVHcExBv5Up4KtcYGdcYWcp4Kpab29cYWZjY2t4lohdYGYr4KxdYGZdYGZeYWcq4KtcYGbG/xYOAAAAEHRSTlMAFOS4+/wz4B8E02zvkFSLeh/uLAAAAFxJREFUKM9jYBg4wMaHnQ0GXAKMWNlgwC7AgZWNEOBkY8MtycDDg0enAAuNJTkZwd7hZmVlZWJElWRjAgry45Fk4oaYyUk311JTkoGZGY8kjvjkZUZic3EOXHoFAJW+Br/53vS3AAAAAElFTkSuQmCC\""
         },
         {
+          "id": "./assets/images/左对齐_不可点@2x.png",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/左对齐_不可点@2x.png",
+          "name": "./assets/images/左对齐_不可点@2x.png",
+          "index": 93,
+          "index2": 89,
+          "size": 203,
+          "cacheable": true,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "issuerId": "./src/components/font-layout-button-group/index.jsx",
+          "issuerName": "./src/components/font-layout-button-group/index.jsx",
+          "issuerPath": [
+            {
+              "id": "./src/components/index.js",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/index.js",
+              "name": "./src/components/index.js"
+            },
+            {
+              "id": "./src/components/editor/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
+              "name": "./src/components/editor/index.jsx"
+            },
+            {
+              "id": "./src/components/font-layout-button-group/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+              "name": "./src/components/font-layout-button-group/index.jsx"
+            }
+          ],
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [
+          ],
+          "reasons": [
+            {
+              "moduleId": "./src/components/font-layout-button-group/index.jsx",
+              "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+              "module": "./src/components/font-layout-button-group/index.jsx",
+              "moduleName": "./src/components/font-layout-button-group/index.jsx",
+              "type": "harmony side effect evaluation",
+              "userRequest": "@assets/images/左对齐_不可点@2x.png",
+              "loc": "32:0-72"
+            },
+            {
+              "moduleId": "./src/components/font-layout-button-group/index.jsx",
+              "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+              "module": "./src/components/font-layout-button-group/index.jsx",
+              "moduleName": "./src/components/font-layout-button-group/index.jsx",
+              "type": "harmony import specifier",
+              "userRequest": "@assets/images/左对齐_不可点@2x.png",
+              "loc": "80:22-49"
+            }
+          ],
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [
+          ],
+          "depth": 4,
+          "source": "export default \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEVHcEzJycnIyMjG7L31AAAAAnRSTlMAtc2YijsAAAAfSURBVAjXY2DABdhWrVq1EokmBNigytiIU05z8yEAAAZDEsEx8RsbAAAAAElFTkSuQmCC\""
+        },
+        {
           "id": "./assets/images/左对齐_正常@2x.png",
           "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/左对齐_正常@2x.png",
           "name": "./assets/images/左对齐_正常@2x.png",
@@ -1214,7 +1473,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/左对齐_正常@2x.png",
-              "loc": "23:0-63"
+              "loc": "24:0-63"
             },
             {
               "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -1223,7 +1482,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/左对齐_正常@2x.png",
-              "loc": "69:78-97"
+              "loc": "79:78-97"
             }
           ],
           "providedExports": [
@@ -1281,7 +1540,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/左对齐_选中@2x.png",
-              "loc": "27:0-71"
+              "loc": "28:0-71"
             },
             {
               "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -1290,7 +1549,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/左对齐_选中@2x.png",
-              "loc": "69:48-75"
+              "loc": "79:48-75"
             }
           ],
           "providedExports": [
@@ -1707,8 +1966,8 @@
           "id": "./assets/images/行间距_不可点@2x.png",
           "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/行间距_不可点@2x.png",
           "name": "./assets/images/行间距_不可点@2x.png",
-          "index": 94,
-          "index2": 91,
+          "index": 98,
+          "index2": 95,
           "size": 431,
           "cacheable": true,
           "built": false,
@@ -1769,8 +2028,8 @@
           "id": "./assets/images/行间距_正常@2x.png",
           "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/行间距_正常@2x.png",
           "name": "./assets/images/行间距_正常@2x.png",
-          "index": 93,
-          "index2": 90,
+          "index": 97,
+          "index2": 94,
           "size": 463,
           "cacheable": true,
           "built": false,
@@ -2101,6 +2360,24 @@
           ],
           "reasons": [
             {
+              "moduleId": "./src/components/font-layout-button-group/index.jsx",
+              "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+              "module": "./src/components/font-layout-button-group/index.jsx",
+              "moduleName": "./src/components/font-layout-button-group/index.jsx",
+              "type": "harmony side effect evaluation",
+              "userRequest": "classnames",
+              "loc": "23:0-36"
+            },
+            {
+              "moduleId": "./src/components/font-layout-button-group/index.jsx",
+              "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+              "module": "./src/components/font-layout-button-group/index.jsx",
+              "moduleName": "./src/components/font-layout-button-group/index.jsx",
+              "type": "harmony import specifier",
+              "userRequest": "classnames",
+              "loc": "71:22-32"
+            },
+            {
               "moduleId": "./src/components/font-style-button-group/index.jsx",
               "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-style-button-group/index.jsx",
               "module": "./src/components/font-style-button-group/index.jsx",
@@ -2284,7 +2561,7 @@
           "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/font-layout-button-group/font-layout-button-group.less",
           "index": 84,
           "index2": 79,
-          "size": 678,
+          "size": 705,
           "cacheable": true,
           "built": false,
           "optional": false,
@@ -2337,7 +2614,7 @@
           "optimizationBailout": [
           ],
           "depth": 5,
-          "source": "// Imports\nvar ___CSS_LOADER_API_IMPORT___ = require(\"../../../node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.id, \".coursebox-font-layout-button-group {\\n  display: inline-block;\\n  vertical-align: bottom;\\n  padding: 3px;\\n  border-radius: 2px;\\n  border: 1px solid #E8E8E8;\\n}\\n.coursebox-font-layout-button-group .coursebox-button-icon {\\n  margin: 0 6px;\\n}\\n.coursebox-font-layout-button-group .coursebox-button-icon:first-child {\\n  margin-left: 0;\\n}\\n.coursebox-font-layout-button-group .coursebox-button-icon:last-child {\\n  margin-right: 0;\\n}\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n"
+          "source": "// Imports\nvar ___CSS_LOADER_API_IMPORT___ = require(\"../../../node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.id, \".coursebox-font-layout-button-group {\\n  display: inline-block;\\n  vertical-align: bottom;\\n  padding: 3px;\\n  border-radius: 2px;\\n  border: 1px solid #E8E8E8;\\n  background-color: #fff;\\n}\\n.coursebox-font-layout-button-group .coursebox-button-icon {\\n  margin: 0 6px;\\n}\\n.coursebox-font-layout-button-group .coursebox-button-icon:first-child {\\n  margin-left: 0;\\n}\\n.coursebox-font-layout-button-group .coursebox-button-icon:last-child {\\n  margin-right: 0;\\n}\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n"
         },
         {
           "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/font-style-button-group/font-style-button-group.less",
@@ -2612,9 +2889,9 @@
               "name": "./src/components/editor/index.jsx"
             },
             {
-              "id": "./src/components/font-layout-button-group/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
-              "name": "./src/components/font-layout-button-group/index.jsx"
+              "id": "./src/components/font-style-button-group/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-style-button-group/index.jsx",
+              "name": "./src/components/font-style-button-group/index.jsx"
             },
             {
               "id": "./src/components/select-button/index.jsx",
@@ -4916,8 +5193,8 @@
           "id": "./src/commons/computed_state.js",
           "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/commons/computed_state.js",
           "name": "./src/commons/computed_state.js",
-          "index": 99,
-          "index2": 96,
+          "index": 103,
+          "index2": 100,
           "size": 4662,
           "cacheable": true,
           "built": false,
@@ -5034,7 +5311,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "cjs require",
               "userRequest": "@commons/debug",
-              "loc": "32:12-37"
+              "loc": "37:12-37"
             },
             {
               "moduleId": "./src/components/font-style-button-group/index.jsx",
@@ -5316,7 +5593,7 @@
           "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
           "name": "./src/components/editor/index.jsx",
           "index": 47,
-          "index2": 97,
+          "index2": 101,
           "size": 16701,
           "cacheable": true,
           "built": false,
@@ -5429,8 +5706,8 @@
           "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
           "name": "./src/components/font-layout-button-group/index.jsx",
           "index": 82,
-          "index2": 89,
-          "size": 5222,
+          "index2": 93,
+          "size": 6040,
           "cacheable": true,
           "built": false,
           "optional": false,
@@ -5484,7 +5761,7 @@
           "optimizationBailout": [
           ],
           "depth": 3,
-          "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './font-layout-button-group.less';\nimport { Component } from 'react';\nimport PropTypes from 'prop-types';\nimport SelectButton from '../select-button';\nimport ImageFontLayoutLeft from '@assets/images/左对齐_正常@2x.png';\nimport ImageFontLayoutCenter from '@assets/images/居中对齐_正常@2x.png';\nimport ImageFontLayoutRight from '@assets/images/右对齐_正常@2x.png';\nimport ImageFontLayoutJustify from '@assets/images/两侧对齐_正常@2x.png';\nimport ImageFontLayoutLeftSelected from '@assets/images/左对齐_选中@2x.png';\nimport ImageFontLayoutCenterSelected from '@assets/images/居中对齐_选中@2x.png';\nimport ImageFontLayoutRightSelected from '@assets/images/右对齐_选中@2x.png';\nimport ImageFontLayoutJustifySelected from '@assets/images/两侧对齐_选中@2x.png';\n\nvar debug = require('@commons/debug')('textbox:font-layout-button-group');\n\nvar FontLayoutButtonGroup =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(FontLayoutButtonGroup, _Component);\n\n  function FontLayoutButtonGroup(props) {\n    var _this;\n\n    _classCallCheck(this, FontLayoutButtonGroup);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(FontLayoutButtonGroup).call(this, props));\n    _this.onFontLayoutChange = _this.onFontLayoutChange.bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(FontLayoutButtonGroup, [{\n    key: \"onFontLayoutChange\",\n    value: function onFontLayoutChange(textAlign) {\n      var _this2 = this;\n\n      return function (selected) {\n        var _this2$props;\n\n        debug('onFontLayoutChange %s %s', textAlign, selected);\n        (_this2$props = _this2.props) === null || _this2$props === void 0 ? void 0 : _this2$props.onFontLayoutChange(selected ? textAlign : 'start');\n      };\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var className = this.props.className;\n      return React.createElement(\"div\", {\n        className: \"coursebox-font-layout-button-group \".concat(className)\n      }, React.createElement(SelectButton, {\n        selected: this.props.textAlign === 'left' || this.props.textAlign === 'start',\n        icon: this.props.textAlign === 'left' ? ImageFontLayoutLeftSelected : ImageFontLayoutLeft,\n        onSelected: this.onFontLayoutChange('left')\n      }), React.createElement(SelectButton, {\n        selected: this.props.textAlign === 'center',\n        icon: this.props.textAlign === 'center' ? ImageFontLayoutCenterSelected : ImageFontLayoutCenter,\n        onSelected: this.onFontLayoutChange('center')\n      }), React.createElement(SelectButton, {\n        selected: this.props.textAlign === 'right',\n        icon: this.props.textAlign === 'right' ? ImageFontLayoutRightSelected : ImageFontLayoutRight,\n        onSelected: this.onFontLayoutChange('right')\n      }));\n    }\n  }]);\n\n  return FontLayoutButtonGroup;\n}(Component);\n\nPropTypes.defaultProps = {\n  textAlign: 'start',\n  'className': ''\n};\nPropTypes.propTypes = {\n  textAlign: PropTypes.string,\n  onFontLayoutChange: PropTypes.func.isRequired\n};\nexport default FontLayoutButtonGroup;"
+          "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './font-layout-button-group.less';\nimport { Component } from 'react';\nimport PropTypes from 'prop-types';\nimport SelectButton from '../select-button';\nimport classNames from 'classnames';\nimport ImageFontLayoutLeft from '@assets/images/左对齐_正常@2x.png';\nimport ImageFontLayoutCenter from '@assets/images/居中对齐_正常@2x.png';\nimport ImageFontLayoutRight from '@assets/images/右对齐_正常@2x.png';\nimport ImageFontLayoutJustify from '@assets/images/两侧对齐_正常@2x.png';\nimport ImageFontLayoutLeftSelected from '@assets/images/左对齐_选中@2x.png';\nimport ImageFontLayoutCenterSelected from '@assets/images/居中对齐_选中@2x.png';\nimport ImageFontLayoutRightSelected from '@assets/images/右对齐_选中@2x.png';\nimport ImageFontLayoutJustifySelected from '@assets/images/两侧对齐_选中@2x.png';\nimport ImageFontLayoutLeftDisabled from '@assets/images/左对齐_不可点@2x.png';\nimport ImageFontLayoutCenterDisabled from '@assets/images/居中对齐_不可点@2x.png';\nimport ImageFontLayoutRightDisabled from '@assets/images/右对齐_不可点@2x.png';\nimport ImageFontLayoutJustifyDisabled from '@assets/images/两侧对齐_不可点@2x.png';\n\nvar debug = require('@commons/debug')('textbox:font-layout-button-group');\n\nvar FontLayoutButtonGroup =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(FontLayoutButtonGroup, _Component);\n\n  function FontLayoutButtonGroup(props) {\n    var _this;\n\n    _classCallCheck(this, FontLayoutButtonGroup);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(FontLayoutButtonGroup).call(this, props));\n    _this.onFontLayoutChange = _this.onFontLayoutChange.bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(FontLayoutButtonGroup, [{\n    key: \"onFontLayoutChange\",\n    value: function onFontLayoutChange(textAlign) {\n      var _this2 = this;\n\n      return function (selected) {\n        var _this2$props;\n\n        debug('onFontLayoutChange %s %s', textAlign, selected);\n        (_this2$props = _this2.props) === null || _this2$props === void 0 ? void 0 : _this2$props.onFontLayoutChange(selected ? textAlign : 'start');\n      };\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var disabled = this.props.disabled;\n      debug('disabled', disabled);\n      var className = classNames('coursebox-font-layout-button-group', this.props.className, {\n        disabled: disabled\n      });\n      return React.createElement(\"div\", {\n        className: className\n      }, React.createElement(SelectButton, {\n        disabled: disabled,\n        selected: this.props.textAlign === 'left' || this.props.textAlign === 'start',\n        icon: this.props.textAlign === 'left' ? ImageFontLayoutLeftSelected : ImageFontLayoutLeft,\n        disabledIcon: ImageFontLayoutLeftDisabled,\n        onSelected: this.onFontLayoutChange('left')\n      }), React.createElement(SelectButton, {\n        disabled: disabled,\n        selected: this.props.textAlign === 'center',\n        icon: this.props.textAlign === 'center' ? ImageFontLayoutCenterSelected : ImageFontLayoutCenter,\n        disabledIcon: ImageFontLayoutCenterDisabled,\n        onSelected: this.onFontLayoutChange('center')\n      }), React.createElement(SelectButton, {\n        disabled: disabled,\n        selected: this.props.textAlign === 'right',\n        icon: this.props.textAlign === 'right' ? ImageFontLayoutRightSelected : ImageFontLayoutRight,\n        disabledIcon: ImageFontLayoutRightDisabled,\n        onSelected: this.onFontLayoutChange('right')\n      }));\n    }\n  }]);\n\n  return FontLayoutButtonGroup;\n}(Component);\n\nFontLayoutButtonGroup.defaultProps = {\n  disabled: true,\n  textAlign: 'start',\n  'className': ''\n};\nFontLayoutButtonGroup.propTypes = {\n  disabled: PropTypes.bool,\n  textAlign: PropTypes.string,\n  onFontLayoutChange: PropTypes.func.isRequired\n};\nexport default FontLayoutButtonGroup;"
         },
         {
           "id": "./src/components/font-style-button-group/font-style-button-group.less",
@@ -5550,7 +5827,7 @@
           "index2": 78,
           "size": 5580,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -5609,7 +5886,7 @@
           "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/index.js",
           "name": "./src/components/index.js",
           "index": 32,
-          "index2": 98,
+          "index2": 102,
           "size": 93,
           "cacheable": true,
           "built": false,
@@ -6042,9 +6319,9 @@
           "chunks": [
             "main"
           ],
-          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
-          "issuerId": "./src/components/font-layout-button-group/index.jsx",
-          "issuerName": "./src/components/font-layout-button-group/index.jsx",
+          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-style-button-group/index.jsx",
+          "issuerId": "./src/components/font-style-button-group/index.jsx",
+          "issuerName": "./src/components/font-style-button-group/index.jsx",
           "issuerPath": [
             {
               "id": "./src/components/index.js",
@@ -6057,9 +6334,9 @@
               "name": "./src/components/editor/index.jsx"
             },
             {
-              "id": "./src/components/font-layout-button-group/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
-              "name": "./src/components/font-layout-button-group/index.jsx"
+              "id": "./src/components/font-style-button-group/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-style-button-group/index.jsx",
+              "name": "./src/components/font-style-button-group/index.jsx"
             }
           ],
           "failed": false,
@@ -6084,7 +6361,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../select-button",
-              "loc": "67:29-41"
+              "loc": "76:29-41"
             },
             {
               "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -6093,7 +6370,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../select-button",
-              "loc": "71:30-42"
+              "loc": "82:30-42"
             },
             {
               "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -6102,7 +6379,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../select-button",
-              "loc": "75:30-42"
+              "loc": "88:30-42"
             },
             {
               "moduleId": "./src/components/font-style-button-group/index.jsx",
@@ -6178,9 +6455,9 @@
               "name": "./src/components/editor/index.jsx"
             },
             {
-              "id": "./src/components/font-layout-button-group/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
-              "name": "./src/components/font-layout-button-group/index.jsx"
+              "id": "./src/components/font-style-button-group/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-style-button-group/index.jsx",
+              "name": "./src/components/font-style-button-group/index.jsx"
             },
             {
               "id": "./src/components/select-button/index.jsx",
@@ -6498,7 +6775,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "86:0-9"
+              "loc": "107:12-21"
             },
             {
               "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -6507,7 +6784,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "90:0-9"
+              "loc": "108:13-22"
             },
             {
               "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -6516,16 +6793,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "91:13-22"
-            },
-            {
-              "moduleId": "./src/components/font-layout-button-group/index.jsx",
-              "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
-              "module": "./src/components/font-layout-button-group/index.jsx",
-              "moduleName": "./src/components/font-layout-button-group/index.jsx",
-              "type": "harmony import specifier",
-              "userRequest": "prop-types",
-              "loc": "92:22-31"
+              "loc": "109:22-31"
             },
             {
               "moduleId": "./src/components/font-style-button-group/index.jsx",
@@ -6934,7 +7202,7 @@
               "moduleName": "./src/components/font-layout-button-group/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "84:2-11"
+              "loc": "99:2-11"
             },
             {
               "moduleId": "./src/components/font-style-button-group/index.jsx",
@@ -7363,7 +7631,7 @@
       "identifier": "multi /Users/doog/Documents/Workspaces/node/textbox/node_modules/webpack-dev-server/client/index.js?http://localhost:9999 ./src/components/index.js",
       "name": "multi (webpack)-dev-server/client?http://localhost:9999 ./src/components/index.js",
       "index": 0,
-      "index2": 99,
+      "index2": 103,
       "size": 40,
       "built": false,
       "optional": false,
@@ -7653,8 +7921,8 @@
       "id": "./assets/images/上下边距_不可点@2x.png",
       "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/上下边距_不可点@2x.png",
       "name": "./assets/images/上下边距_不可点@2x.png",
-      "index": 98,
-      "index2": 95,
+      "index": 102,
+      "index2": 99,
       "size": 339,
       "cacheable": true,
       "built": false,
@@ -7715,8 +7983,8 @@
       "id": "./assets/images/上下边距_正常@2x.png",
       "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/上下边距_正常@2x.png",
       "name": "./assets/images/上下边距_正常@2x.png",
-      "index": 97,
-      "index2": 94,
+      "index": 101,
+      "index2": 98,
       "size": 319,
       "cacheable": true,
       "built": false,
@@ -7908,6 +8176,64 @@
       "source": "export default \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAJFBMVEVHcEzIyMjR0dHQ0NDJycnKysrJycnKysrKysrJycnJycnIyMgi8PNQAAAAC3RSTlMA5hQatV/QM4b4ixD6QUsAAABbSURBVBjTY2CgLmiBE2AgbQAjaMzNLgASsxVgXO8ABgb2jXBnRAsxMLDtgnNZNgaxZwvBuczeu2dvLED4gTV74wIUTykQ6/tGQTAQgbliNxjA3MGkBAYKpIYpAL+PFrHX3dVVAAAAAElFTkSuQmCC\""
     },
     {
+      "id": "./assets/images/两侧对齐_不可点@2x.png",
+      "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/两侧对齐_不可点@2x.png",
+      "name": "./assets/images/两侧对齐_不可点@2x.png",
+      "index": 96,
+      "index2": 92,
+      "size": 179,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+      "issuerId": "./src/components/font-layout-button-group/index.jsx",
+      "issuerName": "./src/components/font-layout-button-group/index.jsx",
+      "issuerPath": [
+        {
+          "id": "./src/components/index.js",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/index.js",
+          "name": "./src/components/index.js"
+        },
+        {
+          "id": "./src/components/editor/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
+          "name": "./src/components/editor/index.jsx"
+        },
+        {
+          "id": "./src/components/font-layout-button-group/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "name": "./src/components/font-layout-button-group/index.jsx"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": "./src/components/font-layout-button-group/index.jsx",
+          "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "module": "./src/components/font-layout-button-group/index.jsx",
+          "moduleName": "./src/components/font-layout-button-group/index.jsx",
+          "type": "harmony side effect evaluation",
+          "userRequest": "@assets/images/两侧对齐_不可点@2x.png",
+          "loc": "35:0-76"
+        }
+      ],
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [
+      ],
+      "depth": 4,
+      "source": "export default \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEXIyMj////Z2dkLxbXWAAAAG0lEQVQI12MIhQAGDDqBgYGBE4nGpW6wqocAANBpNxWy3VjNAAAAAElFTkSuQmCC\""
+    },
+    {
       "id": "./assets/images/两侧对齐_正常@2x.png",
       "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/两侧对齐_正常@2x.png",
       "name": "./assets/images/两侧对齐_正常@2x.png",
@@ -7954,7 +8280,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/两侧对齐_正常@2x.png",
-          "loc": "26:0-67"
+          "loc": "27:0-67"
         }
       ],
       "providedExports": [
@@ -8012,7 +8338,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/两侧对齐_选中@2x.png",
-          "loc": "30:0-75"
+          "loc": "31:0-75"
         }
       ],
       "providedExports": [
@@ -8022,6 +8348,73 @@
       ],
       "depth": 4,
       "source": "export default \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEVHcExdYWdcYGYAUvvjAAAAAnRSTlMAtc2YijsAAAAZSURBVAjXY2DABaRWrVq1BIkmBAabeggAADnWFeGWsPsoAAAAAElFTkSuQmCC\""
+    },
+    {
+      "id": "./assets/images/右对齐_不可点@2x.png",
+      "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/右对齐_不可点@2x.png",
+      "name": "./assets/images/右对齐_不可点@2x.png",
+      "index": 95,
+      "index2": 91,
+      "size": 191,
+      "cacheable": true,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+      "issuerId": "./src/components/font-layout-button-group/index.jsx",
+      "issuerName": "./src/components/font-layout-button-group/index.jsx",
+      "issuerPath": [
+        {
+          "id": "./src/components/index.js",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/index.js",
+          "name": "./src/components/index.js"
+        },
+        {
+          "id": "./src/components/editor/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
+          "name": "./src/components/editor/index.jsx"
+        },
+        {
+          "id": "./src/components/font-layout-button-group/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "name": "./src/components/font-layout-button-group/index.jsx"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": "./src/components/font-layout-button-group/index.jsx",
+          "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "module": "./src/components/font-layout-button-group/index.jsx",
+          "moduleName": "./src/components/font-layout-button-group/index.jsx",
+          "type": "harmony side effect evaluation",
+          "userRequest": "@assets/images/右对齐_不可点@2x.png",
+          "loc": "34:0-73"
+        },
+        {
+          "moduleId": "./src/components/font-layout-button-group/index.jsx",
+          "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "module": "./src/components/font-layout-button-group/index.jsx",
+          "moduleName": "./src/components/font-layout-button-group/index.jsx",
+          "type": "harmony import specifier",
+          "userRequest": "@assets/images/右对齐_不可点@2x.png",
+          "loc": "92:22-50"
+        }
+      ],
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [
+      ],
+      "depth": 4,
+      "source": "export default \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEXIyMj////Z2dkLxbXWAAAAI0lEQVQI12MIhQAGDLqBgYFBFYnGpQ5ON0DVNRCnntbmQwAAMe86SduSxhsAAAAASUVORK5CYII=\""
     },
     {
       "id": "./assets/images/右对齐_正常@2x.png",
@@ -8070,7 +8463,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/右对齐_正常@2x.png",
-          "loc": "25:0-64"
+          "loc": "26:0-64"
         },
         {
           "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -8079,7 +8472,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/右对齐_正常@2x.png",
-          "loc": "77:80-100"
+          "loc": "91:80-100"
         }
       ],
       "providedExports": [
@@ -8137,7 +8530,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/右对齐_选中@2x.png",
-          "loc": "29:0-72"
+          "loc": "30:0-72"
         },
         {
           "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -8146,7 +8539,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/右对齐_选中@2x.png",
-          "loc": "77:49-77"
+          "loc": "91:49-77"
         }
       ],
       "providedExports": [
@@ -8156,6 +8549,73 @@
       ],
       "depth": 4,
       "source": "export default \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEVHcExdYWdcYGYAUvvjAAAAAnRSTlMAtc2YijsAAAAfSURBVAjXY2DABbJWrVo1AYkmCLKg6rKIU09r8yEAAB3GFRkFFNVBAAAAAElFTkSuQmCC\""
+    },
+    {
+      "id": "./assets/images/居中对齐_不可点@2x.png",
+      "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/居中对齐_不可点@2x.png",
+      "name": "./assets/images/居中对齐_不可点@2x.png",
+      "index": 94,
+      "index2": 90,
+      "size": 191,
+      "cacheable": true,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+      "issuerId": "./src/components/font-layout-button-group/index.jsx",
+      "issuerName": "./src/components/font-layout-button-group/index.jsx",
+      "issuerPath": [
+        {
+          "id": "./src/components/index.js",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/index.js",
+          "name": "./src/components/index.js"
+        },
+        {
+          "id": "./src/components/editor/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
+          "name": "./src/components/editor/index.jsx"
+        },
+        {
+          "id": "./src/components/font-layout-button-group/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "name": "./src/components/font-layout-button-group/index.jsx"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": "./src/components/font-layout-button-group/index.jsx",
+          "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "module": "./src/components/font-layout-button-group/index.jsx",
+          "moduleName": "./src/components/font-layout-button-group/index.jsx",
+          "type": "harmony side effect evaluation",
+          "userRequest": "@assets/images/居中对齐_不可点@2x.png",
+          "loc": "33:0-75"
+        },
+        {
+          "moduleId": "./src/components/font-layout-button-group/index.jsx",
+          "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "module": "./src/components/font-layout-button-group/index.jsx",
+          "moduleName": "./src/components/font-layout-button-group/index.jsx",
+          "type": "harmony import specifier",
+          "userRequest": "@assets/images/居中对齐_不可点@2x.png",
+          "loc": "86:22-51"
+        }
+      ],
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [
+      ],
+      "depth": 4,
+      "source": "export default \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEXIyMj////Z2dkLxbXWAAAAI0lEQVQI12MIhQAGDLqBgYFBFYnGpQ5ON0DVNRCnntbmQwAAMe86SduSxhsAAAAASUVORK5CYII=\""
     },
     {
       "id": "./assets/images/居中对齐_正常@2x.png",
@@ -8204,7 +8664,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/居中对齐_正常@2x.png",
-          "loc": "24:0-66"
+          "loc": "25:0-66"
         },
         {
           "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -8213,7 +8673,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/居中对齐_正常@2x.png",
-          "loc": "73:82-103"
+          "loc": "85:82-103"
         }
       ],
       "providedExports": [
@@ -8271,7 +8731,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/居中对齐_选中@2x.png",
-          "loc": "28:0-74"
+          "loc": "29:0-74"
         },
         {
           "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -8280,7 +8740,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/居中对齐_选中@2x.png",
-          "loc": "73:50-79"
+          "loc": "85:50-79"
         }
       ],
       "providedExports": [
@@ -8295,8 +8755,8 @@
       "id": "./assets/images/左右边距_不可点@2x.png",
       "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/左右边距_不可点@2x.png",
       "name": "./assets/images/左右边距_不可点@2x.png",
-      "index": 96,
-      "index2": 93,
+      "index": 100,
+      "index2": 97,
       "size": 343,
       "cacheable": true,
       "built": false,
@@ -8357,8 +8817,8 @@
       "id": "./assets/images/左右边距_正常@2x.png",
       "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/左右边距_正常@2x.png",
       "name": "./assets/images/左右边距_正常@2x.png",
-      "index": 95,
-      "index2": 92,
+      "index": 99,
+      "index2": 96,
       "size": 359,
       "cacheable": true,
       "built": false,
@@ -8416,6 +8876,73 @@
       "source": "export default \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAM1BMVEVHcExBv5Up4KtcYGdcYWcp4Kpab29cYWZjY2t4lohdYGYr4KxdYGZdYGZeYWcq4KtcYGbG/xYOAAAAEHRSTlMAFOS4+/wz4B8E02zvkFSLeh/uLAAAAFxJREFUKM9jYBg4wMaHnQ0GXAKMWNlgwC7AgZWNEOBkY8MtycDDg0enAAuNJTkZwd7hZmVlZWJElWRjAgry45Fk4oaYyUk311JTkoGZGY8kjvjkZUZic3EOXHoFAJW+Br/53vS3AAAAAElFTkSuQmCC\""
     },
     {
+      "id": "./assets/images/左对齐_不可点@2x.png",
+      "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/左对齐_不可点@2x.png",
+      "name": "./assets/images/左对齐_不可点@2x.png",
+      "index": 93,
+      "index2": 89,
+      "size": 203,
+      "cacheable": true,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+      "issuerId": "./src/components/font-layout-button-group/index.jsx",
+      "issuerName": "./src/components/font-layout-button-group/index.jsx",
+      "issuerPath": [
+        {
+          "id": "./src/components/index.js",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/index.js",
+          "name": "./src/components/index.js"
+        },
+        {
+          "id": "./src/components/editor/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
+          "name": "./src/components/editor/index.jsx"
+        },
+        {
+          "id": "./src/components/font-layout-button-group/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "name": "./src/components/font-layout-button-group/index.jsx"
+        }
+      ],
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [
+      ],
+      "reasons": [
+        {
+          "moduleId": "./src/components/font-layout-button-group/index.jsx",
+          "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "module": "./src/components/font-layout-button-group/index.jsx",
+          "moduleName": "./src/components/font-layout-button-group/index.jsx",
+          "type": "harmony side effect evaluation",
+          "userRequest": "@assets/images/左对齐_不可点@2x.png",
+          "loc": "32:0-72"
+        },
+        {
+          "moduleId": "./src/components/font-layout-button-group/index.jsx",
+          "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "module": "./src/components/font-layout-button-group/index.jsx",
+          "moduleName": "./src/components/font-layout-button-group/index.jsx",
+          "type": "harmony import specifier",
+          "userRequest": "@assets/images/左对齐_不可点@2x.png",
+          "loc": "80:22-49"
+        }
+      ],
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [
+      ],
+      "depth": 4,
+      "source": "export default \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcAgMAAAAPYzcHAAAACVBMVEVHcEzJycnIyMjG7L31AAAAAnRSTlMAtc2YijsAAAAfSURBVAjXY2DABdhWrVq1EokmBNigytiIU05z8yEAAAZDEsEx8RsbAAAAAElFTkSuQmCC\""
+    },
+    {
       "id": "./assets/images/左对齐_正常@2x.png",
       "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/左对齐_正常@2x.png",
       "name": "./assets/images/左对齐_正常@2x.png",
@@ -8462,7 +8989,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/左对齐_正常@2x.png",
-          "loc": "23:0-63"
+          "loc": "24:0-63"
         },
         {
           "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -8471,7 +8998,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/左对齐_正常@2x.png",
-          "loc": "69:78-97"
+          "loc": "79:78-97"
         }
       ],
       "providedExports": [
@@ -8529,7 +9056,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/左对齐_选中@2x.png",
-          "loc": "27:0-71"
+          "loc": "28:0-71"
         },
         {
           "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -8538,7 +9065,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/左对齐_选中@2x.png",
-          "loc": "69:48-75"
+          "loc": "79:48-75"
         }
       ],
       "providedExports": [
@@ -8955,8 +9482,8 @@
       "id": "./assets/images/行间距_不可点@2x.png",
       "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/行间距_不可点@2x.png",
       "name": "./assets/images/行间距_不可点@2x.png",
-      "index": 94,
-      "index2": 91,
+      "index": 98,
+      "index2": 95,
       "size": 431,
       "cacheable": true,
       "built": false,
@@ -9017,8 +9544,8 @@
       "id": "./assets/images/行间距_正常@2x.png",
       "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/url-loader/dist/cjs.js??ref--6-0!/Users/doog/Documents/Workspaces/node/textbox/assets/images/行间距_正常@2x.png",
       "name": "./assets/images/行间距_正常@2x.png",
-      "index": 93,
-      "index2": 90,
+      "index": 97,
+      "index2": 94,
       "size": 463,
       "cacheable": true,
       "built": false,
@@ -9349,6 +9876,24 @@
       ],
       "reasons": [
         {
+          "moduleId": "./src/components/font-layout-button-group/index.jsx",
+          "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "module": "./src/components/font-layout-button-group/index.jsx",
+          "moduleName": "./src/components/font-layout-button-group/index.jsx",
+          "type": "harmony side effect evaluation",
+          "userRequest": "classnames",
+          "loc": "23:0-36"
+        },
+        {
+          "moduleId": "./src/components/font-layout-button-group/index.jsx",
+          "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
+          "module": "./src/components/font-layout-button-group/index.jsx",
+          "moduleName": "./src/components/font-layout-button-group/index.jsx",
+          "type": "harmony import specifier",
+          "userRequest": "classnames",
+          "loc": "71:22-32"
+        },
+        {
           "moduleId": "./src/components/font-style-button-group/index.jsx",
           "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-style-button-group/index.jsx",
           "module": "./src/components/font-style-button-group/index.jsx",
@@ -9532,7 +10077,7 @@
       "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/font-layout-button-group/font-layout-button-group.less",
       "index": 84,
       "index2": 79,
-      "size": 678,
+      "size": 705,
       "cacheable": true,
       "built": false,
       "optional": false,
@@ -9585,7 +10130,7 @@
       "optimizationBailout": [
       ],
       "depth": 5,
-      "source": "// Imports\nvar ___CSS_LOADER_API_IMPORT___ = require(\"../../../node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.id, \".coursebox-font-layout-button-group {\\n  display: inline-block;\\n  vertical-align: bottom;\\n  padding: 3px;\\n  border-radius: 2px;\\n  border: 1px solid #E8E8E8;\\n}\\n.coursebox-font-layout-button-group .coursebox-button-icon {\\n  margin: 0 6px;\\n}\\n.coursebox-font-layout-button-group .coursebox-button-icon:first-child {\\n  margin-left: 0;\\n}\\n.coursebox-font-layout-button-group .coursebox-button-icon:last-child {\\n  margin-right: 0;\\n}\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n"
+      "source": "// Imports\nvar ___CSS_LOADER_API_IMPORT___ = require(\"../../../node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.id, \".coursebox-font-layout-button-group {\\n  display: inline-block;\\n  vertical-align: bottom;\\n  padding: 3px;\\n  border-radius: 2px;\\n  border: 1px solid #E8E8E8;\\n  background-color: #fff;\\n}\\n.coursebox-font-layout-button-group .coursebox-button-icon {\\n  margin: 0 6px;\\n}\\n.coursebox-font-layout-button-group .coursebox-button-icon:first-child {\\n  margin-left: 0;\\n}\\n.coursebox-font-layout-button-group .coursebox-button-icon:last-child {\\n  margin-right: 0;\\n}\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n"
     },
     {
       "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/font-style-button-group/font-style-button-group.less",
@@ -9860,9 +10405,9 @@
           "name": "./src/components/editor/index.jsx"
         },
         {
-          "id": "./src/components/font-layout-button-group/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
-          "name": "./src/components/font-layout-button-group/index.jsx"
+          "id": "./src/components/font-style-button-group/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-style-button-group/index.jsx",
+          "name": "./src/components/font-style-button-group/index.jsx"
         },
         {
           "id": "./src/components/select-button/index.jsx",
@@ -12164,8 +12709,8 @@
       "id": "./src/commons/computed_state.js",
       "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/commons/computed_state.js",
       "name": "./src/commons/computed_state.js",
-      "index": 99,
-      "index2": 96,
+      "index": 103,
+      "index2": 100,
       "size": 4662,
       "cacheable": true,
       "built": false,
@@ -12282,7 +12827,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "cjs require",
           "userRequest": "@commons/debug",
-          "loc": "32:12-37"
+          "loc": "37:12-37"
         },
         {
           "moduleId": "./src/components/font-style-button-group/index.jsx",
@@ -12564,7 +13109,7 @@
       "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
       "name": "./src/components/editor/index.jsx",
       "index": 47,
-      "index2": 97,
+      "index2": 101,
       "size": 16701,
       "cacheable": true,
       "built": false,
@@ -12677,8 +13222,8 @@
       "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
       "name": "./src/components/font-layout-button-group/index.jsx",
       "index": 82,
-      "index2": 89,
-      "size": 5222,
+      "index2": 93,
+      "size": 6040,
       "cacheable": true,
       "built": false,
       "optional": false,
@@ -12732,7 +13277,7 @@
       "optimizationBailout": [
       ],
       "depth": 3,
-      "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './font-layout-button-group.less';\nimport { Component } from 'react';\nimport PropTypes from 'prop-types';\nimport SelectButton from '../select-button';\nimport ImageFontLayoutLeft from '@assets/images/左对齐_正常@2x.png';\nimport ImageFontLayoutCenter from '@assets/images/居中对齐_正常@2x.png';\nimport ImageFontLayoutRight from '@assets/images/右对齐_正常@2x.png';\nimport ImageFontLayoutJustify from '@assets/images/两侧对齐_正常@2x.png';\nimport ImageFontLayoutLeftSelected from '@assets/images/左对齐_选中@2x.png';\nimport ImageFontLayoutCenterSelected from '@assets/images/居中对齐_选中@2x.png';\nimport ImageFontLayoutRightSelected from '@assets/images/右对齐_选中@2x.png';\nimport ImageFontLayoutJustifySelected from '@assets/images/两侧对齐_选中@2x.png';\n\nvar debug = require('@commons/debug')('textbox:font-layout-button-group');\n\nvar FontLayoutButtonGroup =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(FontLayoutButtonGroup, _Component);\n\n  function FontLayoutButtonGroup(props) {\n    var _this;\n\n    _classCallCheck(this, FontLayoutButtonGroup);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(FontLayoutButtonGroup).call(this, props));\n    _this.onFontLayoutChange = _this.onFontLayoutChange.bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(FontLayoutButtonGroup, [{\n    key: \"onFontLayoutChange\",\n    value: function onFontLayoutChange(textAlign) {\n      var _this2 = this;\n\n      return function (selected) {\n        var _this2$props;\n\n        debug('onFontLayoutChange %s %s', textAlign, selected);\n        (_this2$props = _this2.props) === null || _this2$props === void 0 ? void 0 : _this2$props.onFontLayoutChange(selected ? textAlign : 'start');\n      };\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var className = this.props.className;\n      return React.createElement(\"div\", {\n        className: \"coursebox-font-layout-button-group \".concat(className)\n      }, React.createElement(SelectButton, {\n        selected: this.props.textAlign === 'left' || this.props.textAlign === 'start',\n        icon: this.props.textAlign === 'left' ? ImageFontLayoutLeftSelected : ImageFontLayoutLeft,\n        onSelected: this.onFontLayoutChange('left')\n      }), React.createElement(SelectButton, {\n        selected: this.props.textAlign === 'center',\n        icon: this.props.textAlign === 'center' ? ImageFontLayoutCenterSelected : ImageFontLayoutCenter,\n        onSelected: this.onFontLayoutChange('center')\n      }), React.createElement(SelectButton, {\n        selected: this.props.textAlign === 'right',\n        icon: this.props.textAlign === 'right' ? ImageFontLayoutRightSelected : ImageFontLayoutRight,\n        onSelected: this.onFontLayoutChange('right')\n      }));\n    }\n  }]);\n\n  return FontLayoutButtonGroup;\n}(Component);\n\nPropTypes.defaultProps = {\n  textAlign: 'start',\n  'className': ''\n};\nPropTypes.propTypes = {\n  textAlign: PropTypes.string,\n  onFontLayoutChange: PropTypes.func.isRequired\n};\nexport default FontLayoutButtonGroup;"
+      "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './font-layout-button-group.less';\nimport { Component } from 'react';\nimport PropTypes from 'prop-types';\nimport SelectButton from '../select-button';\nimport classNames from 'classnames';\nimport ImageFontLayoutLeft from '@assets/images/左对齐_正常@2x.png';\nimport ImageFontLayoutCenter from '@assets/images/居中对齐_正常@2x.png';\nimport ImageFontLayoutRight from '@assets/images/右对齐_正常@2x.png';\nimport ImageFontLayoutJustify from '@assets/images/两侧对齐_正常@2x.png';\nimport ImageFontLayoutLeftSelected from '@assets/images/左对齐_选中@2x.png';\nimport ImageFontLayoutCenterSelected from '@assets/images/居中对齐_选中@2x.png';\nimport ImageFontLayoutRightSelected from '@assets/images/右对齐_选中@2x.png';\nimport ImageFontLayoutJustifySelected from '@assets/images/两侧对齐_选中@2x.png';\nimport ImageFontLayoutLeftDisabled from '@assets/images/左对齐_不可点@2x.png';\nimport ImageFontLayoutCenterDisabled from '@assets/images/居中对齐_不可点@2x.png';\nimport ImageFontLayoutRightDisabled from '@assets/images/右对齐_不可点@2x.png';\nimport ImageFontLayoutJustifyDisabled from '@assets/images/两侧对齐_不可点@2x.png';\n\nvar debug = require('@commons/debug')('textbox:font-layout-button-group');\n\nvar FontLayoutButtonGroup =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(FontLayoutButtonGroup, _Component);\n\n  function FontLayoutButtonGroup(props) {\n    var _this;\n\n    _classCallCheck(this, FontLayoutButtonGroup);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(FontLayoutButtonGroup).call(this, props));\n    _this.onFontLayoutChange = _this.onFontLayoutChange.bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(FontLayoutButtonGroup, [{\n    key: \"onFontLayoutChange\",\n    value: function onFontLayoutChange(textAlign) {\n      var _this2 = this;\n\n      return function (selected) {\n        var _this2$props;\n\n        debug('onFontLayoutChange %s %s', textAlign, selected);\n        (_this2$props = _this2.props) === null || _this2$props === void 0 ? void 0 : _this2$props.onFontLayoutChange(selected ? textAlign : 'start');\n      };\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var disabled = this.props.disabled;\n      debug('disabled', disabled);\n      var className = classNames('coursebox-font-layout-button-group', this.props.className, {\n        disabled: disabled\n      });\n      return React.createElement(\"div\", {\n        className: className\n      }, React.createElement(SelectButton, {\n        disabled: disabled,\n        selected: this.props.textAlign === 'left' || this.props.textAlign === 'start',\n        icon: this.props.textAlign === 'left' ? ImageFontLayoutLeftSelected : ImageFontLayoutLeft,\n        disabledIcon: ImageFontLayoutLeftDisabled,\n        onSelected: this.onFontLayoutChange('left')\n      }), React.createElement(SelectButton, {\n        disabled: disabled,\n        selected: this.props.textAlign === 'center',\n        icon: this.props.textAlign === 'center' ? ImageFontLayoutCenterSelected : ImageFontLayoutCenter,\n        disabledIcon: ImageFontLayoutCenterDisabled,\n        onSelected: this.onFontLayoutChange('center')\n      }), React.createElement(SelectButton, {\n        disabled: disabled,\n        selected: this.props.textAlign === 'right',\n        icon: this.props.textAlign === 'right' ? ImageFontLayoutRightSelected : ImageFontLayoutRight,\n        disabledIcon: ImageFontLayoutRightDisabled,\n        onSelected: this.onFontLayoutChange('right')\n      }));\n    }\n  }]);\n\n  return FontLayoutButtonGroup;\n}(Component);\n\nFontLayoutButtonGroup.defaultProps = {\n  disabled: true,\n  textAlign: 'start',\n  'className': ''\n};\nFontLayoutButtonGroup.propTypes = {\n  disabled: PropTypes.bool,\n  textAlign: PropTypes.string,\n  onFontLayoutChange: PropTypes.func.isRequired\n};\nexport default FontLayoutButtonGroup;"
     },
     {
       "id": "./src/components/font-style-button-group/font-style-button-group.less",
@@ -12798,7 +13343,7 @@
       "index2": 78,
       "size": 5580,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -12857,7 +13402,7 @@
       "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/index.js",
       "name": "./src/components/index.js",
       "index": 32,
-      "index2": 98,
+      "index2": 102,
       "size": 93,
       "cacheable": true,
       "built": false,
@@ -13290,9 +13835,9 @@
       "chunks": [
         "main"
       ],
-      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
-      "issuerId": "./src/components/font-layout-button-group/index.jsx",
-      "issuerName": "./src/components/font-layout-button-group/index.jsx",
+      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-style-button-group/index.jsx",
+      "issuerId": "./src/components/font-style-button-group/index.jsx",
+      "issuerName": "./src/components/font-style-button-group/index.jsx",
       "issuerPath": [
         {
           "id": "./src/components/index.js",
@@ -13305,9 +13850,9 @@
           "name": "./src/components/editor/index.jsx"
         },
         {
-          "id": "./src/components/font-layout-button-group/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
-          "name": "./src/components/font-layout-button-group/index.jsx"
+          "id": "./src/components/font-style-button-group/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-style-button-group/index.jsx",
+          "name": "./src/components/font-style-button-group/index.jsx"
         }
       ],
       "failed": false,
@@ -13332,7 +13877,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../select-button",
-          "loc": "67:29-41"
+          "loc": "76:29-41"
         },
         {
           "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -13341,7 +13886,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../select-button",
-          "loc": "71:30-42"
+          "loc": "82:30-42"
         },
         {
           "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -13350,7 +13895,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../select-button",
-          "loc": "75:30-42"
+          "loc": "88:30-42"
         },
         {
           "moduleId": "./src/components/font-style-button-group/index.jsx",
@@ -13426,9 +13971,9 @@
           "name": "./src/components/editor/index.jsx"
         },
         {
-          "id": "./src/components/font-layout-button-group/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
-          "name": "./src/components/font-layout-button-group/index.jsx"
+          "id": "./src/components/font-style-button-group/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-style-button-group/index.jsx",
+          "name": "./src/components/font-style-button-group/index.jsx"
         },
         {
           "id": "./src/components/select-button/index.jsx",
@@ -13746,7 +14291,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "86:0-9"
+          "loc": "107:12-21"
         },
         {
           "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -13755,7 +14300,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "90:0-9"
+          "loc": "108:13-22"
         },
         {
           "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -13764,16 +14309,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "91:13-22"
-        },
-        {
-          "moduleId": "./src/components/font-layout-button-group/index.jsx",
-          "moduleIdentifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/font-layout-button-group/index.jsx",
-          "module": "./src/components/font-layout-button-group/index.jsx",
-          "moduleName": "./src/components/font-layout-button-group/index.jsx",
-          "type": "harmony import specifier",
-          "userRequest": "prop-types",
-          "loc": "92:22-31"
+          "loc": "109:22-31"
         },
         {
           "moduleId": "./src/components/font-style-button-group/index.jsx",
@@ -14182,7 +14718,7 @@
           "moduleName": "./src/components/font-layout-button-group/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "84:2-11"
+          "loc": "99:2-11"
         },
         {
           "moduleId": "./src/components/font-style-button-group/index.jsx",
