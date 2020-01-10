@@ -45,6 +45,7 @@
   "description": "React Textbox",
   "dependencies": {
     "@simonwep/pickr": "^1.4.8",
+    "classnames": "^2.2.6",
     "medium-editor": "^5.23.3",
     "react-medium-editor": "^1.8.1"
   }

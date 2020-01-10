@@ -133,7 +133,7 @@ class InputColor extends Component {
 }
 
 InputColor.defaultProps = {
-	disabled: true
+	disabled: false
 };
 
 InputColor.propTypes = {

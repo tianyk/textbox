@@ -135,6 +135,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./assets/images/上下边距_不可点@2x.png":
+/*!***************************************!*\
+  !*** ./assets/images/上下边距_不可点@2x.png ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAJFBMVEXIyMhHcEzIyMjOzs78/PzJycnJycn////JycnJycnOzs7IyMhcXlmOAAAADHRSTlP+AN8fBLeSAe5qDXAVU+poAAAAXklEQVQY02MQRAEMEEpsIwp3QSM+rgMjCrdIEcF1NgYDEyhXgQEMmKDcJCUwUEPoRXMGCdwAkMGsuLgiLkDgSJxR2N3MitPNwoYoRgm1o3AFWFC57Khc1KCTnIjVVQCF4SIhW5RvYAAAAABJRU5ErkJggg==");
+
+/***/ }),
+
 /***/ "./assets/images/上下边距_正常@2x.png":
 /*!**************************************!*\
   !*** ./assets/images/上下边距_正常@2x.png ***!
@@ -158,6 +171,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAIVBMVEVHcExdYGddaWpeZ2hdYWddYWddYGZdYmhfY2lcYGZcYGYn+ereAAAACnRSTlMA5xQauYjdXzP4XiimIgAAAERlWElmTU0AKgAAAAgAAgESAAMAAAABAAYAAIdpAAQAAAABAAAAJgAAAAAAAqACAAQAAAABAAAAHKADAAQAAAABAAAAHAAAAAC0p6D3AAAAW0lEQVQY02NgoC4IgRNgIGUAI2jMzWoAErMUYFyvAgYGjoVwZ1QJMTCwLIVzWZYVcXglwblMXqtmLWtA+IE9a2EAiqcUiPV9oCAYiMBcsQoMlsHsUQIDBVLDFAATShWeFhha3wAAAABJRU5ErkJggg==");
+
+/***/ }),
+
+/***/ "./assets/images/下划线_不可点@2x.png":
+/*!**************************************!*\
+  !*** ./assets/images/下划线_不可点@2x.png ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAJFBMVEVHcEzIyMjR0dHQ0NDJycnKysrJycnKysrKysrJycnJycnIyMgi8PNQAAAAC3RSTlMA5hQatV/QM4b4ixD6QUsAAABbSURBVBjTY2CgLmiBE2AgbQAjaMzNLgASsxVgXO8ABgb2jXBnRAsxMLDtgnNZNgaxZwvBuczeu2dvLED4gTV74wIUTykQ6/tGQTAQgbliNxjA3MGkBAYKpIYpAL+PFrHX3dVVAAAAAElFTkSuQmCC");
 
 /***/ }),
 
@@ -239,6 +265,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./assets/images/左右边距_不可点@2x.png":
+/*!***************************************!*\
+  !*** ./assets/images/左右边距_不可点@2x.png ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAJ1BMVEXIyMhHcEzIyMjOzs78/PzJycnJycnMzMzQ0NDJycnKysrJycnLy8vL1iDFAAAADXRSTlP+AOAeA2LvNxC4jtUsyazfuwAAAF5JREFUGNNjEEQBDKRyxQMFYSSIK80hCCNBXCFmQRgJ5YoXonDdElG4DoykckU6BBlEGZiMIFweBYaFQC4bjLshLRCo2BGh15Fsi3ByJSeicJH9KzUFxJXaQk7AIgEApQoftrLsszIAAAAASUVORK5CYII=");
+
+/***/ }),
+
 /***/ "./assets/images/左右边距_正常@2x.png":
 /*!**************************************!*\
   !*** ./assets/images/左右边距_正常@2x.png ***!
@@ -317,6 +356,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./assets/images/斜体_不可点@2x.png":
+/*!*************************************!*\
+  !*** ./assets/images/斜体_不可点@2x.png ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAJ1BMVEVHcEzJycnKysrU1NTJycnNzc3KysrJycnJycnOzs7JycnIyMjIyMg/QVKzAAAADHRSTlMAtFUL8S9zicQZmd1E5kjPAAAAUElEQVQY02NgoDFgPHPmjABOLgPnEQNk1UwHUTRzHUPhch9F4cY4oHBzBFC4MgooXJ8JyDzW0yiSbKdQuByHULg2h1G4Og0o3JoC4n1LHgAAbFoUZs1bf3MAAAAASUVORK5CYII=");
+
+/***/ }),
+
 /***/ "./assets/images/粗体@2x.png":
 /*!*********************************!*\
   !*** ./assets/images/粗体@2x.png ***!
@@ -327,6 +379,32 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAHlBMVEVHcExdYWddYWdcYGZgYGlcYWpdYGZeYGZeYmlcYGaOK88qAAAACXRSTlMAmbPlPTrXekmAjsR4AAAAWUlEQVQY02NgoClonjnTyAHBtZw5c+Z0BHdmoqDmTIT0TAEG1pkKyFwGTQM8XBTFaEYBwUQGFO7MAmTFQjOnoJgcOQmFyzQZHxdZMapRlqgWAb0/WYXiQAQAodIjwkTzNA4AAAAASUVORK5CYII=");
+
+/***/ }),
+
+/***/ "./assets/images/粗体_不可点@2x.png":
+/*!*************************************!*\
+  !*** ./assets/images/粗体_不可点@2x.png ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAG1BMVEVHcEzIyMjJycnKysrJycnIyMjJycnLy8vIyMgjavbaAAAACHRSTlMAmbM85dd6SYaPr+UAAABXSURBVBjTY2CgKSjp6HAyQHA9Ojo62hDcjkBBjQ6EdIcAA3OHAjKXQcMBDxdFMZpRQNDIgMLtSEBWLNTRjGKyRRMKl6kFHxdZMapRHqgWAb3fokxxIAIA8KQgAQv/ltQAAAAASUVORK5CYII=");
+
+/***/ }),
+
+/***/ "./assets/images/行间距_不可点@2x.png":
+/*!**************************************!*\
+  !*** ./assets/images/行间距_不可点@2x.png ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAALVBMVEVHcEzR0dHJycnJycnJycnJycnKysrl5eXJycnNzc3KysrJycnJycnJycnIyMgEBinoAAAADnRSTlMADPXxneI6BYgcU2zCyo9q3H4AAACYSURBVBjTY2AgDXCHNjIwMAoCgQCI6/fujQBj3DsgeALksTxaFneQ/ZISEFiAJNUYpr4pgOlkfJTAwBmXADcpE4hnwWUZyhlcC1BsipuAj2sngM5lv2wMBBYwLsJVEMWFcDcz6KHq1UO11wWJzb4NSGTDuWxAL3DpIRwC9OCiF4jQYHm0Wq8ByV6/dy8YEKHBwH1mAQNZAABlYzGHMJy8jQAAAABJRU5ErkJggg==");
 
 /***/ }),
 
@@ -592,6 +670,68 @@ module.exports = function () {
 
 /***/ }),
 
+/***/ "./node_modules/classnames/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/classnames/index.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg) && arg.length) {
+				var inner = classNames.apply(null, arg);
+				if (inner) {
+					classes.push(inner);
+				}
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if ( true && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/@simonwep/pickr/dist/themes/nano.min.css":
 /*!*****************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/@simonwep/pickr/dist/themes/nano.min.css ***!
@@ -657,7 +797,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".coursebox-font-style-button-group {\n  display: inline-block;\n  vertical-align: bottom;\n  padding: 3px;\n  border-radius: 2px;\n  border: 1px solid #E8E8E8;\n}\n.coursebox-font-style-button-group .coursebox-button-icon {\n  margin: 0 6px;\n}\n.coursebox-font-style-button-group .coursebox-button-icon:first-child {\n  margin-left: 0;\n}\n.coursebox-font-style-button-group .coursebox-button-icon:last-child {\n  margin-right: 0;\n}\n", ""]);
+exports.push([module.i, ".coursebox-font-style-button-group {\n  display: inline-block;\n  vertical-align: bottom;\n  padding: 3px;\n  border-radius: 2px;\n  background-color: #fff;\n  border: 1px solid #E8E8E8;\n}\n.coursebox-font-style-button-group .coursebox-button-icon {\n  margin: 0 6px;\n}\n.coursebox-font-style-button-group .coursebox-button-icon:first-child {\n  margin-left: 0;\n}\n.coursebox-font-style-button-group .coursebox-button-icon:last-child {\n  margin-right: 0;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -711,7 +851,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".coursebox-input-select {\n  position: relative;\n  display: inline-block;\n  background-color: #fff;\n  height: 32px;\n  line-height: 32px;\n  box-sizing: content-box;\n  padding: 0 10px;\n  margin: 0;\n  border: 1px solid #E8E8E8;\n  border-radius: 2px;\n  outline: none;\n  vertical-align: bottom;\n}\n.coursebox-input-select .icon {\n  display: inline-block;\n  vertical-align: middle;\n  width: 14px;\n  height: 14px;\n  padding: 2px;\n  margin-right: 7px;\n}\n.coursebox-input-select .select-value {\n  display: inline-block;\n  width: 14px;\n  font-size: 12px;\n  margin-right: 1px;\n  text-align: center;\n  color: #333;\n}\n.coursebox-input-select .unit {\n  font-size: 12px;\n  margin-left: 1px;\n  color: #333;\n}\n.coursebox-input-select .select-collapse {\n  float: right;\n  margin-left: 7px;\n}\n.coursebox-input-select .select-collapse img {\n  width: 6px;\n  height: 4px;\n  vertical-align: middle;\n}\n.coursebox-input-select .options {\n  position: absolute;\n  z-index: 99;\n  left: -1px;\n  width: 100%;\n}\n.coursebox-input-select .options ul,\n.coursebox-input-select .options ol {\n  background-color: #fff;\n  border: 1px solid #E8E8E8;\n  min-width: 100%;\n  list-style-type: none;\n  padding-left: 0;\n  margin-top: 0;\n  margin-left: 0;\n  max-height: 10em;\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n.coursebox-input-select .options ul li,\n.coursebox-input-select .options ol li {\n  font-size: 12px;\n  padding-left: 7px;\n  user-select: none;\n}\n.coursebox-input-select .options ul li.selected,\n.coursebox-input-select .options ol li.selected {\n  background-color: #E8E8E8;\n}\n.coursebox-input-select .options ul li:hover,\n.coursebox-input-select .options ol li:hover {\n  background-color: #E8E8E8;\n}\n.coursebox-input-select:hover {\n  border-color: #5C6066;\n}\n", ""]);
+exports.push([module.i, ".coursebox-input-select {\n  position: relative;\n  display: inline-block;\n  background-color: #fff;\n  height: 32px;\n  line-height: 32px;\n  box-sizing: content-box;\n  padding: 0 10px;\n  margin: 0;\n  border: 1px solid #E8E8E8;\n  border-radius: 2px;\n  outline: none;\n  vertical-align: bottom;\n}\n.coursebox-input-select .icon {\n  display: inline-block;\n  vertical-align: middle;\n  width: 14px;\n  height: 14px;\n  padding: 2px;\n  margin-right: 7px;\n}\n.coursebox-input-select .select-value {\n  display: inline-block;\n  width: 14px;\n  font-size: 12px;\n  margin-right: 1px;\n  color: #333;\n  text-align: center;\n}\n.coursebox-input-select .unit {\n  font-size: 12px;\n  margin-left: 1px;\n  color: #333;\n}\n.coursebox-input-select .select-collapse {\n  float: right;\n  margin-left: 7px;\n}\n.coursebox-input-select .select-collapse img {\n  width: 6px;\n  height: 4px;\n  vertical-align: middle;\n}\n.coursebox-input-select .options {\n  position: absolute;\n  z-index: 99;\n  left: -1px;\n  width: 100%;\n}\n.coursebox-input-select .options ul,\n.coursebox-input-select .options ol {\n  background-color: #fff;\n  border: 1px solid #E8E8E8;\n  min-width: 100%;\n  list-style-type: none;\n  padding-left: 0;\n  margin-top: 0;\n  margin-left: 0;\n  max-height: 10em;\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n.coursebox-input-select .options ul li,\n.coursebox-input-select .options ol li {\n  font-size: 12px;\n  padding-left: 7px;\n  user-select: none;\n}\n.coursebox-input-select .options ul li.selected,\n.coursebox-input-select .options ol li.selected {\n  background-color: #E8E8E8;\n}\n.coursebox-input-select .options ul li:hover,\n.coursebox-input-select .options ol li:hover {\n  background-color: #E8E8E8;\n}\n.coursebox-input-select.disabled .font-color-bar {\n  background-color: #E8E8E8 !important;\n}\n.coursebox-input-select.disabled .select-value {\n  color: #E8E8E8;\n}\n.coursebox-input-select.disabled .unit {\n  color: #E8E8E8;\n}\n.coursebox-input-select.disabled:hover {\n  border-color: #E8E8E8;\n}\n.coursebox-input-select:hover {\n  border-color: #5C6066;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -729,7 +869,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".coursebox-button-icon {\n  width: 36px;\n  height: 26px;\n  border: 1px solid transparent;\n  border-radius: 1px;\n  background-color: #fff;\n  outline: none;\n  vertical-align: bottom;\n}\n.coursebox-button-icon .icon {\n  width: 14px;\n  height: 14px;\n  padding: 2px;\n}\n.coursebox-button-icon:hover {\n  border-color: #5C6066;\n}\n.coursebox-button-icon.selected {\n  background-color: #E8E8E8;\n  border-color: transparent;\n}\n", ""]);
+exports.push([module.i, ".coursebox-button-icon {\n  width: 36px;\n  height: 26px;\n  border: 1px solid transparent;\n  border-radius: 1px;\n  background-color: #fff;\n  outline: none;\n  vertical-align: bottom;\n}\n.coursebox-button-icon .icon {\n  width: 14px;\n  height: 14px;\n  padding: 2px;\n}\n.coursebox-button-icon:hover {\n  border-color: #5C6066;\n}\n.coursebox-button-icon.selected {\n  background-color: #E8E8E8;\n  border-color: transparent;\n}\n.coursebox-button-icon.disabled:hover {\n  border-color: #fff;\n}\n.coursebox-button-icon.disabled.selected:hover {\n  border-color: #E8E8E8;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -11938,11 +12078,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _font_style_button_group__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../font-style-button-group */ "./src/components/font-style-button-group/index.jsx");
 /* harmony import */ var _font_layout_button_group__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../font-layout-button-group */ "./src/components/font-layout-button-group/index.jsx");
 /* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @assets/images/行间距_正常@2x.png */ "./assets/images/行间距_正常@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @assets/images/左右边距_正常@2x.png */ "./assets/images/左右边距_正常@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @assets/images/上下边距_正常@2x.png */ "./assets/images/上下边距_正常@2x.png");
-/* harmony import */ var _commons_computed_state__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @commons/computed_state */ "./src/commons/computed_state.js");
-/* harmony import */ var _commons_throttle__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @commons/throttle */ "./src/commons/throttle.js");
-/* harmony import */ var _commons_utils__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @commons/utils */ "./src/commons/utils.js");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @assets/images/行间距_不可点@2x.png */ "./assets/images/行间距_不可点@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @assets/images/左右边距_正常@2x.png */ "./assets/images/左右边距_正常@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @assets/images/左右边距_不可点@2x.png */ "./assets/images/左右边距_不可点@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @assets/images/上下边距_正常@2x.png */ "./assets/images/上下边距_正常@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @assets/images/上下边距_不可点@2x.png */ "./assets/images/上下边距_不可点@2x.png");
+/* harmony import */ var _commons_computed_state__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @commons/computed_state */ "./src/commons/computed_state.js");
+/* harmony import */ var _commons_throttle__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @commons/throttle */ "./src/commons/throttle.js");
+/* harmony import */ var _commons_utils__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @commons/utils */ "./src/commons/utils.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11960,6 +12103,9 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
 
 
 
@@ -12031,7 +12177,7 @@ function (_Component) {
       textStyle: {}
     };
     _this.onTextStyleChange = _this.onTextStyleChange.bind(_assertThisInitialized(_this));
-    _this.throttleCheckState = Object(_commons_throttle__WEBPACK_IMPORTED_MODULE_13__["default"])(_this.checkState, 250).bind(_assertThisInitialized(_this));
+    _this.throttleCheckState = Object(_commons_throttle__WEBPACK_IMPORTED_MODULE_16__["default"])(_this.checkState, 250).bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -12090,7 +12236,7 @@ function (_Component) {
       while (parentNode) {
         var _this$getTextbox$opti2;
 
-        Object(_commons_computed_state__WEBPACK_IMPORTED_MODULE_12__["computedState"])(textStyle, parentNode, (_this$getTextbox$opti2 = this.getTextbox().options) === null || _this$getTextbox$opti2 === void 0 ? void 0 : _this$getTextbox$opti2.contentWindow); // we can abort the search upwards if we leave the contentEditable element
+        Object(_commons_computed_state__WEBPACK_IMPORTED_MODULE_15__["computedState"])(textStyle, parentNode, (_this$getTextbox$opti2 = this.getTextbox().options) === null || _this$getTextbox$opti2 === void 0 ? void 0 : _this$getTextbox$opti2.contentWindow); // we can abort the search upwards if we leave the contentEditable element
 
         if (medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.util.isMediumEditorElement(parentNode)) {
           break;
@@ -12112,9 +12258,9 @@ function (_Component) {
       if (this.props.textboxDOM) {
         var textboxDOM = this.props.textboxDOM;
 
-        if (Object(_commons_utils__WEBPACK_IMPORTED_MODULE_14__["isReactComponentInstance"])(textboxDOM)) {
+        if (Object(_commons_utils__WEBPACK_IMPORTED_MODULE_17__["isReactComponentInstance"])(textboxDOM)) {
           return react_dom__WEBPACK_IMPORTED_MODULE_4___default.a.findDOMNode(textboxDOM);
-        } else if (Object(_commons_utils__WEBPACK_IMPORTED_MODULE_14__["isElement"])(textboxDOM)) {
+        } else if (Object(_commons_utils__WEBPACK_IMPORTED_MODULE_17__["isElement"])(textboxDOM)) {
           return textboxDOM;
         } else {
           throw new Error('`textboxDOM` 必须是一个 HTMLElement 或者 React Component 实例');
@@ -12301,6 +12447,7 @@ function (_Component) {
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
         className: "__font-line-height",
         icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__["default"],
+        disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__["default"],
         value: lineHeight,
         options: [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2, 2.4, 2.6, 2.8, 3.0],
         unit: "\u500D",
@@ -12309,7 +12456,8 @@ function (_Component) {
         }
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
         className: "__font-padding-top-bottom",
-        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__["default"],
+        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_13__["default"],
+        disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_14__["default"],
         value: paddingTop,
         options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],
         unit: "px",
@@ -12320,7 +12468,8 @@ function (_Component) {
         }
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
         className: "__font-padding-left-right",
-        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__["default"],
+        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__["default"],
+        disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_12__["default"],
         value: paddingLeft,
         options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],
         unit: "px",
@@ -12540,10 +12689,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _select_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../select-button */ "./src/components/select-button/index.jsx");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @assets/images/粗体@2x.png */ "./assets/images/粗体@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @assets/images/斜体@2x.png */ "./assets/images/斜体@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @assets/images/下划线@2x.png */ "./assets/images/下划线@2x.png");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _select_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../select-button */ "./src/components/select-button/index.jsx");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @assets/images/粗体@2x.png */ "./assets/images/粗体@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @assets/images/粗体_不可点@2x.png */ "./assets/images/粗体_不可点@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @assets/images/斜体@2x.png */ "./assets/images/斜体@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @assets/images/斜体_不可点@2x.png */ "./assets/images/斜体_不可点@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @assets/images/下划线@2x.png */ "./assets/images/下划线@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @assets/images/下划线_不可点@2x.png */ "./assets/images/下划线_不可点@2x.png");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12561,6 +12715,10 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
 
 
 
@@ -12616,20 +12774,29 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var className = this.props.className;
+      var disabled = this.props.disabled;
+      var className = classnames__WEBPACK_IMPORTED_MODULE_3___default()('coursebox-font-style-button-group', this.props.className, {
+        disabled: disabled
+      });
       return React.createElement("div", {
-        className: "coursebox-font-style-button-group ".concat(className)
-      }, React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        className: className
+      }, React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        disabled: disabled,
         selected: this.props.fontWeight === 'bold',
-        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_4__["default"],
-        onSelected: this.onFontStyleChange('fontWeight')
-      }), React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        selected: this.props.fontStyle === 'italic',
         icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__["default"],
+        disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__["default"],
+        onSelected: this.onFontStyleChange('fontWeight')
+      }), React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        disabled: disabled,
+        selected: this.props.fontStyle === 'italic',
+        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_7__["default"],
+        disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_8__["default"],
         onSelected: this.onFontStyleChange('fontStyle')
-      }), React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }), React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        disabled: disabled,
         selected: this.props.textDecoration === 'underline',
-        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__["default"],
+        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__["default"],
+        disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__["default"],
         onSelected: this.onFontStyleChange('textDecoration')
       }));
     }
@@ -12639,12 +12806,14 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 FontStyleButtonGroup.defaultProps = {
+  disabled: false,
   fontWeight: 'normal',
   fontStyle: 'normal',
   textDecoration: 'none',
   className: ''
 };
 FontStyleButtonGroup.propTypes = {
+  disabled: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
   fontWeight: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
   fontStyle: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
   className: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
@@ -12856,7 +13025,7 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 InputColor.defaultProps = {
-  disabled: true
+  disabled: false
 };
 InputColor.propTypes = {
   disabled: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
@@ -13106,7 +13275,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "prop-types");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @assets/images/三角形_收起@2x.png */ "./assets/images/三角形_收起@2x.png");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @assets/images/三角形_收起@2x.png */ "./assets/images/三角形_收起@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @assets/images/三角形_不可点@2x.png */ "./assets/images/三角形_不可点@2x.png");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13124,6 +13296,8 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
 
 
 
@@ -13213,8 +13387,12 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var className = this.props.className || '';
+      var disabled = this.props.disabled;
       var selectValue = this.props.value;
+      var className = classnames__WEBPACK_IMPORTED_MODULE_4___default()('coursebox-input-select ', this.props.className, {
+        disabled: disabled
+      }); // 下拉列表
+
       var options = this.props.options.map(function (option) {
         var selected = false;
 
@@ -13236,14 +13414,17 @@ function (_Component) {
             onClick: _this2.onChange
           }, option);
         }
-      });
+      }); // icon 
+      // 如果禁用状态切有 disableIcon 使用 icon
+
+      var icon = disabled ? this.props.disabledIcon || this.props.icon : this.props.icon;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "coursebox-input-select ".concat(className),
-        onClick: this.showOptions,
+        className: className,
+        onClick: !disabled && this.showOptions,
         onMouseDown: this.onMouseDown
-      }, this.props.icon ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+      }, icon ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
         className: "icon",
-        src: this.props.icon
+        src: icon
       }) : null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
         className: "select-value"
       }, selectValue), this.props.unit ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
@@ -13251,7 +13432,7 @@ function (_Component) {
       }, this.props.unit) : null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "select-collapse"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-        src: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_4__["default"]
+        src: disabled ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__["default"]
       })), this.state.showOptions ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "options"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", null, options)) : null);
@@ -13261,13 +13442,17 @@ function (_Component) {
   return InputSelect;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
-InputSelect.defaultProps = {};
+InputSelect.defaultProps = {
+  disabled: false
+};
 InputSelect.propTypes = {
+  disabled: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
   onChange: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func.isRequired,
   // 值
   value: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number,
   // 图标
   icon: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+  disabledIcon: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
   // 单位
   unit: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string
 };
@@ -13318,10 +13503,12 @@ module.exports = exported;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _select_button_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./select-button.less */ "./src/components/select-button/select-button.less");
 /* harmony import */ var _select_button_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_select_button_less__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13344,7 +13531,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-var debug = __webpack_require__(/*! @commons/debug */ "./src/commons/debug.js")('textbox:button-icon');
+
+var debug = __webpack_require__(/*! @commons/debug */ "./src/commons/debug.js")('textbox:select-button');
 
 var ButtonIcon =
 /*#__PURE__*/
@@ -13377,27 +13565,36 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var className = this.props.className;
+      var disabled = this.props.disabled;
+      debug('disabled', disabled);
+      var className = classnames__WEBPACK_IMPORTED_MODULE_1___default()('coursebox-button-icon', this.props.className, {
+        disabled: disabled,
+        selected: this.props.selected
+      });
+      var icon = disabled ? this.props.disabledIcon || this.props.icon : this.props.icon;
       return React.createElement("button", {
-        className: "coursebox-button-icon ".concat(className, " ").concat(this.props.selected ? 'selected' : ''),
-        onClick: this.onClick,
+        className: className,
+        onClick: !disabled && this.onClick,
         onMouseDown: this.onMouseDown
       }, React.createElement("img", {
         className: "icon",
-        src: this.props.icon
+        src: icon
       }));
     }
   }]);
 
   return ButtonIcon;
-}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_2__["Component"]);
 
 ButtonIcon.defaultProps = {
+  disabled: false,
   selected: false
 };
 ButtonIcon.propTypes = {
-  selected: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool.isRequired,
-  onSelected: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired
+  icon: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string.isRequired,
+  disabledIcon: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+  selected: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool.isRequired,
+  onSelected: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func.isRequired
 };
 /* harmony default export */ __webpack_exports__["default"] = (ButtonIcon);
 

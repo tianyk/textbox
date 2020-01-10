@@ -9,8 +9,11 @@ import MediumEditor from 'medium-editor';
 import FontStyleButtonGroup from '../font-style-button-group';
 import FontLayoutButtonGroup from '../font-layout-button-group';
 import ImageLineHeight from '@assets/images/行间距_正常@2x.png';
+import ImageLineHeightDisabled from '@assets/images/行间距_不可点@2x.png';
 import ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png';
+import ImagePaddingLeftAndRightDisabled from '@assets/images/左右边距_不可点@2x.png';
 import ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';
+import ImagePaddingTopAndBottomDisabled from '@assets/images/上下边距_不可点@2x.png';
 import { computedState } from '@commons/computed_state';
 import throttle from '@commons/throttle';
 import { isReactComponentInstance, isElement} from '@commons/utils';
@@ -270,6 +273,7 @@ class TextboxEditor extends Component {
 					<InputSelect
 						className="__font-line-height"
 						icon={ImageLineHeight}
+						disabledIcon={ImageLineHeightDisabled}
 						value={lineHeight}
 						options={[1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2, 2.4, 2.6, 2.8, 3.0]}
 						unit="倍"
@@ -280,6 +284,7 @@ class TextboxEditor extends Component {
 					<InputSelect
 						className="__font-padding-top-bottom"
 						icon={ImagePaddingTopAndBottom}
+						disabledIcon={ImagePaddingTopAndBottomDisabled}
 						value={paddingTop}
 						options={[5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30]}
 						unit="px"
@@ -293,6 +298,7 @@ class TextboxEditor extends Component {
 					<InputSelect
 						className="__font-padding-left-right"
 						icon={ImagePaddingLeftAndRight}
+						disabledIcon={ImagePaddingLeftAndRightDisabled}
 						value={paddingLeft}
 						options={[5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30]}
 						unit="px"
