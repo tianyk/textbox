@@ -96,6 +96,32 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ({
 
+/***/ "./assets/images/三角形_不可点@2x.png":
+/*!**************************************!*\
+  !*** ./assets/images/三角形_不可点@2x.png ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAIBAMAAAA/ygPCAAAAD1BMVEX////X19ff39/o6Ojy8vKZv434AAAAK0lEQVQI12MwFAQCAwYmICnEwMAApASAlKOgoAOQYhYUZgABRQUwxcQABwBVHwI92exa+wAAAABJRU5ErkJggg==");
+
+/***/ }),
+
+/***/ "./assets/images/三角形_展开@2x.png":
+/*!*************************************!*\
+  !*** ./assets/images/三角形_展开@2x.png ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAIBAMAAAA/ygPCAAAAG1BMVEXm5ub///93d3ekpKTHx8d7e3uJiYn4+Pi/v79ljDV1AAAANklEQVQI12MQFCwuFBRkEBQ0MgRRIkoqIIpVSZVRkEE8SUkpXZBBWElJSVmQoQlIKTUygAEjALcpBjrDPpobAAAAAElFTkSuQmCC");
+
+/***/ }),
+
 /***/ "./assets/images/三角形_收起@2x.png":
 /*!*************************************!*\
   !*** ./assets/images/三角形_收起@2x.png ***!
@@ -106,6 +132,19 @@ return /******/ (function(modules) { // webpackBootstrap
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAIBAMAAAA/ygPCAAAAGFBMVEVHcEx4eHh+fn53d3d3d3d4eHh4eHh3d3ee7MjcAAAAB3RSTlMAziCPnvFTAjVZvQAAAC9JREFUCNdjcC8HAgcGRiBZyMDAFF5eHsTAwJBeXp4ApJjLixlAQFwATCkqMMAAAGDVCN6rdolmAAAAAElFTkSuQmCC");
+
+/***/ }),
+
+/***/ "./assets/images/上下边距_正常@2x.png":
+/*!**************************************!*\
+  !*** ./assets/images/上下边距_正常@2x.png ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAYBAMAAAABjmA/AAAAJFBMVEVHcExcYWZjY2sp4KpcYWdcYGYp4Ksu56xdYWdRjoJcYGdcYGZCgWFzAAAAC3RSTlMA3x/8+7fkFJYsikrk13UAAABRSURBVAjXY2BgYChOYICAYgMogxnGYANLMSkpaU5SUlJgkN4NBhsZGgXBQIKBKBDiAgSuQEY0SPdWvGqBdoEA3K6tMLukQLLsBSgOQ3YqKgMAq/MX3kLS34sAAAAASUVORK5CYII=");
 
 /***/ }),
 
@@ -200,6 +239,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./assets/images/左右边距_正常@2x.png":
+/*!**************************************!*\
+  !*** ./assets/images/左右边距_正常@2x.png ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAM1BMVEVHcExBv5Up4KtcYGdcYWcp4Kpab29cYWZjY2t4lohdYGYr4KxdYGZdYGZeYWcq4KtcYGbG/xYOAAAAEHRSTlMAFOS4+/wz4B8E02zvkFSLeh/uLAAAAFxJREFUKM9jYBg4wMaHnQ0GXAKMWNlgwC7AgZWNEOBkY8MtycDDg0enAAuNJTkZwd7hZmVlZWJElWRjAgry45Fk4oaYyUk311JTkoGZGY8kjvjkZUZic3EOXHoFAJW+Br/53vS3AAAAAElFTkSuQmCC");
+
+/***/ }),
+
 /***/ "./assets/images/左对齐_正常@2x.png":
 /*!*************************************!*\
   !*** ./assets/images/左对齐_正常@2x.png ***!
@@ -239,6 +291,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./assets/images/文字颜色_不可点@2x.png":
+/*!***************************************!*\
+  !*** ./assets/images/文字颜色_不可点@2x.png ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAMAAABl5a5YAAAANlBMVEVHcEzJycnKysrKysrS0tLKysrJycnJycnNzc3MzMzJycnJycne3t7JycnJycnMzMzJycnIyMiefAQ6AAAAEXRSTlMAjUJ8Dmjy1R0t5LMFw6dVneVy9MoAAABySURBVBjTVZBREoAgCAVRJM1Ke/e/bBpJuj8MbxiWgUipQgsBSEsggFuCCGxh6j3yhXnLAa6If5/a/JnhLXC4iRiHOTfsfczMgquXYuaIHDvD7GHI53T7C6s52Y2f+XUqjDKc48Bm9upUSlt7yvSIxOEBvNoFGy6OvjgAAAAASUVORK5CYII=");
+
+/***/ }),
+
 /***/ "./assets/images/斜体@2x.png":
 /*!*********************************!*\
   !*** ./assets/images/斜体@2x.png ***!
@@ -262,6 +327,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAAHlBMVEVHcExdYWddYWdcYGZgYGlcYWpdYGZeYGZeYmlcYGaOK88qAAAACXRSTlMAmbPlPTrXekmAjsR4AAAAWUlEQVQY02NgoClonjnTyAHBtZw5c+Z0BHdmoqDmTIT0TAEG1pkKyFwGTQM8XBTFaEYBwUQGFO7MAmTFQjOnoJgcOQmFyzQZHxdZMapRlqgWAb0/WYXiQAQAodIjwkTzNA4AAAAASUVORK5CYII=");
+
+/***/ }),
+
+/***/ "./assets/images/行间距_正常@2x.png":
+/*!*************************************!*\
+  !*** ./assets/images/行间距_正常@2x.png ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAQlBMVEVHcExcs5cq4a0q4Ksq4Ksz6bEp4Ktqa2tdYGYp4KtdYWYu464s4a0r4atdYWcq4KpdYGcq4Ksq4KpcYWZcYGYp36rNGrw2AAAAFHRSTlMABj9plw3jDPP11hkuUYDElKvAmDmT4NkAAACWSURBVCjPvZLBEoMgDEQTgrEItNWW///VIgh1JtGb7gWGN5lklwBcKGK2Q7mNXY3ZlPXKdJy+Xe/GXAy8UpweXc/GDIDPFEW/obBCjZzGhHr6iPq4M+OxF07+CuhSDUj43MF9Qh9RiTLbPzzoeeLTzvo70hafIQnDFnx0mtf6ZZlZZRMwU6LClE3AsiZrHWoJ0bJEuE0/L/8JeA9VZGQAAAAASUVORK5CYII=");
 
 /***/ }),
 
@@ -597,7 +675,25 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".coursebox-input-color {\n  background-color: #fff;\n  width: 52px;\n  height: 32px;\n  box-sizing: content-box;\n  padding: 0;\n  margin: 0;\n  border: 1px solid #E8E8E8;\n  border-radius: 2px;\n  outline: none;\n  vertical-align: bottom;\n}\n.coursebox-input-color .font-color-icon {\n  width: 14px;\n  height: 14px;\n  margin-left: 10px;\n  float: left;\n}\n.coursebox-input-color .font-color-icon img {\n  width: 8px;\n  height: 9px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n.coursebox-input-color .font-color-icon .font-color-bar {\n  width: 10px;\n  height: 3px;\n  margin-top: 2px;\n  margin-left: auto;\n  margin-right: auto;\n}\n.coursebox-input-color .font-color-collapse {\n  float: right;\n  margin-right: 9px;\n}\n.coursebox-input-color .font-color-collapse img {\n  width: 6px;\n  height: 4px;\n  vertical-align: middle;\n}\n.coursebox-input-color:hover {\n  border-color: #5C6066;\n}\n.pickr-fix-position {\n  margin-top: 20px;\n}\n", ""]);
+exports.push([module.i, ".coursebox-input-color {\n  background-color: #fff;\n  width: 52px;\n  height: 32px;\n  box-sizing: content-box;\n  padding: 0;\n  margin: 0;\n  border: 1px solid #E8E8E8;\n  border-radius: 2px;\n  outline: none;\n  vertical-align: bottom;\n}\n.coursebox-input-color .font-color-icon {\n  width: 14px;\n  height: 14px;\n  margin-left: 10px;\n  float: left;\n}\n.coursebox-input-color .font-color-icon img {\n  width: 8px;\n  height: 9px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n.coursebox-input-color .font-color-icon .font-color-bar {\n  width: 10px;\n  height: 3px;\n  margin-top: 2px;\n  margin-left: auto;\n  margin-right: auto;\n}\n.coursebox-input-color .font-color-collapse {\n  float: right;\n  margin-right: 9px;\n}\n.coursebox-input-color .font-color-collapse img {\n  width: 6px;\n  height: 4px;\n  vertical-align: middle;\n}\n.coursebox-input-color:hover {\n  border-color: #5C6066;\n}\n.coursebox-input-color.disabled .font-color-bar {\n  background-color: #E8E8E8 !important;\n}\n.coursebox-input-color.disabled:hover {\n  border-color: #E8E8E8;\n}\n.pickr-fix-position {\n  margin-top: 20px;\n}\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/input-number/input-number.less":
+/*!************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/input-number/input-number.less ***!
+  \************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".coursebox-input-number {\n  display: inline-block;\n  height: 32px;\n  padding: 0 10px;\n  border: 1px solid #E8E8E8;\n  border-radius: 2px;\n}\n.coursebox-input-number input[type=\"number\"]::-webkit-inner-spin-button,\n.coursebox-input-number input[type=\"number\"]::-webkit-outer-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n.coursebox-input-number input[type=\"number\"] {\n  -moz-appearance: textfield;\n}\n.coursebox-input-number .icon {\n  display: inline-block;\n  vertical-align: middle;\n  width: 14px;\n  height: 14px;\n  padding: 2px;\n  margin-right: 7px;\n}\n.coursebox-input-number .unit {\n  font-size: 12px;\n  vertical-align: middle;\n  margin-left: 1px;\n  color: #333;\n}\n.coursebox-input-number .input-number {\n  background-color: #fff;\n  text-align: center;\n  height: 100%;\n  width: 22px;\n  margin: 0;\n  padding: 0;\n  border: none;\n  outline: none;\n}\n.coursebox-input-number .number-up-down {\n  display: inline-block;\n  float: right;\n  width: 6px;\n  margin-left: 7px;\n}\n.coursebox-input-number .number-up-down .number-up,\n.coursebox-input-number .number-up-down .number-down {\n  width: 100%;\n  display: block;\n  border: 1px solid transparent;\n  -moz-user-select: none;\n  /*火狐*/\n  -webkit-user-select: none;\n  /*webkit浏览器*/\n  -ms-user-select: none;\n  /*IE10*/\n  -khtml-user-select: none;\n  /*早期浏览器*/\n  user-select: none;\n}\n.coursebox-input-number .number-up-down .number-up {\n  margin-top: 5px;\n}\n.coursebox-input-number .number-up-down .number-down {\n  margin-top: 10px;\n  margin-bottom: 5px;\n}\n.coursebox-input-number .number-up-down .number-up:active,\n.coursebox-input-number .number-up-down .number-down:active {\n  border-color: #38f;\n}\n.coursebox-input-number:hover {\n  border-color: #5C6066;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -11832,17 +11928,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _editor_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_editor_less__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _input_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../input-select */ "./src/components/input-select/index.jsx");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "react-dom");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _input_color__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../input-color */ "./src/components/input-color/index.jsx");
-/* harmony import */ var medium_editor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! medium-editor */ "medium-editor");
-/* harmony import */ var medium_editor__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(medium_editor__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _font_style_button_group__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../font-style-button-group */ "./src/components/font-style-button-group/index.jsx");
-/* harmony import */ var _font_layout_button_group__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../font-layout-button-group */ "./src/components/font-layout-button-group/index.jsx");
-/* harmony import */ var _commons_computed_state__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @commons/computed_state */ "./src/commons/computed_state.js");
-/* harmony import */ var _commons_throttle__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @commons/throttle */ "./src/commons/throttle.js");
-/* harmony import */ var _commons_utils__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @commons/utils */ "./src/commons/utils.js");
+/* harmony import */ var _input_number__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../input-number */ "./src/components/input-number/index.jsx");
+/* harmony import */ var _input_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../input-select */ "./src/components/input-select/index.jsx");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dom */ "react-dom");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _input_color__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../input-color */ "./src/components/input-color/index.jsx");
+/* harmony import */ var medium_editor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! medium-editor */ "medium-editor");
+/* harmony import */ var medium_editor__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(medium_editor__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _font_style_button_group__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../font-style-button-group */ "./src/components/font-style-button-group/index.jsx");
+/* harmony import */ var _font_layout_button_group__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../font-layout-button-group */ "./src/components/font-layout-button-group/index.jsx");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @assets/images/行间距_正常@2x.png */ "./assets/images/行间距_正常@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @assets/images/左右边距_正常@2x.png */ "./assets/images/左右边距_正常@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @assets/images/上下边距_正常@2x.png */ "./assets/images/上下边距_正常@2x.png");
+/* harmony import */ var _commons_computed_state__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @commons/computed_state */ "./src/commons/computed_state.js");
+/* harmony import */ var _commons_throttle__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @commons/throttle */ "./src/commons/throttle.js");
+/* harmony import */ var _commons_utils__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @commons/utils */ "./src/commons/utils.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11862,16 +11962,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
- // import InputNumber from '../input-number';
 
 
 
 
 
 
- // import ImageLineHeight from '@assets/images/行间距_正常@2x.png';
-// import ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png';
-// import ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';
+
+
+
+
 
 
 
@@ -11931,7 +12031,7 @@ function (_Component) {
       textStyle: {}
     };
     _this.onTextStyleChange = _this.onTextStyleChange.bind(_assertThisInitialized(_this));
-    _this.throttleCheckState = Object(_commons_throttle__WEBPACK_IMPORTED_MODULE_9__["default"])(_this.checkState, 250).bind(_assertThisInitialized(_this));
+    _this.throttleCheckState = Object(_commons_throttle__WEBPACK_IMPORTED_MODULE_13__["default"])(_this.checkState, 250).bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -11975,12 +12075,12 @@ function (_Component) {
       var _this$getTextbox$opti;
 
       debug('checkState');
-      var selectionRange = medium_editor__WEBPACK_IMPORTED_MODULE_5___default.a.selection.getSelectionRange((_this$getTextbox$opti = this.getTextbox().options) === null || _this$getTextbox$opti === void 0 ? void 0 : _this$getTextbox$opti.ownerDocument);
+      var selectionRange = medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.selection.getSelectionRange((_this$getTextbox$opti = this.getTextbox().options) === null || _this$getTextbox$opti === void 0 ? void 0 : _this$getTextbox$opti.ownerDocument);
       if (!selectionRange) return;
-      var parentNode = medium_editor__WEBPACK_IMPORTED_MODULE_5___default.a.selection.getSelectedParentElement(selectionRange); // Make sure the selection parent isn't outside of the contenteditable
+      var parentNode = medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.selection.getSelectedParentElement(selectionRange); // Make sure the selection parent isn't outside of the contenteditable
 
       if (!this.getTextbox().elements.some(function (element) {
-        return medium_editor__WEBPACK_IMPORTED_MODULE_5___default.a.util.isDescendant(element, parentNode, true);
+        return medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.util.isDescendant(element, parentNode, true);
       })) {
         return;
       }
@@ -11990,9 +12090,9 @@ function (_Component) {
       while (parentNode) {
         var _this$getTextbox$opti2;
 
-        Object(_commons_computed_state__WEBPACK_IMPORTED_MODULE_8__["computedState"])(textStyle, parentNode, (_this$getTextbox$opti2 = this.getTextbox().options) === null || _this$getTextbox$opti2 === void 0 ? void 0 : _this$getTextbox$opti2.contentWindow); // we can abort the search upwards if we leave the contentEditable element
+        Object(_commons_computed_state__WEBPACK_IMPORTED_MODULE_12__["computedState"])(textStyle, parentNode, (_this$getTextbox$opti2 = this.getTextbox().options) === null || _this$getTextbox$opti2 === void 0 ? void 0 : _this$getTextbox$opti2.contentWindow); // we can abort the search upwards if we leave the contentEditable element
 
-        if (medium_editor__WEBPACK_IMPORTED_MODULE_5___default.a.util.isMediumEditorElement(parentNode)) {
+        if (medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.util.isMediumEditorElement(parentNode)) {
           break;
         }
 
@@ -12012,9 +12112,9 @@ function (_Component) {
       if (this.props.textboxDOM) {
         var textboxDOM = this.props.textboxDOM;
 
-        if (Object(_commons_utils__WEBPACK_IMPORTED_MODULE_10__["isReactComponentInstance"])(textboxDOM)) {
-          return react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.findDOMNode(textboxDOM);
-        } else if (Object(_commons_utils__WEBPACK_IMPORTED_MODULE_10__["isElement"])(textboxDOM)) {
+        if (Object(_commons_utils__WEBPACK_IMPORTED_MODULE_14__["isReactComponentInstance"])(textboxDOM)) {
+          return react_dom__WEBPACK_IMPORTED_MODULE_4___default.a.findDOMNode(textboxDOM);
+        } else if (Object(_commons_utils__WEBPACK_IMPORTED_MODULE_14__["isElement"])(textboxDOM)) {
           return textboxDOM;
         } else {
           throw new Error('`textboxDOM` 必须是一个 HTMLElement 或者 React Component 实例');
@@ -12025,7 +12125,7 @@ function (_Component) {
     key: "getTextbox",
     value: function getTextbox() {
       var dom = this.getTextboxDOM();
-      return dom ? medium_editor__WEBPACK_IMPORTED_MODULE_5___default.a.getEditorFromElement(dom) : null;
+      return dom ? medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.getEditorFromElement(dom) : null;
     }
   }, {
     key: "onTextStyleChange",
@@ -12035,8 +12135,8 @@ function (_Component) {
       if (!medium) return;
       var textboxDOM = this.getTextboxDOM();
       var selection = medium.options.ownerDocument.getSelection();
-      var selectionRange = medium_editor__WEBPACK_IMPORTED_MODULE_5___default.a.selection.getSelectionRange(medium.options.ownerDocument);
-      var parentNode = medium_editor__WEBPACK_IMPORTED_MODULE_5___default.a.selection.getSelectedParentElement(selectionRange);
+      var selectionRange = medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.selection.getSelectionRange(medium.options.ownerDocument);
+      var parentNode = medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.selection.getSelectedParentElement(selectionRange);
 
       if (medium) {
         switch (field) {
@@ -12166,13 +12266,13 @@ function (_Component) {
         htmlFor: "font-size-style"
       }, "\u6587\u5B57"), React.createElement("div", {
         id: "font-style"
-      }, React.createElement(_input_color__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      }, React.createElement(_input_color__WEBPACK_IMPORTED_MODULE_5__["default"], {
         className: "__font-color",
         value: this.state.textStyle.color,
         onChange: function onChange(color) {
           return _this2.onTextStyleChange('color', color);
         }
-      }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
         className: "__font-size",
         value: fontSize,
         options: [12, 13, 14, 16, 18, 20, 28, 36, 48, 72],
@@ -12180,7 +12280,7 @@ function (_Component) {
         onChange: function onChange(fontSize) {
           return _this2.onTextStyleChange('fontSize', fontSize);
         }
-      }), React.createElement(_font_style_button_group__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      }), React.createElement(_font_style_button_group__WEBPACK_IMPORTED_MODULE_7__["default"], {
         className: "__font-style",
         fontWeight: (_this$state$textStyle2 = this.state.textStyle) === null || _this$state$textStyle2 === void 0 ? void 0 : _this$state$textStyle2.fontWeight,
         fontStyle: this.state.textStyle.fontStyle,
@@ -12192,11 +12292,42 @@ function (_Component) {
         htmlFor: "font-layout-style"
       }, "\u5E03\u5C40"), React.createElement("div", {
         id: "font-layout-style"
-      }, React.createElement(_font_layout_button_group__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      }, React.createElement(_font_layout_button_group__WEBPACK_IMPORTED_MODULE_8__["default"], {
         className: "__font-layout",
         textAlign: this.state.textStyle.textAlign,
         onFontLayoutChange: function onFontLayoutChange(textAlign) {
           return _this2.onTextStyleChange('textAlign', textAlign);
+        }
+      }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        className: "__font-line-height",
+        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__["default"],
+        value: lineHeight,
+        options: [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2, 2.4, 2.6, 2.8, 3.0],
+        unit: "\u500D",
+        onChange: function onChange(lineHeight) {
+          return _this2.onTextStyleChange('lineHeight', lineHeight);
+        }
+      }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        className: "__font-padding-top-bottom",
+        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__["default"],
+        value: paddingTop,
+        options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],
+        unit: "px",
+        onChange: function onChange(padding) {
+          _this2.onTextStyleChange('paddingTop', "".concat(padding, "px"));
+
+          _this2.onTextStyleChange('paddingBottom', "".concat(padding, "px"));
+        }
+      }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        className: "__font-padding-left-right",
+        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__["default"],
+        value: paddingLeft,
+        options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],
+        unit: "px",
+        onChange: function onChange(padding) {
+          _this2.onTextStyleChange('paddingLeft', "".concat(padding, "px"));
+
+          _this2.onTextStyleChange('paddingRight', "".concat(padding, "px"));
         }
       })));
     }
@@ -12561,9 +12692,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _simonwep_pickr_dist_themes_nano_min_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_simonwep_pickr_dist_themes_nano_min_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _simonwep_pickr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @simonwep/pickr */ "./node_modules/@simonwep/pickr/dist/pickr.min.js");
 /* harmony import */ var _simonwep_pickr__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_simonwep_pickr__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _commons_throttle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @commons/throttle */ "./src/commons/throttle.js");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @assets/images/文字颜色@2x.png */ "./assets/images/文字颜色@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @assets/images/三角形_收起@2x.png */ "./assets/images/三角形_收起@2x.png");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _commons_throttle__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @commons/throttle */ "./src/commons/throttle.js");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @assets/images/文字颜色@2x.png */ "./assets/images/文字颜色@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @assets/images/文字颜色_不可点@2x.png */ "./assets/images/文字颜色_不可点@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @assets/images/三角形_收起@2x.png */ "./assets/images/三角形_收起@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @assets/images/三角形_不可点@2x.png */ "./assets/images/三角形_不可点@2x.png");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12590,6 +12725,9 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+
+
 var InputColor =
 /*#__PURE__*/
 function (_Component) {
@@ -12602,7 +12740,7 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(InputColor).call(this, props));
     _this.pickColor = _this.pickColor.bind(_assertThisInitialized(_this));
-    _this.throttleOnChange = Object(_commons_throttle__WEBPACK_IMPORTED_MODULE_4__["default"])(_this.onChange, 100).bind(_assertThisInitialized(_this));
+    _this.throttleOnChange = Object(_commons_throttle__WEBPACK_IMPORTED_MODULE_5__["default"])(_this.onChange, 100).bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -12654,10 +12792,8 @@ function (_Component) {
         pickr.hide();
         pickr.__isShow = false;
       }).on('show', function () {
-        console.log('[show]');
         pickr.__isShow = true;
       }).on('hide', function () {
-        console.log('[hide]');
         pickr.__isShow = false;
       }).on('save', function (color) {
         pickr.hide();
@@ -12693,13 +12829,14 @@ function (_Component) {
     key: "render",
     value: function render() {
       var className = this.props.className || '';
+      var disabled = this.props.disabled;
       return React.createElement("button", {
-        className: "coursebox-input-color ".concat(className),
-        onClick: this.pickColor
+        className: "coursebox-input-color ".concat(disabled ? 'disabled' : '', " ").concat(className),
+        onClick: !disabled && this.pickColor
       }, React.createElement("div", {
         className: "font-color-icon"
       }, React.createElement("img", {
-        src: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__["default"]
+        src: disabled ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_7__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__["default"]
       }), React.createElement("div", {
         className: "font-color-bar",
         style: {
@@ -12708,7 +12845,7 @@ function (_Component) {
       })), React.createElement("div", {
         className: "font-color-collapse"
       }, React.createElement("img", {
-        src: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__["default"]
+        src: disabled ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_8__["default"]
       })), React.createElement("div", {
         className: "color-picker"
       }));
@@ -12718,6 +12855,13 @@ function (_Component) {
   return InputColor;
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
+InputColor.defaultProps = {
+  disabled: true
+};
+InputColor.propTypes = {
+  disabled: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
+  value: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string
+};
 /* harmony default export */ __webpack_exports__["default"] = (InputColor);
 
 /***/ }),
@@ -12744,6 +12888,197 @@ options.insert = "head";
 options.singleton = false;
 
 var id = "!!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/less-loader/dist/cjs.js!./input-color.less";
+var update = api(id, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+
+/***/ "./src/components/input-number/index.jsx":
+/*!***********************************************!*\
+  !*** ./src/components/input-number/index.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _input_number_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./input-number.less */ "./src/components/input-number/input-number.less");
+/* harmony import */ var _input_number_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_input_number_less__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _commons_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @commons/utils */ "./src/commons/utils.js");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @assets/images/三角形_展开@2x.png */ "./assets/images/三角形_展开@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @assets/images/三角形_收起@2x.png */ "./assets/images/三角形_收起@2x.png");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+
+var debug = __webpack_require__(/*! ../../commons/debug */ "./src/commons/debug.js")('textbox:input-number');
+
+var InputNumber =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(InputNumber, _Component);
+
+  function InputNumber(props) {
+    var _this;
+
+    _classCallCheck(this, InputNumber);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(InputNumber).call(this, props));
+    debug('props: %j', props);
+    _this.inputRef = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
+    _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
+    _this.onMouseDown = _this.onMouseDown.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(InputNumber, [{
+    key: "onMouseDown",
+    value: function onMouseDown(evt) {
+      evt.preventDefault();
+    }
+  }, {
+    key: "onChange",
+    value: function onChange(evt) {
+      var _this$props;
+
+      debug('[onChange]: %o', evt);
+      var val = parseFloat(Object(_commons_utils__WEBPACK_IMPORTED_MODULE_3__["isSyntheticEvent"])(evt) ? evt.target.value : evt); // 校验
+
+      if (val > parseFloat(this.props.max)) val = parseFloat(this.props.max);
+      if (val < parseFloat(this.props.min)) val = parseFloat(this.props.min);
+      (_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.onChange(val);
+    }
+  }, {
+    key: "incr",
+    value: function incr() {
+      var step = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      this.onChange(this.props.value + step);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var className = this.props.className || '';
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "coursebox-input-number ".concat(className),
+        onMouseDown: this.onMouseDown,
+        onClick: function onClick() {
+          var _this2$inputRef;
+
+          return (_this2$inputRef = _this2.inputRef) === null || _this2$inputRef === void 0 ? void 0 : _this2$inputRef.current.focus();
+        }
+      }, this.props.icon ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+        className: "icon",
+        src: this.props.icon
+      }) : null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+        type: "number",
+        ref: this.inputRef,
+        className: "input-number",
+        min: this.props.min,
+        max: this.props.max,
+        step: this.props.step,
+        value: this.props.value,
+        onMouseDown: this.onMouseDown,
+        onChange: this.onChange
+      }), this.props.unit ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "unit"
+      }, this.props.unit) : null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "number-up-down"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+        className: "block number-up",
+        role: "button",
+        src: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_4__["default"],
+        onClick: function onClick() {
+          _this2.incr(_this2.props.step);
+        }
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+        className: "block number-down",
+        role: "button",
+        src: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__["default"],
+        onClick: function onClick() {
+          _this2.incr(-_this2.props.step);
+        }
+      })));
+    }
+  }]);
+
+  return InputNumber;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+
+InputNumber.defaultProps = {
+  min: -Infinity,
+  max: Infinity,
+  step: 1
+};
+InputNumber.propTypes = {
+  onChange: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,
+  min: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
+  max: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
+  setp: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
+  // 值
+  value: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
+  // 图标
+  icon: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
+  // 单位
+  unit: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string
+};
+/* harmony default export */ __webpack_exports__["default"] = (InputNumber);
+
+/***/ }),
+
+/***/ "./src/components/input-number/input-number.less":
+/*!*******************************************************!*\
+  !*** ./src/components/input-number/input-number.less ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/less-loader/dist/cjs.js!./input-number.less */ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/input-number/input-number.less");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var id = "!!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/less-loader/dist/cjs.js!./input-number.less";
 var update = api(id, content, options);
 
 var exported = content.locals ? content.locals : {};
