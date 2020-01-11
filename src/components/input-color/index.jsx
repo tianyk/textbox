@@ -3,10 +3,14 @@ import './input-color.less';
 import { Component } from 'react';
 import '@simonwep/pickr/dist/themes/nano.min.css';
 import Pickr from '@simonwep/pickr';
+import PropTypes from 'prop-types';
 
 import throttle from '@commons/throttle';
 import FontColorImage from '@assets/images/文字颜色@2x.png';
+import FontColorDisabledImage from '@assets/images/文字颜色_不可点@2x.png';
 import FontColorCollapseImage from '@assets/images/三角形_收起@2x.png';
+import FontColorDisabledCollapseImage from '@assets/images/三角形_不可点@2x.png';
+
 
 class InputColor extends Component {
 	constructor(props) {
@@ -77,11 +81,9 @@ class InputColor extends Component {
 				pickr.__isShow = false;
 			})
 			.on('show', () => {
-				console.log('[show]');
 				pickr.__isShow = true;
 			})
 			.on('hide', () => {
-				console.log('[hide]');
 				pickr.__isShow = false;
 			})
 			.on('save', (color) => {
@@ -112,21 +114,31 @@ class InputColor extends Component {
 
 	render() {
 		const className = this.props.className || '';
-		
+		const disabled = this.props.disabled;
+
 		return (
-			<button className={`coursebox-input-color ${className}`} onClick={this.pickColor}>
+			<button className={`coursebox-input-color ${disabled ? 'disabled' : ''} ${className}`} onClick={!disabled && this.pickColor}>
 				<div className="font-color-icon">
-					<img src={FontColorImage}></img>
+					<img src={disabled ? FontColorDisabledImage : FontColorImage}></img>
 					<div className="font-color-bar" style={{ backgroundColor: this.props.value }}></div>
 				</div>
-				
+
 				<div className="font-color-collapse">
-					<img src={FontColorCollapseImage}></img>
+					<img src={disabled ? FontColorDisabledCollapseImage : FontColorCollapseImage}></img>
 				</div>
 				<div className="color-picker"></div>
 			</button>
 		)
 	}
+}
+
+InputColor.defaultProps = {
+	disabled: false
+};
+
+InputColor.propTypes = {
+	disabled: PropTypes.bool,
+	value: PropTypes.string
 }
 
 export default InputColor;

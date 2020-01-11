@@ -18,9 +18,20 @@
 
 .coursebox-button-icon:hover {
 	border-color: #5C6066;
-}
+}	
 
 .coursebox-button-icon.selected {
 	background-color: #E8E8E8;
 	border-color    : transparent;
+}
+
+// 禁用状态
+// 禁用 hover border
+.coursebox-button-icon.disabled:hover {
+	border-color: #fff;
+}
+
+// 禁用选中时
+.coursebox-button-icon.disabled.selected:hover {
+	border-color: #E8E8E8;
 }

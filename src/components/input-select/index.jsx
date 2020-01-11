@@ -3,7 +3,9 @@ import './input-select.less';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import SelectCollapseImage from '@assets/images/三角形_收起@2x.png';
+import SelectDisabledCollapseImage from '@assets/images/三角形_不可点@2x.png';
 
 const debug = require('../../commons/debug')('textbox:input-select');
 
@@ -65,8 +67,18 @@ class InputSelect extends Component {
 	}
 
 	render() {
-		const className = this.props.className || '';
+		const disabled = this.props.disabled;
 		const selectValue = this.props.value;
+
+		const className = classNames(
+			'coursebox-input-select ',
+			this.props.className,
+			{
+				disabled
+			}
+		);
+
+		// 下拉列表
 		const options = this.props.options.map(option => {
 			let selected = false;
 			if (option.key && option.value) {
@@ -75,21 +87,25 @@ class InputSelect extends Component {
 			} else {
 				option = option.toString();
 				if (selectValue) selected = ((selectValue).toString() === option);
-				return <li className={selected ? 'selected' : ''}  data-key={option} data-value={option} onClick={this.onChange}>{option}</li>
+				return <li className={selected ? 'selected' : ''} data-key={option} data-value={option} onClick={this.onChange}>{option}</li>
 			}
 		});
 
+		// icon 
+		// 如果禁用状态切有 disableIcon 使用 icon
+		const icon = disabled ? (this.props.disabledIcon || this.props.icon) : this.props.icon;
+
 		return (
-			<div className={`coursebox-input-select ${className}`} onClick={this.showOptions} onMouseDown={this.onMouseDown}>
+			<div className={className} onClick={!disabled && this.showOptions} onMouseDown={this.onMouseDown}>
 				{
-					this.props.icon ? <img className="icon" src={this.props.icon}></img> : null
+					icon ? <img className="icon" src={icon}></img> : null
 				}
 				<span className="select-value">{selectValue}</span>
 				{
 					this.props.unit ? <span className="unit">{this.props.unit}</span> : null
 				}
 				<div className="select-collapse">
-					<img src={SelectCollapseImage}></img>
+					<img src={disabled ? SelectDisabledCollapseImage : SelectCollapseImage}></img>
 				</div>
 				{
 					this.state.showOptions
@@ -108,14 +124,17 @@ class InputSelect extends Component {
 }
 
 InputSelect.defaultProps = {
+	disabled: false
 }
 
 InputSelect.propTypes = {
+	disabled: PropTypes.bool,
 	onChange: PropTypes.func.isRequired,
 	// 值
 	value: PropTypes.number,
 	// 图标
 	icon: PropTypes.string,
+	disabledIcon: PropTypes.string,
 	// 单位
 	unit: PropTypes.string
 }
