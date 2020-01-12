@@ -1,4 +1,5 @@
 import './textbox.less';
+import classNames from 'classnames';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
@@ -18,9 +19,7 @@ class Textbox extends Component {
 		super(props);
 
 		this.state = {
-			// 隔离循环刷新
-			text: props.text,
-			contentEditable: true /*'plaintext-only'*/
+			text: props.text
 		};
 
 		// 输入框的引用
@@ -31,9 +30,11 @@ class Textbox extends Component {
 
 	componentDidMount() {
 		debug('componentDidMount');
-		const dom = ReactDOM.findDOMNode(this);
+		const dom = this.geDOM();
 
 		this.medium = new MediumEditor(dom, Object.assign(DEFAULT_OPTIONS, this.props.options));
+		// 默认禁止编辑
+		this.disableEditing();
 		this.medium.subscribe('editableInput', () => {
 			if (!this._isComposing) this.onContentChange(dom.innerHTML);
 		});
@@ -41,6 +42,17 @@ class Textbox extends Component {
 		this.medium.on(dom, 'compositionend', this.handleComposition);
 		this.medium.on(dom, 'compositionupdate', this.handleComposition);
 		this.medium.on(dom, 'compositionend', this.handleComposition);
+		this.medium.on(dom, 'dblclick', () => {
+			this.enableEditing();
+		});
+		this.medium.subscribe('hideToolbar', () => {
+			debug('hideToolbar');
+			// const selectionRange = MediumEditor.selection.getSelectionRange(this.medium.options.ownerDocument);
+			// if (selectionRange && !selectionRange.collapsed) return;
+			setTimeout(() => {
+				this.disableEditing();
+			}, 1);
+		})
 	}
 
 	componentWillUnmount() {
@@ -58,6 +70,22 @@ class Textbox extends Component {
 		// }
 
 		this.medium.restoreSelection();
+	}
+
+	geDOM() {
+		return ReactDOM.findDOMNode(this);
+	}
+
+	disableEditing() {
+		debug('disableEditing');
+		const dom = this.geDOM();
+		dom.setAttribute('contenteditable', false);
+	}
+
+	enableEditing() {
+		debug('enableEditing');
+		const dom = this.geDOM();
+		dom.setAttribute('contenteditable', true);
 	}
 
 	handleComposition(evt) {
@@ -89,6 +117,11 @@ class Textbox extends Component {
 	}
 
 	render() {
+		const className = classNames(
+			'coursebox-textbox',
+			this.props.className
+		);
+
 		const {
 			options,
 			text,
@@ -97,6 +130,7 @@ class Textbox extends Component {
 			dangerouslySetInnerHTML,
 			...props
 		} = this.props;
+		props.className = className;
 		props.dangerouslySetInnerHTML = { __html: this.state.text };
 
 		if (this.medium) {

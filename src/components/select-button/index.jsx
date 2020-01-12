@@ -17,7 +17,10 @@ class ButtonIcon extends Component {
 		evt.preventDefault();
 	}
 
-	onClick() {
+	onClick(evt) {
+		evt.preventDefault();
+		evt.stopPropagation();
+		
 		this.props?.onSelected(!this.props.selected);
 	}
 

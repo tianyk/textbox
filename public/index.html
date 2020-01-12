@@ -31,33 +31,20 @@
 			// 命名参考 ReactNative https://facebook.github.io/react-native/docs/text-style-props
 			const [text, setText] = useState('<p style="margin: 0">中国<font color="#ffeedd" size="5">A</font>bc</p>');
 
-			const [editor, setEditor] = useState(null);
-			const editorRef = useRef(null);
+			const textboxRef = useRef(null);
 
 			function onContentChange(val) {
 				setText(val);
 			}
 
-			function onInit() {
-				setEditor(editorRef);
-			}
+			setTimeout(() => {
+				console.log(textboxRef.current);
+			}, 1000);
 
 			return (
 				<div>
-					<div>
-						<Editor textboxDOM={editorRef.current} />
-					</div>
-
-					<button>
-					
-						</button>
-
-					<div>
-						<Textbox ref={editorRef} className="textbox" style={{ border: '1px dashed #aaa', lineHeight: '1.4' }} text={text} onContentChange={onContentChange} />
-
-						<Textbox ref={editorRef} className="textbox" style={{ border: '1px dashed #aaa', lineHeight: '1.4' }} text={text} onContentChange={onContentChange} />
-					</div>
-
+					<Editor textboxDOM={textboxRef.current} />
+					<Textbox ref={textboxRef} className="textbox" style={{ border: '1px dashed #aaa', lineHeight: '1.4' }} text={text} onContentChange={onContentChange} />
 				</div>
 			);
 		}

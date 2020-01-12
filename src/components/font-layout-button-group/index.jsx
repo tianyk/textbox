@@ -85,7 +85,7 @@ class FontLayoutButtonGroup extends Component {
 }
 
 FontLayoutButtonGroup.defaultProps = {
-	disabled: true,
+	disabled: false,
 	textAlign: 'start',
 	'className': ''
 };

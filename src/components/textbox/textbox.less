@@ -1,13 +1,27 @@
-.coursebox-textbox {
-	.textbox {
+.coursebox-textbox{
+	margin: 0;
+	display: inline-block;
+
+	outline: none;
+
+	p {
 		margin: 0;
-		display: inline-block;
-
-		outline: none;
-		border : 1px dashed #aaa;
-
-		p {
-			margin: 0;
-		}
 	}
+}
+
+.coursebox-textbox[contenteditable="false"] {
+	// 禁止选中
+	-moz-user-select: none;
+	/*火狐*/
+	-webkit-user-select: none;
+	/*webkit浏览器*/
+	-ms-user-select: none;
+	/*IE10*/
+	-khtml-user-select: none;
+	/*早期浏览器*/
+	user-select: none;
+}
+
+.coursebox-textbox[contenteditable="true"] {
+	border-color: blue !important;
 }

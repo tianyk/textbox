@@ -16,7 +16,7 @@ import ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png'
 import ImagePaddingTopAndBottomDisabled from '@assets/images/上下边距_不可点@2x.png';
 import { computedState } from '@commons/computed_state';
 import throttle from '@commons/throttle';
-import { isReactComponentInstance, isElement} from '@commons/utils';
+import { isReactComponentInstance, isElement } from '@commons/utils';
 
 const debug = require('@commons/debug')('textbox:editor');
 
@@ -91,7 +91,7 @@ class TextboxEditor extends Component {
 			this.getTextbox().subscribe('editableInput', this.throttleCheckState);
 
 			// Updating the state of the toolbar as things change
-			this.getTextbox().subscribe('editableClick', this.throttleCheckState);
+			// this.getTextbox().subscribe('editableClick', this.throttleCheckState);
 			this.getTextbox().subscribe('editableKeyup', this.throttleCheckState);
 		}
 	}
@@ -129,6 +129,7 @@ class TextboxEditor extends Component {
 	}
 
 	getTextboxDOM() {
+		console.log(this.props)
 		debug('getTextboxDOM', this.props.textboxDOM);
 		if (this.props.textboxDOM) {
 			const textboxDOM = this.props.textboxDOM;
@@ -263,7 +264,7 @@ class TextboxEditor extends Component {
 						fontWeight={this.state.textStyle?.fontWeight}
 						fontStyle={this.state.textStyle.fontStyle}
 						textDecoration={this.state.textStyle.textDecoration}
-						onFontStyleChange={(field, val) => { this.onTextStyleChange(field, val) }}
+						onFontStyleChange={(field, val) => this.onTextStyleChange(field, val)}
 					></FontStyleButtonGroup>
 				</div>
 

@@ -939,7 +939,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".coursebox-textbox .textbox {\n  margin: 0;\n  display: inline-block;\n  outline: none;\n  border: 1px dashed #aaa;\n}\n.coursebox-textbox .textbox p {\n  margin: 0;\n}\n", ""]);
+exports.push([module.i, ".coursebox-textbox {\n  margin: 0;\n  display: inline-block;\n  outline: none;\n}\n.coursebox-textbox p {\n  margin: 0;\n}\n.coursebox-textbox[contenteditable=\"false\"] {\n  -moz-user-select: none;\n  /*火狐*/\n  -webkit-user-select: none;\n  /*webkit浏览器*/\n  -ms-user-select: none;\n  /*IE10*/\n  -khtml-user-select: none;\n  /*早期浏览器*/\n  user-select: none;\n}\n.coursebox-textbox[contenteditable=\"true\"] {\n  border-color: blue !important;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -12278,8 +12278,8 @@ function (_Component) {
         this.getTextbox().subscribe('focus', this.throttleCheckState);
         this.getTextbox().subscribe('positionToolbar', this.throttleCheckState);
         this.getTextbox().subscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change
+        // this.getTextbox().subscribe('editableClick', this.throttleCheckState);
 
-        this.getTextbox().subscribe('editableClick', this.throttleCheckState);
         this.getTextbox().subscribe('editableKeyup', this.throttleCheckState);
       }
     }
@@ -12321,6 +12321,7 @@ function (_Component) {
   }, {
     key: "getTextboxDOM",
     value: function getTextboxDOM() {
+      console.log(this.props);
       debug('getTextboxDOM', this.props.textboxDOM);
 
       if (this.props.textboxDOM) {
@@ -12500,7 +12501,7 @@ function (_Component) {
         fontStyle: this.state.textStyle.fontStyle,
         textDecoration: this.state.textStyle.textDecoration,
         onFontStyleChange: function onFontStyleChange(field, val) {
-          _this2.onTextStyleChange(field, val);
+          return _this2.onTextStyleChange(field, val);
         }
       })), React.createElement("label", {
         htmlFor: "font-layout-style"
@@ -12720,7 +12721,7 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 FontLayoutButtonGroup.defaultProps = {
-  disabled: true,
+  disabled: false,
   textAlign: 'start',
   'className': ''
 };
@@ -13648,9 +13649,11 @@ function (_Component) {
     }
   }, {
     key: "onClick",
-    value: function onClick() {
+    value: function onClick(evt) {
       var _this$props;
 
+      evt.preventDefault();
+      evt.stopPropagation();
       (_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.onSelected(!this.props.selected);
     }
   }, {
@@ -13734,14 +13737,16 @@ module.exports = exported;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _textbox_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./textbox.less */ "./src/components/textbox/textbox.less");
 /* harmony import */ var _textbox_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_textbox_less__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "react-dom");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "prop-types");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var medium_editor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! medium-editor */ "medium-editor");
-/* harmony import */ var medium_editor__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(medium_editor__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "react-dom");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var medium_editor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! medium-editor */ "medium-editor");
+/* harmony import */ var medium_editor__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(medium_editor__WEBPACK_IMPORTED_MODULE_5__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -13772,6 +13777,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var debug = __webpack_require__(/*! ../../commons/debug */ "./src/commons/debug.js")('textbox:textbox');
 
 var DEFAULT_OPTIONS = {
@@ -13792,14 +13798,10 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Textbox).call(this, props));
     _this.state = {
-      // 隔离循环刷新
-      text: props.text,
-      contentEditable: true
-      /*'plaintext-only'*/
-
+      text: props.text
     }; // 输入框的引用
 
-    _this.editorRef = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
+    _this.editorRef = react__WEBPACK_IMPORTED_MODULE_2___default.a.createRef();
     _this.handleComposition = _this.handleComposition.bind(_assertThisInitialized(_this));
     _this.onContentChange = _this.onContentChange.bind(_assertThisInitialized(_this));
     return _this;
@@ -13811,14 +13813,27 @@ function (_Component) {
       var _this2 = this;
 
       debug('componentDidMount');
-      var dom = react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.findDOMNode(this);
-      this.medium = new medium_editor__WEBPACK_IMPORTED_MODULE_4___default.a(dom, Object.assign(DEFAULT_OPTIONS, this.props.options));
+      var dom = this.geDOM();
+      this.medium = new medium_editor__WEBPACK_IMPORTED_MODULE_5___default.a(dom, Object.assign(DEFAULT_OPTIONS, this.props.options)); // 默认禁止编辑
+
+      this.disableEditing();
       this.medium.subscribe('editableInput', function () {
         if (!_this2._isComposing) _this2.onContentChange(dom.innerHTML);
       });
       this.medium.on(dom, 'compositionend', this.handleComposition);
       this.medium.on(dom, 'compositionupdate', this.handleComposition);
       this.medium.on(dom, 'compositionend', this.handleComposition);
+      this.medium.on(dom, 'dblclick', function () {
+        _this2.enableEditing();
+      });
+      this.medium.subscribe('hideToolbar', function () {
+        debug('hideToolbar'); // const selectionRange = MediumEditor.selection.getSelectionRange(this.medium.options.ownerDocument);
+        // if (selectionRange && !selectionRange.collapsed) return;
+
+        setTimeout(function () {
+          _this2.disableEditing();
+        }, 1);
+      });
     }
   }, {
     key: "componentWillUnmount",
@@ -13838,9 +13853,28 @@ function (_Component) {
       this.medium.restoreSelection();
     }
   }, {
+    key: "geDOM",
+    value: function geDOM() {
+      return react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.findDOMNode(this);
+    }
+  }, {
+    key: "disableEditing",
+    value: function disableEditing() {
+      debug('disableEditing');
+      var dom = this.geDOM();
+      dom.setAttribute('contenteditable', false);
+    }
+  }, {
+    key: "enableEditing",
+    value: function enableEditing() {
+      debug('enableEditing');
+      var dom = this.geDOM();
+      dom.setAttribute('contenteditable', true);
+    }
+  }, {
     key: "handleComposition",
     value: function handleComposition(evt) {
-      var dom = react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.findDOMNode(this);
+      var dom = react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.findDOMNode(this);
 
       if (evt.type === 'compositionend') {
         // composition is end
@@ -13868,6 +13902,8 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var className = classnames__WEBPACK_IMPORTED_MODULE_1___default()('coursebox-textbox', this.props.className);
+
       var _this$props = this.props,
           options = _this$props.options,
           text = _this$props.text,
@@ -13876,6 +13912,7 @@ function (_Component) {
           dangerouslySetInnerHTML = _this$props.dangerouslySetInnerHTML,
           props = _objectWithoutProperties(_this$props, ["options", "text", "tag", "contentEditable", "dangerouslySetInnerHTML"]);
 
+      props.className = className;
       props.dangerouslySetInnerHTML = {
         __html: this.state.text
       };
@@ -13884,24 +13921,24 @@ function (_Component) {
         this.medium.saveSelection();
       }
 
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(tag, props);
+      return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(tag, props);
     }
   }]);
 
   return Textbox;
-}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_2__["Component"]);
 
 Textbox.defaultProps = {
   tag: 'div',
   options: {}
 };
 Textbox.propTypes = _defineProperty({
-  onChange: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func.isRequired,
-  onSelection: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.fun,
-  options: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  max: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number,
-  setp: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number
-}, "options", prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object);
+  onChange: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func.isRequired,
+  onSelection: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.fun,
+  options: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  max: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
+  setp: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number
+}, "options", prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object);
 /* harmony default export */ __webpack_exports__["default"] = (Textbox);
 
 /***/ }),
