@@ -64,24 +64,25 @@ function computedState(currentState = {}, node, currentWindow = window) {
 				if (nodeName === 'b' || nodeName === 'strong') {
 					fontWeight = 'bold';
 				} else {
-					fontWeight = computedStyle.getPropertyValue('font-weight');
+					const fontWeightValue = computedStyle.getPropertyValue('font-weight');
+					if (fontWeightValue === '700' || fontWeightValue === 'bold') fontWeight = 'bold';
 				}
 				currentState[styleProp] = fontWeight;
 				break;
 
 			case 'textDecoration':
 				let textDecoration = 'none';
-				if (nodeName === 'i' || nodeName === 'em') {
-					textDecoration = 'italic';
-				} else if (nodeName === 'u') {
+				if (nodeName === 'u') {
 					textDecoration = 'underline';
 				} else if (nodeName === 'strike' || nodeName === 'del' || nodeName === 's') {
 					textDecoration = 'line-through';
 				} else {
+					// getPropertyValue text-decoration 不会继承 获取的不是实时样式
 					textDecoration = computedStyle.getPropertyValue('text-decoration');
 					if (textDecoration.split(' ').length > 0) textDecoration = textDecoration.split(' ')[0];
 				}
-				currentState[styleProp] = textDecoration;
+
+				if (textDecoration !== 'none') currentState[styleProp] = textDecoration;
 				break;
 
 			case 'fontStyle':

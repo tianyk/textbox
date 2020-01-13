@@ -4,9 +4,9 @@
   "warnings": [
   ],
   "version": "4.41.4",
-  "hash": "34cde6cb290784561fe0",
-  "time": 82,
-  "builtAt": 1578846872294,
+  "hash": "7b081f1c78f38ace4283",
+  "time": 330,
+  "builtAt": 1578921061968,
   "publicPath": "",
   "outputPath": "/Users/doog/Documents/Workspaces/node/textbox/dist",
   "assetsByChunkName": {
@@ -29,7 +29,7 @@
     },
     {
       "name": "react-textbox.js",
-      "size": 565719,
+      "size": 565841,
       "chunks": [
         "main"
       ],
@@ -38,11 +38,11 @@
       ],
       "info": {
       },
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "react-textbox.js.map",
-      "size": 599920,
+      "size": 600100,
       "chunks": [
         "main"
       ],
@@ -52,7 +52,7 @@
       "info": {
         "development": true
       },
-      "emitted": false
+      "emitted": true
     }
   ],
   "filteredAssets": 0,
@@ -89,10 +89,10 @@
   "chunks": [
     {
       "id": "main",
-      "rendered": false,
+      "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 494872,
+      "size": 494994,
       "names": [
         "main"
       ],
@@ -100,7 +100,7 @@
         "react-textbox.js",
         "react-textbox.js.map"
       ],
-      "hash": "d5747dd1bdd5c09038c5",
+      "hash": "a6e4c343a3dd1b507de3",
       "siblings": [
       ],
       "parents": [
@@ -2333,9 +2333,9 @@
           "chunks": [
             "main"
           ],
-          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/input-select/index.jsx",
-          "issuerId": "./src/components/input-select/index.jsx",
-          "issuerName": "./src/components/input-select/index.jsx",
+          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "issuerId": "./src/components/textbox/index.jsx",
+          "issuerName": "./src/components/textbox/index.jsx",
           "issuerPath": [
             {
               "id": "./src/components/index.js",
@@ -2343,14 +2343,9 @@
               "name": "./src/components/index.js"
             },
             {
-              "id": "./src/components/editor/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-              "name": "./src/components/editor/index.jsx"
-            },
-            {
-              "id": "./src/components/input-select/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/input-select/index.jsx",
-              "name": "./src/components/input-select/index.jsx"
+              "id": "./src/components/textbox/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+              "name": "./src/components/textbox/index.jsx"
             }
           ],
           "failed": false,
@@ -3014,9 +3009,9 @@
           "chunks": [
             "main"
           ],
-          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/editor.less",
-          "issuerId": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/editor/editor.less",
-          "issuerName": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/editor/editor.less",
+          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/textbox.less",
+          "issuerId": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/textbox/textbox.less",
+          "issuerName": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/textbox/textbox.less",
           "issuerPath": [
             {
               "id": "./src/components/index.js",
@@ -3024,19 +3019,19 @@
               "name": "./src/components/index.js"
             },
             {
-              "id": "./src/components/editor/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-              "name": "./src/components/editor/index.jsx"
+              "id": "./src/components/textbox/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+              "name": "./src/components/textbox/index.jsx"
             },
             {
-              "id": "./src/components/editor/editor.less",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/style-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/editor.less",
-              "name": "./src/components/editor/editor.less"
+              "id": "./src/components/textbox/textbox.less",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/style-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/textbox.less",
+              "name": "./src/components/textbox/textbox.less"
             },
             {
-              "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/editor/editor.less",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/editor.less",
-              "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/editor/editor.less"
+              "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/textbox/textbox.less",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/textbox.less",
+              "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/textbox/textbox.less"
             }
           ],
           "failed": false,
@@ -3157,9 +3152,9 @@
               "name": "./src/components/index.js"
             },
             {
-              "id": "./src/components/editor/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-              "name": "./src/components/editor/index.jsx"
+              "id": "./src/components/textbox/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+              "name": "./src/components/textbox/index.jsx"
             },
             {
               "id": "./src/commons/debug.js",
@@ -3213,9 +3208,9 @@
               "name": "./src/components/index.js"
             },
             {
-              "id": "./src/components/editor/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-              "name": "./src/components/editor/index.jsx"
+              "id": "./src/components/textbox/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+              "name": "./src/components/textbox/index.jsx"
             },
             {
               "id": "./src/commons/debug.js",
@@ -3639,9 +3634,9 @@
               "name": "./src/components/index.js"
             },
             {
-              "id": "./src/components/editor/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-              "name": "./src/components/editor/index.jsx"
+              "id": "./src/components/textbox/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+              "name": "./src/components/textbox/index.jsx"
             },
             {
               "id": "./src/commons/debug.js",
@@ -3766,9 +3761,9 @@
               "name": "./src/components/index.js"
             },
             {
-              "id": "./src/components/editor/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-              "name": "./src/components/editor/index.jsx"
+              "id": "./src/components/textbox/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+              "name": "./src/components/textbox/index.jsx"
             },
             {
               "id": "./src/commons/debug.js",
@@ -4122,9 +4117,9 @@
           "chunks": [
             "main"
           ],
-          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/style-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/editor.less",
-          "issuerId": "./src/components/editor/editor.less",
-          "issuerName": "./src/components/editor/editor.less",
+          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/style-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/textbox.less",
+          "issuerId": "./src/components/textbox/textbox.less",
+          "issuerName": "./src/components/textbox/textbox.less",
           "issuerPath": [
             {
               "id": "./src/components/index.js",
@@ -4132,14 +4127,14 @@
               "name": "./src/components/index.js"
             },
             {
-              "id": "./src/components/editor/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-              "name": "./src/components/editor/index.jsx"
+              "id": "./src/components/textbox/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+              "name": "./src/components/textbox/index.jsx"
             },
             {
-              "id": "./src/components/editor/editor.less",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/style-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/editor.less",
-              "name": "./src/components/editor/editor.less"
+              "id": "./src/components/textbox/textbox.less",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/style-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/textbox.less",
+              "name": "./src/components/textbox/textbox.less"
             }
           ],
           "failed": false,
@@ -5213,9 +5208,9 @@
           "name": "./src/commons/computed_state.js",
           "index": 103,
           "index2": 100,
-          "size": 4662,
+          "size": 4784,
           "cacheable": true,
-          "built": false,
+          "built": true,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -5267,7 +5262,7 @@
           "optimizationBailout": [
           ],
           "depth": 3,
-          "source": "var debug = require('./debug')('textbox:commons:button');\n\nfunction rgba2hex(orig) {\n  var a = '',\n      rgb = orig.replace(/\\s/g, '').match(/^rgba?\\((\\d+),(\\d+),(\\d+),?([^,\\s)]+)?/i),\n      alpha = (rgb && rgb[4] || \"\").trim(),\n      hex = rgb ? (rgb[1] | 1 << 8).toString(16).slice(1) + (rgb[2] | 1 << 8).toString(16).slice(1) + (rgb[3] | 1 << 8).toString(16).slice(1) : orig;\n\n  if (alpha !== '') {\n    a = (255 * parseFloat(alpha)).toString(16);\n  }\n\n  hex = hex + a;\n  return \"#\".concat(hex);\n}\n\nvar STYLE_PROPS = ['fontSize', 'color', 'fontWeight', 'textDecoration', 'fontStyle', 'textAlign', 'lineHeight', 'paddingTop', 'paddingLeft'];\n\nfunction computedState() {\n  var currentState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};\n  var node = arguments.length > 1 ? arguments[1] : undefined;\n  var currentWindow = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : window;\n  var nodeName = node.nodeName.toLowerCase();\n  var computedStyle = currentWindow.getComputedStyle(node, null);\n  debug('computedState', nodeName);\n  var _iteratorNormalCompletion = true;\n  var _didIteratorError = false;\n  var _iteratorError = undefined;\n\n  try {\n    for (var _iterator = STYLE_PROPS[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n      var styleProp = _step.value;\n      // 设置过就不在设置\n      if (typeof currentState[styleProp] !== 'undefined' && styleProp !== 'text-decoration') continue;\n\n      switch (styleProp) {\n        case 'fontSize':\n          var fontSize = '14px'; // if (nodeName === 'font' && node.hasAttribute('size')) {\n          // \tfontSize = node.getAttribute('size');\n          // } else {\n\n          fontSize = computedStyle.getPropertyValue('font-size'); // }\n\n          currentState[styleProp] = fontSize;\n          break;\n\n        case 'color':\n          var color = '#000';\n\n          if (nodeName === 'font' && node.hasAttribute('color')) {\n            color = node.getAttribute('color');\n          } else {\n            color = computedStyle.getPropertyValue('color');\n            if (color.startsWith('rgb')) color = rgba2hex(color);\n          }\n\n          currentState[styleProp] = color;\n          break;\n\n        case 'fontWeight':\n          var fontWeight = 'normal';\n\n          if (nodeName === 'b' || nodeName === 'strong') {\n            fontWeight = 'bold';\n          } else {\n            fontWeight = computedStyle.getPropertyValue('font-weight');\n          }\n\n          currentState[styleProp] = fontWeight;\n          break;\n\n        case 'textDecoration':\n          var textDecoration = 'none';\n\n          if (nodeName === 'i' || nodeName === 'em') {\n            textDecoration = 'italic';\n          } else if (nodeName === 'u') {\n            textDecoration = 'underline';\n          } else if (nodeName === 'strike' || nodeName === 'del' || nodeName === 's') {\n            textDecoration = 'line-through';\n          } else {\n            textDecoration = computedStyle.getPropertyValue('text-decoration');\n            if (textDecoration.split(' ').length > 0) textDecoration = textDecoration.split(' ')[0];\n          }\n\n          currentState[styleProp] = textDecoration;\n          break;\n\n        case 'fontStyle':\n          var fontStyle = 'normal';\n\n          if (nodeName === 'i' || nodeName === 'em') {\n            fontStyle = 'italic';\n          } else {\n            fontStyle = computedStyle.getPropertyValue('font-style');\n          }\n\n          currentState[styleProp] = fontStyle;\n          break;\n\n        case 'textAlign':\n          var textAlign = computedStyle.getPropertyValue('text-align');\n          currentState[styleProp] = textAlign;\n          break;\n\n        case 'lineHeight':\n          var lineHeight = computedStyle.getPropertyValue('line-height');\n          currentState[styleProp] = lineHeight;\n          break;\n\n        case 'paddingTop':\n          var paddingTop = computedStyle.getPropertyValue('padding-top');\n          currentState[styleProp] = paddingTop;\n          break;\n\n        case 'paddingLeft':\n          var paddingLeft = computedStyle.getPropertyValue('padding-left');\n          currentState[styleProp] = paddingLeft;\n          break;\n      }\n\n      debug('currentState: %j', currentState);\n    }\n  } catch (err) {\n    _didIteratorError = true;\n    _iteratorError = err;\n  } finally {\n    try {\n      if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n        _iterator[\"return\"]();\n      }\n    } finally {\n      if (_didIteratorError) {\n        throw _iteratorError;\n      }\n    }\n  }\n\n  return currentState;\n}\n\nexport { computedState };"
+          "source": "var debug = require('./debug')('textbox:commons:button');\n\nfunction rgba2hex(orig) {\n  var a = '',\n      rgb = orig.replace(/\\s/g, '').match(/^rgba?\\((\\d+),(\\d+),(\\d+),?([^,\\s)]+)?/i),\n      alpha = (rgb && rgb[4] || \"\").trim(),\n      hex = rgb ? (rgb[1] | 1 << 8).toString(16).slice(1) + (rgb[2] | 1 << 8).toString(16).slice(1) + (rgb[3] | 1 << 8).toString(16).slice(1) : orig;\n\n  if (alpha !== '') {\n    a = (255 * parseFloat(alpha)).toString(16);\n  }\n\n  hex = hex + a;\n  return \"#\".concat(hex);\n}\n\nvar STYLE_PROPS = ['fontSize', 'color', 'fontWeight', 'textDecoration', 'fontStyle', 'textAlign', 'lineHeight', 'paddingTop', 'paddingLeft'];\n\nfunction computedState() {\n  var currentState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};\n  var node = arguments.length > 1 ? arguments[1] : undefined;\n  var currentWindow = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : window;\n  var nodeName = node.nodeName.toLowerCase();\n  var computedStyle = currentWindow.getComputedStyle(node, null);\n  debug('computedState', nodeName);\n  var _iteratorNormalCompletion = true;\n  var _didIteratorError = false;\n  var _iteratorError = undefined;\n\n  try {\n    for (var _iterator = STYLE_PROPS[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n      var styleProp = _step.value;\n      // 设置过就不在设置\n      if (typeof currentState[styleProp] !== 'undefined' && styleProp !== 'text-decoration') continue;\n\n      switch (styleProp) {\n        case 'fontSize':\n          var fontSize = '14px'; // if (nodeName === 'font' && node.hasAttribute('size')) {\n          // \tfontSize = node.getAttribute('size');\n          // } else {\n\n          fontSize = computedStyle.getPropertyValue('font-size'); // }\n\n          currentState[styleProp] = fontSize;\n          break;\n\n        case 'color':\n          var color = '#000';\n\n          if (nodeName === 'font' && node.hasAttribute('color')) {\n            color = node.getAttribute('color');\n          } else {\n            color = computedStyle.getPropertyValue('color');\n            if (color.startsWith('rgb')) color = rgba2hex(color);\n          }\n\n          currentState[styleProp] = color;\n          break;\n\n        case 'fontWeight':\n          var fontWeight = 'normal';\n\n          if (nodeName === 'b' || nodeName === 'strong') {\n            fontWeight = 'bold';\n          } else {\n            var fontWeightValue = computedStyle.getPropertyValue('font-weight');\n            if (fontWeightValue === '700' || fontWeightValue === 'bold') fontWeight = 'bold';\n          }\n\n          currentState[styleProp] = fontWeight;\n          break;\n\n        case 'textDecoration':\n          var textDecoration = 'none';\n\n          if (nodeName === 'u') {\n            textDecoration = 'underline';\n          } else if (nodeName === 'strike' || nodeName === 'del' || nodeName === 's') {\n            textDecoration = 'line-through';\n          } else {\n            // getPropertyValue text-decoration 不会继承 获取的不是实时样式\n            textDecoration = computedStyle.getPropertyValue('text-decoration');\n            if (textDecoration.split(' ').length > 0) textDecoration = textDecoration.split(' ')[0];\n          }\n\n          if (textDecoration !== 'none') currentState[styleProp] = textDecoration;\n          break;\n\n        case 'fontStyle':\n          var fontStyle = 'normal';\n\n          if (nodeName === 'i' || nodeName === 'em') {\n            fontStyle = 'italic';\n          } else {\n            fontStyle = computedStyle.getPropertyValue('font-style');\n          }\n\n          currentState[styleProp] = fontStyle;\n          break;\n\n        case 'textAlign':\n          var textAlign = computedStyle.getPropertyValue('text-align');\n          currentState[styleProp] = textAlign;\n          break;\n\n        case 'lineHeight':\n          var lineHeight = computedStyle.getPropertyValue('line-height');\n          currentState[styleProp] = lineHeight;\n          break;\n\n        case 'paddingTop':\n          var paddingTop = computedStyle.getPropertyValue('padding-top');\n          currentState[styleProp] = paddingTop;\n          break;\n\n        case 'paddingLeft':\n          var paddingLeft = computedStyle.getPropertyValue('padding-left');\n          currentState[styleProp] = paddingLeft;\n          break;\n      }\n\n      debug('currentState: %j', currentState);\n    }\n  } catch (err) {\n    _didIteratorError = true;\n    _iteratorError = err;\n  } finally {\n    try {\n      if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n        _iterator[\"return\"]();\n      }\n    } finally {\n      if (_didIteratorError) {\n        throw _iteratorError;\n      }\n    }\n  }\n\n  return currentState;\n}\n\nexport { computedState };"
         },
         {
           "id": "./src/commons/debug.js",
@@ -5283,9 +5278,9 @@
           "chunks": [
             "main"
           ],
-          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-          "issuerId": "./src/components/editor/index.jsx",
-          "issuerName": "./src/components/editor/index.jsx",
+          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "issuerId": "./src/components/textbox/index.jsx",
+          "issuerName": "./src/components/textbox/index.jsx",
           "issuerPath": [
             {
               "id": "./src/components/index.js",
@@ -5293,9 +5288,9 @@
               "name": "./src/components/index.js"
             },
             {
-              "id": "./src/components/editor/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-              "name": "./src/components/editor/index.jsx"
+              "id": "./src/components/textbox/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+              "name": "./src/components/textbox/index.jsx"
             }
           ],
           "failed": false,
@@ -6513,7 +6508,7 @@
           "index2": 45,
           "size": 8447,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -6626,9 +6621,9 @@
           "chunks": [
             "main"
           ],
-          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-          "issuerId": "./src/components/editor/index.jsx",
-          "issuerName": "./src/components/editor/index.jsx",
+          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "issuerId": "./src/components/textbox/index.jsx",
+          "issuerName": "./src/components/textbox/index.jsx",
           "issuerPath": [
             {
               "id": "./src/components/index.js",
@@ -6636,9 +6631,9 @@
               "name": "./src/components/index.js"
             },
             {
-              "id": "./src/components/editor/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-              "name": "./src/components/editor/index.jsx"
+              "id": "./src/components/textbox/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+              "name": "./src/components/textbox/index.jsx"
             }
           ],
           "failed": false,
@@ -6756,9 +6751,9 @@
           "chunks": [
             "main"
           ],
-          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/input-number/index.jsx",
-          "issuerId": "./src/components/input-number/index.jsx",
-          "issuerName": "./src/components/input-number/index.jsx",
+          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "issuerId": "./src/components/textbox/index.jsx",
+          "issuerName": "./src/components/textbox/index.jsx",
           "issuerPath": [
             {
               "id": "./src/components/index.js",
@@ -6766,14 +6761,9 @@
               "name": "./src/components/index.js"
             },
             {
-              "id": "./src/components/editor/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-              "name": "./src/components/editor/index.jsx"
-            },
-            {
-              "id": "./src/components/input-number/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/input-number/index.jsx",
-              "name": "./src/components/input-number/index.jsx"
+              "id": "./src/components/textbox/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+              "name": "./src/components/textbox/index.jsx"
             }
           ],
           "failed": false,
@@ -7170,9 +7160,9 @@
           "chunks": [
             "main"
           ],
-          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-          "issuerId": "./src/components/editor/index.jsx",
-          "issuerName": "./src/components/editor/index.jsx",
+          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "issuerId": "./src/components/textbox/index.jsx",
+          "issuerName": "./src/components/textbox/index.jsx",
           "issuerPath": [
             {
               "id": "./src/components/index.js",
@@ -7180,9 +7170,9 @@
               "name": "./src/components/index.js"
             },
             {
-              "id": "./src/components/editor/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-              "name": "./src/components/editor/index.jsx"
+              "id": "./src/components/textbox/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+              "name": "./src/components/textbox/index.jsx"
             }
           ],
           "failed": false,
@@ -7543,9 +7533,9 @@
           "chunks": [
             "main"
           ],
-          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-          "issuerId": "./src/components/editor/index.jsx",
-          "issuerName": "./src/components/editor/index.jsx",
+          "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "issuerId": "./src/components/textbox/index.jsx",
+          "issuerName": "./src/components/textbox/index.jsx",
           "issuerPath": [
             {
               "id": "./src/components/index.js",
@@ -7553,9 +7543,9 @@
               "name": "./src/components/index.js"
             },
             {
-              "id": "./src/components/editor/index.jsx",
-              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-              "name": "./src/components/editor/index.jsx"
+              "id": "./src/components/textbox/index.jsx",
+              "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+              "name": "./src/components/textbox/index.jsx"
             }
           ],
           "failed": false,
@@ -9872,9 +9862,9 @@
       "chunks": [
         "main"
       ],
-      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/input-select/index.jsx",
-      "issuerId": "./src/components/input-select/index.jsx",
-      "issuerName": "./src/components/input-select/index.jsx",
+      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+      "issuerId": "./src/components/textbox/index.jsx",
+      "issuerName": "./src/components/textbox/index.jsx",
       "issuerPath": [
         {
           "id": "./src/components/index.js",
@@ -9882,14 +9872,9 @@
           "name": "./src/components/index.js"
         },
         {
-          "id": "./src/components/editor/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-          "name": "./src/components/editor/index.jsx"
-        },
-        {
-          "id": "./src/components/input-select/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/input-select/index.jsx",
-          "name": "./src/components/input-select/index.jsx"
+          "id": "./src/components/textbox/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "name": "./src/components/textbox/index.jsx"
         }
       ],
       "failed": false,
@@ -10553,9 +10538,9 @@
       "chunks": [
         "main"
       ],
-      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/editor.less",
-      "issuerId": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/editor/editor.less",
-      "issuerName": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/editor/editor.less",
+      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/textbox.less",
+      "issuerId": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/textbox/textbox.less",
+      "issuerName": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/textbox/textbox.less",
       "issuerPath": [
         {
           "id": "./src/components/index.js",
@@ -10563,19 +10548,19 @@
           "name": "./src/components/index.js"
         },
         {
-          "id": "./src/components/editor/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-          "name": "./src/components/editor/index.jsx"
+          "id": "./src/components/textbox/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "name": "./src/components/textbox/index.jsx"
         },
         {
-          "id": "./src/components/editor/editor.less",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/style-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/editor.less",
-          "name": "./src/components/editor/editor.less"
+          "id": "./src/components/textbox/textbox.less",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/style-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/textbox.less",
+          "name": "./src/components/textbox/textbox.less"
         },
         {
-          "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/editor/editor.less",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/editor.less",
-          "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/editor/editor.less"
+          "id": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/textbox/textbox.less",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/textbox.less",
+          "name": "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/textbox/textbox.less"
         }
       ],
       "failed": false,
@@ -10696,9 +10681,9 @@
           "name": "./src/components/index.js"
         },
         {
-          "id": "./src/components/editor/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-          "name": "./src/components/editor/index.jsx"
+          "id": "./src/components/textbox/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "name": "./src/components/textbox/index.jsx"
         },
         {
           "id": "./src/commons/debug.js",
@@ -10752,9 +10737,9 @@
           "name": "./src/components/index.js"
         },
         {
-          "id": "./src/components/editor/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-          "name": "./src/components/editor/index.jsx"
+          "id": "./src/components/textbox/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "name": "./src/components/textbox/index.jsx"
         },
         {
           "id": "./src/commons/debug.js",
@@ -11178,9 +11163,9 @@
           "name": "./src/components/index.js"
         },
         {
-          "id": "./src/components/editor/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-          "name": "./src/components/editor/index.jsx"
+          "id": "./src/components/textbox/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "name": "./src/components/textbox/index.jsx"
         },
         {
           "id": "./src/commons/debug.js",
@@ -11305,9 +11290,9 @@
           "name": "./src/components/index.js"
         },
         {
-          "id": "./src/components/editor/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-          "name": "./src/components/editor/index.jsx"
+          "id": "./src/components/textbox/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "name": "./src/components/textbox/index.jsx"
         },
         {
           "id": "./src/commons/debug.js",
@@ -11661,9 +11646,9 @@
       "chunks": [
         "main"
       ],
-      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/style-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/editor.less",
-      "issuerId": "./src/components/editor/editor.less",
-      "issuerName": "./src/components/editor/editor.less",
+      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/style-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/textbox.less",
+      "issuerId": "./src/components/textbox/textbox.less",
+      "issuerName": "./src/components/textbox/textbox.less",
       "issuerPath": [
         {
           "id": "./src/components/index.js",
@@ -11671,14 +11656,14 @@
           "name": "./src/components/index.js"
         },
         {
-          "id": "./src/components/editor/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-          "name": "./src/components/editor/index.jsx"
+          "id": "./src/components/textbox/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "name": "./src/components/textbox/index.jsx"
         },
         {
-          "id": "./src/components/editor/editor.less",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/style-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/editor.less",
-          "name": "./src/components/editor/editor.less"
+          "id": "./src/components/textbox/textbox.less",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/style-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/css-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/node_modules/less-loader/dist/cjs.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/textbox.less",
+          "name": "./src/components/textbox/textbox.less"
         }
       ],
       "failed": false,
@@ -12752,9 +12737,9 @@
       "name": "./src/commons/computed_state.js",
       "index": 103,
       "index2": 100,
-      "size": 4662,
+      "size": 4784,
       "cacheable": true,
-      "built": false,
+      "built": true,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -12806,7 +12791,7 @@
       "optimizationBailout": [
       ],
       "depth": 3,
-      "source": "var debug = require('./debug')('textbox:commons:button');\n\nfunction rgba2hex(orig) {\n  var a = '',\n      rgb = orig.replace(/\\s/g, '').match(/^rgba?\\((\\d+),(\\d+),(\\d+),?([^,\\s)]+)?/i),\n      alpha = (rgb && rgb[4] || \"\").trim(),\n      hex = rgb ? (rgb[1] | 1 << 8).toString(16).slice(1) + (rgb[2] | 1 << 8).toString(16).slice(1) + (rgb[3] | 1 << 8).toString(16).slice(1) : orig;\n\n  if (alpha !== '') {\n    a = (255 * parseFloat(alpha)).toString(16);\n  }\n\n  hex = hex + a;\n  return \"#\".concat(hex);\n}\n\nvar STYLE_PROPS = ['fontSize', 'color', 'fontWeight', 'textDecoration', 'fontStyle', 'textAlign', 'lineHeight', 'paddingTop', 'paddingLeft'];\n\nfunction computedState() {\n  var currentState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};\n  var node = arguments.length > 1 ? arguments[1] : undefined;\n  var currentWindow = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : window;\n  var nodeName = node.nodeName.toLowerCase();\n  var computedStyle = currentWindow.getComputedStyle(node, null);\n  debug('computedState', nodeName);\n  var _iteratorNormalCompletion = true;\n  var _didIteratorError = false;\n  var _iteratorError = undefined;\n\n  try {\n    for (var _iterator = STYLE_PROPS[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n      var styleProp = _step.value;\n      // 设置过就不在设置\n      if (typeof currentState[styleProp] !== 'undefined' && styleProp !== 'text-decoration') continue;\n\n      switch (styleProp) {\n        case 'fontSize':\n          var fontSize = '14px'; // if (nodeName === 'font' && node.hasAttribute('size')) {\n          // \tfontSize = node.getAttribute('size');\n          // } else {\n\n          fontSize = computedStyle.getPropertyValue('font-size'); // }\n\n          currentState[styleProp] = fontSize;\n          break;\n\n        case 'color':\n          var color = '#000';\n\n          if (nodeName === 'font' && node.hasAttribute('color')) {\n            color = node.getAttribute('color');\n          } else {\n            color = computedStyle.getPropertyValue('color');\n            if (color.startsWith('rgb')) color = rgba2hex(color);\n          }\n\n          currentState[styleProp] = color;\n          break;\n\n        case 'fontWeight':\n          var fontWeight = 'normal';\n\n          if (nodeName === 'b' || nodeName === 'strong') {\n            fontWeight = 'bold';\n          } else {\n            fontWeight = computedStyle.getPropertyValue('font-weight');\n          }\n\n          currentState[styleProp] = fontWeight;\n          break;\n\n        case 'textDecoration':\n          var textDecoration = 'none';\n\n          if (nodeName === 'i' || nodeName === 'em') {\n            textDecoration = 'italic';\n          } else if (nodeName === 'u') {\n            textDecoration = 'underline';\n          } else if (nodeName === 'strike' || nodeName === 'del' || nodeName === 's') {\n            textDecoration = 'line-through';\n          } else {\n            textDecoration = computedStyle.getPropertyValue('text-decoration');\n            if (textDecoration.split(' ').length > 0) textDecoration = textDecoration.split(' ')[0];\n          }\n\n          currentState[styleProp] = textDecoration;\n          break;\n\n        case 'fontStyle':\n          var fontStyle = 'normal';\n\n          if (nodeName === 'i' || nodeName === 'em') {\n            fontStyle = 'italic';\n          } else {\n            fontStyle = computedStyle.getPropertyValue('font-style');\n          }\n\n          currentState[styleProp] = fontStyle;\n          break;\n\n        case 'textAlign':\n          var textAlign = computedStyle.getPropertyValue('text-align');\n          currentState[styleProp] = textAlign;\n          break;\n\n        case 'lineHeight':\n          var lineHeight = computedStyle.getPropertyValue('line-height');\n          currentState[styleProp] = lineHeight;\n          break;\n\n        case 'paddingTop':\n          var paddingTop = computedStyle.getPropertyValue('padding-top');\n          currentState[styleProp] = paddingTop;\n          break;\n\n        case 'paddingLeft':\n          var paddingLeft = computedStyle.getPropertyValue('padding-left');\n          currentState[styleProp] = paddingLeft;\n          break;\n      }\n\n      debug('currentState: %j', currentState);\n    }\n  } catch (err) {\n    _didIteratorError = true;\n    _iteratorError = err;\n  } finally {\n    try {\n      if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n        _iterator[\"return\"]();\n      }\n    } finally {\n      if (_didIteratorError) {\n        throw _iteratorError;\n      }\n    }\n  }\n\n  return currentState;\n}\n\nexport { computedState };"
+      "source": "var debug = require('./debug')('textbox:commons:button');\n\nfunction rgba2hex(orig) {\n  var a = '',\n      rgb = orig.replace(/\\s/g, '').match(/^rgba?\\((\\d+),(\\d+),(\\d+),?([^,\\s)]+)?/i),\n      alpha = (rgb && rgb[4] || \"\").trim(),\n      hex = rgb ? (rgb[1] | 1 << 8).toString(16).slice(1) + (rgb[2] | 1 << 8).toString(16).slice(1) + (rgb[3] | 1 << 8).toString(16).slice(1) : orig;\n\n  if (alpha !== '') {\n    a = (255 * parseFloat(alpha)).toString(16);\n  }\n\n  hex = hex + a;\n  return \"#\".concat(hex);\n}\n\nvar STYLE_PROPS = ['fontSize', 'color', 'fontWeight', 'textDecoration', 'fontStyle', 'textAlign', 'lineHeight', 'paddingTop', 'paddingLeft'];\n\nfunction computedState() {\n  var currentState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};\n  var node = arguments.length > 1 ? arguments[1] : undefined;\n  var currentWindow = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : window;\n  var nodeName = node.nodeName.toLowerCase();\n  var computedStyle = currentWindow.getComputedStyle(node, null);\n  debug('computedState', nodeName);\n  var _iteratorNormalCompletion = true;\n  var _didIteratorError = false;\n  var _iteratorError = undefined;\n\n  try {\n    for (var _iterator = STYLE_PROPS[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n      var styleProp = _step.value;\n      // 设置过就不在设置\n      if (typeof currentState[styleProp] !== 'undefined' && styleProp !== 'text-decoration') continue;\n\n      switch (styleProp) {\n        case 'fontSize':\n          var fontSize = '14px'; // if (nodeName === 'font' && node.hasAttribute('size')) {\n          // \tfontSize = node.getAttribute('size');\n          // } else {\n\n          fontSize = computedStyle.getPropertyValue('font-size'); // }\n\n          currentState[styleProp] = fontSize;\n          break;\n\n        case 'color':\n          var color = '#000';\n\n          if (nodeName === 'font' && node.hasAttribute('color')) {\n            color = node.getAttribute('color');\n          } else {\n            color = computedStyle.getPropertyValue('color');\n            if (color.startsWith('rgb')) color = rgba2hex(color);\n          }\n\n          currentState[styleProp] = color;\n          break;\n\n        case 'fontWeight':\n          var fontWeight = 'normal';\n\n          if (nodeName === 'b' || nodeName === 'strong') {\n            fontWeight = 'bold';\n          } else {\n            var fontWeightValue = computedStyle.getPropertyValue('font-weight');\n            if (fontWeightValue === '700' || fontWeightValue === 'bold') fontWeight = 'bold';\n          }\n\n          currentState[styleProp] = fontWeight;\n          break;\n\n        case 'textDecoration':\n          var textDecoration = 'none';\n\n          if (nodeName === 'u') {\n            textDecoration = 'underline';\n          } else if (nodeName === 'strike' || nodeName === 'del' || nodeName === 's') {\n            textDecoration = 'line-through';\n          } else {\n            // getPropertyValue text-decoration 不会继承 获取的不是实时样式\n            textDecoration = computedStyle.getPropertyValue('text-decoration');\n            if (textDecoration.split(' ').length > 0) textDecoration = textDecoration.split(' ')[0];\n          }\n\n          if (textDecoration !== 'none') currentState[styleProp] = textDecoration;\n          break;\n\n        case 'fontStyle':\n          var fontStyle = 'normal';\n\n          if (nodeName === 'i' || nodeName === 'em') {\n            fontStyle = 'italic';\n          } else {\n            fontStyle = computedStyle.getPropertyValue('font-style');\n          }\n\n          currentState[styleProp] = fontStyle;\n          break;\n\n        case 'textAlign':\n          var textAlign = computedStyle.getPropertyValue('text-align');\n          currentState[styleProp] = textAlign;\n          break;\n\n        case 'lineHeight':\n          var lineHeight = computedStyle.getPropertyValue('line-height');\n          currentState[styleProp] = lineHeight;\n          break;\n\n        case 'paddingTop':\n          var paddingTop = computedStyle.getPropertyValue('padding-top');\n          currentState[styleProp] = paddingTop;\n          break;\n\n        case 'paddingLeft':\n          var paddingLeft = computedStyle.getPropertyValue('padding-left');\n          currentState[styleProp] = paddingLeft;\n          break;\n      }\n\n      debug('currentState: %j', currentState);\n    }\n  } catch (err) {\n    _didIteratorError = true;\n    _iteratorError = err;\n  } finally {\n    try {\n      if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n        _iterator[\"return\"]();\n      }\n    } finally {\n      if (_didIteratorError) {\n        throw _iteratorError;\n      }\n    }\n  }\n\n  return currentState;\n}\n\nexport { computedState };"
     },
     {
       "id": "./src/commons/debug.js",
@@ -12822,9 +12807,9 @@
       "chunks": [
         "main"
       ],
-      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-      "issuerId": "./src/components/editor/index.jsx",
-      "issuerName": "./src/components/editor/index.jsx",
+      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+      "issuerId": "./src/components/textbox/index.jsx",
+      "issuerName": "./src/components/textbox/index.jsx",
       "issuerPath": [
         {
           "id": "./src/components/index.js",
@@ -12832,9 +12817,9 @@
           "name": "./src/components/index.js"
         },
         {
-          "id": "./src/components/editor/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-          "name": "./src/components/editor/index.jsx"
+          "id": "./src/components/textbox/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "name": "./src/components/textbox/index.jsx"
         }
       ],
       "failed": false,
@@ -14052,7 +14037,7 @@
       "index2": 45,
       "size": 8447,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -14165,9 +14150,9 @@
       "chunks": [
         "main"
       ],
-      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-      "issuerId": "./src/components/editor/index.jsx",
-      "issuerName": "./src/components/editor/index.jsx",
+      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+      "issuerId": "./src/components/textbox/index.jsx",
+      "issuerName": "./src/components/textbox/index.jsx",
       "issuerPath": [
         {
           "id": "./src/components/index.js",
@@ -14175,9 +14160,9 @@
           "name": "./src/components/index.js"
         },
         {
-          "id": "./src/components/editor/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-          "name": "./src/components/editor/index.jsx"
+          "id": "./src/components/textbox/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "name": "./src/components/textbox/index.jsx"
         }
       ],
       "failed": false,
@@ -14295,9 +14280,9 @@
       "chunks": [
         "main"
       ],
-      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/input-number/index.jsx",
-      "issuerId": "./src/components/input-number/index.jsx",
-      "issuerName": "./src/components/input-number/index.jsx",
+      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+      "issuerId": "./src/components/textbox/index.jsx",
+      "issuerName": "./src/components/textbox/index.jsx",
       "issuerPath": [
         {
           "id": "./src/components/index.js",
@@ -14305,14 +14290,9 @@
           "name": "./src/components/index.js"
         },
         {
-          "id": "./src/components/editor/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-          "name": "./src/components/editor/index.jsx"
-        },
-        {
-          "id": "./src/components/input-number/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/input-number/index.jsx",
-          "name": "./src/components/input-number/index.jsx"
+          "id": "./src/components/textbox/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "name": "./src/components/textbox/index.jsx"
         }
       ],
       "failed": false,
@@ -14709,9 +14689,9 @@
       "chunks": [
         "main"
       ],
-      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-      "issuerId": "./src/components/editor/index.jsx",
-      "issuerName": "./src/components/editor/index.jsx",
+      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+      "issuerId": "./src/components/textbox/index.jsx",
+      "issuerName": "./src/components/textbox/index.jsx",
       "issuerPath": [
         {
           "id": "./src/components/index.js",
@@ -14719,9 +14699,9 @@
           "name": "./src/components/index.js"
         },
         {
-          "id": "./src/components/editor/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-          "name": "./src/components/editor/index.jsx"
+          "id": "./src/components/textbox/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "name": "./src/components/textbox/index.jsx"
         }
       ],
       "failed": false,
@@ -15082,9 +15062,9 @@
       "chunks": [
         "main"
       ],
-      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-      "issuerId": "./src/components/editor/index.jsx",
-      "issuerName": "./src/components/editor/index.jsx",
+      "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+      "issuerId": "./src/components/textbox/index.jsx",
+      "issuerName": "./src/components/textbox/index.jsx",
       "issuerPath": [
         {
           "id": "./src/components/index.js",
@@ -15092,9 +15072,9 @@
           "name": "./src/components/index.js"
         },
         {
-          "id": "./src/components/editor/index.jsx",
-          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/editor/index.jsx",
-          "name": "./src/components/editor/index.jsx"
+          "id": "./src/components/textbox/index.jsx",
+          "identifier": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/babel-loader/lib/index.js!/Users/doog/Documents/Workspaces/node/textbox/src/components/textbox/index.jsx",
+          "name": "./src/components/textbox/index.jsx"
         }
       ],
       "failed": false,
