@@ -109,19 +109,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./assets/images/三角形_展开@2x.png":
-/*!*************************************!*\
-  !*** ./assets/images/三角形_展开@2x.png ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAIBAMAAAA/ygPCAAAAG1BMVEXm5ub///93d3ekpKTHx8d7e3uJiYn4+Pi/v79ljDV1AAAANklEQVQI12MQFCwuFBRkEBQ0MgRRIkoqIIpVSZVRkEE8SUkpXZBBWElJSVmQoQlIKTUygAEjALcpBjrDPpobAAAAAElFTkSuQmCC");
-
-/***/ }),
-
 /***/ "./assets/images/三角形_收起@2x.png":
 /*!*************************************!*\
   !*** ./assets/images/三角形_收起@2x.png ***!
@@ -868,24 +855,6 @@ var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, ".coursebox-input-color {\n  background-color: #fff;\n  width: 52px;\n  height: 32px;\n  box-sizing: content-box;\n  padding: 0;\n  margin: 0;\n  border: 1px solid #E8E8E8;\n  border-radius: 2px;\n  outline: none;\n  vertical-align: bottom;\n}\n.coursebox-input-color .font-color-icon {\n  width: 14px;\n  height: 14px;\n  margin-left: 10px;\n  float: left;\n}\n.coursebox-input-color .font-color-icon img {\n  width: 8px;\n  height: 9px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n.coursebox-input-color .font-color-icon .font-color-bar {\n  width: 10px;\n  height: 3px;\n  margin-top: 2px;\n  margin-left: auto;\n  margin-right: auto;\n}\n.coursebox-input-color .font-color-collapse {\n  float: right;\n  margin-right: 9px;\n}\n.coursebox-input-color .font-color-collapse img {\n  width: 6px;\n  height: 4px;\n  vertical-align: middle;\n}\n.coursebox-input-color:hover {\n  border-color: #5C6066;\n}\n.coursebox-input-color.disabled .font-color-bar {\n  background-color: #E8E8E8 !important;\n}\n.coursebox-input-color.disabled:hover {\n  border-color: #E8E8E8;\n}\n.pickr-fix-position {\n  margin-top: 20px;\n}\n", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/input-number/input-number.less":
-/*!************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/input-number/input-number.less ***!
-  \************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, ".coursebox-input-number {\n  display: inline-block;\n  height: 32px;\n  padding: 0 10px;\n  border: 1px solid #E8E8E8;\n  border-radius: 2px;\n}\n.coursebox-input-number input[type=\"number\"]::-webkit-inner-spin-button,\n.coursebox-input-number input[type=\"number\"]::-webkit-outer-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n.coursebox-input-number input[type=\"number\"] {\n  -moz-appearance: textfield;\n}\n.coursebox-input-number .icon {\n  display: inline-block;\n  vertical-align: middle;\n  width: 14px;\n  height: 14px;\n  padding: 2px;\n  margin-right: 7px;\n}\n.coursebox-input-number .unit {\n  font-size: 12px;\n  vertical-align: middle;\n  margin-left: 1px;\n  color: #333;\n}\n.coursebox-input-number .input-number {\n  background-color: #fff;\n  text-align: center;\n  height: 100%;\n  width: 22px;\n  margin: 0;\n  padding: 0;\n  border: none;\n  outline: none;\n}\n.coursebox-input-number .number-up-down {\n  display: inline-block;\n  float: right;\n  width: 6px;\n  margin-left: 7px;\n}\n.coursebox-input-number .number-up-down .number-up,\n.coursebox-input-number .number-up-down .number-down {\n  width: 100%;\n  display: block;\n  border: 1px solid transparent;\n  -moz-user-select: none;\n  /*火狐*/\n  -webkit-user-select: none;\n  /*webkit浏览器*/\n  -ms-user-select: none;\n  /*IE10*/\n  -khtml-user-select: none;\n  /*早期浏览器*/\n  user-select: none;\n}\n.coursebox-input-number .number-up-down .number-up {\n  margin-top: 5px;\n}\n.coursebox-input-number .number-up-down .number-down {\n  margin-top: 10px;\n  margin-bottom: 5px;\n}\n.coursebox-input-number .number-up-down .number-up:active,\n.coursebox-input-number .number-up-down .number-down:active {\n  border-color: #38f;\n}\n.coursebox-input-number:hover {\n  border-color: #5C6066;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -11825,7 +11794,7 @@ function rgba2hex(orig) {
       hex = rgb ? (rgb[1] | 1 << 8).toString(16).slice(1) + (rgb[2] | 1 << 8).toString(16).slice(1) + (rgb[3] | 1 << 8).toString(16).slice(1) : orig;
 
   if (alpha !== '') {
-    a = (255 * parseFloat(alpha)).toString(16);
+    a = parseInt(255 * parseFloat(alpha)).toString(16);
   }
 
   hex = hex + a;
@@ -12120,7 +12089,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _editor_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_editor_less__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _input_number__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../input-number */ "./src/components/input-number/index.jsx");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _input_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../input-select */ "./src/components/input-select/index.jsx");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dom */ "react-dom");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_4__);
@@ -12229,7 +12199,7 @@ function (_Component) {
       textStyle: {}
     };
     _this.onTextStyleChange = _this.onTextStyleChange.bind(_assertThisInitialized(_this));
-    _this.throttleCheckState = Object(_commons_throttle__WEBPACK_IMPORTED_MODULE_16__["default"])(_this.checkState, 250).bind(_assertThisInitialized(_this));
+    _this.throttleCheckState = Object(_commons_throttle__WEBPACK_IMPORTED_MODULE_16__["default"])(_this.checkState, 200).bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -12252,21 +12222,6 @@ function (_Component) {
       if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();
     }
   }, {
-    key: "detachEventHandlers",
-    value: function detachEventHandlers() {
-      if (this.attachedEvent) {
-        debug('detachEventHandlers');
-        this.attachedEvent = true; // this.getTextbox().subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
-
-        this.getTextbox().unsubscribe('focus', this.throttleCheckState);
-        this.getTextbox().unsubscribe('positionToolbar', this.throttleCheckState);
-        this.getTextbox().unsubscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change
-
-        this.getTextbox().unsubscribe('editableClick', this.throttleCheckState);
-        this.getTextbox().unsubscribe('editableKeyup', this.throttleCheckState);
-      }
-    }
-  }, {
     key: "attachEventHandlers",
     value: function attachEventHandlers() {
       if (!this.attachedEvent) {
@@ -12281,6 +12236,21 @@ function (_Component) {
         // this.getTextbox().subscribe('editableClick', this.throttleCheckState);
 
         this.getTextbox().subscribe('editableKeyup', this.throttleCheckState);
+      }
+    }
+  }, {
+    key: "detachEventHandlers",
+    value: function detachEventHandlers() {
+      if (this.attachedEvent) {
+        debug('detachEventHandlers');
+        this.attachedEvent = true; // this.getTextbox().subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
+
+        this.getTextbox().unsubscribe('focus', this.throttleCheckState);
+        this.getTextbox().unsubscribe('positionToolbar', this.throttleCheckState);
+        this.getTextbox().unsubscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change
+
+        this.getTextbox().unsubscribe('editableClick', this.throttleCheckState);
+        this.getTextbox().unsubscribe('editableKeyup', this.throttleCheckState);
       }
     }
   }, {
@@ -12321,7 +12291,6 @@ function (_Component) {
   }, {
     key: "getTextboxDOM",
     value: function getTextboxDOM() {
-      console.log(this.props);
       debug('getTextboxDOM', this.props.textboxDOM);
 
       if (this.props.textboxDOM) {
@@ -12466,6 +12435,7 @@ function (_Component) {
       var _this2 = this,
           _this$state$textStyle2;
 
+      var className = classnames__WEBPACK_IMPORTED_MODULE_2___default()('coursebox-editor', this.props.className);
       var _this$state$textStyle = this.state.textStyle,
           fontSize = _this$state$textStyle.fontSize,
           paddingTop = _this$state$textStyle.paddingTop,
@@ -12476,7 +12446,7 @@ function (_Component) {
       if (typeof paddingLeft === 'string' && paddingLeft.endsWith('px')) paddingLeft = parseFloat(paddingLeft);
       if (typeof lineHeight === 'string' && lineHeight.endsWith('px')) lineHeight = (parseFloat(lineHeight) / fontSize).toFixed(1);
       return React.createElement("div", {
-        className: "coursebox-editor"
+        className: className
       }, React.createElement("label", {
         htmlFor: "font-size-style"
       }, "\u6587\u5B57"), React.createElement("div", {
@@ -12949,17 +12919,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _input_color_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_input_color_less__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _simonwep_pickr_dist_themes_nano_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @simonwep/pickr/dist/themes/nano.min.css */ "./node_modules/@simonwep/pickr/dist/themes/nano.min.css");
-/* harmony import */ var _simonwep_pickr_dist_themes_nano_min_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_simonwep_pickr_dist_themes_nano_min_css__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _simonwep_pickr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @simonwep/pickr */ "./node_modules/@simonwep/pickr/dist/pickr.min.js");
-/* harmony import */ var _simonwep_pickr__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_simonwep_pickr__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "prop-types");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _commons_throttle__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @commons/throttle */ "./src/commons/throttle.js");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @assets/images/文字颜色@2x.png */ "./assets/images/文字颜色@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @assets/images/文字颜色_不可点@2x.png */ "./assets/images/文字颜色_不可点@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @assets/images/三角形_收起@2x.png */ "./assets/images/三角形_收起@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @assets/images/三角形_不可点@2x.png */ "./assets/images/三角形_不可点@2x.png");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "react-dom");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _simonwep_pickr_dist_themes_nano_min_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @simonwep/pickr/dist/themes/nano.min.css */ "./node_modules/@simonwep/pickr/dist/themes/nano.min.css");
+/* harmony import */ var _simonwep_pickr_dist_themes_nano_min_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_simonwep_pickr_dist_themes_nano_min_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _simonwep_pickr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @simonwep/pickr */ "./node_modules/@simonwep/pickr/dist/pickr.min.js");
+/* harmony import */ var _simonwep_pickr__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_simonwep_pickr__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _commons_throttle__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @commons/throttle */ "./src/commons/throttle.js");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @assets/images/文字颜色@2x.png */ "./assets/images/文字颜色@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @assets/images/文字颜色_不可点@2x.png */ "./assets/images/文字颜色_不可点@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @assets/images/三角形_收起@2x.png */ "./assets/images/三角形_收起@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @assets/images/三角形_不可点@2x.png */ "./assets/images/三角形_不可点@2x.png");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12989,6 +12963,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+
+var debug = __webpack_require__(/*! @commons/debug */ "./src/commons/debug.js")('textbox:input-color');
+
 var InputColor =
 /*#__PURE__*/
 function (_Component) {
@@ -13001,7 +12979,7 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(InputColor).call(this, props));
     _this.pickColor = _this.pickColor.bind(_assertThisInitialized(_this));
-    _this.throttleOnChange = Object(_commons_throttle__WEBPACK_IMPORTED_MODULE_5__["default"])(_this.onChange, 100).bind(_assertThisInitialized(_this));
+    _this.throttleOnChange = Object(_commons_throttle__WEBPACK_IMPORTED_MODULE_7__["default"])(_this.onChange, 200).bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -13012,11 +12990,12 @@ function (_Component) {
           _this$props2,
           _this2 = this;
 
-      var pickr = this.pickr = _simonwep_pickr__WEBPACK_IMPORTED_MODULE_3___default.a.create({
+      var pickr = this.pickr = _simonwep_pickr__WEBPACK_IMPORTED_MODULE_5___default.a.create({
         el: '.coursebox-input-color .color-picker',
         useAsButton: true,
         // 初始默认值
         "default": ((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.value) || '#333',
+        container: react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.findDOMNode(this).querySelector('.color-picker-container'),
         theme: 'nano',
         // 位置 下-居中
         position: 'bottom-middle',
@@ -13055,12 +13034,16 @@ function (_Component) {
       }).on('show', function () {
         pickr.__isShow = true;
       }).on('hide', function () {
+        debug('[hide]');
         pickr.__isShow = false;
       }).on('save', function (color) {
+        debug('[save]');
         pickr.hide();
 
         _this2.throttleOnChange(color.toHEXA().toString(0));
       }).on('change', function (color) {
+        debug('[change]');
+
         _this2.throttleOnChange(color.toHEXA().toString(0));
       });
     }
@@ -13073,6 +13056,8 @@ function (_Component) {
   }, {
     key: "pickColor",
     value: function pickColor() {
+      debug('pickColor');
+
       if (this.pickr.__isShow) {
         this.pickr.hide();
       } else {
@@ -13089,15 +13074,17 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var className = this.props.className || '';
       var disabled = this.props.disabled;
+      var className = classnames__WEBPACK_IMPORTED_MODULE_3___default()('coursebox-input-color', this.props.className, {
+        disabled: disabled
+      });
       return React.createElement("button", {
-        className: "coursebox-input-color ".concat(disabled ? 'disabled' : '', " ").concat(className),
+        className: className,
         onClick: !disabled && this.pickColor
       }, React.createElement("div", {
         className: "font-color-icon"
       }, React.createElement("img", {
-        src: disabled ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_7__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__["default"]
+        src: disabled ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_8__["default"]
       }), React.createElement("div", {
         className: "font-color-bar",
         style: {
@@ -13106,9 +13093,14 @@ function (_Component) {
       })), React.createElement("div", {
         className: "font-color-collapse"
       }, React.createElement("img", {
-        src: disabled ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_8__["default"]
+        src: disabled ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__["default"]
       })), React.createElement("div", {
         className: "color-picker"
+      }), React.createElement("div", {
+        className: "color-picker-container",
+        onClick: function onClick(evt) {
+          return evt.stopPropagation();
+        }
       }));
     }
   }]);
@@ -13120,8 +13112,8 @@ InputColor.defaultProps = {
   disabled: false
 };
 InputColor.propTypes = {
-  disabled: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
-  value: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.string
+  disabled: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.bool,
+  value: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.string
 };
 /* harmony default export */ __webpack_exports__["default"] = (InputColor);
 
@@ -13149,197 +13141,6 @@ options.insert = "head";
 options.singleton = false;
 
 var id = "!!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/less-loader/dist/cjs.js!./input-color.less";
-var update = api(id, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-
-/***/ "./src/components/input-number/index.jsx":
-/*!***********************************************!*\
-  !*** ./src/components/input-number/index.jsx ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _input_number_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./input-number.less */ "./src/components/input-number/input-number.less");
-/* harmony import */ var _input_number_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_input_number_less__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _commons_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @commons/utils */ "./src/commons/utils.js");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @assets/images/三角形_展开@2x.png */ "./assets/images/三角形_展开@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @assets/images/三角形_收起@2x.png */ "./assets/images/三角形_收起@2x.png");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
-
-
-
-var debug = __webpack_require__(/*! ../../commons/debug */ "./src/commons/debug.js")('textbox:input-number');
-
-var InputNumber =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(InputNumber, _Component);
-
-  function InputNumber(props) {
-    var _this;
-
-    _classCallCheck(this, InputNumber);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(InputNumber).call(this, props));
-    debug('props: %j', props);
-    _this.inputRef = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
-    _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
-    _this.onMouseDown = _this.onMouseDown.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(InputNumber, [{
-    key: "onMouseDown",
-    value: function onMouseDown(evt) {
-      evt.preventDefault();
-    }
-  }, {
-    key: "onChange",
-    value: function onChange(evt) {
-      var _this$props;
-
-      debug('[onChange]: %o', evt);
-      var val = parseFloat(Object(_commons_utils__WEBPACK_IMPORTED_MODULE_3__["isSyntheticEvent"])(evt) ? evt.target.value : evt); // 校验
-
-      if (val > parseFloat(this.props.max)) val = parseFloat(this.props.max);
-      if (val < parseFloat(this.props.min)) val = parseFloat(this.props.min);
-      (_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.onChange(val);
-    }
-  }, {
-    key: "incr",
-    value: function incr() {
-      var step = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-      this.onChange(this.props.value + step);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var className = this.props.className || '';
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "coursebox-input-number ".concat(className),
-        onMouseDown: this.onMouseDown,
-        onClick: function onClick() {
-          var _this2$inputRef;
-
-          return (_this2$inputRef = _this2.inputRef) === null || _this2$inputRef === void 0 ? void 0 : _this2$inputRef.current.focus();
-        }
-      }, this.props.icon ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-        className: "icon",
-        src: this.props.icon
-      }) : null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-        type: "number",
-        ref: this.inputRef,
-        className: "input-number",
-        min: this.props.min,
-        max: this.props.max,
-        step: this.props.step,
-        value: this.props.value,
-        onMouseDown: this.onMouseDown,
-        onChange: this.onChange
-      }), this.props.unit ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-        className: "unit"
-      }, this.props.unit) : null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "number-up-down"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-        className: "block number-up",
-        role: "button",
-        src: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_4__["default"],
-        onClick: function onClick() {
-          _this2.incr(_this2.props.step);
-        }
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-        className: "block number-down",
-        role: "button",
-        src: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__["default"],
-        onClick: function onClick() {
-          _this2.incr(-_this2.props.step);
-        }
-      })));
-    }
-  }]);
-
-  return InputNumber;
-}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
-
-InputNumber.defaultProps = {
-  min: -Infinity,
-  max: Infinity,
-  step: 1
-};
-InputNumber.propTypes = {
-  onChange: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired,
-  min: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
-  max: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
-  setp: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
-  // 值
-  value: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
-  // 图标
-  icon: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
-  // 单位
-  unit: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string
-};
-/* harmony default export */ __webpack_exports__["default"] = (InputNumber);
-
-/***/ }),
-
-/***/ "./src/components/input-number/input-number.less":
-/*!*******************************************************!*\
-  !*** ./src/components/input-number/input-number.less ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/less-loader/dist/cjs.js!./input-number.less */ "./node_modules/css-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/components/input-number/input-number.less");
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var id = "!!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/less-loader/dist/cjs.js!./input-number.less";
 var update = api(id, content, options);
 
 var exported = content.locals ? content.locals : {};
@@ -13646,6 +13447,7 @@ function (_Component) {
     key: "onMouseDown",
     value: function onMouseDown(evt) {
       evt.preventDefault();
+      evt.stopPropagation();
     }
   }, {
     key: "onClick",
@@ -13780,9 +13582,18 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 var debug = __webpack_require__(/*! ../../commons/debug */ "./src/commons/debug.js")('textbox:textbox');
 
+var CourseBoxEditor = medium_editor__WEBPACK_IMPORTED_MODULE_5___default.a.Extension.extend({
+  name: 'coursebox-editor',
+  getInteractionElements: function getInteractionElements() {
+    return Array.from(this.base.options.ownerDocument.querySelectorAll('.coursebox-editor'));
+  }
+});
 var DEFAULT_OPTIONS = {
   toolbar: {
     buttons: ['bold', 'italic', 'underline', 'justifyLeft', 'justifyCenter', 'justifyRight']
+  },
+  extensions: {
+    'coursebox-editor': new CourseBoxEditor()
   }
 };
 

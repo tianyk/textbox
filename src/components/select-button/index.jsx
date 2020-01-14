@@ -15,6 +15,7 @@ class ButtonIcon extends Component {
 
 	onMouseDown(evt) {
 		evt.preventDefault();
+		evt.stopPropagation();
 	}
 
 	onClick(evt) {

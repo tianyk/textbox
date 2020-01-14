@@ -1,6 +1,8 @@
 import './input-color.less';
 
 import { Component } from 'react';
+import ReactDOM from 'react-dom';
+import classNames from 'classnames';
 import '@simonwep/pickr/dist/themes/nano.min.css';
 import Pickr from '@simonwep/pickr';
 import PropTypes from 'prop-types';
@@ -10,6 +12,7 @@ import FontColorImage from '@assets/images/文字颜色@2x.png';
 import FontColorDisabledImage from '@assets/images/文字颜色_不可点@2x.png';
 import FontColorCollapseImage from '@assets/images/三角形_收起@2x.png';
 import FontColorDisabledCollapseImage from '@assets/images/三角形_不可点@2x.png';
+const debug = require('@commons/debug')('textbox:input-color');
 
 
 class InputColor extends Component {
@@ -17,7 +20,7 @@ class InputColor extends Component {
 		super(props);
 
 		this.pickColor = this.pickColor.bind(this);
-		this.throttleOnChange = throttle(this.onChange, 100).bind(this);
+		this.throttleOnChange = throttle(this.onChange, 200).bind(this);
 	}
 
 	componentDidMount() {
@@ -27,6 +30,7 @@ class InputColor extends Component {
 			// 初始默认值
 			default: (this.props?.value || '#333'),
 
+			container: ReactDOM.findDOMNode(this).querySelector('.color-picker-container'),
 			theme: 'nano',
 			// 位置 下-居中
 			position: 'bottom-middle',
@@ -84,13 +88,16 @@ class InputColor extends Component {
 				pickr.__isShow = true;
 			})
 			.on('hide', () => {
+				debug('[hide]');
 				pickr.__isShow = false;
 			})
 			.on('save', (color) => {
+				debug('[save]');
 				pickr.hide();
 				this.throttleOnChange(color.toHEXA().toString(0));
 			})
 			.on('change', (color) => {
+				debug('[change]');
 				this.throttleOnChange(color.toHEXA().toString(0));
 			});
 	}
@@ -101,6 +108,7 @@ class InputColor extends Component {
 
 	// 隐藏显示选色卡
 	pickColor() {
+		debug('pickColor');
 		if (this.pickr.__isShow) {
 			this.pickr.hide();
 		} else {
@@ -113,11 +121,11 @@ class InputColor extends Component {
 	}
 
 	render() {
-		const className = this.props.className || '';
 		const disabled = this.props.disabled;
+		const className = classNames('coursebox-input-color', this.props.className, { disabled })
 
 		return (
-			<button className={`coursebox-input-color ${disabled ? 'disabled' : ''} ${className}`} onClick={!disabled && this.pickColor}>
+			<button className={className} onClick={!disabled && this.pickColor}>
 				<div className="font-color-icon">
 					<img src={disabled ? FontColorDisabledImage : FontColorImage}></img>
 					<div className="font-color-bar" style={{ backgroundColor: this.props.value }}></div>
@@ -127,6 +135,7 @@ class InputColor extends Component {
 					<img src={disabled ? FontColorDisabledCollapseImage : FontColorCollapseImage}></img>
 				</div>
 				<div className="color-picker"></div>
+				<div className="color-picker-container" onClick={evt => evt.stopPropagation()}></div>
 			</button>
 		)
 	}

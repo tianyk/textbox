@@ -8,9 +8,20 @@ import MediumEditor from 'medium-editor';
 
 const debug = require('../../commons/debug')('textbox:textbox');
 
+const CourseBoxEditor = MediumEditor.Extension.extend({
+	name: 'coursebox-editor',
+
+	getInteractionElements: function () {
+		return Array.from(this.base.options.ownerDocument.querySelectorAll('.coursebox-editor'));
+	}
+});
+
 const DEFAULT_OPTIONS = {
 	toolbar: {
 		buttons: ['bold', 'italic', 'underline', 'justifyLeft', 'justifyCenter', 'justifyRight'],
+	},
+	extensions: {
+		'coursebox-editor': new CourseBoxEditor()
 	}
 }
 

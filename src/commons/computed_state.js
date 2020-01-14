@@ -10,7 +10,7 @@ function rgba2hex(orig) {
 			(rgb[3] | 1 << 8).toString(16).slice(1) : orig;
 
 	if (alpha !== '') {
-		a = (255 * parseFloat(alpha)).toString(16);
+		a = parseInt(255 * parseFloat(alpha)).toString(16);
 	}
 	hex = hex + a;
 

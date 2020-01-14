@@ -1,7 +1,7 @@
 import './editor.less';
 
 import { Component } from 'react';
-import InputNumber from '../input-number';
+import classNames from 'classnames';
 import InputSelect from '../input-select';
 import ReactDOM from 'react-dom';
 import InputColor from '../input-color';
@@ -43,7 +43,7 @@ class TextboxEditor extends Component {
 		}
 
 		this.onTextStyleChange = this.onTextStyleChange.bind(this);
-		this.throttleCheckState = throttle(this.checkState, 250).bind(this);
+		this.throttleCheckState = throttle(this.checkState, 200).bind(this);
 	}
 
 	componentDidMount() {
@@ -61,23 +61,6 @@ class TextboxEditor extends Component {
 		if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();
 	}
 
-
-	detachEventHandlers() {
-		if (this.attachedEvent) {
-			debug('detachEventHandlers');
-			this.attachedEvent = true;
-
-			// this.getTextbox().subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
-			this.getTextbox().unsubscribe('focus', this.throttleCheckState);
-			this.getTextbox().unsubscribe('positionToolbar', this.throttleCheckState);
-			this.getTextbox().unsubscribe('editableInput', this.throttleCheckState);
-
-			// Updating the state of the toolbar as things change
-			this.getTextbox().unsubscribe('editableClick', this.throttleCheckState);
-			this.getTextbox().unsubscribe('editableKeyup', this.throttleCheckState);
-		}
-	}
-
 	attachEventHandlers() {
 		if (!this.attachedEvent) {
 			debug('attachEventHandlers');
@@ -93,6 +76,22 @@ class TextboxEditor extends Component {
 			// Updating the state of the toolbar as things change
 			// this.getTextbox().subscribe('editableClick', this.throttleCheckState);
 			this.getTextbox().subscribe('editableKeyup', this.throttleCheckState);
+		}
+	}
+
+	detachEventHandlers() {
+		if (this.attachedEvent) {
+			debug('detachEventHandlers');
+			this.attachedEvent = true;
+
+			// this.getTextbox().subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
+			this.getTextbox().unsubscribe('focus', this.throttleCheckState);
+			this.getTextbox().unsubscribe('positionToolbar', this.throttleCheckState);
+			this.getTextbox().unsubscribe('editableInput', this.throttleCheckState);
+
+			// Updating the state of the toolbar as things change
+			this.getTextbox().unsubscribe('editableClick', this.throttleCheckState);
+			this.getTextbox().unsubscribe('editableKeyup', this.throttleCheckState);
 		}
 	}
 
@@ -129,7 +128,6 @@ class TextboxEditor extends Component {
 	}
 
 	getTextboxDOM() {
-		console.log(this.props)
 		debug('getTextboxDOM', this.props.textboxDOM);
 		if (this.props.textboxDOM) {
 			const textboxDOM = this.props.textboxDOM;
@@ -234,6 +232,7 @@ class TextboxEditor extends Component {
 	}
 
 	render() {
+		const className = classNames('coursebox-editor', this.props.className);
 		let { fontSize, paddingTop, paddingLeft, lineHeight } = this.state.textStyle;
 		if (typeof fontSize === 'string' && fontSize.endsWith('px')) fontSize = parseFloat(fontSize);
 		if (typeof paddingTop === 'string' && paddingTop.endsWith('px')) paddingTop = parseFloat(paddingTop);
@@ -241,7 +240,7 @@ class TextboxEditor extends Component {
 		if (typeof lineHeight === 'string' && lineHeight.endsWith('px')) lineHeight = (parseFloat(lineHeight) / fontSize).toFixed(1);
 
 		return (
-			<div className="coursebox-editor">
+			<div className={className}>
 				<label htmlFor="font-size-style">文字</label>
 
 				<div id="font-style">
