@@ -43,7 +43,7 @@
 
 			return (
 				<div>
-					<Editor textboxDOM={textboxRef.current} />
+					<Editor textboxDOM={textboxRef.current} textboxDOMRef={textboxRef} />
 					<Textbox ref={textboxRef} className="textbox" style={{ border: '1px dashed #aaa', lineHeight: '1.4' }} text={text} onContentChange={onContentChange} />
 				</div>
 			);

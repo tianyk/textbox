@@ -54,16 +54,13 @@ class Textbox extends Component {
 		this.medium.on(dom, 'compositionupdate', this.handleComposition);
 		this.medium.on(dom, 'compositionend', this.handleComposition);
 		this.medium.on(dom, 'dblclick', () => {
+			debug('dblclick');
 			this.enableEditing();
 		});
-		this.medium.subscribe('hideToolbar', () => {
-			debug('hideToolbar');
-			// const selectionRange = MediumEditor.selection.getSelectionRange(this.medium.options.ownerDocument);
-			// if (selectionRange && !selectionRange.collapsed) return;
-			setTimeout(() => {
-				this.disableEditing();
-			}, 1);
-		})
+		this.medium.subscribe('blur', () => {
+			debug('blur');
+			this.disableEditing();
+		});
 	}
 
 	componentWillUnmount() {

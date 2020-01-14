@@ -908,7 +908,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".coursebox-textbox {\n  margin: 0;\n  display: inline-block;\n  outline: none;\n}\n.coursebox-textbox p {\n  margin: 0;\n}\n.coursebox-textbox[contenteditable=\"false\"] {\n  -moz-user-select: none;\n  /*火狐*/\n  -webkit-user-select: none;\n  /*webkit浏览器*/\n  -ms-user-select: none;\n  /*IE10*/\n  -khtml-user-select: none;\n  /*早期浏览器*/\n  user-select: none;\n}\n.coursebox-textbox[contenteditable=\"true\"] {\n  border-color: blue !important;\n}\n", ""]);
+exports.push([module.i, ".coursebox-textbox {\n  margin: 0;\n  display: inline-block;\n  outline: none;\n}\n.coursebox-textbox p {\n  margin: 0;\n}\n.coursebox-textbox[contenteditable=\"false\"] {\n  -moz-user-select: none;\n  /*火狐*/\n  -webkit-user-select: none;\n  /*webkit浏览器*/\n  -ms-user-select: none;\n  /*IE10*/\n  -khtml-user-select: none;\n  /*早期浏览器*/\n  user-select: none;\n}\n.coursebox-textbox[contenteditable=\"true\"] {\n  border-color: blue !important;\n}\n.coursebox-textbox[data-medium-focused=\"true\"] {\n  border: 1px solid blue !important;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -12199,6 +12199,7 @@ function (_Component) {
       textStyle: {}
     };
     _this.onTextStyleChange = _this.onTextStyleChange.bind(_assertThisInitialized(_this));
+    _this.selectTextbox = _this.selectTextbox.bind(_assertThisInitialized(_this));
     _this.throttleCheckState = Object(_commons_throttle__WEBPACK_IMPORTED_MODULE_16__["default"])(_this.checkState, 200).bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -12206,8 +12207,21 @@ function (_Component) {
   _createClass(TextboxEditor, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var _this2 = this;
+
       debug('componentDidMount');
-      if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();
+      if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers(); // 循环检测 current 是否初始化完成
+
+      clearInterval(this.timer);
+      this.timer = setInterval(function () {
+        var dom = _this2.getTextboxDOM();
+
+        if (dom) {
+          clearInterval(_this2.timer);
+
+          _this2.attachEventHandlers();
+        }
+      }, 100);
     }
   }, {
     key: "componentWillUnmount",
@@ -12218,7 +12232,7 @@ function (_Component) {
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate() {
-      debug('componentDidUpdate');
+      debug('componentDidUpdate', arguments);
       if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();
     }
   }, {
@@ -12226,16 +12240,21 @@ function (_Component) {
     value: function attachEventHandlers() {
       if (!this.attachedEvent) {
         debug('attachEventHandlers');
+        var textboxDOM = this.getTextboxDOM();
+        var textbox = this.getTextbox();
         this.attachedEvent = true; // this.throttleCheckState();
         // MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements
-        // this.getTextbox().subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
+        // textbox.subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
 
-        this.getTextbox().subscribe('focus', this.throttleCheckState);
-        this.getTextbox().subscribe('positionToolbar', this.throttleCheckState);
-        this.getTextbox().subscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change
-        // this.getTextbox().subscribe('editableClick', this.throttleCheckState);
+        textbox.subscribe('focus', this.throttleCheckState);
+        textbox.subscribe('positionToolbar', this.throttleCheckState);
+        textbox.subscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change
+        // textbox.subscribe('editableClick', this.throttleCheckState);
 
-        this.getTextbox().subscribe('editableKeyup', this.throttleCheckState);
+        textbox.subscribe('editableKeyup', this.throttleCheckState); // 双击 单击
+
+        textbox.on(textboxDOM, 'click', this.selectTextbox);
+        textbox.on(textboxDOM, 'dbclick', this.editTextbox);
       }
     }
   }, {
@@ -12243,15 +12262,30 @@ function (_Component) {
     value: function detachEventHandlers() {
       if (this.attachedEvent) {
         debug('detachEventHandlers');
-        this.attachedEvent = true; // this.getTextbox().subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
+        var textboxDOM = this.getTextboxDOM();
+        var textbox = this.getTextbox();
+        this.attachedEvent = true; // textbox.subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
 
-        this.getTextbox().unsubscribe('focus', this.throttleCheckState);
-        this.getTextbox().unsubscribe('positionToolbar', this.throttleCheckState);
-        this.getTextbox().unsubscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change
+        textbox.unsubscribe('focus', this.throttleCheckState);
+        textbox.unsubscribe('positionToolbar', this.throttleCheckState);
+        textbox.unsubscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change
 
-        this.getTextbox().unsubscribe('editableClick', this.throttleCheckState);
-        this.getTextbox().unsubscribe('editableKeyup', this.throttleCheckState);
+        textbox.unsubscribe('editableClick', this.throttleCheckState);
+        textbox.unsubscribe('editableKeyup', this.throttleCheckState); // 双击 单击
+
+        textbox.off(textboxDOM, 'click', this.selectTextbox);
+        textbox.off(textboxDOM, 'dbclick', this.editTextbox);
       }
+    }
+  }, {
+    key: "selectTextbox",
+    value: function selectTextbox() {
+      debug('selectTextbox');
+    }
+  }, {
+    key: "editTextbox",
+    value: function editTextbox() {
+      debug('editTextbox');
     }
   }, {
     key: "checkState",
@@ -12291,11 +12325,12 @@ function (_Component) {
   }, {
     key: "getTextboxDOM",
     value: function getTextboxDOM() {
-      debug('getTextboxDOM', this.props.textboxDOM);
+      var _this$props, _this$props2, _this$props2$textboxD;
 
-      if (this.props.textboxDOM) {
-        var textboxDOM = this.props.textboxDOM;
+      debug('getTextboxDOM', this.props.textboxDOM, this.props.textboxDOMRef);
+      var textboxDOM = ((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.textboxDOM) || ((_this$props2 = this.props) === null || _this$props2 === void 0 ? void 0 : (_this$props2$textboxD = _this$props2.textboxDOMRef) === null || _this$props2$textboxD === void 0 ? void 0 : _this$props2$textboxD.current);
 
+      if (textboxDOM) {
         if (Object(_commons_utils__WEBPACK_IMPORTED_MODULE_17__["isReactComponentInstance"])(textboxDOM)) {
           return react_dom__WEBPACK_IMPORTED_MODULE_4___default.a.findDOMNode(textboxDOM);
         } else if (Object(_commons_utils__WEBPACK_IMPORTED_MODULE_17__["isElement"])(textboxDOM)) {
@@ -12432,7 +12467,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this,
+      var _this3 = this,
           _this$state$textStyle2;
 
       var className = classnames__WEBPACK_IMPORTED_MODULE_2___default()('coursebox-editor', this.props.className);
@@ -12455,7 +12490,7 @@ function (_Component) {
         className: "__font-color",
         value: this.state.textStyle.color,
         onChange: function onChange(color) {
-          return _this2.onTextStyleChange('color', color);
+          return _this3.onTextStyleChange('color', color);
         }
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
         className: "__font-size",
@@ -12463,7 +12498,7 @@ function (_Component) {
         options: [12, 13, 14, 16, 18, 20, 28, 36, 48, 72],
         unit: "px",
         onChange: function onChange(fontSize) {
-          return _this2.onTextStyleChange('fontSize', fontSize);
+          return _this3.onTextStyleChange('fontSize', fontSize);
         }
       }), React.createElement(_font_style_button_group__WEBPACK_IMPORTED_MODULE_7__["default"], {
         className: "__font-style",
@@ -12471,7 +12506,7 @@ function (_Component) {
         fontStyle: this.state.textStyle.fontStyle,
         textDecoration: this.state.textStyle.textDecoration,
         onFontStyleChange: function onFontStyleChange(field, val) {
-          return _this2.onTextStyleChange(field, val);
+          return _this3.onTextStyleChange(field, val);
         }
       })), React.createElement("label", {
         htmlFor: "font-layout-style"
@@ -12481,7 +12516,7 @@ function (_Component) {
         className: "__font-layout",
         textAlign: this.state.textStyle.textAlign,
         onFontLayoutChange: function onFontLayoutChange(textAlign) {
-          return _this2.onTextStyleChange('textAlign', textAlign);
+          return _this3.onTextStyleChange('textAlign', textAlign);
         }
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
         className: "__font-line-height",
@@ -12491,7 +12526,7 @@ function (_Component) {
         options: [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2, 2.4, 2.6, 2.8, 3.0],
         unit: "\u500D",
         onChange: function onChange(lineHeight) {
-          return _this2.onTextStyleChange('lineHeight', lineHeight);
+          return _this3.onTextStyleChange('lineHeight', lineHeight);
         }
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
         className: "__font-padding-top-bottom",
@@ -12501,9 +12536,9 @@ function (_Component) {
         options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],
         unit: "px",
         onChange: function onChange(padding) {
-          _this2.onTextStyleChange('paddingTop', "".concat(padding, "px"));
+          _this3.onTextStyleChange('paddingTop', "".concat(padding, "px"));
 
-          _this2.onTextStyleChange('paddingBottom', "".concat(padding, "px"));
+          _this3.onTextStyleChange('paddingBottom', "".concat(padding, "px"));
         }
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
         className: "__font-padding-left-right",
@@ -12513,9 +12548,9 @@ function (_Component) {
         options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],
         unit: "px",
         onChange: function onChange(padding) {
-          _this2.onTextStyleChange('paddingLeft', "".concat(padding, "px"));
+          _this3.onTextStyleChange('paddingLeft', "".concat(padding, "px"));
 
-          _this2.onTextStyleChange('paddingRight', "".concat(padding, "px"));
+          _this3.onTextStyleChange('paddingRight', "".concat(padding, "px"));
         }
       })));
     }
@@ -13635,15 +13670,14 @@ function (_Component) {
       this.medium.on(dom, 'compositionupdate', this.handleComposition);
       this.medium.on(dom, 'compositionend', this.handleComposition);
       this.medium.on(dom, 'dblclick', function () {
+        debug('dblclick');
+
         _this2.enableEditing();
       });
-      this.medium.subscribe('hideToolbar', function () {
-        debug('hideToolbar'); // const selectionRange = MediumEditor.selection.getSelectionRange(this.medium.options.ownerDocument);
-        // if (selectionRange && !selectionRange.collapsed) return;
+      this.medium.subscribe('blur', function () {
+        debug('blur');
 
-        setTimeout(function () {
-          _this2.disableEditing();
-        }, 1);
+        _this2.disableEditing();
       });
     }
   }, {

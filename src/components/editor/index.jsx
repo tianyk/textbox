@@ -43,12 +43,23 @@ class TextboxEditor extends Component {
 		}
 
 		this.onTextStyleChange = this.onTextStyleChange.bind(this);
+		this.selectTextbox = this.selectTextbox.bind(this);
 		this.throttleCheckState = throttle(this.checkState, 200).bind(this);
 	}
 
 	componentDidMount() {
 		debug('componentDidMount');
 		if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();
+
+		// 循环检测 current 是否初始化完成
+		clearInterval(this.timer);
+		this.timer = setInterval(() => {
+			const dom = this.getTextboxDOM();
+			if (dom) {
+				clearInterval(this.timer);
+				this.attachEventHandlers();
+			}
+		}, 100);
 	}
 
 	componentWillUnmount() {
@@ -57,43 +68,64 @@ class TextboxEditor extends Component {
 	}
 
 	componentDidUpdate() {
-		debug('componentDidUpdate');
+		debug('componentDidUpdate', arguments);
 		if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();
 	}
 
 	attachEventHandlers() {
 		if (!this.attachedEvent) {
 			debug('attachEventHandlers');
+			const textboxDOM = this.getTextboxDOM();
+			const textbox = this.getTextbox();
 			this.attachedEvent = true;
 			// this.throttleCheckState();
 
 			// MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements
-			// this.getTextbox().subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
-			this.getTextbox().subscribe('focus', this.throttleCheckState);
-			this.getTextbox().subscribe('positionToolbar', this.throttleCheckState);
-			this.getTextbox().subscribe('editableInput', this.throttleCheckState);
+			// textbox.subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
+			textbox.subscribe('focus', this.throttleCheckState);
+			textbox.subscribe('positionToolbar', this.throttleCheckState);
+			textbox.subscribe('editableInput', this.throttleCheckState);
 
 			// Updating the state of the toolbar as things change
-			// this.getTextbox().subscribe('editableClick', this.throttleCheckState);
-			this.getTextbox().subscribe('editableKeyup', this.throttleCheckState);
+			// textbox.subscribe('editableClick', this.throttleCheckState);
+			textbox.subscribe('editableKeyup', this.throttleCheckState);
+
+			// 双击 单击
+			textbox.on(textboxDOM, 'click', this.selectTextbox)
+			textbox.on(textboxDOM, 'dbclick', this.editTextbox);
 		}
 	}
 
 	detachEventHandlers() {
 		if (this.attachedEvent) {
 			debug('detachEventHandlers');
+			const textboxDOM = this.getTextboxDOM();
+			const textbox = this.getTextbox();
 			this.attachedEvent = true;
 
-			// this.getTextbox().subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
-			this.getTextbox().unsubscribe('focus', this.throttleCheckState);
-			this.getTextbox().unsubscribe('positionToolbar', this.throttleCheckState);
-			this.getTextbox().unsubscribe('editableInput', this.throttleCheckState);
+			// textbox.subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
+			textbox.unsubscribe('focus', this.throttleCheckState);
+			textbox.unsubscribe('positionToolbar', this.throttleCheckState);
+			textbox.unsubscribe('editableInput', this.throttleCheckState);
 
 			// Updating the state of the toolbar as things change
-			this.getTextbox().unsubscribe('editableClick', this.throttleCheckState);
-			this.getTextbox().unsubscribe('editableKeyup', this.throttleCheckState);
+			textbox.unsubscribe('editableClick', this.throttleCheckState);
+			textbox.unsubscribe('editableKeyup', this.throttleCheckState);
+
+			// 双击 单击
+			textbox.off(textboxDOM, 'click', this.selectTextbox)
+			textbox.off(textboxDOM, 'dbclick', this.editTextbox);
 		}
 	}
+
+	selectTextbox() {
+		debug('selectTextbox');
+	}
+
+	editTextbox() {
+		debug('editTextbox');
+	}
+
 
 	checkState() {
 		debug('checkState');
@@ -128,9 +160,10 @@ class TextboxEditor extends Component {
 	}
 
 	getTextboxDOM() {
-		debug('getTextboxDOM', this.props.textboxDOM);
-		if (this.props.textboxDOM) {
-			const textboxDOM = this.props.textboxDOM;
+		debug('getTextboxDOM', this.props.textboxDOM, this.props.textboxDOMRef);
+		const textboxDOM = this.props?.textboxDOM || this.props?.textboxDOMRef?.current;
+
+		if (textboxDOM) {
 			if (isReactComponentInstance(textboxDOM)) {
 				return ReactDOM.findDOMNode(textboxDOM);
 			} else if (isElement(textboxDOM)) {
