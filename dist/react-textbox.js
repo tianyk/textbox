@@ -12212,12 +12212,12 @@ function (_Component) {
       debug('componentDidMount');
       if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers(); // 循环检测 current 是否初始化完成
 
-      clearInterval(this.timer);
-      this.timer = setInterval(function () {
+      clearInterval(this.__CHECK_TEXTBOX_MOUNT_TIMER);
+      this.__CHECK_TEXTBOX_MOUNT_TIMER = setInterval(function () {
         var dom = _this2.getTextboxDOM();
 
         if (dom) {
-          clearInterval(_this2.timer);
+          clearInterval(_this2.__CHECK_TEXTBOX_MOUNT_TIMER);
 
           _this2.attachEventHandlers();
         }

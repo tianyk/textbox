@@ -52,11 +52,11 @@ class TextboxEditor extends Component {
 		if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();
 
 		// 循环检测 current 是否初始化完成
-		clearInterval(this.timer);
-		this.timer = setInterval(() => {
+		clearInterval(this.__CHECK_TEXTBOX_MOUNT_TIMER);
+		this.__CHECK_TEXTBOX_MOUNT_TIMER = setInterval(() => {
 			const dom = this.getTextboxDOM();
 			if (dom) {
-				clearInterval(this.timer);
+				clearInterval(this.__CHECK_TEXTBOX_MOUNT_TIMER);
 				this.attachEventHandlers();
 			}
 		}, 100);
