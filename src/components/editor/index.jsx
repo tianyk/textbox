@@ -39,11 +39,13 @@ class TextboxEditor extends Component {
 		super(props);
 
 		this.state = {
-			textStyle: {}
+			textStyle: {},
+			editState: 'none' //none-未选中 click- 单击 dblClick-双击 dblClickAndSelected-双击并选中
 		}
-
+		this.editTextbox = this.editTextbox.bind(this);
 		this.onTextStyleChange = this.onTextStyleChange.bind(this);
 		this.selectTextbox = this.selectTextbox.bind(this);
+		this.blurTextbox = this.blurTextbox.bind(this);
 		this.throttleCheckState = throttle(this.checkState, 200).bind(this);
 	}
 
@@ -86,13 +88,14 @@ class TextboxEditor extends Component {
 			textbox.subscribe('positionToolbar', this.throttleCheckState);
 			textbox.subscribe('editableInput', this.throttleCheckState);
 
-			// Updating the state of the toolbar as things change
+			// Updating the state of the toolbar as things change 
 			// textbox.subscribe('editableClick', this.throttleCheckState);
 			textbox.subscribe('editableKeyup', this.throttleCheckState);
 
 			// 双击 单击
-			textbox.on(textboxDOM, 'click', this.selectTextbox)
-			textbox.on(textboxDOM, 'dbclick', this.editTextbox);
+			textbox.on(textboxDOM, 'click', this.selectTextbox);
+			textbox.on(textboxDOM, 'dblclick', this.editTextbox);
+			textbox.on(textboxDOM, 'blur', this.blurTextbox);
 		}
 	}
 
@@ -114,24 +117,39 @@ class TextboxEditor extends Component {
 
 			// 双击 单击
 			textbox.off(textboxDOM, 'click', this.selectTextbox)
-			textbox.off(textboxDOM, 'dbclick', this.editTextbox);
+			textbox.off(textboxDOM, 'dblclick', this.editTextbox);
 		}
 	}
 
 	selectTextbox() {
 		debug('selectTextbox');
+		if (this.state.editState === 'dblClick') return
+		this.setState({
+			editState: 'click'
+		})
 	}
 
 	editTextbox() {
 		debug('editTextbox');
+		this.setState({
+			editState: 'dblClick'
+		})
 	}
-
+	blurTextbox() {
+		debug('blurTextbox');
+		this.setState({
+			editState: 'none'
+		});
+	}
 
 	checkState() {
 		debug('checkState');
 		const selectionRange = MediumEditor.selection.getSelectionRange(this.getTextbox().options?.ownerDocument);
 		if (!selectionRange) return;
-
+		debug('selectionRange', selectionRange)
+		if (!selectionRange.collapsed) this.setState({
+			editState: 'dblClickAndSelected'
+		})
 		let parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange);
 		// Make sure the selection parent isn't outside of the contenteditable
 		if (!this.getTextbox().elements.some(function (element) {
@@ -183,7 +201,6 @@ class TextboxEditor extends Component {
 		debug('onTextStyleChange', field, value)
 		const medium = this.getTextbox();
 		if (!medium) return;
-
 		const textboxDOM = this.getTextboxDOM();
 		const selection = medium.options.ownerDocument.getSelection();
 		const selectionRange = MediumEditor.selection.getSelectionRange(medium.options.ownerDocument);
@@ -278,12 +295,14 @@ class TextboxEditor extends Component {
 
 				<div id="font-style">
 					<InputColor
+						disabled={this.state.editState !== 'dblClickAndSelected'}
 						className="__font-color"
 						value={this.state.textStyle.color}
 						onChange={(color) => this.onTextStyleChange('color', color)}
 					></InputColor>
 
 					<InputSelect
+						disabled={this.state.editState !== 'dblClickAndSelected'}
 						className="__font-size"
 						value={fontSize}
 						options={[12, 13, 14, 16, 18, 20, 28, 36, 48, 72]}
@@ -292,6 +311,7 @@ class TextboxEditor extends Component {
 					></InputSelect>
 
 					<FontStyleButtonGroup
+						disabled={this.state.editState !== 'dblClickAndSelected'}
 						className="__font-style"
 						fontWeight={this.state.textStyle?.fontWeight}
 						fontStyle={this.state.textStyle.fontStyle}
@@ -304,6 +324,7 @@ class TextboxEditor extends Component {
 				<div id="font-layout-style">
 					{/* 对齐方式 */}
 					<FontLayoutButtonGroup
+						disabled={this.state.editState  !== 'click'}
 						className="__font-layout"
 						textAlign={this.state.textStyle.textAlign}
 						onFontLayoutChange={(textAlign) => this.onTextStyleChange('textAlign', textAlign)}
@@ -321,6 +342,7 @@ class TextboxEditor extends Component {
 					></InputNumber> */}
 
 					<InputSelect
+						disabled={this.state.editState  !== 'click'}
 						className="__font-line-height"
 						icon={ImageLineHeight}
 						disabledIcon={ImageLineHeightDisabled}
@@ -332,6 +354,7 @@ class TextboxEditor extends Component {
 
 					{/* 上下内边距 */}
 					<InputSelect
+						disabled={this.state.editState  !== 'click'}
 						className="__font-padding-top-bottom"
 						icon={ImagePaddingTopAndBottom}
 						disabledIcon={ImagePaddingTopAndBottomDisabled}
@@ -346,6 +369,7 @@ class TextboxEditor extends Component {
 
 					{/* 左右内边距 */}
 					<InputSelect
+						disabled={this.state.editState  !== 'click'}
 						className="__font-padding-left-right"
 						icon={ImagePaddingLeftAndRight}
 						disabledIcon={ImagePaddingLeftAndRightDisabled}

@@ -50,7 +50,7 @@ class FontLayoutButtonGroup extends Component {
 		return (
 			<div className={className}>
 				<SelectButton
-					disabled={disabled}
+					disabled={this.props.disabled}
 					selected={this.props.textAlign === 'left' || this.props.textAlign === 'start'}
 					icon={this.props.textAlign === 'left' ? ImageFontLayoutLeftSelected : ImageFontLayoutLeft}
 					disabledIcon={ImageFontLayoutLeftDisabled}
@@ -58,7 +58,7 @@ class FontLayoutButtonGroup extends Component {
 				></SelectButton>
 
 				<SelectButton
-					disabled={disabled}
+					disabled={this.props.disabled}
 					selected={this.props.textAlign === 'center'}
 					icon={this.props.textAlign === 'center' ? ImageFontLayoutCenterSelected : ImageFontLayoutCenter}
 					disabledIcon={ImageFontLayoutCenterDisabled}
@@ -66,7 +66,7 @@ class FontLayoutButtonGroup extends Component {
 				></SelectButton>
 
 				<SelectButton
-					disabled={disabled}
+					disabled={this.props.disabled}
 					selected={this.props.textAlign === 'right'}
 					icon={this.props.textAlign === 'right' ? ImageFontLayoutRightSelected : ImageFontLayoutRight}
 					disabledIcon={ImageFontLayoutRightDisabled}

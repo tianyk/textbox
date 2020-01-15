@@ -50,21 +50,21 @@ class FontStyleButtonGroup extends Component {
 		return (
 			<div className={className}>
 				<SelectButton
-					disabled={disabled}
+					disabled={this.props.disabled}
 					selected={this.props.fontWeight === 'bold'}
 					icon={ImageFontWeight}
 					disabledIcon={ImageFontWeightDisabled}
 					onSelected={this.onFontStyleChange('fontWeight')}
 				></SelectButton>
 				<SelectButton
-					disabled={disabled}
+					disabled={this.props.disabled}
 					selected={this.props.fontStyle === 'italic'}
 					icon={ImageFontFontStyle}
 					disabledIcon={ImageFontFontStyleDisabled}
 					onSelected={this.onFontStyleChange('fontStyle')}
 				></SelectButton>
 				<SelectButton
-					disabled={disabled}
+					disabled={this.props.disabled}
 					selected={this.props.textDecoration === 'underline'}
 					icon={ImageFontTextDecoration}
 					disabledIcon={ImageFontTextDecorationDisabled}

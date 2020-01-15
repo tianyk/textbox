@@ -42,14 +42,18 @@ class Textbox extends Component {
 	componentDidMount() {
 		debug('componentDidMount');
 		const dom = this.geDOM();
-
+		
 		this.medium = new MediumEditor(dom, Object.assign(DEFAULT_OPTIONS, this.props.options));
 		// 默认禁止编辑
 		this.disableEditing();
 		this.medium.subscribe('editableInput', () => {
 			if (!this._isComposing) this.onContentChange(dom.innerHTML);
 		});
-
+		const _t = this
+		document.getElementsByTagName('body')[0].onblur = function() {
+			console.log(43434)
+			_t.disableEditing();
+		}
 		this.medium.on(dom, 'compositionend', this.handleComposition);
 		this.medium.on(dom, 'compositionupdate', this.handleComposition);
 		this.medium.on(dom, 'compositionend', this.handleComposition);
@@ -95,7 +99,7 @@ class Textbox extends Component {
 		const dom = this.geDOM();
 		dom.setAttribute('contenteditable', true);
 	}
-
+	
 	handleComposition(evt) {
 		const dom = ReactDOM.findDOMNode(this);
 

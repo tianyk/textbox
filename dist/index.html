@@ -19,9 +19,18 @@
 		href="https://lib.baomitu.com/medium-editor/5.23.3/css/themes/default.css" rel="stylesheet">
 	<script crossorigin="anonymous" integrity="sha384-JSLRmxt+roLKbENSYQdxlXq4DbLGx492b22anlRj7R5X6tw+f6MtV/jc6Cu1CCt9"
 		src="https://lib.baomitu.com/babel-standalone/7.0.0-beta.3/babel.min.js"></script>
+	<style>
+		html, body {
+			height: 100%;
+		}
+	</style>
 <script type="text/javascript" src="react-textbox.js"></script></head>
 
 <body>
+	<div contenteditable="true">
+		中国制造
+	</div>
+
 	<div id="root"></div>
 	<script type="text/babel">
 		const { useState, useRef, useEffect, Component } = React;

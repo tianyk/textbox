@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("MediumEditor"), require("PropTypes"), require("React"), require("ReactDOM"));
+		module.exports = factory(require("React"), require("ReactDOM"), require("PropTypes"), require("MediumEditor"));
 	else if(typeof define === 'function' && define.amd)
-		define(["MediumEditor", "PropTypes", "React", "ReactDOM"], factory);
+		define(["React", "ReactDOM", "PropTypes", "MediumEditor"], factory);
 	else if(typeof exports === 'object')
-		exports["ReactTextbox"] = factory(require("MediumEditor"), require("PropTypes"), require("React"), require("ReactDOM"));
+		exports["ReactTextbox"] = factory(require("React"), require("ReactDOM"), require("PropTypes"), require("MediumEditor"));
 	else
-		root["ReactTextbox"] = factory(root["MediumEditor"], root["PropTypes"], root["React"], root["ReactDOM"]);
-})(window, function(__WEBPACK_EXTERNAL_MODULE_medium_editor__, __WEBPACK_EXTERNAL_MODULE_prop_types__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom__) {
+		root["ReactTextbox"] = factory(root["React"], root["ReactDOM"], root["PropTypes"], root["MediumEditor"]);
+})(window, function(__WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom__, __WEBPACK_EXTERNAL_MODULE_prop_types__, __WEBPACK_EXTERNAL_MODULE_medium_editor__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -12196,10 +12196,14 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(TextboxEditor).call(this, props));
     _this.state = {
-      textStyle: {}
+      textStyle: {},
+      editState: 'none' //none-未选中 click- 单击 dblClick-双击 dblClickAndSelected-双击并选中
+
     };
+    _this.editTextbox = _this.editTextbox.bind(_assertThisInitialized(_this));
     _this.onTextStyleChange = _this.onTextStyleChange.bind(_assertThisInitialized(_this));
     _this.selectTextbox = _this.selectTextbox.bind(_assertThisInitialized(_this));
+    _this.blurTextbox = _this.blurTextbox.bind(_assertThisInitialized(_this));
     _this.throttleCheckState = Object(_commons_throttle__WEBPACK_IMPORTED_MODULE_16__["default"])(_this.checkState, 200).bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -12248,13 +12252,14 @@ function (_Component) {
 
         textbox.subscribe('focus', this.throttleCheckState);
         textbox.subscribe('positionToolbar', this.throttleCheckState);
-        textbox.subscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change
+        textbox.subscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change 
         // textbox.subscribe('editableClick', this.throttleCheckState);
 
         textbox.subscribe('editableKeyup', this.throttleCheckState); // 双击 单击
 
         textbox.on(textboxDOM, 'click', this.selectTextbox);
-        textbox.on(textboxDOM, 'dbclick', this.editTextbox);
+        textbox.on(textboxDOM, 'dblclick', this.editTextbox);
+        textbox.on(textboxDOM, 'blur', this.blurTextbox);
       }
     }
   }, {
@@ -12274,18 +12279,33 @@ function (_Component) {
         textbox.unsubscribe('editableKeyup', this.throttleCheckState); // 双击 单击
 
         textbox.off(textboxDOM, 'click', this.selectTextbox);
-        textbox.off(textboxDOM, 'dbclick', this.editTextbox);
+        textbox.off(textboxDOM, 'dblclick', this.editTextbox);
       }
     }
   }, {
     key: "selectTextbox",
     value: function selectTextbox() {
       debug('selectTextbox');
+      if (this.state.editState === 'dblClick') return;
+      this.setState({
+        editState: 'click'
+      });
     }
   }, {
     key: "editTextbox",
     value: function editTextbox() {
       debug('editTextbox');
+      this.setState({
+        editState: 'dblClick'
+      });
+    }
+  }, {
+    key: "blurTextbox",
+    value: function blurTextbox() {
+      debug('blurTextbox');
+      this.setState({
+        editState: 'none'
+      });
     }
   }, {
     key: "checkState",
@@ -12295,6 +12315,10 @@ function (_Component) {
       debug('checkState');
       var selectionRange = medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.selection.getSelectionRange((_this$getTextbox$opti = this.getTextbox().options) === null || _this$getTextbox$opti === void 0 ? void 0 : _this$getTextbox$opti.ownerDocument);
       if (!selectionRange) return;
+      debug('selectionRange', selectionRange);
+      if (!selectionRange.collapsed) this.setState({
+        editState: 'dblClickAndSelected'
+      });
       var parentNode = medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.selection.getSelectedParentElement(selectionRange); // Make sure the selection parent isn't outside of the contenteditable
 
       if (!this.getTextbox().elements.some(function (element) {
@@ -12487,12 +12511,14 @@ function (_Component) {
       }, "\u6587\u5B57"), React.createElement("div", {
         id: "font-style"
       }, React.createElement(_input_color__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        disabled: this.state.editState !== 'dblClickAndSelected',
         className: "__font-color",
         value: this.state.textStyle.color,
         onChange: function onChange(color) {
           return _this3.onTextStyleChange('color', color);
         }
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        disabled: this.state.editState !== 'dblClickAndSelected',
         className: "__font-size",
         value: fontSize,
         options: [12, 13, 14, 16, 18, 20, 28, 36, 48, 72],
@@ -12501,6 +12527,7 @@ function (_Component) {
           return _this3.onTextStyleChange('fontSize', fontSize);
         }
       }), React.createElement(_font_style_button_group__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        disabled: this.state.editState !== 'dblClickAndSelected',
         className: "__font-style",
         fontWeight: (_this$state$textStyle2 = this.state.textStyle) === null || _this$state$textStyle2 === void 0 ? void 0 : _this$state$textStyle2.fontWeight,
         fontStyle: this.state.textStyle.fontStyle,
@@ -12513,12 +12540,14 @@ function (_Component) {
       }, "\u5E03\u5C40"), React.createElement("div", {
         id: "font-layout-style"
       }, React.createElement(_font_layout_button_group__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        disabled: this.state.editState !== 'click',
         className: "__font-layout",
         textAlign: this.state.textStyle.textAlign,
         onFontLayoutChange: function onFontLayoutChange(textAlign) {
           return _this3.onTextStyleChange('textAlign', textAlign);
         }
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        disabled: this.state.editState !== 'click',
         className: "__font-line-height",
         icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__["default"],
         disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__["default"],
@@ -12529,6 +12558,7 @@ function (_Component) {
           return _this3.onTextStyleChange('lineHeight', lineHeight);
         }
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        disabled: this.state.editState !== 'click',
         className: "__font-padding-top-bottom",
         icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_13__["default"],
         disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_14__["default"],
@@ -12541,6 +12571,7 @@ function (_Component) {
           _this3.onTextStyleChange('paddingBottom', "".concat(padding, "px"));
         }
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        disabled: this.state.editState !== 'click',
         className: "__font-padding-left-right",
         icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__["default"],
         disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_12__["default"],
@@ -12701,19 +12732,19 @@ function (_Component) {
       return React.createElement("div", {
         className: className
       }, React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        disabled: disabled,
+        disabled: this.props.disabled,
         selected: this.props.textAlign === 'left' || this.props.textAlign === 'start',
         icon: this.props.textAlign === 'left' ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__["default"],
         disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_13__["default"],
         onSelected: this.onFontLayoutChange('left')
       }), React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        disabled: disabled,
+        disabled: this.props.disabled,
         selected: this.props.textAlign === 'center',
         icon: this.props.textAlign === 'center' ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__["default"],
         disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_14__["default"],
         onSelected: this.onFontLayoutChange('center')
       }), React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        disabled: disabled,
+        disabled: this.props.disabled,
         selected: this.props.textAlign === 'right',
         icon: this.props.textAlign === 'right' ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_7__["default"],
         disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_15__["default"],
@@ -12878,19 +12909,19 @@ function (_Component) {
       return React.createElement("div", {
         className: className
       }, React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        disabled: disabled,
+        disabled: this.props.disabled,
         selected: this.props.fontWeight === 'bold',
         icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__["default"],
         disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__["default"],
         onSelected: this.onFontStyleChange('fontWeight')
       }), React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        disabled: disabled,
+        disabled: this.props.disabled,
         selected: this.props.fontStyle === 'italic',
         icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_7__["default"],
         disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_8__["default"],
         onSelected: this.onFontStyleChange('fontStyle')
       }), React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        disabled: disabled,
+        disabled: this.props.disabled,
         selected: this.props.textDecoration === 'underline',
         icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__["default"],
         disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__["default"],
@@ -13666,6 +13697,15 @@ function (_Component) {
       this.medium.subscribe('editableInput', function () {
         if (!_this2._isComposing) _this2.onContentChange(dom.innerHTML);
       });
+
+      var _t = this;
+
+      document.getElementsByTagName('body')[0].onblur = function () {
+        console.log(43434);
+
+        _t.disableEditing();
+      };
+
       this.medium.on(dom, 'compositionend', this.handleComposition);
       this.medium.on(dom, 'compositionupdate', this.handleComposition);
       this.medium.on(dom, 'compositionend', this.handleComposition);
@@ -13827,7 +13867,7 @@ module.exports = exported;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/doog/Documents/Workspaces/node/textbox/node_modules/webpack-dev-server/client/index.js?http://localhost:9999 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:9999");
+__webpack_require__(/*! /Users/qijianping/Desktop/textbox/textbox/node_modules/webpack-dev-server/client/index.js?http://localhost:9999 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:9999");
 module.exports = __webpack_require__(/*! ./src/components/index.js */"./src/components/index.js");
 
 
