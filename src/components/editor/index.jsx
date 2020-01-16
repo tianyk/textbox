@@ -50,8 +50,13 @@ class TextboxEditor extends Component {
 	}
 
 	componentDidMount() {
-		debug('componentDidMount');
-		if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();
+		if (this.getTextboxDOM() && !this.attachedEvent) {
+			// fix: 处理点击后才出现editor 问题
+			if (this.getTextboxDOM().getAttribute('data-medium-focused')) {
+				this.selectTextbox();
+			}
+			return this.attachEventHandlers();
+		}
 
 		// 循环检测 current 是否初始化完成
 		clearInterval(this.__CHECK_TEXTBOX_MOUNT_TIMER);
@@ -118,6 +123,8 @@ class TextboxEditor extends Component {
 			// 双击 单击
 			textbox.off(textboxDOM, 'click', this.selectTextbox)
 			textbox.off(textboxDOM, 'dblclick', this.editTextbox);
+
+			this.checkState();
 		}
 	}
 
@@ -237,44 +244,47 @@ class TextboxEditor extends Component {
 					break;
 
 				case 'textAlign':
-					if (value === 'center') {
-						medium.execAction('justifyCenter');
-					} else if (value === 'left') {
-						medium.execAction('justifyLeft');
-					} else if (value === 'right') {
-						medium.execAction('justifyRight');
-					} else if (value === 'justify') {
-						medium.execAction('justifyFull');
-					}
+					textboxDOM.style.textAlign = value;
+					// if (value === 'center') {
+					// 	medium.execAction('justifyCenter');
+					// } else if (value === 'left') {
+					// 	medium.execAction('justifyLeft');
+					// } else if (value === 'right') {
+					// 	medium.execAction('justifyRight');
+					// } else if (value === 'justify') {
+					// 	medium.execAction('justifyFull');
+					// }
 					this.checkState();
 					medium.trigger('editableInput', null, textboxDOM);
 					break;
 
 				case 'lineHeight':
+					textboxDOM.style.lineHeight = value;
 					// 没有选中时
-					if (selection.isCollapsed) {
-						while (parentNode) {
-							if (parentNode.parentNode === textboxDOM) break;
-							parentNode = parentNode.parentNode;
-						}
-					}
-					if (!parentNode) break;
-					removeStyle(parentNode, 'lineHeight');
-					parentNode.style.lineHeight = value;
+					// if (selection.isCollapsed) {
+					// 	while (parentNode) {
+					// 		if (parentNode.parentNode === textboxDOM) break;
+					// 		parentNode = parentNode.parentNode;
+					// 	}
+					// }
+					// if (!parentNode) break;
+					// removeStyle(parentNode, 'lineHeight');
+					// parentNode.style.lineHeight = value;
 					medium.trigger('editableInput', null, textboxDOM);
 					break;
 				case 'paddingTop':
 				case 'paddingBottom':
 				case 'paddingLeft':
 				case 'paddingRight':
-					while (parentNode) {
-						if (parentNode.parentNode === textboxDOM) break;
-						parentNode = parentNode.parentNode;
-					}
-					if (!parentNode) break;
-					removeStyle(parentNode, field);
+					textboxDOM.style[field] = value;
+					// while (parentNode) {
+					// 	if (parentNode.parentNode === textboxDOM) break;
+					// 	parentNode = parentNode.parentNode;
+					// }
+					// if (!parentNode) break;
+					// removeStyle(parentNode, field);
 
-					parentNode.style[field] = value;
+					// parentNode.style[field] = value;
 					medium.trigger('editableInput', null, textboxDOM);
 					break;
 			}

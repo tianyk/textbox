@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("React"), require("ReactDOM"), require("PropTypes"), require("MediumEditor"));
+		module.exports = factory(require("MediumEditor"), require("PropTypes"), require("React"), require("ReactDOM"));
 	else if(typeof define === 'function' && define.amd)
-		define(["React", "ReactDOM", "PropTypes", "MediumEditor"], factory);
+		define(["MediumEditor", "PropTypes", "React", "ReactDOM"], factory);
 	else if(typeof exports === 'object')
-		exports["ReactTextbox"] = factory(require("React"), require("ReactDOM"), require("PropTypes"), require("MediumEditor"));
+		exports["ReactTextbox"] = factory(require("MediumEditor"), require("PropTypes"), require("React"), require("ReactDOM"));
 	else
-		root["ReactTextbox"] = factory(root["React"], root["ReactDOM"], root["PropTypes"], root["MediumEditor"]);
-})(window, function(__WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom__, __WEBPACK_EXTERNAL_MODULE_prop_types__, __WEBPACK_EXTERNAL_MODULE_medium_editor__) {
+		root["ReactTextbox"] = factory(root["MediumEditor"], root["PropTypes"], root["React"], root["ReactDOM"]);
+})(window, function(__WEBPACK_EXTERNAL_MODULE_medium_editor__, __WEBPACK_EXTERNAL_MODULE_prop_types__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -908,7 +908,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".coursebox-textbox {\n  margin: 0;\n  display: inline-block;\n  outline: none;\n}\n.coursebox-textbox p {\n  margin: 0;\n}\n.coursebox-textbox[contenteditable=\"false\"] {\n  -moz-user-select: none;\n  /*火狐*/\n  -webkit-user-select: none;\n  /*webkit浏览器*/\n  -ms-user-select: none;\n  /*IE10*/\n  -khtml-user-select: none;\n  /*早期浏览器*/\n  user-select: none;\n}\n.coursebox-textbox[contenteditable=\"true\"] {\n  border-color: blue !important;\n}\n.coursebox-textbox[data-medium-focused=\"true\"] {\n  border: 1px solid blue !important;\n}\n", ""]);
+exports.push([module.i, ".coursebox-textbox {\n  margin: 0;\n  display: inline-block;\n  outline: none;\n}\n.coursebox-textbox p {\n  margin: 0;\n}\n.coursebox-textbox[contenteditable=\"false\"] {\n  -moz-user-select: none;\n  /*火狐*/\n  -webkit-user-select: none;\n  /*webkit浏览器*/\n  -ms-user-select: none;\n  /*IE10*/\n  -khtml-user-select: none;\n  /*早期浏览器*/\n  user-select: none;\n}\n.coursebox-textbox[contenteditable=\"true\"] {\n  border-color: blue !important;\n}\n.coursebox-textbox[data-medium-focused=\"true\"] {\n  border: 5px solid #00DA9B !important;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -12213,8 +12213,15 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      debug('componentDidMount');
-      if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers(); // 循环检测 current 是否初始化完成
+      if (this.getTextboxDOM() && !this.attachedEvent) {
+        // fix: 处理点击后才出现editor 问题
+        if (this.getTextboxDOM().getAttribute('data-medium-focused')) {
+          this.selectTextbox();
+        }
+
+        return this.attachEventHandlers();
+      } // 循环检测 current 是否初始化完成
+
 
       clearInterval(this.__CHECK_TEXTBOX_MOUNT_TIMER);
       this.__CHECK_TEXTBOX_MOUNT_TIMER = setInterval(function () {
@@ -12280,6 +12287,7 @@ function (_Component) {
 
         textbox.off(textboxDOM, 'click', this.selectTextbox);
         textbox.off(textboxDOM, 'dblclick', this.editTextbox);
+        this.checkState();
       }
     }
   }, {
@@ -12442,32 +12450,32 @@ function (_Component) {
             break;
 
           case 'textAlign':
-            if (value === 'center') {
-              medium.execAction('justifyCenter');
-            } else if (value === 'left') {
-              medium.execAction('justifyLeft');
-            } else if (value === 'right') {
-              medium.execAction('justifyRight');
-            } else if (value === 'justify') {
-              medium.execAction('justifyFull');
-            }
+            textboxDOM.style.textAlign = value; // if (value === 'center') {
+            // 	medium.execAction('justifyCenter');
+            // } else if (value === 'left') {
+            // 	medium.execAction('justifyLeft');
+            // } else if (value === 'right') {
+            // 	medium.execAction('justifyRight');
+            // } else if (value === 'justify') {
+            // 	medium.execAction('justifyFull');
+            // }
 
             this.checkState();
             medium.trigger('editableInput', null, textboxDOM);
             break;
 
           case 'lineHeight':
-            // 没有选中时
-            if (selection.isCollapsed) {
-              while (parentNode) {
-                if (parentNode.parentNode === textboxDOM) break;
-                parentNode = parentNode.parentNode;
-              }
-            }
+            textboxDOM.style.lineHeight = value; // 没有选中时
+            // if (selection.isCollapsed) {
+            // 	while (parentNode) {
+            // 		if (parentNode.parentNode === textboxDOM) break;
+            // 		parentNode = parentNode.parentNode;
+            // 	}
+            // }
+            // if (!parentNode) break;
+            // removeStyle(parentNode, 'lineHeight');
+            // parentNode.style.lineHeight = value;
 
-            if (!parentNode) break;
-            removeStyle(parentNode, 'lineHeight');
-            parentNode.style.lineHeight = value;
             medium.trigger('editableInput', null, textboxDOM);
             break;
 
@@ -12475,14 +12483,14 @@ function (_Component) {
           case 'paddingBottom':
           case 'paddingLeft':
           case 'paddingRight':
-            while (parentNode) {
-              if (parentNode.parentNode === textboxDOM) break;
-              parentNode = parentNode.parentNode;
-            }
+            textboxDOM.style[field] = value; // while (parentNode) {
+            // 	if (parentNode.parentNode === textboxDOM) break;
+            // 	parentNode = parentNode.parentNode;
+            // }
+            // if (!parentNode) break;
+            // removeStyle(parentNode, field);
+            // parentNode.style[field] = value;
 
-            if (!parentNode) break;
-            removeStyle(parentNode, field);
-            parentNode.style[field] = value;
             medium.trigger('editableInput', null, textboxDOM);
             break;
         }
@@ -13656,7 +13664,8 @@ var CourseBoxEditor = medium_editor__WEBPACK_IMPORTED_MODULE_5___default.a.Exten
 });
 var DEFAULT_OPTIONS = {
   toolbar: {
-    buttons: ['bold', 'italic', 'underline', 'justifyLeft', 'justifyCenter', 'justifyRight']
+    // buttons: ['bold', 'italic', 'underline', 'justifyLeft', 'justifyCenter', 'justifyRight'],
+    buttons: ['bold', 'italic', 'underline']
   },
   extensions: {
     'coursebox-editor': new CourseBoxEditor()
@@ -13697,22 +13706,16 @@ function (_Component) {
       this.medium.subscribe('editableInput', function () {
         if (!_this2._isComposing) _this2.onContentChange(dom.innerHTML);
       });
-
-      var _t = this;
-
-      document.getElementsByTagName('body')[0].onblur = function () {
-        console.log(43434);
-
-        _t.disableEditing();
-      };
-
       this.medium.on(dom, 'compositionend', this.handleComposition);
       this.medium.on(dom, 'compositionupdate', this.handleComposition);
-      this.medium.on(dom, 'compositionend', this.handleComposition);
+      this.medium.on(dom, 'compositionend', this.handleComposition); // 双击、单击
+
       this.medium.on(dom, 'dblclick', function () {
         debug('dblclick');
 
         _this2.enableEditing();
+
+        dom.focus();
       });
       this.medium.subscribe('blur', function () {
         debug('blur');
@@ -13867,7 +13870,7 @@ module.exports = exported;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/qijianping/Desktop/textbox/textbox/node_modules/webpack-dev-server/client/index.js?http://localhost:9999 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:9999");
+__webpack_require__(/*! /Users/doog/Documents/Workspaces/node/textbox/node_modules/webpack-dev-server/client/index.js?http://localhost:9999 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:9999");
 module.exports = __webpack_require__(/*! ./src/components/index.js */"./src/components/index.js");
 
 

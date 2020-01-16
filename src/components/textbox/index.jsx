@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import MediumEditor from 'medium-editor';
 
-
 const debug = require('../../commons/debug')('textbox:textbox');
 
 const CourseBoxEditor = MediumEditor.Extension.extend({
@@ -18,7 +17,8 @@ const CourseBoxEditor = MediumEditor.Extension.extend({
 
 const DEFAULT_OPTIONS = {
 	toolbar: {
-		buttons: ['bold', 'italic', 'underline', 'justifyLeft', 'justifyCenter', 'justifyRight'],
+		// buttons: ['bold', 'italic', 'underline', 'justifyLeft', 'justifyCenter', 'justifyRight'],
+		buttons: ['bold', 'italic', 'underline'],
 	},
 	extensions: {
 		'coursebox-editor': new CourseBoxEditor()
@@ -49,17 +49,15 @@ class Textbox extends Component {
 		this.medium.subscribe('editableInput', () => {
 			if (!this._isComposing) this.onContentChange(dom.innerHTML);
 		});
-		const _t = this
-		document.getElementsByTagName('body')[0].onblur = function() {
-			console.log(43434)
-			_t.disableEditing();
-		}
 		this.medium.on(dom, 'compositionend', this.handleComposition);
 		this.medium.on(dom, 'compositionupdate', this.handleComposition);
 		this.medium.on(dom, 'compositionend', this.handleComposition);
+
+		// 双击、单击
 		this.medium.on(dom, 'dblclick', () => {
 			debug('dblclick');
 			this.enableEditing();
+			dom.focus();
 		});
 		this.medium.subscribe('blur', () => {
 			debug('blur');
