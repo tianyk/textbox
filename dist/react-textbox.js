@@ -11801,7 +11801,11 @@ function rgba2hex(orig) {
   return "#".concat(hex);
 }
 
-var STYLE_PROPS = ['fontSize', 'color', 'fontWeight', 'textDecoration', 'fontStyle', 'textAlign', 'lineHeight', 'paddingTop', 'paddingLeft'];
+var STYLE_PROPS = ['fontSize', 'color', 'fontWeight', 'textDecoration', 'fontStyle' // 'textAlign',
+// 'lineHeight',
+// 'paddingTop',
+// 'paddingLeft'
+];
 
 function computedState() {
   var currentState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
@@ -12318,11 +12322,30 @@ function (_Component) {
   }, {
     key: "checkState",
     value: function checkState() {
-      var _this$getTextbox$opti;
+      var _this$getTextbox$opti, _this$getTextbox$opti2;
 
-      debug('checkState');
-      var selectionRange = medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.selection.getSelectionRange((_this$getTextbox$opti = this.getTextbox().options) === null || _this$getTextbox$opti === void 0 ? void 0 : _this$getTextbox$opti.ownerDocument);
-      if (!selectionRange) return;
+      debug('checkState'); // 布局属性从父容器计算
+
+      var computedStyle = (_this$getTextbox$opti = this.getTextbox().options) === null || _this$getTextbox$opti === void 0 ? void 0 : _this$getTextbox$opti.contentWindow.getComputedStyle(this.getTextboxDOM(), null);
+      var textAlign = computedStyle.getPropertyValue('text-align');
+      var lineHeight = computedStyle.getPropertyValue('line-height');
+      var paddingTop = computedStyle.getPropertyValue('padding-top');
+      var paddingLeft = computedStyle.getPropertyValue('padding-left');
+      var textStyle = {
+        paddingTop: paddingTop,
+        paddingLeft: paddingLeft,
+        textAlign: textAlign,
+        lineHeight: lineHeight
+      };
+      var selectionRange = medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.selection.getSelectionRange((_this$getTextbox$opti2 = this.getTextbox().options) === null || _this$getTextbox$opti2 === void 0 ? void 0 : _this$getTextbox$opti2.ownerDocument);
+
+      if (!selectionRange) {
+        this.setState({
+          textStyle: textStyle
+        });
+        return;
+      }
+
       debug('selectionRange', selectionRange);
       if (!selectionRange.collapsed) this.setState({
         editState: 'dblClickAndSelected'
@@ -12333,14 +12356,13 @@ function (_Component) {
         return medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.util.isDescendant(element, parentNode, true);
       })) {
         return;
-      }
+      } // Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node
 
-      var textStyle = {}; // Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node
 
       while (parentNode) {
-        var _this$getTextbox$opti2;
+        var _this$getTextbox$opti3;
 
-        Object(_commons_computed_state__WEBPACK_IMPORTED_MODULE_15__["computedState"])(textStyle, parentNode, (_this$getTextbox$opti2 = this.getTextbox().options) === null || _this$getTextbox$opti2 === void 0 ? void 0 : _this$getTextbox$opti2.contentWindow); // we can abort the search upwards if we leave the contentEditable element
+        Object(_commons_computed_state__WEBPACK_IMPORTED_MODULE_15__["computedState"])(textStyle, parentNode, (_this$getTextbox$opti3 = this.getTextbox().options) === null || _this$getTextbox$opti3 === void 0 ? void 0 : _this$getTextbox$opti3.contentWindow); // we can abort the search upwards if we leave the contentEditable element
 
         if (medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.util.isMediumEditorElement(parentNode)) {
           break;

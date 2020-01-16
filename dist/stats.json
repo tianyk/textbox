@@ -4,9 +4,9 @@
   "warnings": [
   ],
   "version": "4.41.4",
-  "hash": "85546d0bf22bd0efe1cd",
-  "time": 186,
-  "builtAt": 1579177264145,
+  "hash": "3229ba1f0998d6143dd6",
+  "time": 205,
+  "builtAt": 1579178363833,
   "publicPath": "",
   "outputPath": "/Users/doog/Documents/Workspaces/node/textbox/dist",
   "assetsByChunkName": {
@@ -29,7 +29,7 @@
     },
     {
       "name": "react-textbox.js",
-      "size": 557687,
+      "size": 558478,
       "chunks": [
         "main"
       ],
@@ -38,11 +38,11 @@
       ],
       "info": {
       },
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "react-textbox.js.map",
-      "size": 596433,
+      "size": 597535,
       "chunks": [
         "main"
       ],
@@ -52,7 +52,7 @@
       "info": {
         "development": true
       },
-      "emitted": false
+      "emitted": true
     }
   ],
   "filteredAssets": 0,
@@ -89,10 +89,10 @@
   "chunks": [
     {
       "id": "main",
-      "rendered": false,
+      "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 490048,
+      "size": 490839,
       "names": [
         "main"
       ],
@@ -100,7 +100,7 @@
         "react-textbox.js",
         "react-textbox.js.map"
       ],
-      "hash": "cbec680bd8fb7bed2e84",
+      "hash": "3eed19291c270c595014",
       "siblings": [
       ],
       "parents": [
@@ -367,7 +367,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/上下边距_不可点@2x.png",
-              "loc": "462:22-54"
+              "loc": "480:22-54"
             }
           ],
           "providedExports": [
@@ -429,7 +429,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/上下边距_正常@2x.png",
-              "loc": "461:14-38"
+              "loc": "479:14-38"
             }
           ],
           "providedExports": [
@@ -1201,7 +1201,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/左右边距_不可点@2x.png",
-              "loc": "475:22-54"
+              "loc": "493:22-54"
             }
           ],
           "providedExports": [
@@ -1263,7 +1263,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/左右边距_正常@2x.png",
-              "loc": "474:14-38"
+              "loc": "492:14-38"
             }
           ],
           "providedExports": [
@@ -1928,7 +1928,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/行间距_不可点@2x.png",
-              "loc": "451:22-45"
+              "loc": "469:22-45"
             }
           ],
           "providedExports": [
@@ -1990,7 +1990,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/行间距_正常@2x.png",
-              "loc": "450:14-29"
+              "loc": "468:14-29"
             }
           ],
           "providedExports": [
@@ -2285,7 +2285,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "classnames",
-              "loc": "395:22-32"
+              "loc": "413:22-32"
             },
             {
               "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -5080,7 +5080,7 @@
           "name": "./src/commons/computed_state.js",
           "index": 98,
           "index2": 95,
-          "size": 4792,
+          "size": 4804,
           "cacheable": true,
           "built": false,
           "optional": false,
@@ -5125,7 +5125,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@commons/computed_state",
-              "loc": "233:8-21"
+              "loc": "251:8-21"
             }
           ],
           "providedExports": [
@@ -5134,7 +5134,7 @@
           "optimizationBailout": [
           ],
           "depth": 3,
-          "source": "var debug = require('./debug')('textbox:commons:button');\n\nfunction rgba2hex(orig) {\n  var a = '',\n      rgb = orig.replace(/\\s/g, '').match(/^rgba?\\((\\d+),(\\d+),(\\d+),?([^,\\s)]+)?/i),\n      alpha = (rgb && rgb[4] || \"\").trim(),\n      hex = rgb ? (rgb[1] | 1 << 8).toString(16).slice(1) + (rgb[2] | 1 << 8).toString(16).slice(1) + (rgb[3] | 1 << 8).toString(16).slice(1) : orig;\n\n  if (alpha !== '') {\n    a = parseInt(255 * parseFloat(alpha)).toString(16);\n  }\n\n  hex = hex + a;\n  return \"#\".concat(hex);\n}\n\nvar STYLE_PROPS = ['fontSize', 'color', 'fontWeight', 'textDecoration', 'fontStyle', 'textAlign', 'lineHeight', 'paddingTop', 'paddingLeft'];\n\nfunction computedState() {\n  var currentState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};\n  var node = arguments.length > 1 ? arguments[1] : undefined;\n  var currentWindow = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : window;\n  var nodeName = node.nodeName.toLowerCase();\n  var computedStyle = currentWindow.getComputedStyle(node, null);\n  debug('computedState', nodeName);\n  var _iteratorNormalCompletion = true;\n  var _didIteratorError = false;\n  var _iteratorError = undefined;\n\n  try {\n    for (var _iterator = STYLE_PROPS[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n      var styleProp = _step.value;\n      // 设置过就不在设置\n      if (typeof currentState[styleProp] !== 'undefined' && styleProp !== 'text-decoration') continue;\n\n      switch (styleProp) {\n        case 'fontSize':\n          var fontSize = '14px'; // if (nodeName === 'font' && node.hasAttribute('size')) {\n          // \tfontSize = node.getAttribute('size');\n          // } else {\n\n          fontSize = computedStyle.getPropertyValue('font-size'); // }\n\n          currentState[styleProp] = fontSize;\n          break;\n\n        case 'color':\n          var color = '#000';\n\n          if (nodeName === 'font' && node.hasAttribute('color')) {\n            color = node.getAttribute('color');\n          } else {\n            color = computedStyle.getPropertyValue('color');\n            if (color.startsWith('rgb')) color = rgba2hex(color);\n          }\n\n          currentState[styleProp] = color;\n          break;\n\n        case 'fontWeight':\n          var fontWeight = 'normal';\n\n          if (nodeName === 'b' || nodeName === 'strong') {\n            fontWeight = 'bold';\n          } else {\n            var fontWeightValue = computedStyle.getPropertyValue('font-weight');\n            if (fontWeightValue === '700' || fontWeightValue === 'bold') fontWeight = 'bold';\n          }\n\n          currentState[styleProp] = fontWeight;\n          break;\n\n        case 'textDecoration':\n          var textDecoration = 'none';\n\n          if (nodeName === 'u') {\n            textDecoration = 'underline';\n          } else if (nodeName === 'strike' || nodeName === 'del' || nodeName === 's') {\n            textDecoration = 'line-through';\n          } else {\n            // getPropertyValue text-decoration 不会继承 获取的不是实时样式\n            textDecoration = computedStyle.getPropertyValue('text-decoration');\n            if (textDecoration.split(' ').length > 0) textDecoration = textDecoration.split(' ')[0];\n          }\n\n          if (textDecoration !== 'none') currentState[styleProp] = textDecoration;\n          break;\n\n        case 'fontStyle':\n          var fontStyle = 'normal';\n\n          if (nodeName === 'i' || nodeName === 'em') {\n            fontStyle = 'italic';\n          } else {\n            fontStyle = computedStyle.getPropertyValue('font-style');\n          }\n\n          currentState[styleProp] = fontStyle;\n          break;\n\n        case 'textAlign':\n          var textAlign = computedStyle.getPropertyValue('text-align');\n          currentState[styleProp] = textAlign;\n          break;\n\n        case 'lineHeight':\n          var lineHeight = computedStyle.getPropertyValue('line-height');\n          currentState[styleProp] = lineHeight;\n          break;\n\n        case 'paddingTop':\n          var paddingTop = computedStyle.getPropertyValue('padding-top');\n          currentState[styleProp] = paddingTop;\n          break;\n\n        case 'paddingLeft':\n          var paddingLeft = computedStyle.getPropertyValue('padding-left');\n          currentState[styleProp] = paddingLeft;\n          break;\n      }\n\n      debug('currentState: %j', currentState);\n    }\n  } catch (err) {\n    _didIteratorError = true;\n    _iteratorError = err;\n  } finally {\n    try {\n      if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n        _iterator[\"return\"]();\n      }\n    } finally {\n      if (_didIteratorError) {\n        throw _iteratorError;\n      }\n    }\n  }\n\n  return currentState;\n}\n\nexport { computedState };"
+          "source": "var debug = require('./debug')('textbox:commons:button');\n\nfunction rgba2hex(orig) {\n  var a = '',\n      rgb = orig.replace(/\\s/g, '').match(/^rgba?\\((\\d+),(\\d+),(\\d+),?([^,\\s)]+)?/i),\n      alpha = (rgb && rgb[4] || \"\").trim(),\n      hex = rgb ? (rgb[1] | 1 << 8).toString(16).slice(1) + (rgb[2] | 1 << 8).toString(16).slice(1) + (rgb[3] | 1 << 8).toString(16).slice(1) : orig;\n\n  if (alpha !== '') {\n    a = parseInt(255 * parseFloat(alpha)).toString(16);\n  }\n\n  hex = hex + a;\n  return \"#\".concat(hex);\n}\n\nvar STYLE_PROPS = ['fontSize', 'color', 'fontWeight', 'textDecoration', 'fontStyle' // 'textAlign',\n// 'lineHeight',\n// 'paddingTop',\n// 'paddingLeft'\n];\n\nfunction computedState() {\n  var currentState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};\n  var node = arguments.length > 1 ? arguments[1] : undefined;\n  var currentWindow = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : window;\n  var nodeName = node.nodeName.toLowerCase();\n  var computedStyle = currentWindow.getComputedStyle(node, null);\n  debug('computedState', nodeName);\n  var _iteratorNormalCompletion = true;\n  var _didIteratorError = false;\n  var _iteratorError = undefined;\n\n  try {\n    for (var _iterator = STYLE_PROPS[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n      var styleProp = _step.value;\n      // 设置过就不在设置\n      if (typeof currentState[styleProp] !== 'undefined' && styleProp !== 'text-decoration') continue;\n\n      switch (styleProp) {\n        case 'fontSize':\n          var fontSize = '14px'; // if (nodeName === 'font' && node.hasAttribute('size')) {\n          // \tfontSize = node.getAttribute('size');\n          // } else {\n\n          fontSize = computedStyle.getPropertyValue('font-size'); // }\n\n          currentState[styleProp] = fontSize;\n          break;\n\n        case 'color':\n          var color = '#000';\n\n          if (nodeName === 'font' && node.hasAttribute('color')) {\n            color = node.getAttribute('color');\n          } else {\n            color = computedStyle.getPropertyValue('color');\n            if (color.startsWith('rgb')) color = rgba2hex(color);\n          }\n\n          currentState[styleProp] = color;\n          break;\n\n        case 'fontWeight':\n          var fontWeight = 'normal';\n\n          if (nodeName === 'b' || nodeName === 'strong') {\n            fontWeight = 'bold';\n          } else {\n            var fontWeightValue = computedStyle.getPropertyValue('font-weight');\n            if (fontWeightValue === '700' || fontWeightValue === 'bold') fontWeight = 'bold';\n          }\n\n          currentState[styleProp] = fontWeight;\n          break;\n\n        case 'textDecoration':\n          var textDecoration = 'none';\n\n          if (nodeName === 'u') {\n            textDecoration = 'underline';\n          } else if (nodeName === 'strike' || nodeName === 'del' || nodeName === 's') {\n            textDecoration = 'line-through';\n          } else {\n            // getPropertyValue text-decoration 不会继承 获取的不是实时样式\n            textDecoration = computedStyle.getPropertyValue('text-decoration');\n            if (textDecoration.split(' ').length > 0) textDecoration = textDecoration.split(' ')[0];\n          }\n\n          if (textDecoration !== 'none') currentState[styleProp] = textDecoration;\n          break;\n\n        case 'fontStyle':\n          var fontStyle = 'normal';\n\n          if (nodeName === 'i' || nodeName === 'em') {\n            fontStyle = 'italic';\n          } else {\n            fontStyle = computedStyle.getPropertyValue('font-style');\n          }\n\n          currentState[styleProp] = fontStyle;\n          break;\n\n        case 'textAlign':\n          var textAlign = computedStyle.getPropertyValue('text-align');\n          currentState[styleProp] = textAlign;\n          break;\n\n        case 'lineHeight':\n          var lineHeight = computedStyle.getPropertyValue('line-height');\n          currentState[styleProp] = lineHeight;\n          break;\n\n        case 'paddingTop':\n          var paddingTop = computedStyle.getPropertyValue('padding-top');\n          currentState[styleProp] = paddingTop;\n          break;\n\n        case 'paddingLeft':\n          var paddingLeft = computedStyle.getPropertyValue('padding-left');\n          currentState[styleProp] = paddingLeft;\n          break;\n      }\n\n      debug('currentState: %j', currentState);\n    }\n  } catch (err) {\n    _didIteratorError = true;\n    _iteratorError = err;\n  } finally {\n    try {\n      if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n        _iterator[\"return\"]();\n      }\n    } finally {\n      if (_didIteratorError) {\n        throw _iteratorError;\n      }\n    }\n  }\n\n  return currentState;\n}\n\nexport { computedState };"
         },
         {
           "id": "./src/commons/debug.js",
@@ -5381,7 +5381,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@commons/utils",
-              "loc": "256:12-36"
+              "loc": "274:12-36"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -5390,7 +5390,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@commons/utils",
-              "loc": "258:19-28"
+              "loc": "276:19-28"
             }
           ],
           "providedExports": [
@@ -5461,7 +5461,7 @@
           "name": "./src/components/editor/index.jsx",
           "index": 48,
           "index2": 97,
-          "size": 20522,
+          "size": 21301,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -5510,7 +5510,7 @@
           "optimizationBailout": [
           ],
           "depth": 2,
-          "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './editor.less';\nimport { Component } from 'react';\nimport classNames from 'classnames';\nimport InputSelect from '../input-select';\nimport ReactDOM from 'react-dom';\nimport InputColor from '../input-color';\nimport MediumEditor from 'medium-editor';\nimport FontStyleButtonGroup from '../font-style-button-group';\nimport FontLayoutButtonGroup from '../font-layout-button-group';\nimport ImageLineHeight from '@assets/images/行间距_正常@2x.png';\nimport ImageLineHeightDisabled from '@assets/images/行间距_不可点@2x.png';\nimport ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png';\nimport ImagePaddingLeftAndRightDisabled from '@assets/images/左右边距_不可点@2x.png';\nimport ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';\nimport ImagePaddingTopAndBottomDisabled from '@assets/images/上下边距_不可点@2x.png';\nimport { computedState } from '@commons/computed_state';\nimport throttle from '@commons/throttle';\nimport { isReactComponentInstance, isElement } from '@commons/utils';\n\nvar debug = require('@commons/debug')('textbox:editor');\n\nfunction removeStyle(element) {\n  for (var _len = arguments.length, styleNames = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {\n    styleNames[_key - 1] = arguments[_key];\n  }\n\n  for (var _i = 0, _styleNames = styleNames; _i < _styleNames.length; _i++) {\n    var styleName = _styleNames[_i];\n    element.style[styleName] = null;\n  }\n\n  var children = element.children;\n  if (children.length === 0) return;\n  var _iteratorNormalCompletion = true;\n  var _didIteratorError = false;\n  var _iteratorError = undefined;\n\n  try {\n    for (var _iterator = children[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n      var child = _step.value;\n      removeStyle.apply(void 0, [child].concat(styleNames));\n    }\n  } catch (err) {\n    _didIteratorError = true;\n    _iteratorError = err;\n  } finally {\n    try {\n      if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n        _iterator[\"return\"]();\n      }\n    } finally {\n      if (_didIteratorError) {\n        throw _iteratorError;\n      }\n    }\n  }\n}\n\nvar TextboxEditor =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(TextboxEditor, _Component);\n\n  function TextboxEditor(props) {\n    var _this;\n\n    _classCallCheck(this, TextboxEditor);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(TextboxEditor).call(this, props));\n    _this.state = {\n      textStyle: {},\n      editState: 'none' //none-未选中 click- 单击 dblClick-双击 dblClickAndSelected-双击并选中\n\n    };\n    _this.editTextbox = _this.editTextbox.bind(_assertThisInitialized(_this));\n    _this.onTextStyleChange = _this.onTextStyleChange.bind(_assertThisInitialized(_this));\n    _this.selectTextbox = _this.selectTextbox.bind(_assertThisInitialized(_this));\n    _this.blurTextbox = _this.blurTextbox.bind(_assertThisInitialized(_this));\n    _this.throttleCheckState = throttle(_this.checkState, 200).bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(TextboxEditor, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      if (this.getTextboxDOM() && !this.attachedEvent) {\n        // fix: 处理点击后才出现editor 问题\n        if (this.getTextboxDOM().getAttribute('data-medium-focused')) {\n          this.selectTextbox();\n        }\n\n        return this.attachEventHandlers();\n      } // 循环检测 current 是否初始化完成\n\n\n      clearInterval(this.__CHECK_TEXTBOX_MOUNT_TIMER);\n      this.__CHECK_TEXTBOX_MOUNT_TIMER = setInterval(function () {\n        var dom = _this2.getTextboxDOM();\n\n        if (dom) {\n          clearInterval(_this2.__CHECK_TEXTBOX_MOUNT_TIMER);\n\n          _this2.attachEventHandlers();\n        }\n      }, 100);\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      debug('componentWillUnmount');\n      this.detachEventHandlers();\n    }\n  }, {\n    key: \"componentDidUpdate\",\n    value: function componentDidUpdate() {\n      debug('componentDidUpdate', arguments);\n      if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();\n    }\n  }, {\n    key: \"attachEventHandlers\",\n    value: function attachEventHandlers() {\n      if (!this.attachedEvent) {\n        debug('attachEventHandlers');\n        var textboxDOM = this.getTextboxDOM();\n        var textbox = this.getTextbox();\n        this.attachedEvent = true; // this.throttleCheckState();\n        // MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements\n        // textbox.subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置\n\n        textbox.subscribe('focus', this.throttleCheckState);\n        textbox.subscribe('positionToolbar', this.throttleCheckState);\n        textbox.subscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change \n        // textbox.subscribe('editableClick', this.throttleCheckState);\n\n        textbox.subscribe('editableKeyup', this.throttleCheckState); // 双击 单击\n\n        textbox.on(textboxDOM, 'click', this.selectTextbox);\n        textbox.on(textboxDOM, 'dblclick', this.editTextbox);\n        textbox.on(textboxDOM, 'blur', this.blurTextbox);\n      }\n    }\n  }, {\n    key: \"detachEventHandlers\",\n    value: function detachEventHandlers() {\n      if (this.attachedEvent) {\n        debug('detachEventHandlers');\n        var textboxDOM = this.getTextboxDOM();\n        var textbox = this.getTextbox();\n        this.attachedEvent = true; // textbox.subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置\n\n        textbox.unsubscribe('focus', this.throttleCheckState);\n        textbox.unsubscribe('positionToolbar', this.throttleCheckState);\n        textbox.unsubscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change\n\n        textbox.unsubscribe('editableClick', this.throttleCheckState);\n        textbox.unsubscribe('editableKeyup', this.throttleCheckState); // 双击 单击\n\n        textbox.off(textboxDOM, 'click', this.selectTextbox);\n        textbox.off(textboxDOM, 'dblclick', this.editTextbox);\n        this.checkState();\n      }\n    }\n  }, {\n    key: \"selectTextbox\",\n    value: function selectTextbox() {\n      debug('selectTextbox');\n      if (this.state.editState === 'dblClick') return;\n      this.setState({\n        editState: 'click'\n      });\n    }\n  }, {\n    key: \"editTextbox\",\n    value: function editTextbox() {\n      debug('editTextbox');\n      this.setState({\n        editState: 'dblClick'\n      });\n    }\n  }, {\n    key: \"blurTextbox\",\n    value: function blurTextbox() {\n      debug('blurTextbox');\n      this.setState({\n        editState: 'none'\n      });\n    }\n  }, {\n    key: \"checkState\",\n    value: function checkState() {\n      var _this$getTextbox$opti;\n\n      debug('checkState');\n      var selectionRange = MediumEditor.selection.getSelectionRange((_this$getTextbox$opti = this.getTextbox().options) === null || _this$getTextbox$opti === void 0 ? void 0 : _this$getTextbox$opti.ownerDocument);\n      if (!selectionRange) return;\n      debug('selectionRange', selectionRange);\n      if (!selectionRange.collapsed) this.setState({\n        editState: 'dblClickAndSelected'\n      });\n      var parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange); // Make sure the selection parent isn't outside of the contenteditable\n\n      if (!this.getTextbox().elements.some(function (element) {\n        return MediumEditor.util.isDescendant(element, parentNode, true);\n      })) {\n        return;\n      }\n\n      var textStyle = {}; // Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node\n\n      while (parentNode) {\n        var _this$getTextbox$opti2;\n\n        computedState(textStyle, parentNode, (_this$getTextbox$opti2 = this.getTextbox().options) === null || _this$getTextbox$opti2 === void 0 ? void 0 : _this$getTextbox$opti2.contentWindow); // we can abort the search upwards if we leave the contentEditable element\n\n        if (MediumEditor.util.isMediumEditorElement(parentNode)) {\n          break;\n        }\n\n        parentNode = parentNode.parentNode;\n      }\n\n      debug('textStyle %o', textStyle);\n      this.setState({\n        textStyle: textStyle\n      });\n    }\n  }, {\n    key: \"getTextboxDOM\",\n    value: function getTextboxDOM() {\n      var _this$props, _this$props2, _this$props2$textboxD;\n\n      debug('getTextboxDOM', this.props.textboxDOM, this.props.textboxDOMRef);\n      var textboxDOM = ((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.textboxDOM) || ((_this$props2 = this.props) === null || _this$props2 === void 0 ? void 0 : (_this$props2$textboxD = _this$props2.textboxDOMRef) === null || _this$props2$textboxD === void 0 ? void 0 : _this$props2$textboxD.current);\n\n      if (textboxDOM) {\n        if (isReactComponentInstance(textboxDOM)) {\n          return ReactDOM.findDOMNode(textboxDOM);\n        } else if (isElement(textboxDOM)) {\n          return textboxDOM;\n        } else {\n          throw new Error('`textboxDOM` 必须是一个 HTMLElement 或者 React Component 实例');\n        }\n      }\n    }\n  }, {\n    key: \"getTextbox\",\n    value: function getTextbox() {\n      var dom = this.getTextboxDOM();\n      return dom ? MediumEditor.getEditorFromElement(dom) : null;\n    }\n  }, {\n    key: \"onTextStyleChange\",\n    value: function onTextStyleChange(field, value) {\n      debug('onTextStyleChange', field, value);\n      var medium = this.getTextbox();\n      if (!medium) return;\n      var textboxDOM = this.getTextboxDOM();\n      var selection = medium.options.ownerDocument.getSelection();\n      var selectionRange = MediumEditor.selection.getSelectionRange(medium.options.ownerDocument);\n      var parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange);\n\n      if (medium) {\n        switch (field) {\n          case 'fontWeight':\n            medium.execAction('bold');\n            break;\n\n          case 'fontStyle':\n            medium.execAction('italic');\n            break;\n\n          case 'textDecoration':\n            medium.execAction('underline');\n            break;\n\n          case 'color':\n            // fix <font color></font>\n            medium.options.ownerDocument.execCommand('styleWithCSS', false, true);\n            medium.execAction('foreColor', {\n              value: value\n            });\n            medium.options.ownerDocument.execCommand('styleWithCSS', false, false);\n            break;\n\n          case 'fontSize':\n            medium.execAction('fontSize', {\n              value: 7\n            });\n\n            if (textboxDOM) {\n              var nodes = textboxDOM.querySelectorAll('font[size=\"7\"]');\n              var _iteratorNormalCompletion2 = true;\n              var _didIteratorError2 = false;\n              var _iteratorError2 = undefined;\n\n              try {\n                for (var _iterator2 = nodes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {\n                  var node = _step2.value;\n                  node.removeAttribute('size');\n                  node.style.fontSize = \"\".concat(value, \"px\");\n                }\n              } catch (err) {\n                _didIteratorError2 = true;\n                _iteratorError2 = err;\n              } finally {\n                try {\n                  if (!_iteratorNormalCompletion2 && _iterator2[\"return\"] != null) {\n                    _iterator2[\"return\"]();\n                  }\n                } finally {\n                  if (_didIteratorError2) {\n                    throw _iteratorError2;\n                  }\n                }\n              }\n\n              medium.trigger('editableInput', null, textboxDOM);\n            }\n\n            break;\n\n          case 'textAlign':\n            textboxDOM.style.textAlign = value; // if (value === 'center') {\n            // \tmedium.execAction('justifyCenter');\n            // } else if (value === 'left') {\n            // \tmedium.execAction('justifyLeft');\n            // } else if (value === 'right') {\n            // \tmedium.execAction('justifyRight');\n            // } else if (value === 'justify') {\n            // \tmedium.execAction('justifyFull');\n            // }\n\n            this.checkState();\n            medium.trigger('editableInput', null, textboxDOM);\n            break;\n\n          case 'lineHeight':\n            textboxDOM.style.lineHeight = value; // 没有选中时\n            // if (selection.isCollapsed) {\n            // \twhile (parentNode) {\n            // \t\tif (parentNode.parentNode === textboxDOM) break;\n            // \t\tparentNode = parentNode.parentNode;\n            // \t}\n            // }\n            // if (!parentNode) break;\n            // removeStyle(parentNode, 'lineHeight');\n            // parentNode.style.lineHeight = value;\n\n            medium.trigger('editableInput', null, textboxDOM);\n            break;\n\n          case 'paddingTop':\n          case 'paddingBottom':\n          case 'paddingLeft':\n          case 'paddingRight':\n            textboxDOM.style[field] = value; // while (parentNode) {\n            // \tif (parentNode.parentNode === textboxDOM) break;\n            // \tparentNode = parentNode.parentNode;\n            // }\n            // if (!parentNode) break;\n            // removeStyle(parentNode, field);\n            // parentNode.style[field] = value;\n\n            medium.trigger('editableInput', null, textboxDOM);\n            break;\n        }\n      }\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var _this3 = this,\n          _this$state$textStyle2;\n\n      var className = classNames('coursebox-editor', this.props.className);\n      var _this$state$textStyle = this.state.textStyle,\n          fontSize = _this$state$textStyle.fontSize,\n          paddingTop = _this$state$textStyle.paddingTop,\n          paddingLeft = _this$state$textStyle.paddingLeft,\n          lineHeight = _this$state$textStyle.lineHeight;\n      if (typeof fontSize === 'string' && fontSize.endsWith('px')) fontSize = parseFloat(fontSize);\n      if (typeof paddingTop === 'string' && paddingTop.endsWith('px')) paddingTop = parseFloat(paddingTop);\n      if (typeof paddingLeft === 'string' && paddingLeft.endsWith('px')) paddingLeft = parseFloat(paddingLeft);\n      if (typeof lineHeight === 'string' && lineHeight.endsWith('px')) lineHeight = (parseFloat(lineHeight) / fontSize).toFixed(1);\n      return React.createElement(\"div\", {\n        className: className\n      }, React.createElement(\"label\", {\n        htmlFor: \"font-size-style\"\n      }, \"\\u6587\\u5B57\"), React.createElement(\"div\", {\n        id: \"font-style\"\n      }, React.createElement(InputColor, {\n        disabled: this.state.editState !== 'dblClickAndSelected',\n        className: \"__font-color\",\n        value: this.state.textStyle.color,\n        onChange: function onChange(color) {\n          return _this3.onTextStyleChange('color', color);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'dblClickAndSelected',\n        className: \"__font-size\",\n        value: fontSize,\n        options: [12, 13, 14, 16, 18, 20, 28, 36, 48, 72],\n        unit: \"px\",\n        onChange: function onChange(fontSize) {\n          return _this3.onTextStyleChange('fontSize', fontSize);\n        }\n      }), React.createElement(FontStyleButtonGroup, {\n        disabled: this.state.editState !== 'dblClickAndSelected',\n        className: \"__font-style\",\n        fontWeight: (_this$state$textStyle2 = this.state.textStyle) === null || _this$state$textStyle2 === void 0 ? void 0 : _this$state$textStyle2.fontWeight,\n        fontStyle: this.state.textStyle.fontStyle,\n        textDecoration: this.state.textStyle.textDecoration,\n        onFontStyleChange: function onFontStyleChange(field, val) {\n          return _this3.onTextStyleChange(field, val);\n        }\n      })), React.createElement(\"label\", {\n        htmlFor: \"font-layout-style\"\n      }, \"\\u5E03\\u5C40\"), React.createElement(\"div\", {\n        id: \"font-layout-style\"\n      }, React.createElement(FontLayoutButtonGroup, {\n        disabled: this.state.editState !== 'click',\n        className: \"__font-layout\",\n        textAlign: this.state.textStyle.textAlign,\n        onFontLayoutChange: function onFontLayoutChange(textAlign) {\n          return _this3.onTextStyleChange('textAlign', textAlign);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'click',\n        className: \"__font-line-height\",\n        icon: ImageLineHeight,\n        disabledIcon: ImageLineHeightDisabled,\n        value: lineHeight,\n        options: [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2, 2.4, 2.6, 2.8, 3.0],\n        unit: \"\\u500D\",\n        onChange: function onChange(lineHeight) {\n          return _this3.onTextStyleChange('lineHeight', lineHeight);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'click',\n        className: \"__font-padding-top-bottom\",\n        icon: ImagePaddingTopAndBottom,\n        disabledIcon: ImagePaddingTopAndBottomDisabled,\n        value: paddingTop,\n        options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],\n        unit: \"px\",\n        onChange: function onChange(padding) {\n          _this3.onTextStyleChange('paddingTop', \"\".concat(padding, \"px\"));\n\n          _this3.onTextStyleChange('paddingBottom', \"\".concat(padding, \"px\"));\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'click',\n        className: \"__font-padding-left-right\",\n        icon: ImagePaddingLeftAndRight,\n        disabledIcon: ImagePaddingLeftAndRightDisabled,\n        value: paddingLeft,\n        options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],\n        unit: \"px\",\n        onChange: function onChange(padding) {\n          _this3.onTextStyleChange('paddingLeft', \"\".concat(padding, \"px\"));\n\n          _this3.onTextStyleChange('paddingRight', \"\".concat(padding, \"px\"));\n        }\n      })));\n    }\n  }]);\n\n  return TextboxEditor;\n}(Component);\n\nexport default TextboxEditor;"
+          "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './editor.less';\nimport { Component } from 'react';\nimport classNames from 'classnames';\nimport InputSelect from '../input-select';\nimport ReactDOM from 'react-dom';\nimport InputColor from '../input-color';\nimport MediumEditor from 'medium-editor';\nimport FontStyleButtonGroup from '../font-style-button-group';\nimport FontLayoutButtonGroup from '../font-layout-button-group';\nimport ImageLineHeight from '@assets/images/行间距_正常@2x.png';\nimport ImageLineHeightDisabled from '@assets/images/行间距_不可点@2x.png';\nimport ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png';\nimport ImagePaddingLeftAndRightDisabled from '@assets/images/左右边距_不可点@2x.png';\nimport ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';\nimport ImagePaddingTopAndBottomDisabled from '@assets/images/上下边距_不可点@2x.png';\nimport { computedState } from '@commons/computed_state';\nimport throttle from '@commons/throttle';\nimport { isReactComponentInstance, isElement } from '@commons/utils';\n\nvar debug = require('@commons/debug')('textbox:editor');\n\nfunction removeStyle(element) {\n  for (var _len = arguments.length, styleNames = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {\n    styleNames[_key - 1] = arguments[_key];\n  }\n\n  for (var _i = 0, _styleNames = styleNames; _i < _styleNames.length; _i++) {\n    var styleName = _styleNames[_i];\n    element.style[styleName] = null;\n  }\n\n  var children = element.children;\n  if (children.length === 0) return;\n  var _iteratorNormalCompletion = true;\n  var _didIteratorError = false;\n  var _iteratorError = undefined;\n\n  try {\n    for (var _iterator = children[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n      var child = _step.value;\n      removeStyle.apply(void 0, [child].concat(styleNames));\n    }\n  } catch (err) {\n    _didIteratorError = true;\n    _iteratorError = err;\n  } finally {\n    try {\n      if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n        _iterator[\"return\"]();\n      }\n    } finally {\n      if (_didIteratorError) {\n        throw _iteratorError;\n      }\n    }\n  }\n}\n\nvar TextboxEditor =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(TextboxEditor, _Component);\n\n  function TextboxEditor(props) {\n    var _this;\n\n    _classCallCheck(this, TextboxEditor);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(TextboxEditor).call(this, props));\n    _this.state = {\n      textStyle: {},\n      editState: 'none' //none-未选中 click- 单击 dblClick-双击 dblClickAndSelected-双击并选中\n\n    };\n    _this.editTextbox = _this.editTextbox.bind(_assertThisInitialized(_this));\n    _this.onTextStyleChange = _this.onTextStyleChange.bind(_assertThisInitialized(_this));\n    _this.selectTextbox = _this.selectTextbox.bind(_assertThisInitialized(_this));\n    _this.blurTextbox = _this.blurTextbox.bind(_assertThisInitialized(_this));\n    _this.throttleCheckState = throttle(_this.checkState, 200).bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(TextboxEditor, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      if (this.getTextboxDOM() && !this.attachedEvent) {\n        // fix: 处理点击后才出现editor 问题\n        if (this.getTextboxDOM().getAttribute('data-medium-focused')) {\n          this.selectTextbox();\n        }\n\n        return this.attachEventHandlers();\n      } // 循环检测 current 是否初始化完成\n\n\n      clearInterval(this.__CHECK_TEXTBOX_MOUNT_TIMER);\n      this.__CHECK_TEXTBOX_MOUNT_TIMER = setInterval(function () {\n        var dom = _this2.getTextboxDOM();\n\n        if (dom) {\n          clearInterval(_this2.__CHECK_TEXTBOX_MOUNT_TIMER);\n\n          _this2.attachEventHandlers();\n        }\n      }, 100);\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      debug('componentWillUnmount');\n      this.detachEventHandlers();\n    }\n  }, {\n    key: \"componentDidUpdate\",\n    value: function componentDidUpdate() {\n      debug('componentDidUpdate', arguments);\n      if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();\n    }\n  }, {\n    key: \"attachEventHandlers\",\n    value: function attachEventHandlers() {\n      if (!this.attachedEvent) {\n        debug('attachEventHandlers');\n        var textboxDOM = this.getTextboxDOM();\n        var textbox = this.getTextbox();\n        this.attachedEvent = true; // this.throttleCheckState();\n        // MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements\n        // textbox.subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置\n\n        textbox.subscribe('focus', this.throttleCheckState);\n        textbox.subscribe('positionToolbar', this.throttleCheckState);\n        textbox.subscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change \n        // textbox.subscribe('editableClick', this.throttleCheckState);\n\n        textbox.subscribe('editableKeyup', this.throttleCheckState); // 双击 单击\n\n        textbox.on(textboxDOM, 'click', this.selectTextbox);\n        textbox.on(textboxDOM, 'dblclick', this.editTextbox);\n        textbox.on(textboxDOM, 'blur', this.blurTextbox);\n      }\n    }\n  }, {\n    key: \"detachEventHandlers\",\n    value: function detachEventHandlers() {\n      if (this.attachedEvent) {\n        debug('detachEventHandlers');\n        var textboxDOM = this.getTextboxDOM();\n        var textbox = this.getTextbox();\n        this.attachedEvent = true; // textbox.subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置\n\n        textbox.unsubscribe('focus', this.throttleCheckState);\n        textbox.unsubscribe('positionToolbar', this.throttleCheckState);\n        textbox.unsubscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change\n\n        textbox.unsubscribe('editableClick', this.throttleCheckState);\n        textbox.unsubscribe('editableKeyup', this.throttleCheckState); // 双击 单击\n\n        textbox.off(textboxDOM, 'click', this.selectTextbox);\n        textbox.off(textboxDOM, 'dblclick', this.editTextbox);\n        this.checkState();\n      }\n    }\n  }, {\n    key: \"selectTextbox\",\n    value: function selectTextbox() {\n      debug('selectTextbox');\n      if (this.state.editState === 'dblClick') return;\n      this.setState({\n        editState: 'click'\n      });\n    }\n  }, {\n    key: \"editTextbox\",\n    value: function editTextbox() {\n      debug('editTextbox');\n      this.setState({\n        editState: 'dblClick'\n      });\n    }\n  }, {\n    key: \"blurTextbox\",\n    value: function blurTextbox() {\n      debug('blurTextbox');\n      this.setState({\n        editState: 'none'\n      });\n    }\n  }, {\n    key: \"checkState\",\n    value: function checkState() {\n      var _this$getTextbox$opti, _this$getTextbox$opti2;\n\n      debug('checkState'); // 布局属性从父容器计算\n\n      var computedStyle = (_this$getTextbox$opti = this.getTextbox().options) === null || _this$getTextbox$opti === void 0 ? void 0 : _this$getTextbox$opti.contentWindow.getComputedStyle(this.getTextboxDOM(), null);\n      var textAlign = computedStyle.getPropertyValue('text-align');\n      var lineHeight = computedStyle.getPropertyValue('line-height');\n      var paddingTop = computedStyle.getPropertyValue('padding-top');\n      var paddingLeft = computedStyle.getPropertyValue('padding-left');\n      var textStyle = {\n        paddingTop: paddingTop,\n        paddingLeft: paddingLeft,\n        textAlign: textAlign,\n        lineHeight: lineHeight\n      };\n      var selectionRange = MediumEditor.selection.getSelectionRange((_this$getTextbox$opti2 = this.getTextbox().options) === null || _this$getTextbox$opti2 === void 0 ? void 0 : _this$getTextbox$opti2.ownerDocument);\n\n      if (!selectionRange) {\n        this.setState({\n          textStyle: textStyle\n        });\n        return;\n      }\n\n      debug('selectionRange', selectionRange);\n      if (!selectionRange.collapsed) this.setState({\n        editState: 'dblClickAndSelected'\n      });\n      var parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange); // Make sure the selection parent isn't outside of the contenteditable\n\n      if (!this.getTextbox().elements.some(function (element) {\n        return MediumEditor.util.isDescendant(element, parentNode, true);\n      })) {\n        return;\n      } // Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node\n\n\n      while (parentNode) {\n        var _this$getTextbox$opti3;\n\n        computedState(textStyle, parentNode, (_this$getTextbox$opti3 = this.getTextbox().options) === null || _this$getTextbox$opti3 === void 0 ? void 0 : _this$getTextbox$opti3.contentWindow); // we can abort the search upwards if we leave the contentEditable element\n\n        if (MediumEditor.util.isMediumEditorElement(parentNode)) {\n          break;\n        }\n\n        parentNode = parentNode.parentNode;\n      }\n\n      debug('textStyle %o', textStyle);\n      this.setState({\n        textStyle: textStyle\n      });\n    }\n  }, {\n    key: \"getTextboxDOM\",\n    value: function getTextboxDOM() {\n      var _this$props, _this$props2, _this$props2$textboxD;\n\n      debug('getTextboxDOM', this.props.textboxDOM, this.props.textboxDOMRef);\n      var textboxDOM = ((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.textboxDOM) || ((_this$props2 = this.props) === null || _this$props2 === void 0 ? void 0 : (_this$props2$textboxD = _this$props2.textboxDOMRef) === null || _this$props2$textboxD === void 0 ? void 0 : _this$props2$textboxD.current);\n\n      if (textboxDOM) {\n        if (isReactComponentInstance(textboxDOM)) {\n          return ReactDOM.findDOMNode(textboxDOM);\n        } else if (isElement(textboxDOM)) {\n          return textboxDOM;\n        } else {\n          throw new Error('`textboxDOM` 必须是一个 HTMLElement 或者 React Component 实例');\n        }\n      }\n    }\n  }, {\n    key: \"getTextbox\",\n    value: function getTextbox() {\n      var dom = this.getTextboxDOM();\n      return dom ? MediumEditor.getEditorFromElement(dom) : null;\n    }\n  }, {\n    key: \"onTextStyleChange\",\n    value: function onTextStyleChange(field, value) {\n      debug('onTextStyleChange', field, value);\n      var medium = this.getTextbox();\n      if (!medium) return;\n      var textboxDOM = this.getTextboxDOM();\n      var selection = medium.options.ownerDocument.getSelection();\n      var selectionRange = MediumEditor.selection.getSelectionRange(medium.options.ownerDocument);\n      var parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange);\n\n      if (medium) {\n        switch (field) {\n          case 'fontWeight':\n            medium.execAction('bold');\n            break;\n\n          case 'fontStyle':\n            medium.execAction('italic');\n            break;\n\n          case 'textDecoration':\n            medium.execAction('underline');\n            break;\n\n          case 'color':\n            // fix <font color></font>\n            medium.options.ownerDocument.execCommand('styleWithCSS', false, true);\n            medium.execAction('foreColor', {\n              value: value\n            });\n            medium.options.ownerDocument.execCommand('styleWithCSS', false, false);\n            break;\n\n          case 'fontSize':\n            medium.execAction('fontSize', {\n              value: 7\n            });\n\n            if (textboxDOM) {\n              var nodes = textboxDOM.querySelectorAll('font[size=\"7\"]');\n              var _iteratorNormalCompletion2 = true;\n              var _didIteratorError2 = false;\n              var _iteratorError2 = undefined;\n\n              try {\n                for (var _iterator2 = nodes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {\n                  var node = _step2.value;\n                  node.removeAttribute('size');\n                  node.style.fontSize = \"\".concat(value, \"px\");\n                }\n              } catch (err) {\n                _didIteratorError2 = true;\n                _iteratorError2 = err;\n              } finally {\n                try {\n                  if (!_iteratorNormalCompletion2 && _iterator2[\"return\"] != null) {\n                    _iterator2[\"return\"]();\n                  }\n                } finally {\n                  if (_didIteratorError2) {\n                    throw _iteratorError2;\n                  }\n                }\n              }\n\n              medium.trigger('editableInput', null, textboxDOM);\n            }\n\n            break;\n\n          case 'textAlign':\n            textboxDOM.style.textAlign = value; // if (value === 'center') {\n            // \tmedium.execAction('justifyCenter');\n            // } else if (value === 'left') {\n            // \tmedium.execAction('justifyLeft');\n            // } else if (value === 'right') {\n            // \tmedium.execAction('justifyRight');\n            // } else if (value === 'justify') {\n            // \tmedium.execAction('justifyFull');\n            // }\n\n            this.checkState();\n            medium.trigger('editableInput', null, textboxDOM);\n            break;\n\n          case 'lineHeight':\n            textboxDOM.style.lineHeight = value; // 没有选中时\n            // if (selection.isCollapsed) {\n            // \twhile (parentNode) {\n            // \t\tif (parentNode.parentNode === textboxDOM) break;\n            // \t\tparentNode = parentNode.parentNode;\n            // \t}\n            // }\n            // if (!parentNode) break;\n            // removeStyle(parentNode, 'lineHeight');\n            // parentNode.style.lineHeight = value;\n\n            medium.trigger('editableInput', null, textboxDOM);\n            break;\n\n          case 'paddingTop':\n          case 'paddingBottom':\n          case 'paddingLeft':\n          case 'paddingRight':\n            textboxDOM.style[field] = value; // while (parentNode) {\n            // \tif (parentNode.parentNode === textboxDOM) break;\n            // \tparentNode = parentNode.parentNode;\n            // }\n            // if (!parentNode) break;\n            // removeStyle(parentNode, field);\n            // parentNode.style[field] = value;\n\n            medium.trigger('editableInput', null, textboxDOM);\n            break;\n        }\n      }\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var _this3 = this,\n          _this$state$textStyle2;\n\n      var className = classNames('coursebox-editor', this.props.className);\n      var _this$state$textStyle = this.state.textStyle,\n          fontSize = _this$state$textStyle.fontSize,\n          paddingTop = _this$state$textStyle.paddingTop,\n          paddingLeft = _this$state$textStyle.paddingLeft,\n          lineHeight = _this$state$textStyle.lineHeight;\n      if (typeof fontSize === 'string' && fontSize.endsWith('px')) fontSize = parseFloat(fontSize);\n      if (typeof paddingTop === 'string' && paddingTop.endsWith('px')) paddingTop = parseFloat(paddingTop);\n      if (typeof paddingLeft === 'string' && paddingLeft.endsWith('px')) paddingLeft = parseFloat(paddingLeft);\n      if (typeof lineHeight === 'string' && lineHeight.endsWith('px')) lineHeight = (parseFloat(lineHeight) / fontSize).toFixed(1);\n      return React.createElement(\"div\", {\n        className: className\n      }, React.createElement(\"label\", {\n        htmlFor: \"font-size-style\"\n      }, \"\\u6587\\u5B57\"), React.createElement(\"div\", {\n        id: \"font-style\"\n      }, React.createElement(InputColor, {\n        disabled: this.state.editState !== 'dblClickAndSelected',\n        className: \"__font-color\",\n        value: this.state.textStyle.color,\n        onChange: function onChange(color) {\n          return _this3.onTextStyleChange('color', color);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'dblClickAndSelected',\n        className: \"__font-size\",\n        value: fontSize,\n        options: [12, 13, 14, 16, 18, 20, 28, 36, 48, 72],\n        unit: \"px\",\n        onChange: function onChange(fontSize) {\n          return _this3.onTextStyleChange('fontSize', fontSize);\n        }\n      }), React.createElement(FontStyleButtonGroup, {\n        disabled: this.state.editState !== 'dblClickAndSelected',\n        className: \"__font-style\",\n        fontWeight: (_this$state$textStyle2 = this.state.textStyle) === null || _this$state$textStyle2 === void 0 ? void 0 : _this$state$textStyle2.fontWeight,\n        fontStyle: this.state.textStyle.fontStyle,\n        textDecoration: this.state.textStyle.textDecoration,\n        onFontStyleChange: function onFontStyleChange(field, val) {\n          return _this3.onTextStyleChange(field, val);\n        }\n      })), React.createElement(\"label\", {\n        htmlFor: \"font-layout-style\"\n      }, \"\\u5E03\\u5C40\"), React.createElement(\"div\", {\n        id: \"font-layout-style\"\n      }, React.createElement(FontLayoutButtonGroup, {\n        disabled: this.state.editState !== 'click',\n        className: \"__font-layout\",\n        textAlign: this.state.textStyle.textAlign,\n        onFontLayoutChange: function onFontLayoutChange(textAlign) {\n          return _this3.onTextStyleChange('textAlign', textAlign);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'click',\n        className: \"__font-line-height\",\n        icon: ImageLineHeight,\n        disabledIcon: ImageLineHeightDisabled,\n        value: lineHeight,\n        options: [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2, 2.4, 2.6, 2.8, 3.0],\n        unit: \"\\u500D\",\n        onChange: function onChange(lineHeight) {\n          return _this3.onTextStyleChange('lineHeight', lineHeight);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'click',\n        className: \"__font-padding-top-bottom\",\n        icon: ImagePaddingTopAndBottom,\n        disabledIcon: ImagePaddingTopAndBottomDisabled,\n        value: paddingTop,\n        options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],\n        unit: \"px\",\n        onChange: function onChange(padding) {\n          _this3.onTextStyleChange('paddingTop', \"\".concat(padding, \"px\"));\n\n          _this3.onTextStyleChange('paddingBottom', \"\".concat(padding, \"px\"));\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'click',\n        className: \"__font-padding-left-right\",\n        icon: ImagePaddingLeftAndRight,\n        disabledIcon: ImagePaddingLeftAndRightDisabled,\n        value: paddingLeft,\n        options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],\n        unit: \"px\",\n        onChange: function onChange(padding) {\n          _this3.onTextStyleChange('paddingLeft', \"\".concat(padding, \"px\"));\n\n          _this3.onTextStyleChange('paddingRight', \"\".concat(padding, \"px\"));\n        }\n      })));\n    }\n  }]);\n\n  return TextboxEditor;\n}(Component);\n\nexport default TextboxEditor;"
         },
         {
           "id": "./src/components/font-layout-button-group/font-layout-button-group.less",
@@ -5619,7 +5619,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../font-layout-button-group",
-              "loc": "440:29-50"
+              "loc": "458:29-50"
             }
           ],
           "providedExports": [
@@ -5737,7 +5737,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../font-style-button-group",
-              "loc": "427:30-50"
+              "loc": "445:30-50"
             }
           ],
           "providedExports": [
@@ -5851,7 +5851,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../input-color",
-              "loc": "411:29-39"
+              "loc": "429:29-39"
             }
           ],
           "providedExports": [
@@ -5969,7 +5969,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../input-select",
-              "loc": "418:30-41"
+              "loc": "436:30-41"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -5978,7 +5978,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../input-select",
-              "loc": "447:30-41"
+              "loc": "465:30-41"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -5987,7 +5987,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../input-select",
-              "loc": "458:30-41"
+              "loc": "476:30-41"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -5996,7 +5996,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../input-select",
-              "loc": "471:30-41"
+              "loc": "489:30-41"
             }
           ],
           "providedExports": [
@@ -6403,7 +6403,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "medium-editor",
-              "loc": "214:27-39"
+              "loc": "226:27-39"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -6412,7 +6412,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "medium-editor",
-              "loc": "220:23-35"
+              "loc": "239:23-35"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -6421,7 +6421,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "medium-editor",
-              "loc": "223:15-27"
+              "loc": "242:15-27"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -6430,7 +6430,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "medium-editor",
-              "loc": "235:12-24"
+              "loc": "253:12-24"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -6439,7 +6439,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "medium-editor",
-              "loc": "269:19-31"
+              "loc": "287:19-31"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -6448,7 +6448,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "medium-editor",
-              "loc": "279:27-39"
+              "loc": "297:27-39"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -6457,7 +6457,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "medium-editor",
-              "loc": "280:23-35"
+              "loc": "298:23-35"
             },
             {
               "moduleId": "./src/components/textbox/index.jsx",
@@ -6879,7 +6879,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "489:2-11"
+              "loc": "507:2-11"
             },
             {
               "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -7162,7 +7162,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "react-dom",
-              "loc": "257:17-25"
+              "loc": "275:17-25"
             },
             {
               "moduleId": "./src/components/input-color/index.jsx",
@@ -7506,7 +7506,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/上下边距_不可点@2x.png",
-          "loc": "462:22-54"
+          "loc": "480:22-54"
         }
       ],
       "providedExports": [
@@ -7568,7 +7568,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/上下边距_正常@2x.png",
-          "loc": "461:14-38"
+          "loc": "479:14-38"
         }
       ],
       "providedExports": [
@@ -8340,7 +8340,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/左右边距_不可点@2x.png",
-          "loc": "475:22-54"
+          "loc": "493:22-54"
         }
       ],
       "providedExports": [
@@ -8402,7 +8402,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/左右边距_正常@2x.png",
-          "loc": "474:14-38"
+          "loc": "492:14-38"
         }
       ],
       "providedExports": [
@@ -9067,7 +9067,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/行间距_不可点@2x.png",
-          "loc": "451:22-45"
+          "loc": "469:22-45"
         }
       ],
       "providedExports": [
@@ -9129,7 +9129,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/行间距_正常@2x.png",
-          "loc": "450:14-29"
+          "loc": "468:14-29"
         }
       ],
       "providedExports": [
@@ -9424,7 +9424,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "classnames",
-          "loc": "395:22-32"
+          "loc": "413:22-32"
         },
         {
           "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -12219,7 +12219,7 @@
       "name": "./src/commons/computed_state.js",
       "index": 98,
       "index2": 95,
-      "size": 4792,
+      "size": 4804,
       "cacheable": true,
       "built": false,
       "optional": false,
@@ -12264,7 +12264,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@commons/computed_state",
-          "loc": "233:8-21"
+          "loc": "251:8-21"
         }
       ],
       "providedExports": [
@@ -12273,7 +12273,7 @@
       "optimizationBailout": [
       ],
       "depth": 3,
-      "source": "var debug = require('./debug')('textbox:commons:button');\n\nfunction rgba2hex(orig) {\n  var a = '',\n      rgb = orig.replace(/\\s/g, '').match(/^rgba?\\((\\d+),(\\d+),(\\d+),?([^,\\s)]+)?/i),\n      alpha = (rgb && rgb[4] || \"\").trim(),\n      hex = rgb ? (rgb[1] | 1 << 8).toString(16).slice(1) + (rgb[2] | 1 << 8).toString(16).slice(1) + (rgb[3] | 1 << 8).toString(16).slice(1) : orig;\n\n  if (alpha !== '') {\n    a = parseInt(255 * parseFloat(alpha)).toString(16);\n  }\n\n  hex = hex + a;\n  return \"#\".concat(hex);\n}\n\nvar STYLE_PROPS = ['fontSize', 'color', 'fontWeight', 'textDecoration', 'fontStyle', 'textAlign', 'lineHeight', 'paddingTop', 'paddingLeft'];\n\nfunction computedState() {\n  var currentState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};\n  var node = arguments.length > 1 ? arguments[1] : undefined;\n  var currentWindow = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : window;\n  var nodeName = node.nodeName.toLowerCase();\n  var computedStyle = currentWindow.getComputedStyle(node, null);\n  debug('computedState', nodeName);\n  var _iteratorNormalCompletion = true;\n  var _didIteratorError = false;\n  var _iteratorError = undefined;\n\n  try {\n    for (var _iterator = STYLE_PROPS[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n      var styleProp = _step.value;\n      // 设置过就不在设置\n      if (typeof currentState[styleProp] !== 'undefined' && styleProp !== 'text-decoration') continue;\n\n      switch (styleProp) {\n        case 'fontSize':\n          var fontSize = '14px'; // if (nodeName === 'font' && node.hasAttribute('size')) {\n          // \tfontSize = node.getAttribute('size');\n          // } else {\n\n          fontSize = computedStyle.getPropertyValue('font-size'); // }\n\n          currentState[styleProp] = fontSize;\n          break;\n\n        case 'color':\n          var color = '#000';\n\n          if (nodeName === 'font' && node.hasAttribute('color')) {\n            color = node.getAttribute('color');\n          } else {\n            color = computedStyle.getPropertyValue('color');\n            if (color.startsWith('rgb')) color = rgba2hex(color);\n          }\n\n          currentState[styleProp] = color;\n          break;\n\n        case 'fontWeight':\n          var fontWeight = 'normal';\n\n          if (nodeName === 'b' || nodeName === 'strong') {\n            fontWeight = 'bold';\n          } else {\n            var fontWeightValue = computedStyle.getPropertyValue('font-weight');\n            if (fontWeightValue === '700' || fontWeightValue === 'bold') fontWeight = 'bold';\n          }\n\n          currentState[styleProp] = fontWeight;\n          break;\n\n        case 'textDecoration':\n          var textDecoration = 'none';\n\n          if (nodeName === 'u') {\n            textDecoration = 'underline';\n          } else if (nodeName === 'strike' || nodeName === 'del' || nodeName === 's') {\n            textDecoration = 'line-through';\n          } else {\n            // getPropertyValue text-decoration 不会继承 获取的不是实时样式\n            textDecoration = computedStyle.getPropertyValue('text-decoration');\n            if (textDecoration.split(' ').length > 0) textDecoration = textDecoration.split(' ')[0];\n          }\n\n          if (textDecoration !== 'none') currentState[styleProp] = textDecoration;\n          break;\n\n        case 'fontStyle':\n          var fontStyle = 'normal';\n\n          if (nodeName === 'i' || nodeName === 'em') {\n            fontStyle = 'italic';\n          } else {\n            fontStyle = computedStyle.getPropertyValue('font-style');\n          }\n\n          currentState[styleProp] = fontStyle;\n          break;\n\n        case 'textAlign':\n          var textAlign = computedStyle.getPropertyValue('text-align');\n          currentState[styleProp] = textAlign;\n          break;\n\n        case 'lineHeight':\n          var lineHeight = computedStyle.getPropertyValue('line-height');\n          currentState[styleProp] = lineHeight;\n          break;\n\n        case 'paddingTop':\n          var paddingTop = computedStyle.getPropertyValue('padding-top');\n          currentState[styleProp] = paddingTop;\n          break;\n\n        case 'paddingLeft':\n          var paddingLeft = computedStyle.getPropertyValue('padding-left');\n          currentState[styleProp] = paddingLeft;\n          break;\n      }\n\n      debug('currentState: %j', currentState);\n    }\n  } catch (err) {\n    _didIteratorError = true;\n    _iteratorError = err;\n  } finally {\n    try {\n      if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n        _iterator[\"return\"]();\n      }\n    } finally {\n      if (_didIteratorError) {\n        throw _iteratorError;\n      }\n    }\n  }\n\n  return currentState;\n}\n\nexport { computedState };"
+      "source": "var debug = require('./debug')('textbox:commons:button');\n\nfunction rgba2hex(orig) {\n  var a = '',\n      rgb = orig.replace(/\\s/g, '').match(/^rgba?\\((\\d+),(\\d+),(\\d+),?([^,\\s)]+)?/i),\n      alpha = (rgb && rgb[4] || \"\").trim(),\n      hex = rgb ? (rgb[1] | 1 << 8).toString(16).slice(1) + (rgb[2] | 1 << 8).toString(16).slice(1) + (rgb[3] | 1 << 8).toString(16).slice(1) : orig;\n\n  if (alpha !== '') {\n    a = parseInt(255 * parseFloat(alpha)).toString(16);\n  }\n\n  hex = hex + a;\n  return \"#\".concat(hex);\n}\n\nvar STYLE_PROPS = ['fontSize', 'color', 'fontWeight', 'textDecoration', 'fontStyle' // 'textAlign',\n// 'lineHeight',\n// 'paddingTop',\n// 'paddingLeft'\n];\n\nfunction computedState() {\n  var currentState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};\n  var node = arguments.length > 1 ? arguments[1] : undefined;\n  var currentWindow = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : window;\n  var nodeName = node.nodeName.toLowerCase();\n  var computedStyle = currentWindow.getComputedStyle(node, null);\n  debug('computedState', nodeName);\n  var _iteratorNormalCompletion = true;\n  var _didIteratorError = false;\n  var _iteratorError = undefined;\n\n  try {\n    for (var _iterator = STYLE_PROPS[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n      var styleProp = _step.value;\n      // 设置过就不在设置\n      if (typeof currentState[styleProp] !== 'undefined' && styleProp !== 'text-decoration') continue;\n\n      switch (styleProp) {\n        case 'fontSize':\n          var fontSize = '14px'; // if (nodeName === 'font' && node.hasAttribute('size')) {\n          // \tfontSize = node.getAttribute('size');\n          // } else {\n\n          fontSize = computedStyle.getPropertyValue('font-size'); // }\n\n          currentState[styleProp] = fontSize;\n          break;\n\n        case 'color':\n          var color = '#000';\n\n          if (nodeName === 'font' && node.hasAttribute('color')) {\n            color = node.getAttribute('color');\n          } else {\n            color = computedStyle.getPropertyValue('color');\n            if (color.startsWith('rgb')) color = rgba2hex(color);\n          }\n\n          currentState[styleProp] = color;\n          break;\n\n        case 'fontWeight':\n          var fontWeight = 'normal';\n\n          if (nodeName === 'b' || nodeName === 'strong') {\n            fontWeight = 'bold';\n          } else {\n            var fontWeightValue = computedStyle.getPropertyValue('font-weight');\n            if (fontWeightValue === '700' || fontWeightValue === 'bold') fontWeight = 'bold';\n          }\n\n          currentState[styleProp] = fontWeight;\n          break;\n\n        case 'textDecoration':\n          var textDecoration = 'none';\n\n          if (nodeName === 'u') {\n            textDecoration = 'underline';\n          } else if (nodeName === 'strike' || nodeName === 'del' || nodeName === 's') {\n            textDecoration = 'line-through';\n          } else {\n            // getPropertyValue text-decoration 不会继承 获取的不是实时样式\n            textDecoration = computedStyle.getPropertyValue('text-decoration');\n            if (textDecoration.split(' ').length > 0) textDecoration = textDecoration.split(' ')[0];\n          }\n\n          if (textDecoration !== 'none') currentState[styleProp] = textDecoration;\n          break;\n\n        case 'fontStyle':\n          var fontStyle = 'normal';\n\n          if (nodeName === 'i' || nodeName === 'em') {\n            fontStyle = 'italic';\n          } else {\n            fontStyle = computedStyle.getPropertyValue('font-style');\n          }\n\n          currentState[styleProp] = fontStyle;\n          break;\n\n        case 'textAlign':\n          var textAlign = computedStyle.getPropertyValue('text-align');\n          currentState[styleProp] = textAlign;\n          break;\n\n        case 'lineHeight':\n          var lineHeight = computedStyle.getPropertyValue('line-height');\n          currentState[styleProp] = lineHeight;\n          break;\n\n        case 'paddingTop':\n          var paddingTop = computedStyle.getPropertyValue('padding-top');\n          currentState[styleProp] = paddingTop;\n          break;\n\n        case 'paddingLeft':\n          var paddingLeft = computedStyle.getPropertyValue('padding-left');\n          currentState[styleProp] = paddingLeft;\n          break;\n      }\n\n      debug('currentState: %j', currentState);\n    }\n  } catch (err) {\n    _didIteratorError = true;\n    _iteratorError = err;\n  } finally {\n    try {\n      if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n        _iterator[\"return\"]();\n      }\n    } finally {\n      if (_didIteratorError) {\n        throw _iteratorError;\n      }\n    }\n  }\n\n  return currentState;\n}\n\nexport { computedState };"
     },
     {
       "id": "./src/commons/debug.js",
@@ -12520,7 +12520,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@commons/utils",
-          "loc": "256:12-36"
+          "loc": "274:12-36"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -12529,7 +12529,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@commons/utils",
-          "loc": "258:19-28"
+          "loc": "276:19-28"
         }
       ],
       "providedExports": [
@@ -12600,7 +12600,7 @@
       "name": "./src/components/editor/index.jsx",
       "index": 48,
       "index2": 97,
-      "size": 20522,
+      "size": 21301,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -12649,7 +12649,7 @@
       "optimizationBailout": [
       ],
       "depth": 2,
-      "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './editor.less';\nimport { Component } from 'react';\nimport classNames from 'classnames';\nimport InputSelect from '../input-select';\nimport ReactDOM from 'react-dom';\nimport InputColor from '../input-color';\nimport MediumEditor from 'medium-editor';\nimport FontStyleButtonGroup from '../font-style-button-group';\nimport FontLayoutButtonGroup from '../font-layout-button-group';\nimport ImageLineHeight from '@assets/images/行间距_正常@2x.png';\nimport ImageLineHeightDisabled from '@assets/images/行间距_不可点@2x.png';\nimport ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png';\nimport ImagePaddingLeftAndRightDisabled from '@assets/images/左右边距_不可点@2x.png';\nimport ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';\nimport ImagePaddingTopAndBottomDisabled from '@assets/images/上下边距_不可点@2x.png';\nimport { computedState } from '@commons/computed_state';\nimport throttle from '@commons/throttle';\nimport { isReactComponentInstance, isElement } from '@commons/utils';\n\nvar debug = require('@commons/debug')('textbox:editor');\n\nfunction removeStyle(element) {\n  for (var _len = arguments.length, styleNames = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {\n    styleNames[_key - 1] = arguments[_key];\n  }\n\n  for (var _i = 0, _styleNames = styleNames; _i < _styleNames.length; _i++) {\n    var styleName = _styleNames[_i];\n    element.style[styleName] = null;\n  }\n\n  var children = element.children;\n  if (children.length === 0) return;\n  var _iteratorNormalCompletion = true;\n  var _didIteratorError = false;\n  var _iteratorError = undefined;\n\n  try {\n    for (var _iterator = children[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n      var child = _step.value;\n      removeStyle.apply(void 0, [child].concat(styleNames));\n    }\n  } catch (err) {\n    _didIteratorError = true;\n    _iteratorError = err;\n  } finally {\n    try {\n      if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n        _iterator[\"return\"]();\n      }\n    } finally {\n      if (_didIteratorError) {\n        throw _iteratorError;\n      }\n    }\n  }\n}\n\nvar TextboxEditor =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(TextboxEditor, _Component);\n\n  function TextboxEditor(props) {\n    var _this;\n\n    _classCallCheck(this, TextboxEditor);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(TextboxEditor).call(this, props));\n    _this.state = {\n      textStyle: {},\n      editState: 'none' //none-未选中 click- 单击 dblClick-双击 dblClickAndSelected-双击并选中\n\n    };\n    _this.editTextbox = _this.editTextbox.bind(_assertThisInitialized(_this));\n    _this.onTextStyleChange = _this.onTextStyleChange.bind(_assertThisInitialized(_this));\n    _this.selectTextbox = _this.selectTextbox.bind(_assertThisInitialized(_this));\n    _this.blurTextbox = _this.blurTextbox.bind(_assertThisInitialized(_this));\n    _this.throttleCheckState = throttle(_this.checkState, 200).bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(TextboxEditor, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      if (this.getTextboxDOM() && !this.attachedEvent) {\n        // fix: 处理点击后才出现editor 问题\n        if (this.getTextboxDOM().getAttribute('data-medium-focused')) {\n          this.selectTextbox();\n        }\n\n        return this.attachEventHandlers();\n      } // 循环检测 current 是否初始化完成\n\n\n      clearInterval(this.__CHECK_TEXTBOX_MOUNT_TIMER);\n      this.__CHECK_TEXTBOX_MOUNT_TIMER = setInterval(function () {\n        var dom = _this2.getTextboxDOM();\n\n        if (dom) {\n          clearInterval(_this2.__CHECK_TEXTBOX_MOUNT_TIMER);\n\n          _this2.attachEventHandlers();\n        }\n      }, 100);\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      debug('componentWillUnmount');\n      this.detachEventHandlers();\n    }\n  }, {\n    key: \"componentDidUpdate\",\n    value: function componentDidUpdate() {\n      debug('componentDidUpdate', arguments);\n      if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();\n    }\n  }, {\n    key: \"attachEventHandlers\",\n    value: function attachEventHandlers() {\n      if (!this.attachedEvent) {\n        debug('attachEventHandlers');\n        var textboxDOM = this.getTextboxDOM();\n        var textbox = this.getTextbox();\n        this.attachedEvent = true; // this.throttleCheckState();\n        // MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements\n        // textbox.subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置\n\n        textbox.subscribe('focus', this.throttleCheckState);\n        textbox.subscribe('positionToolbar', this.throttleCheckState);\n        textbox.subscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change \n        // textbox.subscribe('editableClick', this.throttleCheckState);\n\n        textbox.subscribe('editableKeyup', this.throttleCheckState); // 双击 单击\n\n        textbox.on(textboxDOM, 'click', this.selectTextbox);\n        textbox.on(textboxDOM, 'dblclick', this.editTextbox);\n        textbox.on(textboxDOM, 'blur', this.blurTextbox);\n      }\n    }\n  }, {\n    key: \"detachEventHandlers\",\n    value: function detachEventHandlers() {\n      if (this.attachedEvent) {\n        debug('detachEventHandlers');\n        var textboxDOM = this.getTextboxDOM();\n        var textbox = this.getTextbox();\n        this.attachedEvent = true; // textbox.subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置\n\n        textbox.unsubscribe('focus', this.throttleCheckState);\n        textbox.unsubscribe('positionToolbar', this.throttleCheckState);\n        textbox.unsubscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change\n\n        textbox.unsubscribe('editableClick', this.throttleCheckState);\n        textbox.unsubscribe('editableKeyup', this.throttleCheckState); // 双击 单击\n\n        textbox.off(textboxDOM, 'click', this.selectTextbox);\n        textbox.off(textboxDOM, 'dblclick', this.editTextbox);\n        this.checkState();\n      }\n    }\n  }, {\n    key: \"selectTextbox\",\n    value: function selectTextbox() {\n      debug('selectTextbox');\n      if (this.state.editState === 'dblClick') return;\n      this.setState({\n        editState: 'click'\n      });\n    }\n  }, {\n    key: \"editTextbox\",\n    value: function editTextbox() {\n      debug('editTextbox');\n      this.setState({\n        editState: 'dblClick'\n      });\n    }\n  }, {\n    key: \"blurTextbox\",\n    value: function blurTextbox() {\n      debug('blurTextbox');\n      this.setState({\n        editState: 'none'\n      });\n    }\n  }, {\n    key: \"checkState\",\n    value: function checkState() {\n      var _this$getTextbox$opti;\n\n      debug('checkState');\n      var selectionRange = MediumEditor.selection.getSelectionRange((_this$getTextbox$opti = this.getTextbox().options) === null || _this$getTextbox$opti === void 0 ? void 0 : _this$getTextbox$opti.ownerDocument);\n      if (!selectionRange) return;\n      debug('selectionRange', selectionRange);\n      if (!selectionRange.collapsed) this.setState({\n        editState: 'dblClickAndSelected'\n      });\n      var parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange); // Make sure the selection parent isn't outside of the contenteditable\n\n      if (!this.getTextbox().elements.some(function (element) {\n        return MediumEditor.util.isDescendant(element, parentNode, true);\n      })) {\n        return;\n      }\n\n      var textStyle = {}; // Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node\n\n      while (parentNode) {\n        var _this$getTextbox$opti2;\n\n        computedState(textStyle, parentNode, (_this$getTextbox$opti2 = this.getTextbox().options) === null || _this$getTextbox$opti2 === void 0 ? void 0 : _this$getTextbox$opti2.contentWindow); // we can abort the search upwards if we leave the contentEditable element\n\n        if (MediumEditor.util.isMediumEditorElement(parentNode)) {\n          break;\n        }\n\n        parentNode = parentNode.parentNode;\n      }\n\n      debug('textStyle %o', textStyle);\n      this.setState({\n        textStyle: textStyle\n      });\n    }\n  }, {\n    key: \"getTextboxDOM\",\n    value: function getTextboxDOM() {\n      var _this$props, _this$props2, _this$props2$textboxD;\n\n      debug('getTextboxDOM', this.props.textboxDOM, this.props.textboxDOMRef);\n      var textboxDOM = ((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.textboxDOM) || ((_this$props2 = this.props) === null || _this$props2 === void 0 ? void 0 : (_this$props2$textboxD = _this$props2.textboxDOMRef) === null || _this$props2$textboxD === void 0 ? void 0 : _this$props2$textboxD.current);\n\n      if (textboxDOM) {\n        if (isReactComponentInstance(textboxDOM)) {\n          return ReactDOM.findDOMNode(textboxDOM);\n        } else if (isElement(textboxDOM)) {\n          return textboxDOM;\n        } else {\n          throw new Error('`textboxDOM` 必须是一个 HTMLElement 或者 React Component 实例');\n        }\n      }\n    }\n  }, {\n    key: \"getTextbox\",\n    value: function getTextbox() {\n      var dom = this.getTextboxDOM();\n      return dom ? MediumEditor.getEditorFromElement(dom) : null;\n    }\n  }, {\n    key: \"onTextStyleChange\",\n    value: function onTextStyleChange(field, value) {\n      debug('onTextStyleChange', field, value);\n      var medium = this.getTextbox();\n      if (!medium) return;\n      var textboxDOM = this.getTextboxDOM();\n      var selection = medium.options.ownerDocument.getSelection();\n      var selectionRange = MediumEditor.selection.getSelectionRange(medium.options.ownerDocument);\n      var parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange);\n\n      if (medium) {\n        switch (field) {\n          case 'fontWeight':\n            medium.execAction('bold');\n            break;\n\n          case 'fontStyle':\n            medium.execAction('italic');\n            break;\n\n          case 'textDecoration':\n            medium.execAction('underline');\n            break;\n\n          case 'color':\n            // fix <font color></font>\n            medium.options.ownerDocument.execCommand('styleWithCSS', false, true);\n            medium.execAction('foreColor', {\n              value: value\n            });\n            medium.options.ownerDocument.execCommand('styleWithCSS', false, false);\n            break;\n\n          case 'fontSize':\n            medium.execAction('fontSize', {\n              value: 7\n            });\n\n            if (textboxDOM) {\n              var nodes = textboxDOM.querySelectorAll('font[size=\"7\"]');\n              var _iteratorNormalCompletion2 = true;\n              var _didIteratorError2 = false;\n              var _iteratorError2 = undefined;\n\n              try {\n                for (var _iterator2 = nodes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {\n                  var node = _step2.value;\n                  node.removeAttribute('size');\n                  node.style.fontSize = \"\".concat(value, \"px\");\n                }\n              } catch (err) {\n                _didIteratorError2 = true;\n                _iteratorError2 = err;\n              } finally {\n                try {\n                  if (!_iteratorNormalCompletion2 && _iterator2[\"return\"] != null) {\n                    _iterator2[\"return\"]();\n                  }\n                } finally {\n                  if (_didIteratorError2) {\n                    throw _iteratorError2;\n                  }\n                }\n              }\n\n              medium.trigger('editableInput', null, textboxDOM);\n            }\n\n            break;\n\n          case 'textAlign':\n            textboxDOM.style.textAlign = value; // if (value === 'center') {\n            // \tmedium.execAction('justifyCenter');\n            // } else if (value === 'left') {\n            // \tmedium.execAction('justifyLeft');\n            // } else if (value === 'right') {\n            // \tmedium.execAction('justifyRight');\n            // } else if (value === 'justify') {\n            // \tmedium.execAction('justifyFull');\n            // }\n\n            this.checkState();\n            medium.trigger('editableInput', null, textboxDOM);\n            break;\n\n          case 'lineHeight':\n            textboxDOM.style.lineHeight = value; // 没有选中时\n            // if (selection.isCollapsed) {\n            // \twhile (parentNode) {\n            // \t\tif (parentNode.parentNode === textboxDOM) break;\n            // \t\tparentNode = parentNode.parentNode;\n            // \t}\n            // }\n            // if (!parentNode) break;\n            // removeStyle(parentNode, 'lineHeight');\n            // parentNode.style.lineHeight = value;\n\n            medium.trigger('editableInput', null, textboxDOM);\n            break;\n\n          case 'paddingTop':\n          case 'paddingBottom':\n          case 'paddingLeft':\n          case 'paddingRight':\n            textboxDOM.style[field] = value; // while (parentNode) {\n            // \tif (parentNode.parentNode === textboxDOM) break;\n            // \tparentNode = parentNode.parentNode;\n            // }\n            // if (!parentNode) break;\n            // removeStyle(parentNode, field);\n            // parentNode.style[field] = value;\n\n            medium.trigger('editableInput', null, textboxDOM);\n            break;\n        }\n      }\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var _this3 = this,\n          _this$state$textStyle2;\n\n      var className = classNames('coursebox-editor', this.props.className);\n      var _this$state$textStyle = this.state.textStyle,\n          fontSize = _this$state$textStyle.fontSize,\n          paddingTop = _this$state$textStyle.paddingTop,\n          paddingLeft = _this$state$textStyle.paddingLeft,\n          lineHeight = _this$state$textStyle.lineHeight;\n      if (typeof fontSize === 'string' && fontSize.endsWith('px')) fontSize = parseFloat(fontSize);\n      if (typeof paddingTop === 'string' && paddingTop.endsWith('px')) paddingTop = parseFloat(paddingTop);\n      if (typeof paddingLeft === 'string' && paddingLeft.endsWith('px')) paddingLeft = parseFloat(paddingLeft);\n      if (typeof lineHeight === 'string' && lineHeight.endsWith('px')) lineHeight = (parseFloat(lineHeight) / fontSize).toFixed(1);\n      return React.createElement(\"div\", {\n        className: className\n      }, React.createElement(\"label\", {\n        htmlFor: \"font-size-style\"\n      }, \"\\u6587\\u5B57\"), React.createElement(\"div\", {\n        id: \"font-style\"\n      }, React.createElement(InputColor, {\n        disabled: this.state.editState !== 'dblClickAndSelected',\n        className: \"__font-color\",\n        value: this.state.textStyle.color,\n        onChange: function onChange(color) {\n          return _this3.onTextStyleChange('color', color);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'dblClickAndSelected',\n        className: \"__font-size\",\n        value: fontSize,\n        options: [12, 13, 14, 16, 18, 20, 28, 36, 48, 72],\n        unit: \"px\",\n        onChange: function onChange(fontSize) {\n          return _this3.onTextStyleChange('fontSize', fontSize);\n        }\n      }), React.createElement(FontStyleButtonGroup, {\n        disabled: this.state.editState !== 'dblClickAndSelected',\n        className: \"__font-style\",\n        fontWeight: (_this$state$textStyle2 = this.state.textStyle) === null || _this$state$textStyle2 === void 0 ? void 0 : _this$state$textStyle2.fontWeight,\n        fontStyle: this.state.textStyle.fontStyle,\n        textDecoration: this.state.textStyle.textDecoration,\n        onFontStyleChange: function onFontStyleChange(field, val) {\n          return _this3.onTextStyleChange(field, val);\n        }\n      })), React.createElement(\"label\", {\n        htmlFor: \"font-layout-style\"\n      }, \"\\u5E03\\u5C40\"), React.createElement(\"div\", {\n        id: \"font-layout-style\"\n      }, React.createElement(FontLayoutButtonGroup, {\n        disabled: this.state.editState !== 'click',\n        className: \"__font-layout\",\n        textAlign: this.state.textStyle.textAlign,\n        onFontLayoutChange: function onFontLayoutChange(textAlign) {\n          return _this3.onTextStyleChange('textAlign', textAlign);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'click',\n        className: \"__font-line-height\",\n        icon: ImageLineHeight,\n        disabledIcon: ImageLineHeightDisabled,\n        value: lineHeight,\n        options: [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2, 2.4, 2.6, 2.8, 3.0],\n        unit: \"\\u500D\",\n        onChange: function onChange(lineHeight) {\n          return _this3.onTextStyleChange('lineHeight', lineHeight);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'click',\n        className: \"__font-padding-top-bottom\",\n        icon: ImagePaddingTopAndBottom,\n        disabledIcon: ImagePaddingTopAndBottomDisabled,\n        value: paddingTop,\n        options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],\n        unit: \"px\",\n        onChange: function onChange(padding) {\n          _this3.onTextStyleChange('paddingTop', \"\".concat(padding, \"px\"));\n\n          _this3.onTextStyleChange('paddingBottom', \"\".concat(padding, \"px\"));\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'click',\n        className: \"__font-padding-left-right\",\n        icon: ImagePaddingLeftAndRight,\n        disabledIcon: ImagePaddingLeftAndRightDisabled,\n        value: paddingLeft,\n        options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],\n        unit: \"px\",\n        onChange: function onChange(padding) {\n          _this3.onTextStyleChange('paddingLeft', \"\".concat(padding, \"px\"));\n\n          _this3.onTextStyleChange('paddingRight', \"\".concat(padding, \"px\"));\n        }\n      })));\n    }\n  }]);\n\n  return TextboxEditor;\n}(Component);\n\nexport default TextboxEditor;"
+      "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './editor.less';\nimport { Component } from 'react';\nimport classNames from 'classnames';\nimport InputSelect from '../input-select';\nimport ReactDOM from 'react-dom';\nimport InputColor from '../input-color';\nimport MediumEditor from 'medium-editor';\nimport FontStyleButtonGroup from '../font-style-button-group';\nimport FontLayoutButtonGroup from '../font-layout-button-group';\nimport ImageLineHeight from '@assets/images/行间距_正常@2x.png';\nimport ImageLineHeightDisabled from '@assets/images/行间距_不可点@2x.png';\nimport ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png';\nimport ImagePaddingLeftAndRightDisabled from '@assets/images/左右边距_不可点@2x.png';\nimport ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';\nimport ImagePaddingTopAndBottomDisabled from '@assets/images/上下边距_不可点@2x.png';\nimport { computedState } from '@commons/computed_state';\nimport throttle from '@commons/throttle';\nimport { isReactComponentInstance, isElement } from '@commons/utils';\n\nvar debug = require('@commons/debug')('textbox:editor');\n\nfunction removeStyle(element) {\n  for (var _len = arguments.length, styleNames = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {\n    styleNames[_key - 1] = arguments[_key];\n  }\n\n  for (var _i = 0, _styleNames = styleNames; _i < _styleNames.length; _i++) {\n    var styleName = _styleNames[_i];\n    element.style[styleName] = null;\n  }\n\n  var children = element.children;\n  if (children.length === 0) return;\n  var _iteratorNormalCompletion = true;\n  var _didIteratorError = false;\n  var _iteratorError = undefined;\n\n  try {\n    for (var _iterator = children[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n      var child = _step.value;\n      removeStyle.apply(void 0, [child].concat(styleNames));\n    }\n  } catch (err) {\n    _didIteratorError = true;\n    _iteratorError = err;\n  } finally {\n    try {\n      if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n        _iterator[\"return\"]();\n      }\n    } finally {\n      if (_didIteratorError) {\n        throw _iteratorError;\n      }\n    }\n  }\n}\n\nvar TextboxEditor =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(TextboxEditor, _Component);\n\n  function TextboxEditor(props) {\n    var _this;\n\n    _classCallCheck(this, TextboxEditor);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(TextboxEditor).call(this, props));\n    _this.state = {\n      textStyle: {},\n      editState: 'none' //none-未选中 click- 单击 dblClick-双击 dblClickAndSelected-双击并选中\n\n    };\n    _this.editTextbox = _this.editTextbox.bind(_assertThisInitialized(_this));\n    _this.onTextStyleChange = _this.onTextStyleChange.bind(_assertThisInitialized(_this));\n    _this.selectTextbox = _this.selectTextbox.bind(_assertThisInitialized(_this));\n    _this.blurTextbox = _this.blurTextbox.bind(_assertThisInitialized(_this));\n    _this.throttleCheckState = throttle(_this.checkState, 200).bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(TextboxEditor, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      if (this.getTextboxDOM() && !this.attachedEvent) {\n        // fix: 处理点击后才出现editor 问题\n        if (this.getTextboxDOM().getAttribute('data-medium-focused')) {\n          this.selectTextbox();\n        }\n\n        return this.attachEventHandlers();\n      } // 循环检测 current 是否初始化完成\n\n\n      clearInterval(this.__CHECK_TEXTBOX_MOUNT_TIMER);\n      this.__CHECK_TEXTBOX_MOUNT_TIMER = setInterval(function () {\n        var dom = _this2.getTextboxDOM();\n\n        if (dom) {\n          clearInterval(_this2.__CHECK_TEXTBOX_MOUNT_TIMER);\n\n          _this2.attachEventHandlers();\n        }\n      }, 100);\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      debug('componentWillUnmount');\n      this.detachEventHandlers();\n    }\n  }, {\n    key: \"componentDidUpdate\",\n    value: function componentDidUpdate() {\n      debug('componentDidUpdate', arguments);\n      if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();\n    }\n  }, {\n    key: \"attachEventHandlers\",\n    value: function attachEventHandlers() {\n      if (!this.attachedEvent) {\n        debug('attachEventHandlers');\n        var textboxDOM = this.getTextboxDOM();\n        var textbox = this.getTextbox();\n        this.attachedEvent = true; // this.throttleCheckState();\n        // MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements\n        // textbox.subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置\n\n        textbox.subscribe('focus', this.throttleCheckState);\n        textbox.subscribe('positionToolbar', this.throttleCheckState);\n        textbox.subscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change \n        // textbox.subscribe('editableClick', this.throttleCheckState);\n\n        textbox.subscribe('editableKeyup', this.throttleCheckState); // 双击 单击\n\n        textbox.on(textboxDOM, 'click', this.selectTextbox);\n        textbox.on(textboxDOM, 'dblclick', this.editTextbox);\n        textbox.on(textboxDOM, 'blur', this.blurTextbox);\n      }\n    }\n  }, {\n    key: \"detachEventHandlers\",\n    value: function detachEventHandlers() {\n      if (this.attachedEvent) {\n        debug('detachEventHandlers');\n        var textboxDOM = this.getTextboxDOM();\n        var textbox = this.getTextbox();\n        this.attachedEvent = true; // textbox.subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置\n\n        textbox.unsubscribe('focus', this.throttleCheckState);\n        textbox.unsubscribe('positionToolbar', this.throttleCheckState);\n        textbox.unsubscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change\n\n        textbox.unsubscribe('editableClick', this.throttleCheckState);\n        textbox.unsubscribe('editableKeyup', this.throttleCheckState); // 双击 单击\n\n        textbox.off(textboxDOM, 'click', this.selectTextbox);\n        textbox.off(textboxDOM, 'dblclick', this.editTextbox);\n        this.checkState();\n      }\n    }\n  }, {\n    key: \"selectTextbox\",\n    value: function selectTextbox() {\n      debug('selectTextbox');\n      if (this.state.editState === 'dblClick') return;\n      this.setState({\n        editState: 'click'\n      });\n    }\n  }, {\n    key: \"editTextbox\",\n    value: function editTextbox() {\n      debug('editTextbox');\n      this.setState({\n        editState: 'dblClick'\n      });\n    }\n  }, {\n    key: \"blurTextbox\",\n    value: function blurTextbox() {\n      debug('blurTextbox');\n      this.setState({\n        editState: 'none'\n      });\n    }\n  }, {\n    key: \"checkState\",\n    value: function checkState() {\n      var _this$getTextbox$opti, _this$getTextbox$opti2;\n\n      debug('checkState'); // 布局属性从父容器计算\n\n      var computedStyle = (_this$getTextbox$opti = this.getTextbox().options) === null || _this$getTextbox$opti === void 0 ? void 0 : _this$getTextbox$opti.contentWindow.getComputedStyle(this.getTextboxDOM(), null);\n      var textAlign = computedStyle.getPropertyValue('text-align');\n      var lineHeight = computedStyle.getPropertyValue('line-height');\n      var paddingTop = computedStyle.getPropertyValue('padding-top');\n      var paddingLeft = computedStyle.getPropertyValue('padding-left');\n      var textStyle = {\n        paddingTop: paddingTop,\n        paddingLeft: paddingLeft,\n        textAlign: textAlign,\n        lineHeight: lineHeight\n      };\n      var selectionRange = MediumEditor.selection.getSelectionRange((_this$getTextbox$opti2 = this.getTextbox().options) === null || _this$getTextbox$opti2 === void 0 ? void 0 : _this$getTextbox$opti2.ownerDocument);\n\n      if (!selectionRange) {\n        this.setState({\n          textStyle: textStyle\n        });\n        return;\n      }\n\n      debug('selectionRange', selectionRange);\n      if (!selectionRange.collapsed) this.setState({\n        editState: 'dblClickAndSelected'\n      });\n      var parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange); // Make sure the selection parent isn't outside of the contenteditable\n\n      if (!this.getTextbox().elements.some(function (element) {\n        return MediumEditor.util.isDescendant(element, parentNode, true);\n      })) {\n        return;\n      } // Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node\n\n\n      while (parentNode) {\n        var _this$getTextbox$opti3;\n\n        computedState(textStyle, parentNode, (_this$getTextbox$opti3 = this.getTextbox().options) === null || _this$getTextbox$opti3 === void 0 ? void 0 : _this$getTextbox$opti3.contentWindow); // we can abort the search upwards if we leave the contentEditable element\n\n        if (MediumEditor.util.isMediumEditorElement(parentNode)) {\n          break;\n        }\n\n        parentNode = parentNode.parentNode;\n      }\n\n      debug('textStyle %o', textStyle);\n      this.setState({\n        textStyle: textStyle\n      });\n    }\n  }, {\n    key: \"getTextboxDOM\",\n    value: function getTextboxDOM() {\n      var _this$props, _this$props2, _this$props2$textboxD;\n\n      debug('getTextboxDOM', this.props.textboxDOM, this.props.textboxDOMRef);\n      var textboxDOM = ((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.textboxDOM) || ((_this$props2 = this.props) === null || _this$props2 === void 0 ? void 0 : (_this$props2$textboxD = _this$props2.textboxDOMRef) === null || _this$props2$textboxD === void 0 ? void 0 : _this$props2$textboxD.current);\n\n      if (textboxDOM) {\n        if (isReactComponentInstance(textboxDOM)) {\n          return ReactDOM.findDOMNode(textboxDOM);\n        } else if (isElement(textboxDOM)) {\n          return textboxDOM;\n        } else {\n          throw new Error('`textboxDOM` 必须是一个 HTMLElement 或者 React Component 实例');\n        }\n      }\n    }\n  }, {\n    key: \"getTextbox\",\n    value: function getTextbox() {\n      var dom = this.getTextboxDOM();\n      return dom ? MediumEditor.getEditorFromElement(dom) : null;\n    }\n  }, {\n    key: \"onTextStyleChange\",\n    value: function onTextStyleChange(field, value) {\n      debug('onTextStyleChange', field, value);\n      var medium = this.getTextbox();\n      if (!medium) return;\n      var textboxDOM = this.getTextboxDOM();\n      var selection = medium.options.ownerDocument.getSelection();\n      var selectionRange = MediumEditor.selection.getSelectionRange(medium.options.ownerDocument);\n      var parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange);\n\n      if (medium) {\n        switch (field) {\n          case 'fontWeight':\n            medium.execAction('bold');\n            break;\n\n          case 'fontStyle':\n            medium.execAction('italic');\n            break;\n\n          case 'textDecoration':\n            medium.execAction('underline');\n            break;\n\n          case 'color':\n            // fix <font color></font>\n            medium.options.ownerDocument.execCommand('styleWithCSS', false, true);\n            medium.execAction('foreColor', {\n              value: value\n            });\n            medium.options.ownerDocument.execCommand('styleWithCSS', false, false);\n            break;\n\n          case 'fontSize':\n            medium.execAction('fontSize', {\n              value: 7\n            });\n\n            if (textboxDOM) {\n              var nodes = textboxDOM.querySelectorAll('font[size=\"7\"]');\n              var _iteratorNormalCompletion2 = true;\n              var _didIteratorError2 = false;\n              var _iteratorError2 = undefined;\n\n              try {\n                for (var _iterator2 = nodes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {\n                  var node = _step2.value;\n                  node.removeAttribute('size');\n                  node.style.fontSize = \"\".concat(value, \"px\");\n                }\n              } catch (err) {\n                _didIteratorError2 = true;\n                _iteratorError2 = err;\n              } finally {\n                try {\n                  if (!_iteratorNormalCompletion2 && _iterator2[\"return\"] != null) {\n                    _iterator2[\"return\"]();\n                  }\n                } finally {\n                  if (_didIteratorError2) {\n                    throw _iteratorError2;\n                  }\n                }\n              }\n\n              medium.trigger('editableInput', null, textboxDOM);\n            }\n\n            break;\n\n          case 'textAlign':\n            textboxDOM.style.textAlign = value; // if (value === 'center') {\n            // \tmedium.execAction('justifyCenter');\n            // } else if (value === 'left') {\n            // \tmedium.execAction('justifyLeft');\n            // } else if (value === 'right') {\n            // \tmedium.execAction('justifyRight');\n            // } else if (value === 'justify') {\n            // \tmedium.execAction('justifyFull');\n            // }\n\n            this.checkState();\n            medium.trigger('editableInput', null, textboxDOM);\n            break;\n\n          case 'lineHeight':\n            textboxDOM.style.lineHeight = value; // 没有选中时\n            // if (selection.isCollapsed) {\n            // \twhile (parentNode) {\n            // \t\tif (parentNode.parentNode === textboxDOM) break;\n            // \t\tparentNode = parentNode.parentNode;\n            // \t}\n            // }\n            // if (!parentNode) break;\n            // removeStyle(parentNode, 'lineHeight');\n            // parentNode.style.lineHeight = value;\n\n            medium.trigger('editableInput', null, textboxDOM);\n            break;\n\n          case 'paddingTop':\n          case 'paddingBottom':\n          case 'paddingLeft':\n          case 'paddingRight':\n            textboxDOM.style[field] = value; // while (parentNode) {\n            // \tif (parentNode.parentNode === textboxDOM) break;\n            // \tparentNode = parentNode.parentNode;\n            // }\n            // if (!parentNode) break;\n            // removeStyle(parentNode, field);\n            // parentNode.style[field] = value;\n\n            medium.trigger('editableInput', null, textboxDOM);\n            break;\n        }\n      }\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var _this3 = this,\n          _this$state$textStyle2;\n\n      var className = classNames('coursebox-editor', this.props.className);\n      var _this$state$textStyle = this.state.textStyle,\n          fontSize = _this$state$textStyle.fontSize,\n          paddingTop = _this$state$textStyle.paddingTop,\n          paddingLeft = _this$state$textStyle.paddingLeft,\n          lineHeight = _this$state$textStyle.lineHeight;\n      if (typeof fontSize === 'string' && fontSize.endsWith('px')) fontSize = parseFloat(fontSize);\n      if (typeof paddingTop === 'string' && paddingTop.endsWith('px')) paddingTop = parseFloat(paddingTop);\n      if (typeof paddingLeft === 'string' && paddingLeft.endsWith('px')) paddingLeft = parseFloat(paddingLeft);\n      if (typeof lineHeight === 'string' && lineHeight.endsWith('px')) lineHeight = (parseFloat(lineHeight) / fontSize).toFixed(1);\n      return React.createElement(\"div\", {\n        className: className\n      }, React.createElement(\"label\", {\n        htmlFor: \"font-size-style\"\n      }, \"\\u6587\\u5B57\"), React.createElement(\"div\", {\n        id: \"font-style\"\n      }, React.createElement(InputColor, {\n        disabled: this.state.editState !== 'dblClickAndSelected',\n        className: \"__font-color\",\n        value: this.state.textStyle.color,\n        onChange: function onChange(color) {\n          return _this3.onTextStyleChange('color', color);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'dblClickAndSelected',\n        className: \"__font-size\",\n        value: fontSize,\n        options: [12, 13, 14, 16, 18, 20, 28, 36, 48, 72],\n        unit: \"px\",\n        onChange: function onChange(fontSize) {\n          return _this3.onTextStyleChange('fontSize', fontSize);\n        }\n      }), React.createElement(FontStyleButtonGroup, {\n        disabled: this.state.editState !== 'dblClickAndSelected',\n        className: \"__font-style\",\n        fontWeight: (_this$state$textStyle2 = this.state.textStyle) === null || _this$state$textStyle2 === void 0 ? void 0 : _this$state$textStyle2.fontWeight,\n        fontStyle: this.state.textStyle.fontStyle,\n        textDecoration: this.state.textStyle.textDecoration,\n        onFontStyleChange: function onFontStyleChange(field, val) {\n          return _this3.onTextStyleChange(field, val);\n        }\n      })), React.createElement(\"label\", {\n        htmlFor: \"font-layout-style\"\n      }, \"\\u5E03\\u5C40\"), React.createElement(\"div\", {\n        id: \"font-layout-style\"\n      }, React.createElement(FontLayoutButtonGroup, {\n        disabled: this.state.editState !== 'click',\n        className: \"__font-layout\",\n        textAlign: this.state.textStyle.textAlign,\n        onFontLayoutChange: function onFontLayoutChange(textAlign) {\n          return _this3.onTextStyleChange('textAlign', textAlign);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'click',\n        className: \"__font-line-height\",\n        icon: ImageLineHeight,\n        disabledIcon: ImageLineHeightDisabled,\n        value: lineHeight,\n        options: [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2, 2.4, 2.6, 2.8, 3.0],\n        unit: \"\\u500D\",\n        onChange: function onChange(lineHeight) {\n          return _this3.onTextStyleChange('lineHeight', lineHeight);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'click',\n        className: \"__font-padding-top-bottom\",\n        icon: ImagePaddingTopAndBottom,\n        disabledIcon: ImagePaddingTopAndBottomDisabled,\n        value: paddingTop,\n        options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],\n        unit: \"px\",\n        onChange: function onChange(padding) {\n          _this3.onTextStyleChange('paddingTop', \"\".concat(padding, \"px\"));\n\n          _this3.onTextStyleChange('paddingBottom', \"\".concat(padding, \"px\"));\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'click',\n        className: \"__font-padding-left-right\",\n        icon: ImagePaddingLeftAndRight,\n        disabledIcon: ImagePaddingLeftAndRightDisabled,\n        value: paddingLeft,\n        options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],\n        unit: \"px\",\n        onChange: function onChange(padding) {\n          _this3.onTextStyleChange('paddingLeft', \"\".concat(padding, \"px\"));\n\n          _this3.onTextStyleChange('paddingRight', \"\".concat(padding, \"px\"));\n        }\n      })));\n    }\n  }]);\n\n  return TextboxEditor;\n}(Component);\n\nexport default TextboxEditor;"
     },
     {
       "id": "./src/components/font-layout-button-group/font-layout-button-group.less",
@@ -12758,7 +12758,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../font-layout-button-group",
-          "loc": "440:29-50"
+          "loc": "458:29-50"
         }
       ],
       "providedExports": [
@@ -12876,7 +12876,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../font-style-button-group",
-          "loc": "427:30-50"
+          "loc": "445:30-50"
         }
       ],
       "providedExports": [
@@ -12990,7 +12990,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../input-color",
-          "loc": "411:29-39"
+          "loc": "429:29-39"
         }
       ],
       "providedExports": [
@@ -13108,7 +13108,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../input-select",
-          "loc": "418:30-41"
+          "loc": "436:30-41"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13117,7 +13117,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../input-select",
-          "loc": "447:30-41"
+          "loc": "465:30-41"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13126,7 +13126,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../input-select",
-          "loc": "458:30-41"
+          "loc": "476:30-41"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13135,7 +13135,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../input-select",
-          "loc": "471:30-41"
+          "loc": "489:30-41"
         }
       ],
       "providedExports": [
@@ -13542,7 +13542,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "medium-editor",
-          "loc": "214:27-39"
+          "loc": "226:27-39"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13551,7 +13551,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "medium-editor",
-          "loc": "220:23-35"
+          "loc": "239:23-35"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13560,7 +13560,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "medium-editor",
-          "loc": "223:15-27"
+          "loc": "242:15-27"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13569,7 +13569,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "medium-editor",
-          "loc": "235:12-24"
+          "loc": "253:12-24"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13578,7 +13578,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "medium-editor",
-          "loc": "269:19-31"
+          "loc": "287:19-31"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13587,7 +13587,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "medium-editor",
-          "loc": "279:27-39"
+          "loc": "297:27-39"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13596,7 +13596,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "medium-editor",
-          "loc": "280:23-35"
+          "loc": "298:23-35"
         },
         {
           "moduleId": "./src/components/textbox/index.jsx",
@@ -14018,7 +14018,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "489:2-11"
+          "loc": "507:2-11"
         },
         {
           "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -14301,7 +14301,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "react-dom",
-          "loc": "257:17-25"
+          "loc": "275:17-25"
         },
         {
           "moduleId": "./src/components/input-color/index.jsx",
@@ -14397,7 +14397,7 @@
           "name": "index.html",
           "size": 549556,
           "chunks": [
-            0
+            1
           ],
           "chunkNames": [
           ],
@@ -14410,7 +14410,7 @@
       "entrypoints": {
         "undefined": {
           "chunks": [
-            0
+            1
           ],
           "assets": [
             "index.html"
@@ -14424,7 +14424,7 @@
       "namedChunkGroups": {
         "undefined": {
           "chunks": [
-            0
+            1
           ],
           "assets": [
             "index.html"
@@ -14437,7 +14437,7 @@
       },
       "chunks": [
         {
-          "id": 0,
+          "id": 1,
           "rendered": false,
           "initial": true,
           "entry": true,
@@ -14447,7 +14447,7 @@
           "files": [
             "index.html"
           ],
-          "hash": "9953eda98aa637e4efde",
+          "hash": "2340ff7082993ba17c5c",
           "siblings": [
           ],
           "parents": [
@@ -14469,7 +14469,7 @@
               "optional": false,
               "prefetched": false,
               "chunks": [
-                0
+                1
               ],
               "issuer": null,
               "issuerId": null,
@@ -14508,7 +14508,7 @@
               "optional": false,
               "prefetched": false,
               "chunks": [
-                0
+                1
               ],
               "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/html-webpack-plugin/lib/loader.js!/Users/doog/Documents/Workspaces/node/textbox/public/index.html",
               "issuerId": "./node_modules/html-webpack-plugin/lib/loader.js!./public/index.html",
@@ -14554,7 +14554,7 @@
               "optional": false,
               "prefetched": false,
               "chunks": [
-                0
+                1
               ],
               "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/lodash/lodash.js",
               "issuerId": "./node_modules/lodash/lodash.js",
@@ -14605,7 +14605,7 @@
               "optional": false,
               "prefetched": false,
               "chunks": [
-                0
+                1
               ],
               "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/lodash/lodash.js",
               "issuerId": "./node_modules/lodash/lodash.js",
@@ -14672,7 +14672,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            0
+            1
           ],
           "issuer": null,
           "issuerId": null,
@@ -14711,7 +14711,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            0
+            1
           ],
           "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/html-webpack-plugin/lib/loader.js!/Users/doog/Documents/Workspaces/node/textbox/public/index.html",
           "issuerId": "./node_modules/html-webpack-plugin/lib/loader.js!./public/index.html",
@@ -14757,7 +14757,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            0
+            1
           ],
           "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/lodash/lodash.js",
           "issuerId": "./node_modules/lodash/lodash.js",
@@ -14808,7 +14808,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            0
+            1
           ],
           "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/lodash/lodash.js",
           "issuerId": "./node_modules/lodash/lodash.js",

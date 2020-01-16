@@ -151,9 +151,27 @@ class TextboxEditor extends Component {
 
 	checkState() {
 		debug('checkState');
+		// 布局属性从父容器计算
+		const computedStyle = this.getTextbox().options?.contentWindow.getComputedStyle(this.getTextboxDOM(), null);
+		let textAlign = computedStyle.getPropertyValue('text-align');
+		let lineHeight = computedStyle.getPropertyValue('line-height');
+		let paddingTop = computedStyle.getPropertyValue('padding-top');
+		let paddingLeft = computedStyle.getPropertyValue('padding-left');
+		const textStyle = {
+			paddingTop,
+			paddingLeft,
+			textAlign,
+			lineHeight
+		};
+
 		const selectionRange = MediumEditor.selection.getSelectionRange(this.getTextbox().options?.ownerDocument);
-		if (!selectionRange) return;
-		debug('selectionRange', selectionRange)
+		if (!selectionRange) {
+			this.setState({
+				textStyle
+			});
+			return;
+		}
+		debug('selectionRange', selectionRange);
 		if (!selectionRange.collapsed) this.setState({
 			editState: 'dblClickAndSelected'
 		})
@@ -165,7 +183,6 @@ class TextboxEditor extends Component {
 			return;
 		}
 
-		const textStyle = {};
 		// Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node
 		while (parentNode) {
 			computedState(textStyle, parentNode, this.getTextbox().options?.contentWindow);
@@ -334,7 +351,7 @@ class TextboxEditor extends Component {
 				<div id="font-layout-style">
 					{/* 对齐方式 */}
 					<FontLayoutButtonGroup
-						disabled={this.state.editState  !== 'click'}
+						disabled={this.state.editState !== 'click'}
 						className="__font-layout"
 						textAlign={this.state.textStyle.textAlign}
 						onFontLayoutChange={(textAlign) => this.onTextStyleChange('textAlign', textAlign)}
@@ -352,7 +369,7 @@ class TextboxEditor extends Component {
 					></InputNumber> */}
 
 					<InputSelect
-						disabled={this.state.editState  !== 'click'}
+						disabled={this.state.editState !== 'click'}
 						className="__font-line-height"
 						icon={ImageLineHeight}
 						disabledIcon={ImageLineHeightDisabled}
@@ -364,7 +381,7 @@ class TextboxEditor extends Component {
 
 					{/* 上下内边距 */}
 					<InputSelect
-						disabled={this.state.editState  !== 'click'}
+						disabled={this.state.editState !== 'click'}
 						className="__font-padding-top-bottom"
 						icon={ImagePaddingTopAndBottom}
 						disabledIcon={ImagePaddingTopAndBottomDisabled}
@@ -379,7 +396,7 @@ class TextboxEditor extends Component {
 
 					{/* 左右内边距 */}
 					<InputSelect
-						disabled={this.state.editState  !== 'click'}
+						disabled={this.state.editState !== 'click'}
 						className="__font-padding-left-right"
 						icon={ImagePaddingLeftAndRight}
 						disabledIcon={ImagePaddingLeftAndRightDisabled}

@@ -23,10 +23,10 @@ const STYLE_PROPS = [
 	'fontWeight',
 	'textDecoration',
 	'fontStyle',
-	'textAlign',
-	'lineHeight',
-	'paddingTop',
-	'paddingLeft'
+	// 'textAlign',
+	// 'lineHeight',
+	// 'paddingTop',
+	// 'paddingLeft'
 ]
 
 function computedState(currentState = {}, node, currentWindow = window) {
