@@ -709,6 +709,94 @@ module.exports = function () {
 
 /***/ }),
 
+/***/ "./node_modules/camelcase/index.js":
+/*!*****************************************!*\
+  !*** ./node_modules/camelcase/index.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+const preserveCamelCase = string => {
+	let isLastCharLower = false;
+	let isLastCharUpper = false;
+	let isLastLastCharUpper = false;
+
+	for (let i = 0; i < string.length; i++) {
+		const character = string[i];
+
+		if (isLastCharLower && /[a-zA-Z]/.test(character) && character.toUpperCase() === character) {
+			string = string.slice(0, i) + '-' + string.slice(i);
+			isLastCharLower = false;
+			isLastLastCharUpper = isLastCharUpper;
+			isLastCharUpper = true;
+			i++;
+		} else if (isLastCharUpper && isLastLastCharUpper && /[a-zA-Z]/.test(character) && character.toLowerCase() === character) {
+			string = string.slice(0, i - 1) + '-' + string.slice(i - 1);
+			isLastLastCharUpper = isLastCharUpper;
+			isLastCharUpper = false;
+			isLastCharLower = true;
+		} else {
+			isLastCharLower = character.toLowerCase() === character && character.toUpperCase() !== character;
+			isLastLastCharUpper = isLastCharUpper;
+			isLastCharUpper = character.toUpperCase() === character && character.toLowerCase() !== character;
+		}
+	}
+
+	return string;
+};
+
+const camelCase = (input, options) => {
+	if (!(typeof input === 'string' || Array.isArray(input))) {
+		throw new TypeError('Expected the input to be `string | string[]`');
+	}
+
+	options = Object.assign({
+		pascalCase: false
+	}, options);
+
+	const postProcess = x => options.pascalCase ? x.charAt(0).toUpperCase() + x.slice(1) : x;
+
+	if (Array.isArray(input)) {
+		input = input.map(x => x.trim())
+			.filter(x => x.length)
+			.join('-');
+	} else {
+		input = input.trim();
+	}
+
+	if (input.length === 0) {
+		return '';
+	}
+
+	if (input.length === 1) {
+		return options.pascalCase ? input.toUpperCase() : input.toLowerCase();
+	}
+
+	const hasUpperCase = input !== input.toLowerCase();
+
+	if (hasUpperCase) {
+		input = preserveCamelCase(input);
+	}
+
+	input = input
+		.replace(/^[_.\- ]+/, '')
+		.toLowerCase()
+		.replace(/[_.\- ]+(\w|$)/g, (_, p1) => p1.toUpperCase())
+		.replace(/\d+(\w|$)/g, m => m.toUpperCase());
+
+	return postProcess(input);
+};
+
+module.exports = camelCase;
+// TODO: Remove this for the next major release
+module.exports.default = camelCase;
+
+
+/***/ }),
+
 /***/ "./node_modules/classnames/index.js":
 /*!******************************************!*\
   !*** ./node_modules/classnames/index.js ***!
@@ -872,7 +960,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".coursebox-input-select {\n  position: relative;\n  display: inline-block;\n  background-color: #fff;\n  height: 32px;\n  line-height: 32px;\n  box-sizing: content-box;\n  padding: 0 10px;\n  margin: 0;\n  border: 1px solid #E8E8E8;\n  border-radius: 2px;\n  outline: none;\n  vertical-align: bottom;\n}\n.coursebox-input-select .icon {\n  display: inline-block;\n  vertical-align: middle;\n  width: 14px;\n  height: 14px;\n  padding: 2px;\n  margin-right: 7px;\n}\n.coursebox-input-select .select-value {\n  display: inline-block;\n  width: 14px;\n  font-size: 12px;\n  margin-right: 1px;\n  color: #333;\n  text-align: center;\n}\n.coursebox-input-select .unit {\n  font-size: 12px;\n  margin-left: 1px;\n  color: #333;\n}\n.coursebox-input-select .select-collapse {\n  float: right;\n  margin-left: 7px;\n}\n.coursebox-input-select .select-collapse img {\n  width: 6px;\n  height: 4px;\n  vertical-align: middle;\n}\n.coursebox-input-select .options {\n  position: absolute;\n  z-index: 10001;\n  left: -1px;\n  width: 100%;\n}\n.coursebox-input-select .options ul,\n.coursebox-input-select .options ol {\n  background-color: #fff;\n  border: 1px solid #E8E8E8;\n  min-width: 100%;\n  list-style-type: none;\n  padding-left: 0;\n  margin-top: 0;\n  margin-left: 0;\n  max-height: 10em;\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n.coursebox-input-select .options ul li,\n.coursebox-input-select .options ol li {\n  font-size: 12px;\n  padding-left: 7px;\n  user-select: none;\n}\n.coursebox-input-select .options ul li.selected,\n.coursebox-input-select .options ol li.selected {\n  background-color: #E8E8E8;\n}\n.coursebox-input-select .options ul li:hover,\n.coursebox-input-select .options ol li:hover {\n  background-color: #E8E8E8;\n}\n.coursebox-input-select.disabled .font-color-bar {\n  background-color: #E8E8E8 !important;\n}\n.coursebox-input-select.disabled .select-value {\n  color: #E8E8E8;\n}\n.coursebox-input-select.disabled .unit {\n  color: #E8E8E8;\n}\n.coursebox-input-select.disabled:hover {\n  border-color: #E8E8E8;\n}\n.coursebox-input-select:hover {\n  border-color: #5C6066;\n}\n", ""]);
+exports.push([module.i, ".coursebox-input-select {\n  position: relative;\n  display: inline-block;\n  background-color: #fff;\n  height: 32px;\n  line-height: 32px;\n  box-sizing: content-box;\n  padding: 0 10px;\n  margin: 0;\n  border: 1px solid #E8E8E8;\n  border-radius: 2px;\n  outline: none;\n  vertical-align: bottom;\n}\n.coursebox-input-select .icon {\n  display: inline-block;\n  vertical-align: middle;\n  width: 14px;\n  height: 14px;\n  padding: 2px;\n  margin-right: 7px;\n}\n.coursebox-input-select .select-value {\n  display: inline-block;\n  font-size: 12px;\n  margin-right: 1px;\n  color: #333;\n  text-align: center;\n}\n.coursebox-input-select .unit {\n  font-size: 12px;\n  margin-left: 1px;\n  color: #333;\n}\n.coursebox-input-select .select-collapse {\n  float: right;\n  margin-left: 7px;\n}\n.coursebox-input-select .select-collapse img {\n  width: 6px;\n  height: 4px;\n  vertical-align: middle;\n}\n.coursebox-input-select .options {\n  position: absolute;\n  z-index: 10001;\n  left: -1px;\n  width: 100%;\n}\n.coursebox-input-select .options ul,\n.coursebox-input-select .options ol {\n  background-color: #fff;\n  border: 1px solid #E8E8E8;\n  min-width: 100%;\n  list-style-type: none;\n  padding-left: 0;\n  margin-top: 0;\n  margin-left: 0;\n  max-height: 10em;\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n.coursebox-input-select .options ul li,\n.coursebox-input-select .options ol li {\n  font-size: 12px;\n  padding-left: 7px;\n  user-select: none;\n}\n.coursebox-input-select .options ul li.selected,\n.coursebox-input-select .options ol li.selected {\n  background-color: #E8E8E8;\n}\n.coursebox-input-select .options ul li:hover,\n.coursebox-input-select .options ol li:hover {\n  background-color: #E8E8E8;\n}\n.coursebox-input-select.disabled .font-color-bar {\n  background-color: #E8E8E8 !important;\n}\n.coursebox-input-select.disabled .select-value {\n  color: #E8E8E8;\n}\n.coursebox-input-select.disabled .unit {\n  color: #E8E8E8;\n}\n.coursebox-input-select.disabled:hover {\n  border-color: #E8E8E8;\n}\n.coursebox-input-select:hover {\n  border-color: #5C6066;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -908,7 +996,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".coursebox-textbox {\n  margin: 0;\n  display: inline-block;\n  outline: none;\n}\n.coursebox-textbox p {\n  margin: 0;\n}\n.coursebox-textbox[contenteditable=\"false\"] {\n  -moz-user-select: none;\n  /*火狐*/\n  -webkit-user-select: none;\n  /*webkit浏览器*/\n  -ms-user-select: none;\n  /*IE10*/\n  -khtml-user-select: none;\n  /*早期浏览器*/\n  user-select: none;\n}\n.coursebox-textbox[contenteditable=\"true\"] {\n  border-color: blue !important;\n}\n.coursebox-textbox[data-medium-focused=\"true\"] {\n  border: 5px solid #00DA9B !important;\n}\n", ""]);
+exports.push([module.i, ".coursebox-textbox {\n  margin: 0;\n  display: inline-block;\n  border: 5px solid transparent;\n  outline: none;\n}\n.coursebox-textbox p {\n  margin: 0;\n}\n.coursebox-textbox[contenteditable=\"false\"] {\n  -moz-user-select: none;\n  /*火狐*/\n  -webkit-user-select: none;\n  /*webkit浏览器*/\n  -ms-user-select: none;\n  /*IE10*/\n  -khtml-user-select: none;\n  /*早期浏览器*/\n  user-select: none;\n}\n.coursebox-textbox[contenteditable=\"true\"] {\n  border-color: blue !important;\n}\n.coursebox-textbox[data-medium-focused=\"true\"] {\n  border: 5px solid #00DA9B !important;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -11779,13 +11867,18 @@ module.exports.formatError = function(err) {
 /*!***************************************!*\
   !*** ./src/commons/computed_state.js ***!
   \***************************************/
-/*! exports provided: computedState */
+/*! exports provided: getStyle, computedState */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStyle", function() { return getStyle; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computedState", function() { return computedState; });
-var debug = __webpack_require__(/*! ./debug */ "./src/commons/debug.js")('textbox:commons:button');
+/* harmony import */ var camelcase__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! camelcase */ "./node_modules/camelcase/index.js");
+/* harmony import */ var camelcase__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(camelcase__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var debug = __webpack_require__(/*! ./debug */ "./src/commons/debug.js")('textbox:commons:computed_state');
 
 function rgba2hex(orig) {
   var a = '',
@@ -11801,19 +11894,101 @@ function rgba2hex(orig) {
   return "#".concat(hex);
 }
 
-var STYLE_PROPS = ['fontSize', 'color', 'fontWeight', 'textDecoration', 'fontStyle' // 'textAlign',
-// 'lineHeight',
-// 'paddingTop',
-// 'paddingLeft'
-];
+function getStyle(node, styleProp) {
+  var currentWindow = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : window;
+  var nodeName = node.nodeName.toLowerCase();
+  var computedStyle = currentWindow.getComputedStyle(node, null);
+  var styleValue;
+
+  switch (styleProp) {
+    case 'font-size':
+      styleValue = computedStyle.getPropertyValue('font-size');
+      break;
+
+    case 'color':
+      if (nodeName === 'font' && node.hasAttribute('color')) {
+        styleValue = node.getAttribute('color');
+      } else {
+        styleValue = computedStyle.getPropertyValue('color');
+      }
+
+      if (styleValue.startsWith('rgb')) {
+        styleValue = rgba2hex(styleValue);
+      }
+
+      break;
+
+    case 'font-weight':
+      if (nodeName === 'b' || nodeName === 'strong') {
+        styleValue = 'bold';
+      } else {
+        styleValue = computedStyle.getPropertyValue('font-weight');
+      }
+
+      break;
+
+    case 'text-decoration':
+      var textDecoration = 'none';
+
+      if (nodeName === 'u') {
+        textDecoration = 'underline';
+      } else if (nodeName === 'strike' || nodeName === 'del' || nodeName === 's') {
+        textDecoration = 'line-through';
+      } else {
+        // getPropertyValue text-decoration 不会继承 获取的不是实时样式
+        textDecoration = computedStyle.getPropertyValue('text-decoration');
+        if (textDecoration.split(' ').length > 0) textDecoration = textDecoration.split(' ')[0];
+      }
+
+      if (textDecoration !== 'none') styleValue = textDecoration;
+      break;
+
+    case 'font-style':
+      var fontStyle = 'normal';
+
+      if (nodeName === 'i' || nodeName === 'em') {
+        fontStyle = 'italic';
+      } else {
+        fontStyle = computedStyle.getPropertyValue('font-style');
+      }
+
+      styleValue = fontStyle;
+      break;
+
+    case 'text-align':
+      styleValue = computedStyle.getPropertyValue('text-align');
+      break;
+
+    case 'line-height':
+      var _fontSize = computedStyle.getPropertyValue('font-size');
+
+      var _lineHeight = computedStyle.getPropertyValue('line-height');
+
+      styleValue = (parseFloat(_lineHeight) / parseFloat(_fontSize)).toFixed(1);
+      break;
+
+    case 'padding-top':
+      styleValue = computedStyle.getPropertyValue('padding-top');
+      break;
+
+    case 'padding-left':
+      styleValue = computedStyle.getPropertyValue('padding-left');
+      break;
+
+    default:
+      styleValue = computedStyle.getPropertyValue(styleProp);
+  }
+
+  debug(nodeName, styleProp, styleValue);
+  return styleValue;
+}
+
+var STYLE_PROPS = ['font-size', 'color', 'font-weight', 'text-decoration', 'font-style'];
 
 function computedState() {
   var currentState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var node = arguments.length > 1 ? arguments[1] : undefined;
   var currentWindow = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : window;
-  var nodeName = node.nodeName.toLowerCase();
-  var computedStyle = currentWindow.getComputedStyle(node, null);
-  debug('computedState', nodeName);
   var _iteratorNormalCompletion = true;
   var _didIteratorError = false;
   var _iteratorError = undefined;
@@ -11822,95 +11997,8 @@ function computedState() {
     for (var _iterator = STYLE_PROPS[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
       var styleProp = _step.value;
       // 设置过就不在设置
-      if (typeof currentState[styleProp] !== 'undefined' && styleProp !== 'text-decoration') continue;
-
-      switch (styleProp) {
-        case 'fontSize':
-          var fontSize = '14px'; // if (nodeName === 'font' && node.hasAttribute('size')) {
-          // 	fontSize = node.getAttribute('size');
-          // } else {
-
-          fontSize = computedStyle.getPropertyValue('font-size'); // }
-
-          currentState[styleProp] = fontSize;
-          break;
-
-        case 'color':
-          var color = '#000';
-
-          if (nodeName === 'font' && node.hasAttribute('color')) {
-            color = node.getAttribute('color');
-          } else {
-            color = computedStyle.getPropertyValue('color');
-            if (color.startsWith('rgb')) color = rgba2hex(color);
-          }
-
-          currentState[styleProp] = color;
-          break;
-
-        case 'fontWeight':
-          var fontWeight = 'normal';
-
-          if (nodeName === 'b' || nodeName === 'strong') {
-            fontWeight = 'bold';
-          } else {
-            var fontWeightValue = computedStyle.getPropertyValue('font-weight');
-            if (fontWeightValue === '700' || fontWeightValue === 'bold') fontWeight = 'bold';
-          }
-
-          currentState[styleProp] = fontWeight;
-          break;
-
-        case 'textDecoration':
-          var textDecoration = 'none';
-
-          if (nodeName === 'u') {
-            textDecoration = 'underline';
-          } else if (nodeName === 'strike' || nodeName === 'del' || nodeName === 's') {
-            textDecoration = 'line-through';
-          } else {
-            // getPropertyValue text-decoration 不会继承 获取的不是实时样式
-            textDecoration = computedStyle.getPropertyValue('text-decoration');
-            if (textDecoration.split(' ').length > 0) textDecoration = textDecoration.split(' ')[0];
-          }
-
-          if (textDecoration !== 'none') currentState[styleProp] = textDecoration;
-          break;
-
-        case 'fontStyle':
-          var fontStyle = 'normal';
-
-          if (nodeName === 'i' || nodeName === 'em') {
-            fontStyle = 'italic';
-          } else {
-            fontStyle = computedStyle.getPropertyValue('font-style');
-          }
-
-          currentState[styleProp] = fontStyle;
-          break;
-
-        case 'textAlign':
-          var textAlign = computedStyle.getPropertyValue('text-align');
-          currentState[styleProp] = textAlign;
-          break;
-
-        case 'lineHeight':
-          var lineHeight = computedStyle.getPropertyValue('line-height');
-          currentState[styleProp] = lineHeight;
-          break;
-
-        case 'paddingTop':
-          var paddingTop = computedStyle.getPropertyValue('padding-top');
-          currentState[styleProp] = paddingTop;
-          break;
-
-        case 'paddingLeft':
-          var paddingLeft = computedStyle.getPropertyValue('padding-left');
-          currentState[styleProp] = paddingLeft;
-          break;
-      }
-
-      debug('currentState: %j', currentState);
+      if (typeof currentState[camelcase__WEBPACK_IMPORTED_MODULE_0___default()(styleProp)] !== 'undefined') continue;
+      currentState[camelcase__WEBPACK_IMPORTED_MODULE_0___default()(styleProp)] = getStyle(node, styleProp, currentWindow);
     }
   } catch (err) {
     _didIteratorError = true;
@@ -11927,6 +12015,7 @@ function computedState() {
     }
   }
 
+  debug('currentState: %j', currentState);
   return currentState;
 }
 
@@ -12095,23 +12184,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _input_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../input-select */ "./src/components/input-select/index.jsx");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dom */ "react-dom");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _input_color__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../input-color */ "./src/components/input-color/index.jsx");
-/* harmony import */ var medium_editor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! medium-editor */ "medium-editor");
-/* harmony import */ var medium_editor__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(medium_editor__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _font_style_button_group__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../font-style-button-group */ "./src/components/font-style-button-group/index.jsx");
-/* harmony import */ var _font_layout_button_group__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../font-layout-button-group */ "./src/components/font-layout-button-group/index.jsx");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @assets/images/行间距_正常@2x.png */ "./assets/images/行间距_正常@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @assets/images/行间距_不可点@2x.png */ "./assets/images/行间距_不可点@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @assets/images/左右边距_正常@2x.png */ "./assets/images/左右边距_正常@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @assets/images/左右边距_不可点@2x.png */ "./assets/images/左右边距_不可点@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @assets/images/上下边距_正常@2x.png */ "./assets/images/上下边距_正常@2x.png");
-/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @assets/images/上下边距_不可点@2x.png */ "./assets/images/上下边距_不可点@2x.png");
-/* harmony import */ var _commons_computed_state__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @commons/computed_state */ "./src/commons/computed_state.js");
-/* harmony import */ var _commons_throttle__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @commons/throttle */ "./src/commons/throttle.js");
-/* harmony import */ var _commons_utils__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @commons/utils */ "./src/commons/utils.js");
+/* harmony import */ var camelcase__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! camelcase */ "./node_modules/camelcase/index.js");
+/* harmony import */ var camelcase__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(camelcase__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _input_select__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../input-select */ "./src/components/input-select/index.jsx");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-dom */ "react-dom");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _input_color__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../input-color */ "./src/components/input-color/index.jsx");
+/* harmony import */ var medium_editor__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! medium-editor */ "medium-editor");
+/* harmony import */ var medium_editor__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(medium_editor__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _font_style_button_group__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../font-style-button-group */ "./src/components/font-style-button-group/index.jsx");
+/* harmony import */ var _font_layout_button_group__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../font-layout-button-group */ "./src/components/font-layout-button-group/index.jsx");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @assets/images/行间距_正常@2x.png */ "./assets/images/行间距_正常@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @assets/images/行间距_不可点@2x.png */ "./assets/images/行间距_不可点@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @assets/images/左右边距_正常@2x.png */ "./assets/images/左右边距_正常@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @assets/images/左右边距_不可点@2x.png */ "./assets/images/左右边距_不可点@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @assets/images/上下边距_正常@2x.png */ "./assets/images/上下边距_正常@2x.png");
+/* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @assets/images/上下边距_不可点@2x.png */ "./assets/images/上下边距_不可点@2x.png");
+/* harmony import */ var _commons_computed_state__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @commons/computed_state */ "./src/commons/computed_state.js");
+/* harmony import */ var _commons_throttle__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @commons/throttle */ "./src/commons/throttle.js");
+/* harmony import */ var _commons_utils__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @commons/utils */ "./src/commons/utils.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12149,44 +12240,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var debug = __webpack_require__(/*! @commons/debug */ "./src/commons/debug.js")('textbox:editor');
-
-function removeStyle(element) {
-  for (var _len = arguments.length, styleNames = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-    styleNames[_key - 1] = arguments[_key];
-  }
-
-  for (var _i = 0, _styleNames = styleNames; _i < _styleNames.length; _i++) {
-    var styleName = _styleNames[_i];
-    element.style[styleName] = null;
-  }
-
-  var children = element.children;
-  if (children.length === 0) return;
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
-
-  try {
-    for (var _iterator = children[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var child = _step.value;
-      removeStyle.apply(void 0, [child].concat(styleNames));
-    }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-        _iterator["return"]();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
-  }
-}
 
 var TextboxEditor =
 /*#__PURE__*/
@@ -12208,7 +12263,7 @@ function (_Component) {
     _this.onTextStyleChange = _this.onTextStyleChange.bind(_assertThisInitialized(_this));
     _this.selectTextbox = _this.selectTextbox.bind(_assertThisInitialized(_this));
     _this.blurTextbox = _this.blurTextbox.bind(_assertThisInitialized(_this));
-    _this.throttleCheckState = Object(_commons_throttle__WEBPACK_IMPORTED_MODULE_16__["default"])(_this.checkState, 200).bind(_assertThisInitialized(_this));
+    _this.throttleCheckState = Object(_commons_throttle__WEBPACK_IMPORTED_MODULE_17__["default"])(_this.checkState, 200).bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -12247,7 +12302,7 @@ function (_Component) {
   }, {
     key: "componentDidUpdate",
     value: function componentDidUpdate() {
-      debug('componentDidUpdate', arguments);
+      debug('componentDidUpdate');
       if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();
     }
   }, {
@@ -12322,49 +12377,47 @@ function (_Component) {
   }, {
     key: "checkState",
     value: function checkState() {
-      var _this$getTextbox$opti, _this$getTextbox$opti2;
+      var _this$getTextbox$opti;
 
       debug('checkState'); // 布局属性从父容器计算
 
-      var computedStyle = (_this$getTextbox$opti = this.getTextbox().options) === null || _this$getTextbox$opti === void 0 ? void 0 : _this$getTextbox$opti.contentWindow.getComputedStyle(this.getTextboxDOM(), null);
-      var textAlign = computedStyle.getPropertyValue('text-align');
-      var lineHeight = computedStyle.getPropertyValue('line-height');
-      var paddingTop = computedStyle.getPropertyValue('padding-top');
-      var paddingLeft = computedStyle.getPropertyValue('padding-left');
-      var textStyle = {
-        paddingTop: paddingTop,
-        paddingLeft: paddingLeft,
-        textAlign: textAlign,
-        lineHeight: lineHeight
-      };
-      var selectionRange = medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.selection.getSelectionRange((_this$getTextbox$opti2 = this.getTextbox().options) === null || _this$getTextbox$opti2 === void 0 ? void 0 : _this$getTextbox$opti2.ownerDocument);
+      debug('textStyle: %o', textStyle);
+      var selectionRange = medium_editor__WEBPACK_IMPORTED_MODULE_7___default.a.selection.getSelectionRange((_this$getTextbox$opti = this.getTextbox().options) === null || _this$getTextbox$opti === void 0 ? void 0 : _this$getTextbox$opti.ownerDocument);
+      debug('selectionRange', selectionRange);
 
       if (!selectionRange) {
+        var _textStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-weight', 'font-size', 'color');
+
         this.setState({
-          textStyle: textStyle
+          textStyle: _textStyle
         });
         return;
       }
 
-      debug('selectionRange', selectionRange);
       if (!selectionRange.collapsed) this.setState({
         editState: 'dblClickAndSelected'
       });
-      var parentNode = medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.selection.getSelectedParentElement(selectionRange); // Make sure the selection parent isn't outside of the contenteditable
+      var parentNode = medium_editor__WEBPACK_IMPORTED_MODULE_7___default.a.selection.getSelectedParentElement(selectionRange); // Make sure the selection parent isn't outside of the contenteditable
 
       if (!this.getTextbox().elements.some(function (element) {
-        return medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.util.isDescendant(element, parentNode, true);
+        return medium_editor__WEBPACK_IMPORTED_MODULE_7___default.a.util.isDescendant(element, parentNode, true);
       })) {
-        return;
-      } // Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node
+        var _textStyle2 = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-weight', 'font-size', 'color');
 
+        this.setState({
+          textStyle: _textStyle2
+        });
+        return;
+      }
+
+      var textStyle = {}; // Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node
 
       while (parentNode) {
-        var _this$getTextbox$opti3;
+        var _this$getTextbox$opti2;
 
-        Object(_commons_computed_state__WEBPACK_IMPORTED_MODULE_15__["computedState"])(textStyle, parentNode, (_this$getTextbox$opti3 = this.getTextbox().options) === null || _this$getTextbox$opti3 === void 0 ? void 0 : _this$getTextbox$opti3.contentWindow); // we can abort the search upwards if we leave the contentEditable element
+        Object(_commons_computed_state__WEBPACK_IMPORTED_MODULE_16__["computedState"])(textStyle, parentNode, (_this$getTextbox$opti2 = this.getTextbox().options) === null || _this$getTextbox$opti2 === void 0 ? void 0 : _this$getTextbox$opti2.contentWindow); // we can abort the search upwards if we leave the contentEditable element
 
-        if (medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.util.isMediumEditorElement(parentNode)) {
+        if (medium_editor__WEBPACK_IMPORTED_MODULE_7___default.a.util.isMediumEditorElement(parentNode)) {
           break;
         }
 
@@ -12385,9 +12438,9 @@ function (_Component) {
       var textboxDOM = ((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.textboxDOM) || ((_this$props2 = this.props) === null || _this$props2 === void 0 ? void 0 : (_this$props2$textboxD = _this$props2.textboxDOMRef) === null || _this$props2$textboxD === void 0 ? void 0 : _this$props2$textboxD.current);
 
       if (textboxDOM) {
-        if (Object(_commons_utils__WEBPACK_IMPORTED_MODULE_17__["isReactComponentInstance"])(textboxDOM)) {
-          return react_dom__WEBPACK_IMPORTED_MODULE_4___default.a.findDOMNode(textboxDOM);
-        } else if (Object(_commons_utils__WEBPACK_IMPORTED_MODULE_17__["isElement"])(textboxDOM)) {
+        if (Object(_commons_utils__WEBPACK_IMPORTED_MODULE_18__["isReactComponentInstance"])(textboxDOM)) {
+          return react_dom__WEBPACK_IMPORTED_MODULE_5___default.a.findDOMNode(textboxDOM);
+        } else if (Object(_commons_utils__WEBPACK_IMPORTED_MODULE_18__["isElement"])(textboxDOM)) {
           return textboxDOM;
         } else {
           throw new Error('`textboxDOM` 必须是一个 HTMLElement 或者 React Component 实例');
@@ -12395,10 +12448,61 @@ function (_Component) {
       }
     }
   }, {
+    key: "getTextboxDOMStyle",
+    value: function getTextboxDOMStyle() {
+      debug('getTextboxDOMStyle');
+      var dom = this.getTextboxDOM();
+      if (!dom) return null;
+      var style = {};
+
+      for (var _len = arguments.length, properties = new Array(_len), _key = 0; _key < _len; _key++) {
+        properties[_key] = arguments[_key];
+      }
+
+      if (properties.length > 0) {
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
+
+        try {
+          for (var _iterator = properties[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var _this$getTextbox$opti3;
+
+            var property = _step.value;
+            var styleValue = Object(_commons_computed_state__WEBPACK_IMPORTED_MODULE_16__["getStyle"])(dom, property, (_this$getTextbox$opti3 = this.getTextbox().options) === null || _this$getTextbox$opti3 === void 0 ? void 0 : _this$getTextbox$opti3.contentWindow);
+            if (styleValue) style[camelcase__WEBPACK_IMPORTED_MODULE_3___default()(property)] = styleValue;
+          }
+        } catch (err) {
+          _didIteratorError = true;
+          _iteratorError = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+              _iterator["return"]();
+            }
+          } finally {
+            if (_didIteratorError) {
+              throw _iteratorError;
+            }
+          }
+        }
+      } else {
+        var _this$getTextbox$opti4;
+
+        var computedStyle = (_this$getTextbox$opti4 = this.getTextbox().options) === null || _this$getTextbox$opti4 === void 0 ? void 0 : _this$getTextbox$opti4.contentWindow.getComputedStyle(dom, null);
+
+        for (var i = 0; i < computedStyle.length; i++) {
+          style[computedStyle[i]] = computedStyle.getPropertyValue(computedStyle[i]);
+        }
+      }
+
+      return style;
+    }
+  }, {
     key: "getTextbox",
     value: function getTextbox() {
       var dom = this.getTextboxDOM();
-      return dom ? medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.getEditorFromElement(dom) : null;
+      return dom ? medium_editor__WEBPACK_IMPORTED_MODULE_7___default.a.getEditorFromElement(dom) : null;
     }
   }, {
     key: "onTextStyleChange",
@@ -12408,8 +12512,8 @@ function (_Component) {
       if (!medium) return;
       var textboxDOM = this.getTextboxDOM();
       var selection = medium.options.ownerDocument.getSelection();
-      var selectionRange = medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.selection.getSelectionRange(medium.options.ownerDocument);
-      var parentNode = medium_editor__WEBPACK_IMPORTED_MODULE_6___default.a.selection.getSelectedParentElement(selectionRange);
+      var selectionRange = medium_editor__WEBPACK_IMPORTED_MODULE_7___default.a.selection.getSelectionRange(medium.options.ownerDocument);
+      var parentNode = medium_editor__WEBPACK_IMPORTED_MODULE_7___default.a.selection.getSelectedParentElement(selectionRange);
 
       if (medium) {
         switch (field) {
@@ -12540,14 +12644,14 @@ function (_Component) {
         htmlFor: "font-size-style"
       }, "\u6587\u5B57"), React.createElement("div", {
         id: "font-style"
-      }, React.createElement(_input_color__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }, React.createElement(_input_color__WEBPACK_IMPORTED_MODULE_6__["default"], {
         disabled: this.state.editState !== 'dblClickAndSelected',
         className: "__font-color",
         value: this.state.textStyle.color,
         onChange: function onChange(color) {
           return _this3.onTextStyleChange('color', color);
         }
-      }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_4__["default"], {
         disabled: this.state.editState !== 'dblClickAndSelected',
         className: "__font-size",
         value: fontSize,
@@ -12556,7 +12660,7 @@ function (_Component) {
         onChange: function onChange(fontSize) {
           return _this3.onTextStyleChange('fontSize', fontSize);
         }
-      }), React.createElement(_font_style_button_group__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      }), React.createElement(_font_style_button_group__WEBPACK_IMPORTED_MODULE_8__["default"], {
         disabled: this.state.editState !== 'dblClickAndSelected',
         className: "__font-style",
         fontWeight: (_this$state$textStyle2 = this.state.textStyle) === null || _this$state$textStyle2 === void 0 ? void 0 : _this$state$textStyle2.fontWeight,
@@ -12569,44 +12673,44 @@ function (_Component) {
         htmlFor: "font-layout-style"
       }, "\u5E03\u5C40"), React.createElement("div", {
         id: "font-layout-style"
-      }, React.createElement(_font_layout_button_group__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }, React.createElement(_font_layout_button_group__WEBPACK_IMPORTED_MODULE_9__["default"], {
         disabled: this.state.editState !== 'click',
         className: "__font-layout",
         textAlign: this.state.textStyle.textAlign,
         onFontLayoutChange: function onFontLayoutChange(textAlign) {
           return _this3.onTextStyleChange('textAlign', textAlign);
         }
-      }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_4__["default"], {
         disabled: this.state.editState !== 'click',
         className: "__font-line-height",
-        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_9__["default"],
-        disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__["default"],
+        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__["default"],
+        disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__["default"],
         value: lineHeight,
         options: [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2, 2.4, 2.6, 2.8, 3.0],
         unit: "\u500D",
         onChange: function onChange(lineHeight) {
           return _this3.onTextStyleChange('lineHeight', lineHeight);
         }
-      }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_4__["default"], {
         disabled: this.state.editState !== 'click',
         className: "__font-padding-top-bottom",
-        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_13__["default"],
-        disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_14__["default"],
+        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_14__["default"],
+        disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_15__["default"],
         value: paddingTop,
-        options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],
+        options: [0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],
         unit: "px",
         onChange: function onChange(padding) {
           _this3.onTextStyleChange('paddingTop', "".concat(padding, "px"));
 
           _this3.onTextStyleChange('paddingBottom', "".concat(padding, "px"));
         }
-      }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_4__["default"], {
         disabled: this.state.editState !== 'click',
         className: "__font-padding-left-right",
-        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__["default"],
-        disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_12__["default"],
+        icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_12__["default"],
+        disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_13__["default"],
         value: paddingLeft,
-        options: [5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],
+        options: [0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],
         unit: "px",
         onChange: function onChange(padding) {
           _this3.onTextStyleChange('paddingLeft', "".concat(padding, "px"));
@@ -12936,11 +13040,12 @@ function (_Component) {
       var className = classnames__WEBPACK_IMPORTED_MODULE_3___default()('coursebox-font-style-button-group', this.props.className, {
         disabled: disabled
       });
+      var fontWeight = this.props.fontWeight === 'bold' || parseInt(this.props.fontWeight) >= 700 ? 'bold' : 'normal';
       return React.createElement("div", {
         className: className
       }, React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_4__["default"], {
         disabled: this.props.disabled,
-        selected: this.props.fontWeight === 'bold',
+        selected: fontWeight === 'bold',
         icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_5__["default"],
         disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_6__["default"],
         onSelected: this.onFontStyleChange('fontWeight')
@@ -13840,6 +13945,12 @@ function (_Component) {
 
 Textbox.defaultProps = {
   tag: 'div',
+  style: {
+    fontSize: '16px',
+    width: 'auto',
+    height: 'auto',
+    lineHeight: '1.2'
+  },
   options: {}
 };
 Textbox.propTypes = _defineProperty({

@@ -42,7 +42,7 @@ class Textbox extends Component {
 	componentDidMount() {
 		debug('componentDidMount');
 		const dom = this.geDOM();
-		
+
 		this.medium = new MediumEditor(dom, Object.assign(DEFAULT_OPTIONS, this.props.options));
 		// 默认禁止编辑
 		this.disableEditing();
@@ -97,7 +97,7 @@ class Textbox extends Component {
 		const dom = this.geDOM();
 		dom.setAttribute('contenteditable', true);
 	}
-	
+
 	handleComposition(evt) {
 		const dom = ReactDOM.findDOMNode(this);
 
@@ -152,6 +152,12 @@ class Textbox extends Component {
 
 Textbox.defaultProps = {
 	tag: 'div',
+	style: {
+		fontSize: '16px',
+		width: 'auto',
+		height: 'auto',
+		lineHeight: '1.2'
+	},
 	options: {}
 }
 

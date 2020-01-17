@@ -40,6 +40,13 @@
 		function App() {
 			// 命名参考 ReactNative https://facebook.github.io/react-native/docs/text-style-props
 			const [text, setText] = useState('<p style="margin: 0">中国<font color="#ffeedd" size="5">A</font>bc</p>');
+			const [style, setStyle] = useState({
+				fontSize: '16px',
+				width: 'auto',
+				height: 'auto',
+				lineHeight: '1.2',
+				fontWeight: 'bold'
+			});
 
 			const textboxRef = useRef(null);
 
@@ -47,14 +54,10 @@
 				setText(val);
 			}
 
-			// setTimeout(() => {
-			// 	console.log(textboxRef.current);
-			// }, 1000);
-
 			return (
 				<div>
-					<Editor textboxDOM={textboxRef.current} textboxDOMRef={textboxRef} />
-					<Textbox ref={textboxRef} className="textbox" style={{ border: '1px dashed #aaa', lineHeight: '1.4' }} text={text} onContentChange={onContentChange} />
+					<Editor textboxStyle={style} textboxDOM={textboxRef.current} textboxDOMRef={textboxRef} />
+					<Textbox ref={textboxRef} className="textbox" style={style} text={text} onContentChange={onContentChange} />
 				</div>
 			);
 		}

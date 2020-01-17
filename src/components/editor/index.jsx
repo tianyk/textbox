@@ -2,6 +2,7 @@ import './editor.less';
 
 import { Component } from 'react';
 import classNames from 'classnames';
+import camelCase from 'camelcase';
 import InputSelect from '../input-select';
 import ReactDOM from 'react-dom';
 import InputColor from '../input-color';
@@ -14,24 +15,11 @@ import ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png'
 import ImagePaddingLeftAndRightDisabled from '@assets/images/左右边距_不可点@2x.png';
 import ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';
 import ImagePaddingTopAndBottomDisabled from '@assets/images/上下边距_不可点@2x.png';
-import { computedState } from '@commons/computed_state';
+import { computedState, getStyle } from '@commons/computed_state';
 import throttle from '@commons/throttle';
 import { isReactComponentInstance, isElement } from '@commons/utils';
 
 const debug = require('@commons/debug')('textbox:editor');
-
-function removeStyle(element, ...styleNames) {
-	for (let styleName of styleNames) {
-		element.style[styleName] = null;
-	}
-
-	const children = element.children;
-	if (children.length === 0) return;
-
-	for (let child of children) {
-		removeStyle(child, ...styleNames);
-	}
-}
 
 
 class TextboxEditor extends Component {
@@ -75,7 +63,7 @@ class TextboxEditor extends Component {
 	}
 
 	componentDidUpdate() {
-		debug('componentDidUpdate', arguments);
+		debug('componentDidUpdate');
 		if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();
 	}
 
@@ -152,26 +140,18 @@ class TextboxEditor extends Component {
 	checkState() {
 		debug('checkState');
 		// 布局属性从父容器计算
-		const computedStyle = this.getTextbox().options?.contentWindow.getComputedStyle(this.getTextboxDOM(), null);
-		let textAlign = computedStyle.getPropertyValue('text-align');
-		let lineHeight = computedStyle.getPropertyValue('line-height');
-		let paddingTop = computedStyle.getPropertyValue('padding-top');
-		let paddingLeft = computedStyle.getPropertyValue('padding-left');
-		const textStyle = {
-			paddingTop,
-			paddingLeft,
-			textAlign,
-			lineHeight
-		};
-
+		debug('textStyle: %o', textStyle);
+		
 		const selectionRange = MediumEditor.selection.getSelectionRange(this.getTextbox().options?.ownerDocument);
+		debug('selectionRange', selectionRange);
 		if (!selectionRange) {
+			const textStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-weight', 'font-size', 'color');
 			this.setState({
 				textStyle
 			});
 			return;
 		}
-		debug('selectionRange', selectionRange);
+
 		if (!selectionRange.collapsed) this.setState({
 			editState: 'dblClickAndSelected'
 		})
@@ -180,9 +160,14 @@ class TextboxEditor extends Component {
 		if (!this.getTextbox().elements.some(function (element) {
 			return MediumEditor.util.isDescendant(element, parentNode, true);
 		})) {
+			const textStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-weight', 'font-size', 'color');
+			this.setState({
+				textStyle
+			});
 			return;
 		}
 
+		const textStyle = {};
 		// Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node
 		while (parentNode) {
 			computedState(textStyle, parentNode, this.getTextbox().options?.contentWindow);
@@ -214,6 +199,27 @@ class TextboxEditor extends Component {
 				throw new Error('`textboxDOM` 必须是一个 HTMLElement 或者 React Component 实例');
 			}
 		}
+	}
+
+	getTextboxDOMStyle(...properties) {
+		debug('getTextboxDOMStyle');
+		const dom = this.getTextboxDOM();
+		if (!dom) return null;
+
+		const style = {};
+		if (properties.length > 0) {
+			for (let property of properties) {
+				const styleValue = getStyle(dom, property, this.getTextbox().options?.contentWindow);
+				if (styleValue) style[camelCase(property)] = styleValue;
+			}
+		} else {
+			const computedStyle = this.getTextbox().options?.contentWindow.getComputedStyle(dom, null);
+			for (let i = 0; i < computedStyle.length; i++) {
+				style[computedStyle[i]] = computedStyle.getPropertyValue(computedStyle[i]);
+			}
+		}
+
+		return style;
 	}
 
 	getTextbox() {
@@ -386,7 +392,7 @@ class TextboxEditor extends Component {
 						icon={ImagePaddingTopAndBottom}
 						disabledIcon={ImagePaddingTopAndBottomDisabled}
 						value={paddingTop}
-						options={[5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30]}
+						options={[0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30]}
 						unit="px"
 						onChange={(padding) => {
 							this.onTextStyleChange('paddingTop', `${padding}px`);
@@ -401,7 +407,7 @@ class TextboxEditor extends Component {
 						icon={ImagePaddingLeftAndRight}
 						disabledIcon={ImagePaddingLeftAndRightDisabled}
 						value={paddingLeft}
-						options={[5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30]}
+						options={[0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30]}
 						unit="px"
 						onChange={(padding) => {
 							this.onTextStyleChange('paddingLeft', `${padding}px`);

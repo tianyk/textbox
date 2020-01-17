@@ -1,4 +1,5 @@
-const debug = require('./debug')('textbox:commons:button');
+import camelCase from 'camelcase';
+const debug = require('./debug')('textbox:commons:computed_state');
 
 function rgba2hex(orig) {
 	let a = '',
@@ -17,111 +18,106 @@ function rgba2hex(orig) {
 	return `#${hex}`;
 }
 
-const STYLE_PROPS = [
-	'fontSize',
-	'color',
-	'fontWeight',
-	'textDecoration',
-	'fontStyle',
-	// 'textAlign',
-	// 'lineHeight',
-	// 'paddingTop',
-	// 'paddingLeft'
-]
 
-function computedState(currentState = {}, node, currentWindow = window) {
+function getStyle(node, styleProp, currentWindow = window) {
 	const nodeName = node.nodeName.toLowerCase();
 	const computedStyle = currentWindow.getComputedStyle(node, null);
-	debug('computedState', nodeName);
-	for (let styleProp of STYLE_PROPS) {
-		// 设置过就不在设置
-		if (typeof currentState[styleProp] !== 'undefined' && styleProp !== 'text-decoration') continue;
 
-		switch (styleProp) {
-			case 'fontSize':
-				let fontSize = '14px';
-				// if (nodeName === 'font' && node.hasAttribute('size')) {
-				// 	fontSize = node.getAttribute('size');
-				// } else {
-				fontSize = computedStyle.getPropertyValue('font-size');
-				// }
-				currentState[styleProp] = fontSize;
-				break;
+	let styleValue;
+	switch (styleProp) {
+		case 'font-size':
+			styleValue = computedStyle.getPropertyValue('font-size');
+			break;
 
-			case 'color':
-				let color = '#000';
-				if (nodeName === 'font' && node.hasAttribute('color')) {
-					color = node.getAttribute('color');
-				} else {
-					color = computedStyle.getPropertyValue('color');
-					if (color.startsWith('rgb')) color = rgba2hex(color);
-				}
-				currentState[styleProp] = color;
-				break;
+		case 'color':
+			if (nodeName === 'font' && node.hasAttribute('color')) {
+				styleValue = node.getAttribute('color');
+			} else {
+				styleValue = computedStyle.getPropertyValue('color');
+			}
+			if (styleValue.startsWith('rgb')) { styleValue = rgba2hex(styleValue); }
+			break;
 
-			case 'fontWeight':
-				let fontWeight = 'normal';
-				if (nodeName === 'b' || nodeName === 'strong') {
-					fontWeight = 'bold';
-				} else {
-					const fontWeightValue = computedStyle.getPropertyValue('font-weight');
-					if (fontWeightValue === '700' || fontWeightValue === 'bold') fontWeight = 'bold';
-				}
-				currentState[styleProp] = fontWeight;
-				break;
+		case 'font-weight':
+			if (nodeName === 'b' || nodeName === 'strong') {
+				styleValue = 'bold';
+			} else {
+				styleValue = computedStyle.getPropertyValue('font-weight');
+			}
+			break;
 
-			case 'textDecoration':
-				let textDecoration = 'none';
-				if (nodeName === 'u') {
-					textDecoration = 'underline';
-				} else if (nodeName === 'strike' || nodeName === 'del' || nodeName === 's') {
-					textDecoration = 'line-through';
-				} else {
-					// getPropertyValue text-decoration 不会继承 获取的不是实时样式
-					textDecoration = computedStyle.getPropertyValue('text-decoration');
-					if (textDecoration.split(' ').length > 0) textDecoration = textDecoration.split(' ')[0];
-				}
+		case 'text-decoration':
+			let textDecoration = 'none';
+			if (nodeName === 'u') {
+				textDecoration = 'underline';
+			} else if (nodeName === 'strike' || nodeName === 'del' || nodeName === 's') {
+				textDecoration = 'line-through';
+			} else {
+				// getPropertyValue text-decoration 不会继承 获取的不是实时样式
+				textDecoration = computedStyle.getPropertyValue('text-decoration');
+				if (textDecoration.split(' ').length > 0) textDecoration = textDecoration.split(' ')[0];
+			}
 
-				if (textDecoration !== 'none') currentState[styleProp] = textDecoration;
-				break;
+			if (textDecoration !== 'none') styleValue = textDecoration;
+			break;
 
-			case 'fontStyle':
-				let fontStyle = 'normal';
-				if (nodeName === 'i' || nodeName === 'em') {
-					fontStyle = 'italic';
-				} else {
-					fontStyle = computedStyle.getPropertyValue('font-style');
-				}
-				currentState[styleProp] = fontStyle;
-				break;
+		case 'font-style':
+			let fontStyle = 'normal';
+			if (nodeName === 'i' || nodeName === 'em') {
+				fontStyle = 'italic';
+			} else {
+				fontStyle = computedStyle.getPropertyValue('font-style');
+			}
+			styleValue = fontStyle;
+			break;
 
-			case 'textAlign':
-				let textAlign = computedStyle.getPropertyValue('text-align');
-				currentState[styleProp] = textAlign;
-				break;
+		case 'text-align':
+			styleValue = computedStyle.getPropertyValue('text-align');
+			break;
 
-			case 'lineHeight':
-				let lineHeight = computedStyle.getPropertyValue('line-height');
-				currentState[styleProp] = lineHeight;
-				break;
+		case 'line-height':
+			let _fontSize = computedStyle.getPropertyValue('font-size');
+			let _lineHeight = computedStyle.getPropertyValue('line-height');
+			styleValue = (parseFloat(_lineHeight) / parseFloat(_fontSize)).toFixed(1);
+			break;
 
-			case 'paddingTop':
-				let paddingTop = computedStyle.getPropertyValue('padding-top');
-				currentState[styleProp] = paddingTop;
-				break;
+		case 'padding-top':
+			styleValue = computedStyle.getPropertyValue('padding-top');
+			break;
 
-			case 'paddingLeft':
-				let paddingLeft = computedStyle.getPropertyValue('padding-left');
-				currentState[styleProp] = paddingLeft;
-				break;
-		}
+		case 'padding-left':
+			styleValue = computedStyle.getPropertyValue('padding-left');
+			break;
 
-		debug('currentState: %j', currentState);
+		default:
+			styleValue = computedStyle.getPropertyValue(styleProp);
 	}
 
+	debug(nodeName, styleProp, styleValue)
+	return styleValue;
+}
+
+const STYLE_PROPS = [
+	'font-size',
+	'color',
+	'font-weight',
+	'text-decoration',
+	'font-style',
+];
+
+function computedState(currentState = {}, node, currentWindow = window) {
+	for (let styleProp of STYLE_PROPS) {
+		// 设置过就不在设置
+		if (typeof currentState[camelCase(styleProp)] !== 'undefined') continue;
+
+		currentState[camelCase(styleProp)] = getStyle(node, styleProp, currentWindow);
+	}
+
+	debug('currentState: %j', currentState);
 	return currentState;
 }
 
 export {
+	getStyle,
 	computedState
 };

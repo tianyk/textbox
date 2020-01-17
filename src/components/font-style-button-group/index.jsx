@@ -47,11 +47,13 @@ class FontStyleButtonGroup extends Component {
 				disabled
 			});
 
+		const fontWeight = (this.props.fontWeight === 'bold' || parseInt(this.props.fontWeight) >= 700) ? 'bold' : 'normal';
+
 		return (
 			<div className={className}>
 				<SelectButton
 					disabled={this.props.disabled}
-					selected={this.props.fontWeight === 'bold'}
+					selected={fontWeight === 'bold'}
 					icon={ImageFontWeight}
 					disabledIcon={ImageFontWeightDisabled}
 					onSelected={this.onFontStyleChange('fontWeight')}
