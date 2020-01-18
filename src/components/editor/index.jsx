@@ -28,20 +28,22 @@ class TextboxEditor extends Component {
 
 		this.state = {
 			textStyle: {},
-			editState: 'none' //none-未选中 click- 单击 dblClick-双击 dblClickAndSelected-双击并选中
+			toolbarState: 'hide',
+			editState: 'blur' // blur 未选中 focus 选中
 		}
-		this.editTextbox = this.editTextbox.bind(this);
 		this.onTextStyleChange = this.onTextStyleChange.bind(this);
-		this.selectTextbox = this.selectTextbox.bind(this);
-		this.blurTextbox = this.blurTextbox.bind(this);
-		this.throttleCheckState = throttle(this.checkState, 200).bind(this);
+		this.handleFocus = this.handleFocus.bind(this);
+		this.handleBlur = this.handleBlur.bind(this);
+		this.hideToolbar = this.hideToolbar.bind(this);
+		this.showToolbar = this.showToolbar.bind(this);
+		this.throttleCheckState = throttle(this.checkState, 300).bind(this);
 	}
 
 	componentDidMount() {
 		if (this.getTextboxDOM() && !this.attachedEvent) {
 			// fix: 处理点击后才出现editor 问题
 			if (this.getTextboxDOM().getAttribute('data-medium-focused')) {
-				this.selectTextbox();
+				this.handleFocus();
 			}
 			return this.attachEventHandlers();
 		}
@@ -70,103 +72,98 @@ class TextboxEditor extends Component {
 	attachEventHandlers() {
 		if (!this.attachedEvent) {
 			debug('attachEventHandlers');
-			const textboxDOM = this.getTextboxDOM();
 			const textbox = this.getTextbox();
 			this.attachedEvent = true;
-			// this.throttleCheckState();
 
 			// MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements
-			// textbox.subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
-			textbox.subscribe('focus', this.throttleCheckState);
+			textbox.subscribe('blur', this.handleBlur);
+			textbox.subscribe('focus', this.handleFocus);
 			textbox.subscribe('positionToolbar', this.throttleCheckState);
 			textbox.subscribe('editableInput', this.throttleCheckState);
+			textbox.subscribe('hideToolbar', this.hideToolbar);
+			textbox.subscribe('showToolbar', this.showToolbar);
 
 			// Updating the state of the toolbar as things change 
-			// textbox.subscribe('editableClick', this.throttleCheckState);
 			textbox.subscribe('editableKeyup', this.throttleCheckState);
-
-			// 双击 单击
-			textbox.on(textboxDOM, 'click', this.selectTextbox);
-			textbox.on(textboxDOM, 'dblclick', this.editTextbox);
-			textbox.on(textboxDOM, 'blur', this.blurTextbox);
 		}
 	}
 
 	detachEventHandlers() {
 		if (this.attachedEvent) {
 			debug('detachEventHandlers');
-			const textboxDOM = this.getTextboxDOM();
 			const textbox = this.getTextbox();
-			this.attachedEvent = true;
+			this.attachedEvent = false;
 
-			// textbox.subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
-			textbox.unsubscribe('focus', this.throttleCheckState);
+			textbox.unsubscribe('blur', this.handleBlur);
+			textbox.unsubscribe('focus', this.handleFocus);
 			textbox.unsubscribe('positionToolbar', this.throttleCheckState);
 			textbox.unsubscribe('editableInput', this.throttleCheckState);
+			textbox.unsubscribe('hideToolbar', this.hideToolbar);
+			textbox.unsubscribe('showToolbar', this.showToolbar);
 
 			// Updating the state of the toolbar as things change
-			textbox.unsubscribe('editableClick', this.throttleCheckState);
 			textbox.unsubscribe('editableKeyup', this.throttleCheckState);
-
-			// 双击 单击
-			textbox.off(textboxDOM, 'click', this.selectTextbox)
-			textbox.off(textboxDOM, 'dblclick', this.editTextbox);
-
-			this.checkState();
 		}
 	}
 
-	selectTextbox() {
-		debug('selectTextbox');
-		if (this.state.editState === 'dblClick') return
+	handleFocus() {
+		debug('handleFocus');
+
 		this.setState({
-			editState: 'click'
+			editState: 'focus'
+		});
+		this.throttleCheckState();
+	}
+
+	handleBlur() {
+		debug('handleBlur');
+
+		this.setState({
+			editState: 'blur',
+			textStyle: {},
+		});
+	}
+
+	showToolbar() {
+		this.setState({
+			toolbarState: 'show'
 		})
 	}
 
-	editTextbox() {
-		debug('editTextbox');
+	hideToolbar() {
 		this.setState({
-			editState: 'dblClick'
+			toolbarState: 'hide'
 		})
-	}
-	blurTextbox() {
-		debug('blurTextbox');
-		this.setState({
-			editState: 'none'
-		});
 	}
 
 	checkState() {
 		debug('checkState');
-		// 布局属性从父容器计算
-		debug('textStyle: %o', textStyle);
-		
+		const globalStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-style', 'font-weight', 'text-decoration', 'font-size', 'color');
+		debug('globalStyle: %o', globalStyle);
 		const selectionRange = MediumEditor.selection.getSelectionRange(this.getTextbox().options?.ownerDocument);
 		debug('selectionRange', selectionRange);
-		if (!selectionRange) {
-			const textStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-weight', 'font-size', 'color');
+		// 未选择
+		if (!selectionRange || selectionRange.collapsed) {
 			this.setState({
-				textStyle
+				textStyle: globalStyle
 			});
 			return;
 		}
 
-		if (!selectionRange.collapsed) this.setState({
-			editState: 'dblClickAndSelected'
-		})
+		// 选择元素是编辑器
 		let parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange);
 		// Make sure the selection parent isn't outside of the contenteditable
 		if (!this.getTextbox().elements.some(function (element) {
 			return MediumEditor.util.isDescendant(element, parentNode, true);
 		})) {
-			const textStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-weight', 'font-size', 'color');
 			this.setState({
-				textStyle
+				textStyle: globalStyle
 			});
 			return;
 		}
 
+
+		// 选择的是node
 		const textStyle = {};
 		// Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node
 		while (parentNode) {
@@ -222,6 +219,14 @@ class TextboxEditor extends Component {
 		return style;
 	}
 
+	triggerGlobalStyleChange(style) {
+		const medium = this.getTextbox();
+		if (!medium) return;
+		const textboxDOM = this.getTextboxDOM();
+		// const globalStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-style', 'font-weight', 'text-decoration', 'font-size', 'color')
+		medium.trigger('editableChangeStyle', style, textboxDOM);
+	}
+
 	getTextbox() {
 		const dom = this.getTextboxDOM();
 		return dom ? MediumEditor.getEditorFromElement(dom) : null;
@@ -229,32 +234,50 @@ class TextboxEditor extends Component {
 
 	onTextStyleChange(field, value) {
 		debug('onTextStyleChange', field, value)
+		if (this.state.editState === 'blur') return;
+
 		const medium = this.getTextbox();
 		if (!medium) return;
 		const textboxDOM = this.getTextboxDOM();
-		const selection = medium.options.ownerDocument.getSelection();
-		const selectionRange = MediumEditor.selection.getSelectionRange(medium.options.ownerDocument);
-		let parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange);
 
-		if (medium) {
-			switch (field) {
-				case 'fontWeight':
+		switch (field) {
+			case 'fontWeight':
+				if (this.state.toolbarState === 'show') {
 					medium.execAction('bold');
-					break;
-				case 'fontStyle':
+				} else {
+					medium.trigger('editableChangeStyle', { fontWeight: value }, textboxDOM);
+				}
+				break;
+
+			case 'fontStyle':
+				if (this.state.toolbarState === 'show') {
 					medium.execAction('italic');
-					break;
-				case 'textDecoration':
+				} else {
+					medium.trigger('editableChangeStyle', { fontStyle: value }, textboxDOM);
+				}
+				break;
+
+			case 'textDecoration':
+				if (this.state.toolbarState === 'show') {
 					medium.execAction('underline');
-					break;
-				case 'color':
+				} else {
+					medium.trigger('editableChangeStyle', { textDecoration: value }, textboxDOM);
+				}
+				break;
+
+			case 'color':
+				if (this.state.toolbarState === 'show') {
 					// fix <font color></font>
 					medium.options.ownerDocument.execCommand('styleWithCSS', false, true);
 					medium.execAction('foreColor', { value });
 					medium.options.ownerDocument.execCommand('styleWithCSS', false, false);
-					break;
+				} else {
+					medium.trigger('editableChangeStyle', { color: value }, textboxDOM);
+				}
+				break;
 
-				case 'fontSize':
+			case 'fontSize':
+				if (this.state.toolbarState === 'show') {
 					medium.execAction('fontSize', { value: 7 });
 					if (textboxDOM) {
 						const nodes = textboxDOM.querySelectorAll('font[size="7"]');
@@ -262,56 +285,31 @@ class TextboxEditor extends Component {
 							node.removeAttribute('size');
 							node.style.fontSize = `${value}px`;
 						}
-						medium.trigger('editableInput', null, textboxDOM);
 					}
-					break;
+				} else {
+					medium.trigger('editableChangeStyle', { fontSize: `${value}px` }, textboxDOM);
+				}
 
-				case 'textAlign':
-					textboxDOM.style.textAlign = value;
-					// if (value === 'center') {
-					// 	medium.execAction('justifyCenter');
-					// } else if (value === 'left') {
-					// 	medium.execAction('justifyLeft');
-					// } else if (value === 'right') {
-					// 	medium.execAction('justifyRight');
-					// } else if (value === 'justify') {
-					// 	medium.execAction('justifyFull');
-					// }
-					this.checkState();
-					medium.trigger('editableInput', null, textboxDOM);
-					break;
+				break;
 
-				case 'lineHeight':
-					textboxDOM.style.lineHeight = value;
-					// 没有选中时
-					// if (selection.isCollapsed) {
-					// 	while (parentNode) {
-					// 		if (parentNode.parentNode === textboxDOM) break;
-					// 		parentNode = parentNode.parentNode;
-					// 	}
-					// }
-					// if (!parentNode) break;
-					// removeStyle(parentNode, 'lineHeight');
-					// parentNode.style.lineHeight = value;
-					medium.trigger('editableInput', null, textboxDOM);
-					break;
-				case 'paddingTop':
-				case 'paddingBottom':
-				case 'paddingLeft':
-				case 'paddingRight':
-					textboxDOM.style[field] = value;
-					// while (parentNode) {
-					// 	if (parentNode.parentNode === textboxDOM) break;
-					// 	parentNode = parentNode.parentNode;
-					// }
-					// if (!parentNode) break;
-					// removeStyle(parentNode, field);
+			case 'textAlign':
+				medium.trigger('editableChangeStyle', { textAlign: value }, textboxDOM);
+				break;
 
-					// parentNode.style[field] = value;
-					medium.trigger('editableInput', null, textboxDOM);
-					break;
-			}
+			case 'lineHeight':
+				medium.trigger('editableChangeStyle', { lineHeight: value }, textboxDOM);
+				break;
+
+			case 'paddingTop':
+			case 'paddingBottom':
+			case 'paddingLeft':
+			case 'paddingRight':
+				medium.trigger('editableChangeStyle', { [field]: value }, textboxDOM);
+				break;
 		}
+
+		medium.trigger('editableInput', null, textboxDOM);
+		this.throttleCheckState();
 	}
 
 	render() {
@@ -328,14 +326,14 @@ class TextboxEditor extends Component {
 
 				<div id="font-style">
 					<InputColor
-						disabled={this.state.editState !== 'dblClickAndSelected'}
+						disabled={this.state.editState !== 'focus'}
 						className="__font-color"
 						value={this.state.textStyle.color}
 						onChange={(color) => this.onTextStyleChange('color', color)}
 					></InputColor>
 
 					<InputSelect
-						disabled={this.state.editState !== 'dblClickAndSelected'}
+						disabled={this.state.editState !== 'focus'}
 						className="__font-size"
 						value={fontSize}
 						options={[12, 13, 14, 16, 18, 20, 28, 36, 48, 72]}
@@ -344,7 +342,7 @@ class TextboxEditor extends Component {
 					></InputSelect>
 
 					<FontStyleButtonGroup
-						disabled={this.state.editState !== 'dblClickAndSelected'}
+						disabled={this.state.editState !== 'focus'}
 						className="__font-style"
 						fontWeight={this.state.textStyle?.fontWeight}
 						fontStyle={this.state.textStyle.fontStyle}
@@ -356,8 +354,9 @@ class TextboxEditor extends Component {
 				<label htmlFor="font-layout-style">布局</label>
 				<div id="font-layout-style">
 					{/* 对齐方式 */}
+					<span>{this.state.editState !== 'focus' || this.state.toolbarState === 'show'}</span>
 					<FontLayoutButtonGroup
-						disabled={this.state.editState !== 'click'}
+						disabled={this.state.editState !== 'focus' || this.state.toolbarState === 'show'}
 						className="__font-layout"
 						textAlign={this.state.textStyle.textAlign}
 						onFontLayoutChange={(textAlign) => this.onTextStyleChange('textAlign', textAlign)}
@@ -367,7 +366,7 @@ class TextboxEditor extends Component {
 					{/* <InputNumber
 						min={0.8}
 						max={5}
-						step={0.1}
+						step={0.1} 
 						unit="倍"
 						icon={ImageLineHeight}
 						value={lineHeight}
@@ -375,7 +374,7 @@ class TextboxEditor extends Component {
 					></InputNumber> */}
 
 					<InputSelect
-						disabled={this.state.editState !== 'click'}
+						disabled={this.state.editState !== 'focus' || this.state.toolbarState === 'show'}
 						className="__font-line-height"
 						icon={ImageLineHeight}
 						disabledIcon={ImageLineHeightDisabled}
@@ -387,7 +386,7 @@ class TextboxEditor extends Component {
 
 					{/* 上下内边距 */}
 					<InputSelect
-						disabled={this.state.editState !== 'click'}
+						disabled={this.state.editState !== 'focus' || this.state.toolbarState === 'show'}
 						className="__font-padding-top-bottom"
 						icon={ImagePaddingTopAndBottom}
 						disabledIcon={ImagePaddingTopAndBottomDisabled}
@@ -402,7 +401,7 @@ class TextboxEditor extends Component {
 
 					{/* 左右内边距 */}
 					<InputSelect
-						disabled={this.state.editState !== 'click'}
+						disabled={this.state.editState !== 'focus' || this.state.toolbarState === 'show'}
 						className="__font-padding-left-right"
 						icon={ImagePaddingLeftAndRight}
 						disabledIcon={ImagePaddingLeftAndRightDisabled}

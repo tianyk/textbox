@@ -960,7 +960,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".coursebox-input-select {\n  position: relative;\n  display: inline-block;\n  background-color: #fff;\n  height: 32px;\n  line-height: 32px;\n  box-sizing: content-box;\n  padding: 0 10px;\n  margin: 0;\n  border: 1px solid #E8E8E8;\n  border-radius: 2px;\n  outline: none;\n  vertical-align: bottom;\n}\n.coursebox-input-select .icon {\n  display: inline-block;\n  vertical-align: middle;\n  width: 14px;\n  height: 14px;\n  padding: 2px;\n  margin-right: 7px;\n}\n.coursebox-input-select .select-value {\n  display: inline-block;\n  font-size: 12px;\n  margin-right: 1px;\n  color: #333;\n  text-align: center;\n}\n.coursebox-input-select .unit {\n  font-size: 12px;\n  margin-left: 1px;\n  color: #333;\n}\n.coursebox-input-select .select-collapse {\n  float: right;\n  margin-left: 7px;\n}\n.coursebox-input-select .select-collapse img {\n  width: 6px;\n  height: 4px;\n  vertical-align: middle;\n}\n.coursebox-input-select .options {\n  position: absolute;\n  z-index: 10001;\n  left: -1px;\n  width: 100%;\n}\n.coursebox-input-select .options ul,\n.coursebox-input-select .options ol {\n  background-color: #fff;\n  border: 1px solid #E8E8E8;\n  min-width: 100%;\n  list-style-type: none;\n  padding-left: 0;\n  margin-top: 0;\n  margin-left: 0;\n  max-height: 10em;\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n.coursebox-input-select .options ul li,\n.coursebox-input-select .options ol li {\n  font-size: 12px;\n  padding-left: 7px;\n  user-select: none;\n}\n.coursebox-input-select .options ul li.selected,\n.coursebox-input-select .options ol li.selected {\n  background-color: #E8E8E8;\n}\n.coursebox-input-select .options ul li:hover,\n.coursebox-input-select .options ol li:hover {\n  background-color: #E8E8E8;\n}\n.coursebox-input-select.disabled .font-color-bar {\n  background-color: #E8E8E8 !important;\n}\n.coursebox-input-select.disabled .select-value {\n  color: #E8E8E8;\n}\n.coursebox-input-select.disabled .unit {\n  color: #E8E8E8;\n}\n.coursebox-input-select.disabled:hover {\n  border-color: #E8E8E8;\n}\n.coursebox-input-select:hover {\n  border-color: #5C6066;\n}\n", ""]);
+exports.push([module.i, ".coursebox-input-select {\n  position: relative;\n  display: inline-block;\n  background-color: #fff;\n  height: 32px;\n  line-height: 32px;\n  box-sizing: content-box;\n  padding: 0 10px;\n  margin: 0;\n  border: 1px solid #E8E8E8;\n  border-radius: 2px;\n  outline: none;\n  vertical-align: bottom;\n}\n.coursebox-input-select .icon {\n  display: inline-block;\n  vertical-align: middle;\n  width: 14px;\n  height: 14px;\n  padding: 2px;\n  margin-right: 7px;\n}\n.coursebox-input-select .select-value {\n  display: inline-block;\n  font-size: 12px;\n  margin-right: 1px;\n  color: #333;\n  text-align: center;\n}\n.coursebox-input-select .unit {\n  font-size: 12px;\n  margin-left: 1px;\n  color: #333;\n}\n.coursebox-input-select .select-collapse {\n  float: right;\n  margin-left: 7px;\n}\n.coursebox-input-select .select-collapse img {\n  width: 6px;\n  height: 4px;\n  vertical-align: middle;\n}\n.coursebox-input-select .options {\n  position: absolute;\n  z-index: 10001;\n  left: -1px;\n  width: 100%;\n}\n.coursebox-input-select .options ul,\n.coursebox-input-select .options ol {\n  background-color: #fff;\n  border: 1px solid #E8E8E8;\n  min-width: 100%;\n  list-style-type: none;\n  padding-left: 0;\n  margin-top: 0;\n  margin-left: 0;\n  max-height: 15em;\n  overflow-y: auto;\n  overflow-x: hidden;\n}\n.coursebox-input-select .options ul li,\n.coursebox-input-select .options ol li {\n  font-size: 12px;\n  padding-left: 7px;\n  user-select: none;\n}\n.coursebox-input-select .options ul li.selected,\n.coursebox-input-select .options ol li.selected {\n  background-color: #E8E8E8;\n}\n.coursebox-input-select .options ul li:hover,\n.coursebox-input-select .options ol li:hover {\n  background-color: #E8E8E8;\n}\n.coursebox-input-select.disabled .font-color-bar {\n  background-color: #E8E8E8 !important;\n}\n.coursebox-input-select.disabled .select-value {\n  color: #E8E8E8;\n}\n.coursebox-input-select.disabled .unit {\n  color: #E8E8E8;\n}\n.coursebox-input-select.disabled:hover {\n  border-color: #E8E8E8;\n}\n.coursebox-input-select:hover {\n  border-color: #5C6066;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -12205,6 +12205,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _commons_utils__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @commons/utils */ "./src/commons/utils.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -12256,14 +12258,16 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(TextboxEditor).call(this, props));
     _this.state = {
       textStyle: {},
-      editState: 'none' //none-未选中 click- 单击 dblClick-双击 dblClickAndSelected-双击并选中
+      toolbarState: 'hide',
+      editState: 'blur' // blur 未选中 focus 选中
 
     };
-    _this.editTextbox = _this.editTextbox.bind(_assertThisInitialized(_this));
     _this.onTextStyleChange = _this.onTextStyleChange.bind(_assertThisInitialized(_this));
-    _this.selectTextbox = _this.selectTextbox.bind(_assertThisInitialized(_this));
-    _this.blurTextbox = _this.blurTextbox.bind(_assertThisInitialized(_this));
-    _this.throttleCheckState = Object(_commons_throttle__WEBPACK_IMPORTED_MODULE_17__["default"])(_this.checkState, 200).bind(_assertThisInitialized(_this));
+    _this.handleFocus = _this.handleFocus.bind(_assertThisInitialized(_this));
+    _this.handleBlur = _this.handleBlur.bind(_assertThisInitialized(_this));
+    _this.hideToolbar = _this.hideToolbar.bind(_assertThisInitialized(_this));
+    _this.showToolbar = _this.showToolbar.bind(_assertThisInitialized(_this));
+    _this.throttleCheckState = Object(_commons_throttle__WEBPACK_IMPORTED_MODULE_17__["default"])(_this.checkState, 300).bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -12275,7 +12279,7 @@ function (_Component) {
       if (this.getTextboxDOM() && !this.attachedEvent) {
         // fix: 处理点击后才出现editor 问题
         if (this.getTextboxDOM().getAttribute('data-medium-focused')) {
-          this.selectTextbox();
+          this.handleFocus();
         }
 
         return this.attachEventHandlers();
@@ -12310,22 +12314,17 @@ function (_Component) {
     value: function attachEventHandlers() {
       if (!this.attachedEvent) {
         debug('attachEventHandlers');
-        var textboxDOM = this.getTextboxDOM();
         var textbox = this.getTextbox();
-        this.attachedEvent = true; // this.throttleCheckState();
-        // MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements
-        // textbox.subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
+        this.attachedEvent = true; // MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements
 
-        textbox.subscribe('focus', this.throttleCheckState);
+        textbox.subscribe('blur', this.handleBlur);
+        textbox.subscribe('focus', this.handleFocus);
         textbox.subscribe('positionToolbar', this.throttleCheckState);
-        textbox.subscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change 
-        // textbox.subscribe('editableClick', this.throttleCheckState);
+        textbox.subscribe('editableInput', this.throttleCheckState);
+        textbox.subscribe('hideToolbar', this.hideToolbar);
+        textbox.subscribe('showToolbar', this.showToolbar); // Updating the state of the toolbar as things change 
 
-        textbox.subscribe('editableKeyup', this.throttleCheckState); // 双击 单击
-
-        textbox.on(textboxDOM, 'click', this.selectTextbox);
-        textbox.on(textboxDOM, 'dblclick', this.editTextbox);
-        textbox.on(textboxDOM, 'blur', this.blurTextbox);
+        textbox.subscribe('editableKeyup', this.throttleCheckState);
       }
     }
   }, {
@@ -12333,45 +12332,48 @@ function (_Component) {
     value: function detachEventHandlers() {
       if (this.attachedEvent) {
         debug('detachEventHandlers');
-        var textboxDOM = this.getTextboxDOM();
         var textbox = this.getTextbox();
-        this.attachedEvent = true; // textbox.subscribe('blur', this.handleBlur.bind(this)); // 禁用、重置
-
-        textbox.unsubscribe('focus', this.throttleCheckState);
+        this.attachedEvent = false;
+        textbox.unsubscribe('blur', this.handleBlur);
+        textbox.unsubscribe('focus', this.handleFocus);
         textbox.unsubscribe('positionToolbar', this.throttleCheckState);
-        textbox.unsubscribe('editableInput', this.throttleCheckState); // Updating the state of the toolbar as things change
+        textbox.unsubscribe('editableInput', this.throttleCheckState);
+        textbox.unsubscribe('hideToolbar', this.hideToolbar);
+        textbox.unsubscribe('showToolbar', this.showToolbar); // Updating the state of the toolbar as things change
 
-        textbox.unsubscribe('editableClick', this.throttleCheckState);
-        textbox.unsubscribe('editableKeyup', this.throttleCheckState); // 双击 单击
-
-        textbox.off(textboxDOM, 'click', this.selectTextbox);
-        textbox.off(textboxDOM, 'dblclick', this.editTextbox);
-        this.checkState();
+        textbox.unsubscribe('editableKeyup', this.throttleCheckState);
       }
     }
   }, {
-    key: "selectTextbox",
-    value: function selectTextbox() {
-      debug('selectTextbox');
-      if (this.state.editState === 'dblClick') return;
+    key: "handleFocus",
+    value: function handleFocus() {
+      debug('handleFocus');
       this.setState({
-        editState: 'click'
+        editState: 'focus'
+      });
+      this.throttleCheckState();
+    }
+  }, {
+    key: "handleBlur",
+    value: function handleBlur() {
+      debug('handleBlur');
+      this.setState({
+        editState: 'blur',
+        textStyle: {}
       });
     }
   }, {
-    key: "editTextbox",
-    value: function editTextbox() {
-      debug('editTextbox');
+    key: "showToolbar",
+    value: function showToolbar() {
       this.setState({
-        editState: 'dblClick'
+        toolbarState: 'show'
       });
     }
   }, {
-    key: "blurTextbox",
-    value: function blurTextbox() {
-      debug('blurTextbox');
+    key: "hideToolbar",
+    value: function hideToolbar() {
       this.setState({
-        editState: 'none'
+        toolbarState: 'hide'
       });
     }
   }, {
@@ -12379,36 +12381,31 @@ function (_Component) {
     value: function checkState() {
       var _this$getTextbox$opti;
 
-      debug('checkState'); // 布局属性从父容器计算
-
-      debug('textStyle: %o', textStyle);
+      debug('checkState');
+      var globalStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-style', 'font-weight', 'text-decoration', 'font-size', 'color');
+      debug('globalStyle: %o', globalStyle);
       var selectionRange = medium_editor__WEBPACK_IMPORTED_MODULE_7___default.a.selection.getSelectionRange((_this$getTextbox$opti = this.getTextbox().options) === null || _this$getTextbox$opti === void 0 ? void 0 : _this$getTextbox$opti.ownerDocument);
-      debug('selectionRange', selectionRange);
+      debug('selectionRange', selectionRange); // 未选择
 
-      if (!selectionRange) {
-        var _textStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-weight', 'font-size', 'color');
-
+      if (!selectionRange || selectionRange.collapsed) {
         this.setState({
-          textStyle: _textStyle
+          textStyle: globalStyle
         });
         return;
-      }
+      } // 选择元素是编辑器
 
-      if (!selectionRange.collapsed) this.setState({
-        editState: 'dblClickAndSelected'
-      });
+
       var parentNode = medium_editor__WEBPACK_IMPORTED_MODULE_7___default.a.selection.getSelectedParentElement(selectionRange); // Make sure the selection parent isn't outside of the contenteditable
 
       if (!this.getTextbox().elements.some(function (element) {
         return medium_editor__WEBPACK_IMPORTED_MODULE_7___default.a.util.isDescendant(element, parentNode, true);
       })) {
-        var _textStyle2 = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-weight', 'font-size', 'color');
-
         this.setState({
-          textStyle: _textStyle2
+          textStyle: globalStyle
         });
         return;
-      }
+      } // 选择的是node
+
 
       var textStyle = {}; // Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node
 
@@ -12499,6 +12496,15 @@ function (_Component) {
       return style;
     }
   }, {
+    key: "triggerGlobalStyleChange",
+    value: function triggerGlobalStyleChange(style) {
+      var medium = this.getTextbox();
+      if (!medium) return;
+      var textboxDOM = this.getTextboxDOM(); // const globalStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-style', 'font-weight', 'text-decoration', 'font-size', 'color')
+
+      medium.trigger('editableChangeStyle', style, textboxDOM);
+    }
+  }, {
     key: "getTextbox",
     value: function getTextbox() {
       var dom = this.getTextboxDOM();
@@ -12508,37 +12514,63 @@ function (_Component) {
     key: "onTextStyleChange",
     value: function onTextStyleChange(field, value) {
       debug('onTextStyleChange', field, value);
+      if (this.state.editState === 'blur') return;
       var medium = this.getTextbox();
       if (!medium) return;
       var textboxDOM = this.getTextboxDOM();
-      var selection = medium.options.ownerDocument.getSelection();
-      var selectionRange = medium_editor__WEBPACK_IMPORTED_MODULE_7___default.a.selection.getSelectionRange(medium.options.ownerDocument);
-      var parentNode = medium_editor__WEBPACK_IMPORTED_MODULE_7___default.a.selection.getSelectedParentElement(selectionRange);
 
-      if (medium) {
-        switch (field) {
-          case 'fontWeight':
+      switch (field) {
+        case 'fontWeight':
+          if (this.state.toolbarState === 'show') {
             medium.execAction('bold');
-            break;
+          } else {
+            medium.trigger('editableChangeStyle', {
+              fontWeight: value
+            }, textboxDOM);
+          }
 
-          case 'fontStyle':
+          break;
+
+        case 'fontStyle':
+          if (this.state.toolbarState === 'show') {
             medium.execAction('italic');
-            break;
+          } else {
+            medium.trigger('editableChangeStyle', {
+              fontStyle: value
+            }, textboxDOM);
+          }
 
-          case 'textDecoration':
+          break;
+
+        case 'textDecoration':
+          if (this.state.toolbarState === 'show') {
             medium.execAction('underline');
-            break;
+          } else {
+            medium.trigger('editableChangeStyle', {
+              textDecoration: value
+            }, textboxDOM);
+          }
 
-          case 'color':
+          break;
+
+        case 'color':
+          if (this.state.toolbarState === 'show') {
             // fix <font color></font>
             medium.options.ownerDocument.execCommand('styleWithCSS', false, true);
             medium.execAction('foreColor', {
               value: value
             });
             medium.options.ownerDocument.execCommand('styleWithCSS', false, false);
-            break;
+          } else {
+            medium.trigger('editableChangeStyle', {
+              color: value
+            }, textboxDOM);
+          }
 
-          case 'fontSize':
+          break;
+
+        case 'fontSize':
+          if (this.state.toolbarState === 'show') {
             medium.execAction('fontSize', {
               value: 7
             });
@@ -12569,58 +12601,37 @@ function (_Component) {
                   }
                 }
               }
-
-              medium.trigger('editableInput', null, textboxDOM);
             }
+          } else {
+            medium.trigger('editableChangeStyle', {
+              fontSize: "".concat(value, "px")
+            }, textboxDOM);
+          }
 
-            break;
+          break;
 
-          case 'textAlign':
-            textboxDOM.style.textAlign = value; // if (value === 'center') {
-            // 	medium.execAction('justifyCenter');
-            // } else if (value === 'left') {
-            // 	medium.execAction('justifyLeft');
-            // } else if (value === 'right') {
-            // 	medium.execAction('justifyRight');
-            // } else if (value === 'justify') {
-            // 	medium.execAction('justifyFull');
-            // }
+        case 'textAlign':
+          medium.trigger('editableChangeStyle', {
+            textAlign: value
+          }, textboxDOM);
+          break;
 
-            this.checkState();
-            medium.trigger('editableInput', null, textboxDOM);
-            break;
+        case 'lineHeight':
+          medium.trigger('editableChangeStyle', {
+            lineHeight: value
+          }, textboxDOM);
+          break;
 
-          case 'lineHeight':
-            textboxDOM.style.lineHeight = value; // 没有选中时
-            // if (selection.isCollapsed) {
-            // 	while (parentNode) {
-            // 		if (parentNode.parentNode === textboxDOM) break;
-            // 		parentNode = parentNode.parentNode;
-            // 	}
-            // }
-            // if (!parentNode) break;
-            // removeStyle(parentNode, 'lineHeight');
-            // parentNode.style.lineHeight = value;
-
-            medium.trigger('editableInput', null, textboxDOM);
-            break;
-
-          case 'paddingTop':
-          case 'paddingBottom':
-          case 'paddingLeft':
-          case 'paddingRight':
-            textboxDOM.style[field] = value; // while (parentNode) {
-            // 	if (parentNode.parentNode === textboxDOM) break;
-            // 	parentNode = parentNode.parentNode;
-            // }
-            // if (!parentNode) break;
-            // removeStyle(parentNode, field);
-            // parentNode.style[field] = value;
-
-            medium.trigger('editableInput', null, textboxDOM);
-            break;
-        }
+        case 'paddingTop':
+        case 'paddingBottom':
+        case 'paddingLeft':
+        case 'paddingRight':
+          medium.trigger('editableChangeStyle', _defineProperty({}, field, value), textboxDOM);
+          break;
       }
+
+      medium.trigger('editableInput', null, textboxDOM);
+      this.throttleCheckState();
     }
   }, {
     key: "render",
@@ -12645,14 +12656,14 @@ function (_Component) {
       }, "\u6587\u5B57"), React.createElement("div", {
         id: "font-style"
       }, React.createElement(_input_color__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        disabled: this.state.editState !== 'dblClickAndSelected',
+        disabled: this.state.editState !== 'focus',
         className: "__font-color",
         value: this.state.textStyle.color,
         onChange: function onChange(color) {
           return _this3.onTextStyleChange('color', color);
         }
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        disabled: this.state.editState !== 'dblClickAndSelected',
+        disabled: this.state.editState !== 'focus',
         className: "__font-size",
         value: fontSize,
         options: [12, 13, 14, 16, 18, 20, 28, 36, 48, 72],
@@ -12661,7 +12672,7 @@ function (_Component) {
           return _this3.onTextStyleChange('fontSize', fontSize);
         }
       }), React.createElement(_font_style_button_group__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        disabled: this.state.editState !== 'dblClickAndSelected',
+        disabled: this.state.editState !== 'focus',
         className: "__font-style",
         fontWeight: (_this$state$textStyle2 = this.state.textStyle) === null || _this$state$textStyle2 === void 0 ? void 0 : _this$state$textStyle2.fontWeight,
         fontStyle: this.state.textStyle.fontStyle,
@@ -12673,15 +12684,15 @@ function (_Component) {
         htmlFor: "font-layout-style"
       }, "\u5E03\u5C40"), React.createElement("div", {
         id: "font-layout-style"
-      }, React.createElement(_font_layout_button_group__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        disabled: this.state.editState !== 'click',
+      }, React.createElement("span", null, this.state.editState !== 'focus' || this.state.toolbarState === 'show'), React.createElement(_font_layout_button_group__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',
         className: "__font-layout",
         textAlign: this.state.textStyle.textAlign,
         onFontLayoutChange: function onFontLayoutChange(textAlign) {
           return _this3.onTextStyleChange('textAlign', textAlign);
         }
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        disabled: this.state.editState !== 'click',
+        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',
         className: "__font-line-height",
         icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_10__["default"],
         disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__["default"],
@@ -12692,7 +12703,7 @@ function (_Component) {
           return _this3.onTextStyleChange('lineHeight', lineHeight);
         }
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        disabled: this.state.editState !== 'click',
+        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',
         className: "__font-padding-top-bottom",
         icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_14__["default"],
         disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_15__["default"],
@@ -12705,7 +12716,7 @@ function (_Component) {
           _this3.onTextStyleChange('paddingBottom', "".concat(padding, "px"));
         }
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        disabled: this.state.editState !== 'click',
+        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',
         className: "__font-padding-left-right",
         icon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_12__["default"],
         disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_13__["default"],
@@ -12883,6 +12894,12 @@ function (_Component) {
         icon: this.props.textAlign === 'right' ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_7__["default"],
         disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_15__["default"],
         onSelected: this.onFontLayoutChange('right')
+      }), React.createElement(_select_button__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        disabled: this.props.disabled,
+        selected: this.props.textAlign === 'justify',
+        icon: this.props.textAlign === 'justify' ? _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_12__["default"] : _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_8__["default"],
+        disabledIcon: _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_16__["default"],
+        onSelected: this.onFontLayoutChange('justify')
       }));
     }
   }]);
@@ -13750,8 +13767,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var medium_editor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! medium-editor */ "medium-editor");
 /* harmony import */ var medium_editor__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(medium_editor__WEBPACK_IMPORTED_MODULE_5__);
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -13848,6 +13863,10 @@ function (_Component) {
         debug('blur');
 
         _this2.disableEditing();
+      });
+      this.medium.subscribe('editableChangeStyle', function (style) {
+        debug('editableChangeStyle', style);
+        _this2.props.onStyleChange && _this2.props.onStyleChange(style);
       });
     }
   }, {
@@ -13953,13 +13972,10 @@ Textbox.defaultProps = {
   },
   options: {}
 };
-Textbox.propTypes = _defineProperty({
+Textbox.propTypes = {
   onChange: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func.isRequired,
-  onSelection: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.fun,
-  options: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  max: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
-  setp: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number
-}, "options", prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object);
+  options: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
+};
 /* harmony default export */ __webpack_exports__["default"] = (Textbox);
 
 /***/ }),

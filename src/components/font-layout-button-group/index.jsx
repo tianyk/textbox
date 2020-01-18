@@ -73,12 +73,13 @@ class FontLayoutButtonGroup extends Component {
 					onSelected={this.onFontLayoutChange('right')}
 				></SelectButton>
 
-				{/* <SelectButton
+				<SelectButton
+					disabled={this.props.disabled}
 					selected={this.props.textAlign === 'justify'}
 					icon={this.props.textAlign === 'justify' ? ImageFontLayoutJustifySelected : ImageFontLayoutJustify}
 					disabledIcon={ImageFontLayoutJustifyDisabled}
 					onSelected={this.onFontLayoutChange('justify')}
-				></SelectButton> */}
+				></SelectButton>
 			</div>
 		);
 	}

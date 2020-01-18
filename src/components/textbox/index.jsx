@@ -63,6 +63,11 @@ class Textbox extends Component {
 			debug('blur');
 			this.disableEditing();
 		});
+
+		this.medium.subscribe('editableChangeStyle', (style) => {
+			debug('editableChangeStyle', style);
+			this.props.onStyleChange && this.props.onStyleChange(style);
+		});
 	}
 
 	componentWillUnmount() {
@@ -163,10 +168,6 @@ Textbox.defaultProps = {
 
 Textbox.propTypes = {
 	onChange: PropTypes.func.isRequired,
-	onSelection: PropTypes.fun,
-	options: PropTypes.object,
-	max: PropTypes.number,
-	setp: PropTypes.number,
 	options: PropTypes.object
 }
 

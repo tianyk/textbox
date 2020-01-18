@@ -56,8 +56,10 @@
 
 			return (
 				<div>
-					<Editor textboxStyle={style} textboxDOM={textboxRef.current} textboxDOMRef={textboxRef} />
-					<Textbox ref={textboxRef} className="textbox" style={style} text={text} onContentChange={onContentChange} />
+					<Editor textboxDOM={textboxRef.current} textboxDOMRef={textboxRef} />
+					<Textbox ref={textboxRef} className="textbox" style={style} text={text} onContentChange={onContentChange} onStyleChange={(style) => {
+						setStyle(prevStyle => { return { ...prevStyle, ...style } })
+					}} />
 				</div>
 			);
 		}
