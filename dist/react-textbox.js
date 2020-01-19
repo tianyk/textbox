@@ -13154,6 +13154,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_images_2x_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @assets/images/三角形_不可点@2x.png */ "./assets/images/三角形_不可点@2x.png");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -13208,11 +13216,28 @@ function (_Component) {
           _this$props2,
           _this2 = this;
 
+      var colors = [((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.value) || '#333', "#f44336ff", "#e91e63f2", "#9c27b0e5", "#673ab7d8", "#3f51b5cc", "#2196f3bf", "#03a9f4b2", "#00bcd4b2", "#009688bf", "#4caf50cc", "#8bc34ad8", "#cddc39e5", "#ffeb3bf2"];
+
+      try {
+        var recentlyUsedColors = JSON.parse(window.localStorage.getItem('__PICKR_COLORS__') || '[]');
+
+        for (var _i = 0, _colors = colors; _i < _colors.length; _i++) {
+          var color = _colors[_i];
+          var pos = recentlyUsedColors.indexOf(color);
+          if (-1 !== pos) recentlyUsedColors.splice(pos, 1);
+        }
+
+        if (recentlyUsedColors.length > 0) {
+          colors.splice.apply(colors, [colors.length - recentlyUsedColors.length, recentlyUsedColors.length].concat(_toConsumableArray(recentlyUsedColors)));
+        }
+      } catch (ignored) {}
+
+      console.log(colors);
       var pickr = this.pickr = _simonwep_pickr__WEBPACK_IMPORTED_MODULE_5___default.a.create({
         el: '.coursebox-input-color .color-picker',
         useAsButton: true,
         // 初始默认值
-        "default": ((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.value) || '#333',
+        "default": ((_this$props2 = this.props) === null || _this$props2 === void 0 ? void 0 : _this$props2.value) || '#333',
         container: react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.findDOMNode(this).querySelector('.color-picker-container'),
         theme: 'nano',
         // 位置 下-居中
@@ -13222,7 +13247,7 @@ function (_Component) {
         // 重新定位
         autoReposition: true,
         appClass: 'pickr-fix-position',
-        swatches: [((_this$props2 = this.props) === null || _this$props2 === void 0 ? void 0 : _this$props2.value) || '#333', 'rgba(244, 67, 54, 1)', 'rgba(233, 30, 99, 0.95)', 'rgba(156, 39, 176, 0.9)', 'rgba(103, 58, 183, 0.85)', 'rgba(63, 81, 181, 0.8)', 'rgba(33, 150, 243, 0.75)', 'rgba(3, 169, 244, 0.7)', 'rgba(0, 188, 212, 0.7)', 'rgba(0, 150, 136, 0.75)', 'rgba(76, 175, 80, 0.8)', 'rgba(139, 195, 74, 0.85)', 'rgba(205, 220, 57, 0.9)', 'rgba(255, 235, 59, 0.95)'],
+        swatches: colors,
         components: {
           // Main components
           preview: true,
@@ -13257,8 +13282,21 @@ function (_Component) {
       }).on('save', function (color) {
         debug('[save]');
         pickr.hide();
+        color = color.toHEXA().toString(0); // 保存最近使用的颜色 
 
-        _this2.throttleOnChange(color.toHEXA().toString(0));
+        try {
+          var _colors2 = JSON.parse(window.localStorage.getItem('__PICKR_COLORS__') || '[]');
+
+          if (!_colors2.includes(color)) {
+            if (_colors2.length >= 7) _colors2 = _colors2.slice(_colors2.length - 7);
+
+            _colors2.push(color);
+
+            window.localStorage.setItem('__PICKR_COLORS__', JSON.stringify(_colors2));
+          }
+        } catch (ignored) {}
+
+        _this2.throttleOnChange(color);
       }).on('change', function (color) {
         debug('[change]');
 
@@ -13773,6 +13811,12 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -13866,7 +13910,7 @@ function (_Component) {
       });
       this.medium.subscribe('editableChangeStyle', function (style) {
         debug('editableChangeStyle', style);
-        _this2.props.onStyleChange && _this2.props.onStyleChange(style);
+        _this2.props.onStyleChange && _this2.props.onStyleChange(_objectSpread({}, _this2.props.style, {}, style));
       });
     }
   }, {
@@ -13965,9 +14009,11 @@ function (_Component) {
 Textbox.defaultProps = {
   tag: 'div',
   style: {
-    fontSize: '16px',
-    width: 'auto',
-    height: 'auto',
+    color: '#000000',
+    fontSize: '14px',
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    textDecoration: 'none',
     lineHeight: '1.2'
   },
   options: {}

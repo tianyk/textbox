@@ -66,7 +66,10 @@ class Textbox extends Component {
 
 		this.medium.subscribe('editableChangeStyle', (style) => {
 			debug('editableChangeStyle', style);
-			this.props.onStyleChange && this.props.onStyleChange(style);
+			this.props.onStyleChange && this.props.onStyleChange({
+				...this.props.style,
+				...style
+			});
 		});
 	}
 
@@ -158,9 +161,11 @@ class Textbox extends Component {
 Textbox.defaultProps = {
 	tag: 'div',
 	style: {
-		fontSize: '16px',
-		width: 'auto',
-		height: 'auto',
+		color: '#000000',
+		fontSize: '14px',
+		fontStyle: 'normal',
+		fontWeight: 'normal',
+		textDecoration: 'none',
 		lineHeight: '1.2'
 	},
 	options: {}

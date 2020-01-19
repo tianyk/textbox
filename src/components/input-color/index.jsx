@@ -24,6 +24,36 @@ class InputColor extends Component {
 	}
 
 	componentDidMount() {
+		const colors = [
+			(this.props?.value || '#333'),
+			"#f44336ff",
+			"#e91e63f2",
+			"#9c27b0e5",
+			"#673ab7d8",
+			"#3f51b5cc",
+			"#2196f3bf",
+			"#03a9f4b2",
+			"#00bcd4b2",
+			"#009688bf",
+			"#4caf50cc",
+			"#8bc34ad8",
+			"#cddc39e5",
+			"#ffeb3bf2"
+		];
+
+		try {
+			let recentlyUsedColors = JSON.parse(window.localStorage.getItem('__PICKR_COLORS__') || '[]');
+			for (let color of colors) {
+				const pos = recentlyUsedColors.indexOf(color);
+				if (-1 !== pos) recentlyUsedColors.splice(pos, 1);
+			}
+			if (recentlyUsedColors.length > 0) {
+				colors.splice(colors.length - recentlyUsedColors.length, recentlyUsedColors.length, ...recentlyUsedColors);
+			}
+		} catch (ignored) { }
+
+		console.log(colors);
+
 		const pickr = this.pickr = Pickr.create({
 			el: '.coursebox-input-color .color-picker',
 			useAsButton: true,
@@ -39,22 +69,7 @@ class InputColor extends Component {
 			// 重新定位
 			autoReposition: true,
 			appClass: 'pickr-fix-position',
-			swatches: [
-				(this.props?.value || '#333'),
-				'rgba(244, 67, 54, 1)',
-				'rgba(233, 30, 99, 0.95)',
-				'rgba(156, 39, 176, 0.9)',
-				'rgba(103, 58, 183, 0.85)',
-				'rgba(63, 81, 181, 0.8)',
-				'rgba(33, 150, 243, 0.75)',
-				'rgba(3, 169, 244, 0.7)',
-				'rgba(0, 188, 212, 0.7)',
-				'rgba(0, 150, 136, 0.75)',
-				'rgba(76, 175, 80, 0.8)',
-				'rgba(139, 195, 74, 0.85)',
-				'rgba(205, 220, 57, 0.9)',
-				'rgba(255, 235, 59, 0.95)'
-			],
+			swatches: colors,
 			components: {
 				// Main components
 				preview: true,
@@ -94,7 +109,19 @@ class InputColor extends Component {
 			.on('save', (color) => {
 				debug('[save]');
 				pickr.hide();
-				this.throttleOnChange(color.toHEXA().toString(0));
+
+				color = color.toHEXA().toString(0);
+				// 保存最近使用的颜色 
+				try {
+					let colors = JSON.parse(window.localStorage.getItem('__PICKR_COLORS__') || '[]');
+					if (!colors.includes(color)) {
+						if (colors.length >= 7) colors = colors.slice(colors.length - 7);
+						colors.push(color);
+						window.localStorage.setItem('__PICKR_COLORS__', JSON.stringify(colors));
+					}
+				} catch (ignored) { }
+
+				this.throttleOnChange(color);
 			})
 			.on('change', (color) => {
 				debug('[change]');

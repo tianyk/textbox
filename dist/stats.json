@@ -4,9 +4,9 @@
   "warnings": [
   ],
   "version": "4.41.4",
-  "hash": "25da87abccf665d7138f",
-  "time": 122,
-  "builtAt": 1579332869709,
+  "hash": "319bd8561446a30c5bef",
+  "time": 116,
+  "builtAt": 1579404895018,
   "publicPath": "",
   "outputPath": "/Users/doog/Documents/Workspaces/node/textbox/dist",
   "assetsByChunkName": {
@@ -18,7 +18,7 @@
   "assets": [
     {
       "name": "index.html",
-      "size": 2724,
+      "size": 2679,
       "chunks": [
       ],
       "chunkNames": [
@@ -29,7 +29,7 @@
     },
     {
       "name": "react-textbox.js",
-      "size": 562184,
+      "size": 564861,
       "chunks": [
         "main"
       ],
@@ -42,7 +42,7 @@
     },
     {
       "name": "react-textbox.js.map",
-      "size": 601535,
+      "size": 603810,
       "chunks": [
         "main"
       ],
@@ -92,7 +92,7 @@
       "rendered": false,
       "initial": true,
       "entry": true,
-      "size": 493547,
+      "size": 496224,
       "names": [
         "main"
       ],
@@ -100,7 +100,7 @@
         "react-textbox.js",
         "react-textbox.js.map"
       ],
-      "hash": "b7a4984a3c0662d55dcd",
+      "hash": "ba1724e42b219abd5592",
       "siblings": [
       ],
       "parents": [
@@ -193,7 +193,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/三角形_不可点@2x.png",
-              "loc": "30:0-75"
+              "loc": "38:0-75"
             },
             {
               "moduleId": "./src/components/input-color/index.jsx",
@@ -202,7 +202,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/三角形_不可点@2x.png",
-              "loc": "160:24-54"
+              "loc": "198:24-54"
             },
             {
               "moduleId": "./src/components/input-select/index.jsx",
@@ -278,7 +278,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/三角形_收起@2x.png",
-              "loc": "29:0-66"
+              "loc": "37:0-66"
             },
             {
               "moduleId": "./src/components/input-color/index.jsx",
@@ -287,7 +287,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/三角形_收起@2x.png",
-              "loc": "160:57-79"
+              "loc": "198:57-79"
             },
             {
               "moduleId": "./src/components/input-select/index.jsx",
@@ -1549,7 +1549,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/文字颜色@2x.png",
-              "loc": "27:0-56"
+              "loc": "35:0-56"
             },
             {
               "moduleId": "./src/components/input-color/index.jsx",
@@ -1558,7 +1558,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/文字颜色@2x.png",
-              "loc": "151:49-63"
+              "loc": "189:49-63"
             }
           ],
           "providedExports": [
@@ -1616,7 +1616,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/文字颜色_不可点@2x.png",
-              "loc": "28:0-68"
+              "loc": "36:0-68"
             },
             {
               "moduleId": "./src/components/input-color/index.jsx",
@@ -1625,7 +1625,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/文字颜色_不可点@2x.png",
-              "loc": "151:24-46"
+              "loc": "189:24-46"
             }
           ],
           "providedExports": [
@@ -2075,7 +2075,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@simonwep/pickr",
-              "loc": "24:0-36"
+              "loc": "32:0-36"
             },
             {
               "moduleId": "./src/components/input-color/index.jsx",
@@ -2084,7 +2084,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@simonwep/pickr",
-              "loc": "57:31-36"
+              "loc": "82:31-36"
             }
           ],
           "providedExports": null,
@@ -2140,7 +2140,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@simonwep/pickr/dist/themes/nano.min.css",
-              "loc": "23:0-50"
+              "loc": "31:0-50"
             }
           ],
           "providedExports": null,
@@ -2444,7 +2444,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "classnames",
-              "loc": "22:0-36"
+              "loc": "30:0-36"
             },
             {
               "moduleId": "./src/components/input-color/index.jsx",
@@ -2453,7 +2453,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "classnames",
-              "loc": "142:22-32"
+              "loc": "180:22-32"
             },
             {
               "moduleId": "./src/components/input-select/index.jsx",
@@ -2498,7 +2498,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "classnames",
-              "loc": "24:0-36"
+              "loc": "30:0-36"
             },
             {
               "moduleId": "./src/components/textbox/index.jsx",
@@ -2507,7 +2507,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "classnames",
-              "loc": "170:22-32"
+              "loc": "176:22-32"
             }
           ],
           "providedExports": null,
@@ -5338,7 +5338,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "cjs require",
               "userRequest": "@commons/debug",
-              "loc": "32:12-37"
+              "loc": "40:12-37"
             },
             {
               "moduleId": "./src/components/input-select/index.jsx",
@@ -5365,7 +5365,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "cjs require",
               "userRequest": "../../commons/debug",
-              "loc": "30:12-42"
+              "loc": "36:12-42"
             }
           ],
           "providedExports": null,
@@ -5434,7 +5434,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@commons/throttle",
-              "loc": "26:0-41"
+              "loc": "34:0-41"
             },
             {
               "moduleId": "./src/components/input-color/index.jsx",
@@ -5443,7 +5443,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@commons/throttle",
-              "loc": "46:29-37"
+              "loc": "54:29-37"
             }
           ],
           "providedExports": [
@@ -5587,7 +5587,7 @@
           "index2": 98,
           "size": 21886,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -5930,9 +5930,9 @@
           "name": "./src/components/input-color/index.jsx",
           "index": 57,
           "index2": 62,
-          "size": 7651,
+          "size": 9133,
           "cacheable": true,
-          "built": false,
+          "built": true,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -5984,7 +5984,7 @@
           "optimizationBailout": [
           ],
           "depth": 3,
-          "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './input-color.less';\nimport { Component } from 'react';\nimport ReactDOM from 'react-dom';\nimport classNames from 'classnames';\nimport '@simonwep/pickr/dist/themes/nano.min.css';\nimport Pickr from '@simonwep/pickr';\nimport PropTypes from 'prop-types';\nimport throttle from '@commons/throttle';\nimport FontColorImage from '@assets/images/文字颜色@2x.png';\nimport FontColorDisabledImage from '@assets/images/文字颜色_不可点@2x.png';\nimport FontColorCollapseImage from '@assets/images/三角形_收起@2x.png';\nimport FontColorDisabledCollapseImage from '@assets/images/三角形_不可点@2x.png';\n\nvar debug = require('@commons/debug')('textbox:input-color');\n\nvar InputColor =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(InputColor, _Component);\n\n  function InputColor(props) {\n    var _this;\n\n    _classCallCheck(this, InputColor);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(InputColor).call(this, props));\n    _this.pickColor = _this.pickColor.bind(_assertThisInitialized(_this));\n    _this.throttleOnChange = throttle(_this.onChange, 200).bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(InputColor, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this$props,\n          _this$props2,\n          _this2 = this;\n\n      var pickr = this.pickr = Pickr.create({\n        el: '.coursebox-input-color .color-picker',\n        useAsButton: true,\n        // 初始默认值\n        \"default\": ((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.value) || '#333',\n        container: ReactDOM.findDOMNode(this).querySelector('.color-picker-container'),\n        theme: 'nano',\n        // 位置 下-居中\n        position: 'bottom-middle',\n        // 是否一直显示 默认fasle，点击别的区域后会隐藏。初始就显示\n        showAlways: true,\n        // 重新定位\n        autoReposition: true,\n        appClass: 'pickr-fix-position',\n        swatches: [((_this$props2 = this.props) === null || _this$props2 === void 0 ? void 0 : _this$props2.value) || '#333', 'rgba(244, 67, 54, 1)', 'rgba(233, 30, 99, 0.95)', 'rgba(156, 39, 176, 0.9)', 'rgba(103, 58, 183, 0.85)', 'rgba(63, 81, 181, 0.8)', 'rgba(33, 150, 243, 0.75)', 'rgba(3, 169, 244, 0.7)', 'rgba(0, 188, 212, 0.7)', 'rgba(0, 150, 136, 0.75)', 'rgba(76, 175, 80, 0.8)', 'rgba(139, 195, 74, 0.85)', 'rgba(205, 220, 57, 0.9)', 'rgba(255, 235, 59, 0.95)'],\n        components: {\n          // Main components\n          preview: true,\n          opacity: true,\n          hue: true,\n          // Input / output Options\n          interaction: {\n            hex: false,\n            rgba: false,\n            hsla: false,\n            hsva: false,\n            cmyk: false,\n            input: true,\n            clear: false,\n            save: true\n          }\n        },\n        strings: {\n          save: 'Close' // 实时变化，保存即关闭\n\n        }\n      });\n      pickr.on('init', function () {\n        // 由于 showAlways 为 true ，默认显示。初始化完成先将其隐藏\n        pickr.hide();\n        pickr.__isShow = false;\n      }).on('show', function () {\n        pickr.__isShow = true;\n      }).on('hide', function () {\n        debug('[hide]');\n        pickr.__isShow = false;\n      }).on('save', function (color) {\n        debug('[save]');\n        pickr.hide();\n\n        _this2.throttleOnChange(color.toHEXA().toString(0));\n      }).on('change', function (color) {\n        debug('[change]');\n\n        _this2.throttleOnChange(color.toHEXA().toString(0));\n      });\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      this.pickr && this.pickr.destroyAndRemove();\n    } // 隐藏显示选色卡\n\n  }, {\n    key: \"pickColor\",\n    value: function pickColor() {\n      debug('pickColor');\n\n      if (this.pickr.__isShow) {\n        this.pickr.hide();\n      } else {\n        this.pickr.show();\n      }\n    }\n  }, {\n    key: \"onChange\",\n    value: function onChange(val) {\n      var _this$props3;\n\n      (_this$props3 = this.props) === null || _this$props3 === void 0 ? void 0 : _this$props3.onChange(val);\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var disabled = this.props.disabled;\n      var className = classNames('coursebox-input-color', this.props.className, {\n        disabled: disabled\n      });\n      return React.createElement(\"button\", {\n        className: className,\n        onClick: !disabled && this.pickColor\n      }, React.createElement(\"div\", {\n        className: \"font-color-icon\"\n      }, React.createElement(\"img\", {\n        src: disabled ? FontColorDisabledImage : FontColorImage\n      }), React.createElement(\"div\", {\n        className: \"font-color-bar\",\n        style: {\n          backgroundColor: this.props.value\n        }\n      })), React.createElement(\"div\", {\n        className: \"font-color-collapse\"\n      }, React.createElement(\"img\", {\n        src: disabled ? FontColorDisabledCollapseImage : FontColorCollapseImage\n      })), React.createElement(\"div\", {\n        className: \"color-picker\"\n      }), React.createElement(\"div\", {\n        className: \"color-picker-container\",\n        onClick: function onClick(evt) {\n          return evt.stopPropagation();\n        }\n      }));\n    }\n  }]);\n\n  return InputColor;\n}(Component);\n\nInputColor.defaultProps = {\n  disabled: false\n};\nInputColor.propTypes = {\n  disabled: PropTypes.bool,\n  value: PropTypes.string\n};\nexport default InputColor;"
+          "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance\"); }\n\nfunction _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === \"[object Arguments]\") return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './input-color.less';\nimport { Component } from 'react';\nimport ReactDOM from 'react-dom';\nimport classNames from 'classnames';\nimport '@simonwep/pickr/dist/themes/nano.min.css';\nimport Pickr from '@simonwep/pickr';\nimport PropTypes from 'prop-types';\nimport throttle from '@commons/throttle';\nimport FontColorImage from '@assets/images/文字颜色@2x.png';\nimport FontColorDisabledImage from '@assets/images/文字颜色_不可点@2x.png';\nimport FontColorCollapseImage from '@assets/images/三角形_收起@2x.png';\nimport FontColorDisabledCollapseImage from '@assets/images/三角形_不可点@2x.png';\n\nvar debug = require('@commons/debug')('textbox:input-color');\n\nvar InputColor =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(InputColor, _Component);\n\n  function InputColor(props) {\n    var _this;\n\n    _classCallCheck(this, InputColor);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(InputColor).call(this, props));\n    _this.pickColor = _this.pickColor.bind(_assertThisInitialized(_this));\n    _this.throttleOnChange = throttle(_this.onChange, 200).bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(InputColor, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this$props,\n          _this$props2,\n          _this2 = this;\n\n      var colors = [((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.value) || '#333', \"#f44336ff\", \"#e91e63f2\", \"#9c27b0e5\", \"#673ab7d8\", \"#3f51b5cc\", \"#2196f3bf\", \"#03a9f4b2\", \"#00bcd4b2\", \"#009688bf\", \"#4caf50cc\", \"#8bc34ad8\", \"#cddc39e5\", \"#ffeb3bf2\"];\n\n      try {\n        var recentlyUsedColors = JSON.parse(window.localStorage.getItem('__PICKR_COLORS__') || '[]');\n\n        for (var _i = 0, _colors = colors; _i < _colors.length; _i++) {\n          var color = _colors[_i];\n          var pos = recentlyUsedColors.indexOf(color);\n          if (-1 !== pos) recentlyUsedColors.splice(pos, 1);\n        }\n\n        if (recentlyUsedColors.length > 0) {\n          colors.splice.apply(colors, [colors.length - recentlyUsedColors.length, recentlyUsedColors.length].concat(_toConsumableArray(recentlyUsedColors)));\n        }\n      } catch (ignored) {}\n\n      console.log(colors);\n      var pickr = this.pickr = Pickr.create({\n        el: '.coursebox-input-color .color-picker',\n        useAsButton: true,\n        // 初始默认值\n        \"default\": ((_this$props2 = this.props) === null || _this$props2 === void 0 ? void 0 : _this$props2.value) || '#333',\n        container: ReactDOM.findDOMNode(this).querySelector('.color-picker-container'),\n        theme: 'nano',\n        // 位置 下-居中\n        position: 'bottom-middle',\n        // 是否一直显示 默认fasle，点击别的区域后会隐藏。初始就显示\n        showAlways: true,\n        // 重新定位\n        autoReposition: true,\n        appClass: 'pickr-fix-position',\n        swatches: colors,\n        components: {\n          // Main components\n          preview: true,\n          opacity: true,\n          hue: true,\n          // Input / output Options\n          interaction: {\n            hex: false,\n            rgba: false,\n            hsla: false,\n            hsva: false,\n            cmyk: false,\n            input: true,\n            clear: false,\n            save: true\n          }\n        },\n        strings: {\n          save: 'Close' // 实时变化，保存即关闭\n\n        }\n      });\n      pickr.on('init', function () {\n        // 由于 showAlways 为 true ，默认显示。初始化完成先将其隐藏\n        pickr.hide();\n        pickr.__isShow = false;\n      }).on('show', function () {\n        pickr.__isShow = true;\n      }).on('hide', function () {\n        debug('[hide]');\n        pickr.__isShow = false;\n      }).on('save', function (color) {\n        debug('[save]');\n        pickr.hide();\n        color = color.toHEXA().toString(0); // 保存最近使用的颜色 \n\n        try {\n          var _colors2 = JSON.parse(window.localStorage.getItem('__PICKR_COLORS__') || '[]');\n\n          if (!_colors2.includes(color)) {\n            if (_colors2.length >= 7) _colors2 = _colors2.slice(_colors2.length - 7);\n\n            _colors2.push(color);\n\n            window.localStorage.setItem('__PICKR_COLORS__', JSON.stringify(_colors2));\n          }\n        } catch (ignored) {}\n\n        _this2.throttleOnChange(color);\n      }).on('change', function (color) {\n        debug('[change]');\n\n        _this2.throttleOnChange(color.toHEXA().toString(0));\n      });\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      this.pickr && this.pickr.destroyAndRemove();\n    } // 隐藏显示选色卡\n\n  }, {\n    key: \"pickColor\",\n    value: function pickColor() {\n      debug('pickColor');\n\n      if (this.pickr.__isShow) {\n        this.pickr.hide();\n      } else {\n        this.pickr.show();\n      }\n    }\n  }, {\n    key: \"onChange\",\n    value: function onChange(val) {\n      var _this$props3;\n\n      (_this$props3 = this.props) === null || _this$props3 === void 0 ? void 0 : _this$props3.onChange(val);\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var disabled = this.props.disabled;\n      var className = classNames('coursebox-input-color', this.props.className, {\n        disabled: disabled\n      });\n      return React.createElement(\"button\", {\n        className: className,\n        onClick: !disabled && this.pickColor\n      }, React.createElement(\"div\", {\n        className: \"font-color-icon\"\n      }, React.createElement(\"img\", {\n        src: disabled ? FontColorDisabledImage : FontColorImage\n      }), React.createElement(\"div\", {\n        className: \"font-color-bar\",\n        style: {\n          backgroundColor: this.props.value\n        }\n      })), React.createElement(\"div\", {\n        className: \"font-color-collapse\"\n      }, React.createElement(\"img\", {\n        src: disabled ? FontColorDisabledCollapseImage : FontColorCollapseImage\n      })), React.createElement(\"div\", {\n        className: \"color-picker\"\n      }), React.createElement(\"div\", {\n        className: \"color-picker-container\",\n        onClick: function onClick(evt) {\n          return evt.stopPropagation();\n        }\n      }));\n    }\n  }]);\n\n  return InputColor;\n}(Component);\n\nInputColor.defaultProps = {\n  disabled: false\n};\nInputColor.propTypes = {\n  disabled: PropTypes.bool,\n  value: PropTypes.string\n};\nexport default InputColor;"
         },
         {
           "id": "./src/components/input-color/input-color.less",
@@ -6033,7 +6033,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "./input-color.less",
-              "loc": "19:0-28"
+              "loc": "27:0-28"
             }
           ],
           "providedExports": null,
@@ -6384,7 +6384,7 @@
           "name": "./src/components/textbox/index.jsx",
           "index": 33,
           "index2": 45,
-          "size": 8603,
+          "size": 9798,
           "cacheable": true,
           "built": false,
           "optional": false,
@@ -6433,7 +6433,7 @@
           "optimizationBailout": [
           ],
           "depth": 2,
-          "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './textbox.less';\nimport classNames from 'classnames';\nimport React, { Component } from 'react';\nimport ReactDOM from 'react-dom';\nimport PropTypes from 'prop-types';\nimport MediumEditor from 'medium-editor';\n\nvar debug = require('../../commons/debug')('textbox:textbox');\n\nvar CourseBoxEditor = MediumEditor.Extension.extend({\n  name: 'coursebox-editor',\n  getInteractionElements: function getInteractionElements() {\n    return Array.from(this.base.options.ownerDocument.querySelectorAll('.coursebox-editor'));\n  }\n});\nvar DEFAULT_OPTIONS = {\n  toolbar: {\n    // buttons: ['bold', 'italic', 'underline', 'justifyLeft', 'justifyCenter', 'justifyRight'],\n    buttons: ['bold', 'italic', 'underline']\n  },\n  extensions: {\n    'coursebox-editor': new CourseBoxEditor()\n  }\n};\n\nvar Textbox =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(Textbox, _Component);\n\n  function Textbox(props) {\n    var _this;\n\n    _classCallCheck(this, Textbox);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(Textbox).call(this, props));\n    _this.state = {\n      text: props.text\n    }; // 输入框的引用\n\n    _this.editorRef = React.createRef();\n    _this.handleComposition = _this.handleComposition.bind(_assertThisInitialized(_this));\n    _this.onContentChange = _this.onContentChange.bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(Textbox, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      debug('componentDidMount');\n      var dom = this.geDOM();\n      this.medium = new MediumEditor(dom, Object.assign(DEFAULT_OPTIONS, this.props.options)); // 默认禁止编辑\n\n      this.disableEditing();\n      this.medium.subscribe('editableInput', function () {\n        if (!_this2._isComposing) _this2.onContentChange(dom.innerHTML);\n      });\n      this.medium.on(dom, 'compositionend', this.handleComposition);\n      this.medium.on(dom, 'compositionupdate', this.handleComposition);\n      this.medium.on(dom, 'compositionend', this.handleComposition); // 双击、单击\n\n      this.medium.on(dom, 'dblclick', function () {\n        debug('dblclick');\n\n        _this2.enableEditing();\n\n        dom.focus();\n      });\n      this.medium.subscribe('blur', function () {\n        debug('blur');\n\n        _this2.disableEditing();\n      });\n      this.medium.subscribe('editableChangeStyle', function (style) {\n        debug('editableChangeStyle', style);\n        _this2.props.onStyleChange && _this2.props.onStyleChange(style);\n      });\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      debug('componentWillUnmount');\n      this.medium.destroy();\n    }\n  }, {\n    key: \"componentDidUpdate\",\n    value: function componentDidUpdate() {\n      debug('componentDidUpdate'); // if (this.props.text !== this.state.text) {\n      // \tthis.setState({ text: this.props.text }, () => {\n      // \t\tthis.medium.restoreSelection();\n      // \t});\n      // }\n\n      this.medium.restoreSelection();\n    }\n  }, {\n    key: \"geDOM\",\n    value: function geDOM() {\n      return ReactDOM.findDOMNode(this);\n    }\n  }, {\n    key: \"disableEditing\",\n    value: function disableEditing() {\n      debug('disableEditing');\n      var dom = this.geDOM();\n      dom.setAttribute('contenteditable', false);\n    }\n  }, {\n    key: \"enableEditing\",\n    value: function enableEditing() {\n      debug('enableEditing');\n      var dom = this.geDOM();\n      dom.setAttribute('contenteditable', true);\n    }\n  }, {\n    key: \"handleComposition\",\n    value: function handleComposition(evt) {\n      var dom = ReactDOM.findDOMNode(this);\n\n      if (evt.type === 'compositionend') {\n        // composition is end\n        this._isComposing = false; // fixed for Chrome v53+ and detect all Chrome\n        // https://chromium.googlesource.com/chromium/src/\n        // +/afce9d93e76f2ff81baaa088a4ea25f67d1a76b3%5E%21/\n        // if ((evt.target instanceof HTMLInputElement || evt.target.isContentEditable) && !this._isComposing && isChrome) {\n        // \t// fire onChange\n        // \t// props.onChange(e)\n        // \tthis.medium.trigger('editableInput', evt, this.editorRef.current);\n        // }\n        // chrome safari 渲染 compositionend 在input 事件后触发\n\n        this.medium.trigger('editableInput', evt, dom);\n      } else {\n        // in composition\n        this._isComposing = true;\n      }\n    }\n  }, {\n    key: \"onContentChange\",\n    value: function onContentChange(text) {\n      this.props.onContentChange && this.props.onContentChange(text);\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var className = classNames('coursebox-textbox', this.props.className);\n\n      var _this$props = this.props,\n          options = _this$props.options,\n          text = _this$props.text,\n          tag = _this$props.tag,\n          contentEditable = _this$props.contentEditable,\n          dangerouslySetInnerHTML = _this$props.dangerouslySetInnerHTML,\n          props = _objectWithoutProperties(_this$props, [\"options\", \"text\", \"tag\", \"contentEditable\", \"dangerouslySetInnerHTML\"]);\n\n      props.className = className;\n      props.dangerouslySetInnerHTML = {\n        __html: this.state.text\n      };\n\n      if (this.medium) {\n        this.medium.saveSelection();\n      }\n\n      return React.createElement(tag, props);\n    }\n  }]);\n\n  return Textbox;\n}(Component);\n\nTextbox.defaultProps = {\n  tag: 'div',\n  style: {\n    fontSize: '16px',\n    width: 'auto',\n    height: 'auto',\n    lineHeight: '1.2'\n  },\n  options: {}\n};\nTextbox.propTypes = {\n  onChange: PropTypes.func.isRequired,\n  options: PropTypes.object\n};\nexport default Textbox;"
+          "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './textbox.less';\nimport classNames from 'classnames';\nimport React, { Component } from 'react';\nimport ReactDOM from 'react-dom';\nimport PropTypes from 'prop-types';\nimport MediumEditor from 'medium-editor';\n\nvar debug = require('../../commons/debug')('textbox:textbox');\n\nvar CourseBoxEditor = MediumEditor.Extension.extend({\n  name: 'coursebox-editor',\n  getInteractionElements: function getInteractionElements() {\n    return Array.from(this.base.options.ownerDocument.querySelectorAll('.coursebox-editor'));\n  }\n});\nvar DEFAULT_OPTIONS = {\n  toolbar: {\n    // buttons: ['bold', 'italic', 'underline', 'justifyLeft', 'justifyCenter', 'justifyRight'],\n    buttons: ['bold', 'italic', 'underline']\n  },\n  extensions: {\n    'coursebox-editor': new CourseBoxEditor()\n  }\n};\n\nvar Textbox =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(Textbox, _Component);\n\n  function Textbox(props) {\n    var _this;\n\n    _classCallCheck(this, Textbox);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(Textbox).call(this, props));\n    _this.state = {\n      text: props.text\n    }; // 输入框的引用\n\n    _this.editorRef = React.createRef();\n    _this.handleComposition = _this.handleComposition.bind(_assertThisInitialized(_this));\n    _this.onContentChange = _this.onContentChange.bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(Textbox, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      debug('componentDidMount');\n      var dom = this.geDOM();\n      this.medium = new MediumEditor(dom, Object.assign(DEFAULT_OPTIONS, this.props.options)); // 默认禁止编辑\n\n      this.disableEditing();\n      this.medium.subscribe('editableInput', function () {\n        if (!_this2._isComposing) _this2.onContentChange(dom.innerHTML);\n      });\n      this.medium.on(dom, 'compositionend', this.handleComposition);\n      this.medium.on(dom, 'compositionupdate', this.handleComposition);\n      this.medium.on(dom, 'compositionend', this.handleComposition); // 双击、单击\n\n      this.medium.on(dom, 'dblclick', function () {\n        debug('dblclick');\n\n        _this2.enableEditing();\n\n        dom.focus();\n      });\n      this.medium.subscribe('blur', function () {\n        debug('blur');\n\n        _this2.disableEditing();\n      });\n      this.medium.subscribe('editableChangeStyle', function (style) {\n        debug('editableChangeStyle', style);\n        _this2.props.onStyleChange && _this2.props.onStyleChange(_objectSpread({}, _this2.props.style, {}, style));\n      });\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      debug('componentWillUnmount');\n      this.medium.destroy();\n    }\n  }, {\n    key: \"componentDidUpdate\",\n    value: function componentDidUpdate() {\n      debug('componentDidUpdate'); // if (this.props.text !== this.state.text) {\n      // \tthis.setState({ text: this.props.text }, () => {\n      // \t\tthis.medium.restoreSelection();\n      // \t});\n      // }\n\n      this.medium.restoreSelection();\n    }\n  }, {\n    key: \"geDOM\",\n    value: function geDOM() {\n      return ReactDOM.findDOMNode(this);\n    }\n  }, {\n    key: \"disableEditing\",\n    value: function disableEditing() {\n      debug('disableEditing');\n      var dom = this.geDOM();\n      dom.setAttribute('contenteditable', false);\n    }\n  }, {\n    key: \"enableEditing\",\n    value: function enableEditing() {\n      debug('enableEditing');\n      var dom = this.geDOM();\n      dom.setAttribute('contenteditable', true);\n    }\n  }, {\n    key: \"handleComposition\",\n    value: function handleComposition(evt) {\n      var dom = ReactDOM.findDOMNode(this);\n\n      if (evt.type === 'compositionend') {\n        // composition is end\n        this._isComposing = false; // fixed for Chrome v53+ and detect all Chrome\n        // https://chromium.googlesource.com/chromium/src/\n        // +/afce9d93e76f2ff81baaa088a4ea25f67d1a76b3%5E%21/\n        // if ((evt.target instanceof HTMLInputElement || evt.target.isContentEditable) && !this._isComposing && isChrome) {\n        // \t// fire onChange\n        // \t// props.onChange(e)\n        // \tthis.medium.trigger('editableInput', evt, this.editorRef.current);\n        // }\n        // chrome safari 渲染 compositionend 在input 事件后触发\n\n        this.medium.trigger('editableInput', evt, dom);\n      } else {\n        // in composition\n        this._isComposing = true;\n      }\n    }\n  }, {\n    key: \"onContentChange\",\n    value: function onContentChange(text) {\n      this.props.onContentChange && this.props.onContentChange(text);\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var className = classNames('coursebox-textbox', this.props.className);\n\n      var _this$props = this.props,\n          options = _this$props.options,\n          text = _this$props.text,\n          tag = _this$props.tag,\n          contentEditable = _this$props.contentEditable,\n          dangerouslySetInnerHTML = _this$props.dangerouslySetInnerHTML,\n          props = _objectWithoutProperties(_this$props, [\"options\", \"text\", \"tag\", \"contentEditable\", \"dangerouslySetInnerHTML\"]);\n\n      props.className = className;\n      props.dangerouslySetInnerHTML = {\n        __html: this.state.text\n      };\n\n      if (this.medium) {\n        this.medium.saveSelection();\n      }\n\n      return React.createElement(tag, props);\n    }\n  }]);\n\n  return Textbox;\n}(Component);\n\nTextbox.defaultProps = {\n  tag: 'div',\n  style: {\n    color: '#000000',\n    fontSize: '14px',\n    fontStyle: 'normal',\n    fontWeight: 'normal',\n    textDecoration: 'none',\n    lineHeight: '1.2'\n  },\n  options: {}\n};\nTextbox.propTypes = {\n  onChange: PropTypes.func.isRequired,\n  options: PropTypes.object\n};\nexport default Textbox;"
         },
         {
           "id": "./src/components/textbox/textbox.less",
@@ -6477,7 +6477,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "./textbox.less",
-              "loc": "23:0-24"
+              "loc": "29:0-24"
             }
           ],
           "providedExports": null,
@@ -6581,7 +6581,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "medium-editor",
-              "loc": "28:0-41"
+              "loc": "34:0-41"
             },
             {
               "moduleId": "./src/components/textbox/index.jsx",
@@ -6590,7 +6590,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "medium-editor",
-              "loc": "32:22-34"
+              "loc": "38:22-34"
             },
             {
               "moduleId": "./src/components/textbox/index.jsx",
@@ -6599,7 +6599,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "medium-editor",
-              "loc": "76:24-36"
+              "loc": "82:24-36"
             }
           ],
           "providedExports": null,
@@ -6747,7 +6747,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "prop-types",
-              "loc": "25:0-35"
+              "loc": "33:0-35"
             },
             {
               "moduleId": "./src/components/input-color/index.jsx",
@@ -6756,7 +6756,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "179:12-21"
+              "loc": "217:12-21"
             },
             {
               "moduleId": "./src/components/input-color/index.jsx",
@@ -6765,7 +6765,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "180:9-18"
+              "loc": "218:9-18"
             },
             {
               "moduleId": "./src/components/input-select/index.jsx",
@@ -6882,7 +6882,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "prop-types",
-              "loc": "27:0-35"
+              "loc": "33:0-35"
             },
             {
               "moduleId": "./src/components/textbox/index.jsx",
@@ -6891,7 +6891,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "207:12-21"
+              "loc": "215:12-21"
             },
             {
               "moduleId": "./src/components/textbox/index.jsx",
@@ -6900,7 +6900,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "prop-types",
-              "loc": "208:11-20"
+              "loc": "216:11-20"
             }
           ],
           "providedExports": null,
@@ -7003,7 +7003,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "react",
-              "loc": "20:0-34"
+              "loc": "28:0-34"
             },
             {
               "moduleId": "./src/components/input-color/index.jsx",
@@ -7012,7 +7012,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "173:2-11"
+              "loc": "211:2-11"
             },
             {
               "moduleId": "./src/components/input-select/index.jsx",
@@ -7156,7 +7156,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "react",
-              "loc": "25:0-41"
+              "loc": "31:0-41"
             },
             {
               "moduleId": "./src/components/textbox/index.jsx",
@@ -7165,7 +7165,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "63:22-27"
+              "loc": "69:22-27"
             },
             {
               "moduleId": "./src/components/textbox/index.jsx",
@@ -7174,7 +7174,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "189:13-18"
+              "loc": "195:13-18"
             },
             {
               "moduleId": "./src/components/textbox/index.jsx",
@@ -7183,7 +7183,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "194:2-11"
+              "loc": "200:2-11"
             }
           ],
           "providedExports": null,
@@ -7250,7 +7250,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "react-dom",
-              "loc": "21:0-33"
+              "loc": "29:0-33"
             },
             {
               "moduleId": "./src/components/input-color/index.jsx",
@@ -7259,7 +7259,7 @@
               "moduleName": "./src/components/input-color/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "react-dom",
-              "loc": "62:19-27"
+              "loc": "87:19-27"
             },
             {
               "moduleId": "./src/components/input-select/index.jsx",
@@ -7286,7 +7286,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "react-dom",
-              "loc": "26:0-33"
+              "loc": "32:0-33"
             },
             {
               "moduleId": "./src/components/textbox/index.jsx",
@@ -7295,7 +7295,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "react-dom",
-              "loc": "123:13-21"
+              "loc": "129:13-21"
             },
             {
               "moduleId": "./src/components/textbox/index.jsx",
@@ -7304,7 +7304,7 @@
               "moduleName": "./src/components/textbox/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "react-dom",
-              "loc": "142:16-24"
+              "loc": "148:16-24"
             }
           ],
           "providedExports": null,
@@ -7411,7 +7411,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/三角形_不可点@2x.png",
-          "loc": "30:0-75"
+          "loc": "38:0-75"
         },
         {
           "moduleId": "./src/components/input-color/index.jsx",
@@ -7420,7 +7420,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/三角形_不可点@2x.png",
-          "loc": "160:24-54"
+          "loc": "198:24-54"
         },
         {
           "moduleId": "./src/components/input-select/index.jsx",
@@ -7496,7 +7496,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/三角形_收起@2x.png",
-          "loc": "29:0-66"
+          "loc": "37:0-66"
         },
         {
           "moduleId": "./src/components/input-color/index.jsx",
@@ -7505,7 +7505,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/三角形_收起@2x.png",
-          "loc": "160:57-79"
+          "loc": "198:57-79"
         },
         {
           "moduleId": "./src/components/input-select/index.jsx",
@@ -8767,7 +8767,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/文字颜色@2x.png",
-          "loc": "27:0-56"
+          "loc": "35:0-56"
         },
         {
           "moduleId": "./src/components/input-color/index.jsx",
@@ -8776,7 +8776,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/文字颜色@2x.png",
-          "loc": "151:49-63"
+          "loc": "189:49-63"
         }
       ],
       "providedExports": [
@@ -8834,7 +8834,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/文字颜色_不可点@2x.png",
-          "loc": "28:0-68"
+          "loc": "36:0-68"
         },
         {
           "moduleId": "./src/components/input-color/index.jsx",
@@ -8843,7 +8843,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/文字颜色_不可点@2x.png",
-          "loc": "151:24-46"
+          "loc": "189:24-46"
         }
       ],
       "providedExports": [
@@ -9293,7 +9293,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@simonwep/pickr",
-          "loc": "24:0-36"
+          "loc": "32:0-36"
         },
         {
           "moduleId": "./src/components/input-color/index.jsx",
@@ -9302,7 +9302,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@simonwep/pickr",
-          "loc": "57:31-36"
+          "loc": "82:31-36"
         }
       ],
       "providedExports": null,
@@ -9358,7 +9358,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@simonwep/pickr/dist/themes/nano.min.css",
-          "loc": "23:0-50"
+          "loc": "31:0-50"
         }
       ],
       "providedExports": null,
@@ -9662,7 +9662,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "classnames",
-          "loc": "22:0-36"
+          "loc": "30:0-36"
         },
         {
           "moduleId": "./src/components/input-color/index.jsx",
@@ -9671,7 +9671,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "classnames",
-          "loc": "142:22-32"
+          "loc": "180:22-32"
         },
         {
           "moduleId": "./src/components/input-select/index.jsx",
@@ -9716,7 +9716,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "classnames",
-          "loc": "24:0-36"
+          "loc": "30:0-36"
         },
         {
           "moduleId": "./src/components/textbox/index.jsx",
@@ -9725,7 +9725,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "classnames",
-          "loc": "170:22-32"
+          "loc": "176:22-32"
         }
       ],
       "providedExports": null,
@@ -12556,7 +12556,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "cjs require",
           "userRequest": "@commons/debug",
-          "loc": "32:12-37"
+          "loc": "40:12-37"
         },
         {
           "moduleId": "./src/components/input-select/index.jsx",
@@ -12583,7 +12583,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "cjs require",
           "userRequest": "../../commons/debug",
-          "loc": "30:12-42"
+          "loc": "36:12-42"
         }
       ],
       "providedExports": null,
@@ -12652,7 +12652,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@commons/throttle",
-          "loc": "26:0-41"
+          "loc": "34:0-41"
         },
         {
           "moduleId": "./src/components/input-color/index.jsx",
@@ -12661,7 +12661,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@commons/throttle",
-          "loc": "46:29-37"
+          "loc": "54:29-37"
         }
       ],
       "providedExports": [
@@ -12805,7 +12805,7 @@
       "index2": 98,
       "size": 21886,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -13148,9 +13148,9 @@
       "name": "./src/components/input-color/index.jsx",
       "index": 57,
       "index2": 62,
-      "size": 7651,
+      "size": 9133,
       "cacheable": true,
-      "built": false,
+      "built": true,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -13202,7 +13202,7 @@
       "optimizationBailout": [
       ],
       "depth": 3,
-      "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './input-color.less';\nimport { Component } from 'react';\nimport ReactDOM from 'react-dom';\nimport classNames from 'classnames';\nimport '@simonwep/pickr/dist/themes/nano.min.css';\nimport Pickr from '@simonwep/pickr';\nimport PropTypes from 'prop-types';\nimport throttle from '@commons/throttle';\nimport FontColorImage from '@assets/images/文字颜色@2x.png';\nimport FontColorDisabledImage from '@assets/images/文字颜色_不可点@2x.png';\nimport FontColorCollapseImage from '@assets/images/三角形_收起@2x.png';\nimport FontColorDisabledCollapseImage from '@assets/images/三角形_不可点@2x.png';\n\nvar debug = require('@commons/debug')('textbox:input-color');\n\nvar InputColor =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(InputColor, _Component);\n\n  function InputColor(props) {\n    var _this;\n\n    _classCallCheck(this, InputColor);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(InputColor).call(this, props));\n    _this.pickColor = _this.pickColor.bind(_assertThisInitialized(_this));\n    _this.throttleOnChange = throttle(_this.onChange, 200).bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(InputColor, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this$props,\n          _this$props2,\n          _this2 = this;\n\n      var pickr = this.pickr = Pickr.create({\n        el: '.coursebox-input-color .color-picker',\n        useAsButton: true,\n        // 初始默认值\n        \"default\": ((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.value) || '#333',\n        container: ReactDOM.findDOMNode(this).querySelector('.color-picker-container'),\n        theme: 'nano',\n        // 位置 下-居中\n        position: 'bottom-middle',\n        // 是否一直显示 默认fasle，点击别的区域后会隐藏。初始就显示\n        showAlways: true,\n        // 重新定位\n        autoReposition: true,\n        appClass: 'pickr-fix-position',\n        swatches: [((_this$props2 = this.props) === null || _this$props2 === void 0 ? void 0 : _this$props2.value) || '#333', 'rgba(244, 67, 54, 1)', 'rgba(233, 30, 99, 0.95)', 'rgba(156, 39, 176, 0.9)', 'rgba(103, 58, 183, 0.85)', 'rgba(63, 81, 181, 0.8)', 'rgba(33, 150, 243, 0.75)', 'rgba(3, 169, 244, 0.7)', 'rgba(0, 188, 212, 0.7)', 'rgba(0, 150, 136, 0.75)', 'rgba(76, 175, 80, 0.8)', 'rgba(139, 195, 74, 0.85)', 'rgba(205, 220, 57, 0.9)', 'rgba(255, 235, 59, 0.95)'],\n        components: {\n          // Main components\n          preview: true,\n          opacity: true,\n          hue: true,\n          // Input / output Options\n          interaction: {\n            hex: false,\n            rgba: false,\n            hsla: false,\n            hsva: false,\n            cmyk: false,\n            input: true,\n            clear: false,\n            save: true\n          }\n        },\n        strings: {\n          save: 'Close' // 实时变化，保存即关闭\n\n        }\n      });\n      pickr.on('init', function () {\n        // 由于 showAlways 为 true ，默认显示。初始化完成先将其隐藏\n        pickr.hide();\n        pickr.__isShow = false;\n      }).on('show', function () {\n        pickr.__isShow = true;\n      }).on('hide', function () {\n        debug('[hide]');\n        pickr.__isShow = false;\n      }).on('save', function (color) {\n        debug('[save]');\n        pickr.hide();\n\n        _this2.throttleOnChange(color.toHEXA().toString(0));\n      }).on('change', function (color) {\n        debug('[change]');\n\n        _this2.throttleOnChange(color.toHEXA().toString(0));\n      });\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      this.pickr && this.pickr.destroyAndRemove();\n    } // 隐藏显示选色卡\n\n  }, {\n    key: \"pickColor\",\n    value: function pickColor() {\n      debug('pickColor');\n\n      if (this.pickr.__isShow) {\n        this.pickr.hide();\n      } else {\n        this.pickr.show();\n      }\n    }\n  }, {\n    key: \"onChange\",\n    value: function onChange(val) {\n      var _this$props3;\n\n      (_this$props3 = this.props) === null || _this$props3 === void 0 ? void 0 : _this$props3.onChange(val);\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var disabled = this.props.disabled;\n      var className = classNames('coursebox-input-color', this.props.className, {\n        disabled: disabled\n      });\n      return React.createElement(\"button\", {\n        className: className,\n        onClick: !disabled && this.pickColor\n      }, React.createElement(\"div\", {\n        className: \"font-color-icon\"\n      }, React.createElement(\"img\", {\n        src: disabled ? FontColorDisabledImage : FontColorImage\n      }), React.createElement(\"div\", {\n        className: \"font-color-bar\",\n        style: {\n          backgroundColor: this.props.value\n        }\n      })), React.createElement(\"div\", {\n        className: \"font-color-collapse\"\n      }, React.createElement(\"img\", {\n        src: disabled ? FontColorDisabledCollapseImage : FontColorCollapseImage\n      })), React.createElement(\"div\", {\n        className: \"color-picker\"\n      }), React.createElement(\"div\", {\n        className: \"color-picker-container\",\n        onClick: function onClick(evt) {\n          return evt.stopPropagation();\n        }\n      }));\n    }\n  }]);\n\n  return InputColor;\n}(Component);\n\nInputColor.defaultProps = {\n  disabled: false\n};\nInputColor.propTypes = {\n  disabled: PropTypes.bool,\n  value: PropTypes.string\n};\nexport default InputColor;"
+      "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance\"); }\n\nfunction _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === \"[object Arguments]\") return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './input-color.less';\nimport { Component } from 'react';\nimport ReactDOM from 'react-dom';\nimport classNames from 'classnames';\nimport '@simonwep/pickr/dist/themes/nano.min.css';\nimport Pickr from '@simonwep/pickr';\nimport PropTypes from 'prop-types';\nimport throttle from '@commons/throttle';\nimport FontColorImage from '@assets/images/文字颜色@2x.png';\nimport FontColorDisabledImage from '@assets/images/文字颜色_不可点@2x.png';\nimport FontColorCollapseImage from '@assets/images/三角形_收起@2x.png';\nimport FontColorDisabledCollapseImage from '@assets/images/三角形_不可点@2x.png';\n\nvar debug = require('@commons/debug')('textbox:input-color');\n\nvar InputColor =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(InputColor, _Component);\n\n  function InputColor(props) {\n    var _this;\n\n    _classCallCheck(this, InputColor);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(InputColor).call(this, props));\n    _this.pickColor = _this.pickColor.bind(_assertThisInitialized(_this));\n    _this.throttleOnChange = throttle(_this.onChange, 200).bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(InputColor, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this$props,\n          _this$props2,\n          _this2 = this;\n\n      var colors = [((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.value) || '#333', \"#f44336ff\", \"#e91e63f2\", \"#9c27b0e5\", \"#673ab7d8\", \"#3f51b5cc\", \"#2196f3bf\", \"#03a9f4b2\", \"#00bcd4b2\", \"#009688bf\", \"#4caf50cc\", \"#8bc34ad8\", \"#cddc39e5\", \"#ffeb3bf2\"];\n\n      try {\n        var recentlyUsedColors = JSON.parse(window.localStorage.getItem('__PICKR_COLORS__') || '[]');\n\n        for (var _i = 0, _colors = colors; _i < _colors.length; _i++) {\n          var color = _colors[_i];\n          var pos = recentlyUsedColors.indexOf(color);\n          if (-1 !== pos) recentlyUsedColors.splice(pos, 1);\n        }\n\n        if (recentlyUsedColors.length > 0) {\n          colors.splice.apply(colors, [colors.length - recentlyUsedColors.length, recentlyUsedColors.length].concat(_toConsumableArray(recentlyUsedColors)));\n        }\n      } catch (ignored) {}\n\n      console.log(colors);\n      var pickr = this.pickr = Pickr.create({\n        el: '.coursebox-input-color .color-picker',\n        useAsButton: true,\n        // 初始默认值\n        \"default\": ((_this$props2 = this.props) === null || _this$props2 === void 0 ? void 0 : _this$props2.value) || '#333',\n        container: ReactDOM.findDOMNode(this).querySelector('.color-picker-container'),\n        theme: 'nano',\n        // 位置 下-居中\n        position: 'bottom-middle',\n        // 是否一直显示 默认fasle，点击别的区域后会隐藏。初始就显示\n        showAlways: true,\n        // 重新定位\n        autoReposition: true,\n        appClass: 'pickr-fix-position',\n        swatches: colors,\n        components: {\n          // Main components\n          preview: true,\n          opacity: true,\n          hue: true,\n          // Input / output Options\n          interaction: {\n            hex: false,\n            rgba: false,\n            hsla: false,\n            hsva: false,\n            cmyk: false,\n            input: true,\n            clear: false,\n            save: true\n          }\n        },\n        strings: {\n          save: 'Close' // 实时变化，保存即关闭\n\n        }\n      });\n      pickr.on('init', function () {\n        // 由于 showAlways 为 true ，默认显示。初始化完成先将其隐藏\n        pickr.hide();\n        pickr.__isShow = false;\n      }).on('show', function () {\n        pickr.__isShow = true;\n      }).on('hide', function () {\n        debug('[hide]');\n        pickr.__isShow = false;\n      }).on('save', function (color) {\n        debug('[save]');\n        pickr.hide();\n        color = color.toHEXA().toString(0); // 保存最近使用的颜色 \n\n        try {\n          var _colors2 = JSON.parse(window.localStorage.getItem('__PICKR_COLORS__') || '[]');\n\n          if (!_colors2.includes(color)) {\n            if (_colors2.length >= 7) _colors2 = _colors2.slice(_colors2.length - 7);\n\n            _colors2.push(color);\n\n            window.localStorage.setItem('__PICKR_COLORS__', JSON.stringify(_colors2));\n          }\n        } catch (ignored) {}\n\n        _this2.throttleOnChange(color);\n      }).on('change', function (color) {\n        debug('[change]');\n\n        _this2.throttleOnChange(color.toHEXA().toString(0));\n      });\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      this.pickr && this.pickr.destroyAndRemove();\n    } // 隐藏显示选色卡\n\n  }, {\n    key: \"pickColor\",\n    value: function pickColor() {\n      debug('pickColor');\n\n      if (this.pickr.__isShow) {\n        this.pickr.hide();\n      } else {\n        this.pickr.show();\n      }\n    }\n  }, {\n    key: \"onChange\",\n    value: function onChange(val) {\n      var _this$props3;\n\n      (_this$props3 = this.props) === null || _this$props3 === void 0 ? void 0 : _this$props3.onChange(val);\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var disabled = this.props.disabled;\n      var className = classNames('coursebox-input-color', this.props.className, {\n        disabled: disabled\n      });\n      return React.createElement(\"button\", {\n        className: className,\n        onClick: !disabled && this.pickColor\n      }, React.createElement(\"div\", {\n        className: \"font-color-icon\"\n      }, React.createElement(\"img\", {\n        src: disabled ? FontColorDisabledImage : FontColorImage\n      }), React.createElement(\"div\", {\n        className: \"font-color-bar\",\n        style: {\n          backgroundColor: this.props.value\n        }\n      })), React.createElement(\"div\", {\n        className: \"font-color-collapse\"\n      }, React.createElement(\"img\", {\n        src: disabled ? FontColorDisabledCollapseImage : FontColorCollapseImage\n      })), React.createElement(\"div\", {\n        className: \"color-picker\"\n      }), React.createElement(\"div\", {\n        className: \"color-picker-container\",\n        onClick: function onClick(evt) {\n          return evt.stopPropagation();\n        }\n      }));\n    }\n  }]);\n\n  return InputColor;\n}(Component);\n\nInputColor.defaultProps = {\n  disabled: false\n};\nInputColor.propTypes = {\n  disabled: PropTypes.bool,\n  value: PropTypes.string\n};\nexport default InputColor;"
     },
     {
       "id": "./src/components/input-color/input-color.less",
@@ -13251,7 +13251,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "./input-color.less",
-          "loc": "19:0-28"
+          "loc": "27:0-28"
         }
       ],
       "providedExports": null,
@@ -13602,7 +13602,7 @@
       "name": "./src/components/textbox/index.jsx",
       "index": 33,
       "index2": 45,
-      "size": 8603,
+      "size": 9798,
       "cacheable": true,
       "built": false,
       "optional": false,
@@ -13651,7 +13651,7 @@
       "optimizationBailout": [
       ],
       "depth": 2,
-      "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './textbox.less';\nimport classNames from 'classnames';\nimport React, { Component } from 'react';\nimport ReactDOM from 'react-dom';\nimport PropTypes from 'prop-types';\nimport MediumEditor from 'medium-editor';\n\nvar debug = require('../../commons/debug')('textbox:textbox');\n\nvar CourseBoxEditor = MediumEditor.Extension.extend({\n  name: 'coursebox-editor',\n  getInteractionElements: function getInteractionElements() {\n    return Array.from(this.base.options.ownerDocument.querySelectorAll('.coursebox-editor'));\n  }\n});\nvar DEFAULT_OPTIONS = {\n  toolbar: {\n    // buttons: ['bold', 'italic', 'underline', 'justifyLeft', 'justifyCenter', 'justifyRight'],\n    buttons: ['bold', 'italic', 'underline']\n  },\n  extensions: {\n    'coursebox-editor': new CourseBoxEditor()\n  }\n};\n\nvar Textbox =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(Textbox, _Component);\n\n  function Textbox(props) {\n    var _this;\n\n    _classCallCheck(this, Textbox);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(Textbox).call(this, props));\n    _this.state = {\n      text: props.text\n    }; // 输入框的引用\n\n    _this.editorRef = React.createRef();\n    _this.handleComposition = _this.handleComposition.bind(_assertThisInitialized(_this));\n    _this.onContentChange = _this.onContentChange.bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(Textbox, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      debug('componentDidMount');\n      var dom = this.geDOM();\n      this.medium = new MediumEditor(dom, Object.assign(DEFAULT_OPTIONS, this.props.options)); // 默认禁止编辑\n\n      this.disableEditing();\n      this.medium.subscribe('editableInput', function () {\n        if (!_this2._isComposing) _this2.onContentChange(dom.innerHTML);\n      });\n      this.medium.on(dom, 'compositionend', this.handleComposition);\n      this.medium.on(dom, 'compositionupdate', this.handleComposition);\n      this.medium.on(dom, 'compositionend', this.handleComposition); // 双击、单击\n\n      this.medium.on(dom, 'dblclick', function () {\n        debug('dblclick');\n\n        _this2.enableEditing();\n\n        dom.focus();\n      });\n      this.medium.subscribe('blur', function () {\n        debug('blur');\n\n        _this2.disableEditing();\n      });\n      this.medium.subscribe('editableChangeStyle', function (style) {\n        debug('editableChangeStyle', style);\n        _this2.props.onStyleChange && _this2.props.onStyleChange(style);\n      });\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      debug('componentWillUnmount');\n      this.medium.destroy();\n    }\n  }, {\n    key: \"componentDidUpdate\",\n    value: function componentDidUpdate() {\n      debug('componentDidUpdate'); // if (this.props.text !== this.state.text) {\n      // \tthis.setState({ text: this.props.text }, () => {\n      // \t\tthis.medium.restoreSelection();\n      // \t});\n      // }\n\n      this.medium.restoreSelection();\n    }\n  }, {\n    key: \"geDOM\",\n    value: function geDOM() {\n      return ReactDOM.findDOMNode(this);\n    }\n  }, {\n    key: \"disableEditing\",\n    value: function disableEditing() {\n      debug('disableEditing');\n      var dom = this.geDOM();\n      dom.setAttribute('contenteditable', false);\n    }\n  }, {\n    key: \"enableEditing\",\n    value: function enableEditing() {\n      debug('enableEditing');\n      var dom = this.geDOM();\n      dom.setAttribute('contenteditable', true);\n    }\n  }, {\n    key: \"handleComposition\",\n    value: function handleComposition(evt) {\n      var dom = ReactDOM.findDOMNode(this);\n\n      if (evt.type === 'compositionend') {\n        // composition is end\n        this._isComposing = false; // fixed for Chrome v53+ and detect all Chrome\n        // https://chromium.googlesource.com/chromium/src/\n        // +/afce9d93e76f2ff81baaa088a4ea25f67d1a76b3%5E%21/\n        // if ((evt.target instanceof HTMLInputElement || evt.target.isContentEditable) && !this._isComposing && isChrome) {\n        // \t// fire onChange\n        // \t// props.onChange(e)\n        // \tthis.medium.trigger('editableInput', evt, this.editorRef.current);\n        // }\n        // chrome safari 渲染 compositionend 在input 事件后触发\n\n        this.medium.trigger('editableInput', evt, dom);\n      } else {\n        // in composition\n        this._isComposing = true;\n      }\n    }\n  }, {\n    key: \"onContentChange\",\n    value: function onContentChange(text) {\n      this.props.onContentChange && this.props.onContentChange(text);\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var className = classNames('coursebox-textbox', this.props.className);\n\n      var _this$props = this.props,\n          options = _this$props.options,\n          text = _this$props.text,\n          tag = _this$props.tag,\n          contentEditable = _this$props.contentEditable,\n          dangerouslySetInnerHTML = _this$props.dangerouslySetInnerHTML,\n          props = _objectWithoutProperties(_this$props, [\"options\", \"text\", \"tag\", \"contentEditable\", \"dangerouslySetInnerHTML\"]);\n\n      props.className = className;\n      props.dangerouslySetInnerHTML = {\n        __html: this.state.text\n      };\n\n      if (this.medium) {\n        this.medium.saveSelection();\n      }\n\n      return React.createElement(tag, props);\n    }\n  }]);\n\n  return Textbox;\n}(Component);\n\nTextbox.defaultProps = {\n  tag: 'div',\n  style: {\n    fontSize: '16px',\n    width: 'auto',\n    height: 'auto',\n    lineHeight: '1.2'\n  },\n  options: {}\n};\nTextbox.propTypes = {\n  onChange: PropTypes.func.isRequired,\n  options: PropTypes.object\n};\nexport default Textbox;"
+      "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './textbox.less';\nimport classNames from 'classnames';\nimport React, { Component } from 'react';\nimport ReactDOM from 'react-dom';\nimport PropTypes from 'prop-types';\nimport MediumEditor from 'medium-editor';\n\nvar debug = require('../../commons/debug')('textbox:textbox');\n\nvar CourseBoxEditor = MediumEditor.Extension.extend({\n  name: 'coursebox-editor',\n  getInteractionElements: function getInteractionElements() {\n    return Array.from(this.base.options.ownerDocument.querySelectorAll('.coursebox-editor'));\n  }\n});\nvar DEFAULT_OPTIONS = {\n  toolbar: {\n    // buttons: ['bold', 'italic', 'underline', 'justifyLeft', 'justifyCenter', 'justifyRight'],\n    buttons: ['bold', 'italic', 'underline']\n  },\n  extensions: {\n    'coursebox-editor': new CourseBoxEditor()\n  }\n};\n\nvar Textbox =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(Textbox, _Component);\n\n  function Textbox(props) {\n    var _this;\n\n    _classCallCheck(this, Textbox);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(Textbox).call(this, props));\n    _this.state = {\n      text: props.text\n    }; // 输入框的引用\n\n    _this.editorRef = React.createRef();\n    _this.handleComposition = _this.handleComposition.bind(_assertThisInitialized(_this));\n    _this.onContentChange = _this.onContentChange.bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(Textbox, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      debug('componentDidMount');\n      var dom = this.geDOM();\n      this.medium = new MediumEditor(dom, Object.assign(DEFAULT_OPTIONS, this.props.options)); // 默认禁止编辑\n\n      this.disableEditing();\n      this.medium.subscribe('editableInput', function () {\n        if (!_this2._isComposing) _this2.onContentChange(dom.innerHTML);\n      });\n      this.medium.on(dom, 'compositionend', this.handleComposition);\n      this.medium.on(dom, 'compositionupdate', this.handleComposition);\n      this.medium.on(dom, 'compositionend', this.handleComposition); // 双击、单击\n\n      this.medium.on(dom, 'dblclick', function () {\n        debug('dblclick');\n\n        _this2.enableEditing();\n\n        dom.focus();\n      });\n      this.medium.subscribe('blur', function () {\n        debug('blur');\n\n        _this2.disableEditing();\n      });\n      this.medium.subscribe('editableChangeStyle', function (style) {\n        debug('editableChangeStyle', style);\n        _this2.props.onStyleChange && _this2.props.onStyleChange(_objectSpread({}, _this2.props.style, {}, style));\n      });\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      debug('componentWillUnmount');\n      this.medium.destroy();\n    }\n  }, {\n    key: \"componentDidUpdate\",\n    value: function componentDidUpdate() {\n      debug('componentDidUpdate'); // if (this.props.text !== this.state.text) {\n      // \tthis.setState({ text: this.props.text }, () => {\n      // \t\tthis.medium.restoreSelection();\n      // \t});\n      // }\n\n      this.medium.restoreSelection();\n    }\n  }, {\n    key: \"geDOM\",\n    value: function geDOM() {\n      return ReactDOM.findDOMNode(this);\n    }\n  }, {\n    key: \"disableEditing\",\n    value: function disableEditing() {\n      debug('disableEditing');\n      var dom = this.geDOM();\n      dom.setAttribute('contenteditable', false);\n    }\n  }, {\n    key: \"enableEditing\",\n    value: function enableEditing() {\n      debug('enableEditing');\n      var dom = this.geDOM();\n      dom.setAttribute('contenteditable', true);\n    }\n  }, {\n    key: \"handleComposition\",\n    value: function handleComposition(evt) {\n      var dom = ReactDOM.findDOMNode(this);\n\n      if (evt.type === 'compositionend') {\n        // composition is end\n        this._isComposing = false; // fixed for Chrome v53+ and detect all Chrome\n        // https://chromium.googlesource.com/chromium/src/\n        // +/afce9d93e76f2ff81baaa088a4ea25f67d1a76b3%5E%21/\n        // if ((evt.target instanceof HTMLInputElement || evt.target.isContentEditable) && !this._isComposing && isChrome) {\n        // \t// fire onChange\n        // \t// props.onChange(e)\n        // \tthis.medium.trigger('editableInput', evt, this.editorRef.current);\n        // }\n        // chrome safari 渲染 compositionend 在input 事件后触发\n\n        this.medium.trigger('editableInput', evt, dom);\n      } else {\n        // in composition\n        this._isComposing = true;\n      }\n    }\n  }, {\n    key: \"onContentChange\",\n    value: function onContentChange(text) {\n      this.props.onContentChange && this.props.onContentChange(text);\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var className = classNames('coursebox-textbox', this.props.className);\n\n      var _this$props = this.props,\n          options = _this$props.options,\n          text = _this$props.text,\n          tag = _this$props.tag,\n          contentEditable = _this$props.contentEditable,\n          dangerouslySetInnerHTML = _this$props.dangerouslySetInnerHTML,\n          props = _objectWithoutProperties(_this$props, [\"options\", \"text\", \"tag\", \"contentEditable\", \"dangerouslySetInnerHTML\"]);\n\n      props.className = className;\n      props.dangerouslySetInnerHTML = {\n        __html: this.state.text\n      };\n\n      if (this.medium) {\n        this.medium.saveSelection();\n      }\n\n      return React.createElement(tag, props);\n    }\n  }]);\n\n  return Textbox;\n}(Component);\n\nTextbox.defaultProps = {\n  tag: 'div',\n  style: {\n    color: '#000000',\n    fontSize: '14px',\n    fontStyle: 'normal',\n    fontWeight: 'normal',\n    textDecoration: 'none',\n    lineHeight: '1.2'\n  },\n  options: {}\n};\nTextbox.propTypes = {\n  onChange: PropTypes.func.isRequired,\n  options: PropTypes.object\n};\nexport default Textbox;"
     },
     {
       "id": "./src/components/textbox/textbox.less",
@@ -13695,7 +13695,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "./textbox.less",
-          "loc": "23:0-24"
+          "loc": "29:0-24"
         }
       ],
       "providedExports": null,
@@ -13799,7 +13799,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "medium-editor",
-          "loc": "28:0-41"
+          "loc": "34:0-41"
         },
         {
           "moduleId": "./src/components/textbox/index.jsx",
@@ -13808,7 +13808,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "medium-editor",
-          "loc": "32:22-34"
+          "loc": "38:22-34"
         },
         {
           "moduleId": "./src/components/textbox/index.jsx",
@@ -13817,7 +13817,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "medium-editor",
-          "loc": "76:24-36"
+          "loc": "82:24-36"
         }
       ],
       "providedExports": null,
@@ -13965,7 +13965,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "prop-types",
-          "loc": "25:0-35"
+          "loc": "33:0-35"
         },
         {
           "moduleId": "./src/components/input-color/index.jsx",
@@ -13974,7 +13974,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "179:12-21"
+          "loc": "217:12-21"
         },
         {
           "moduleId": "./src/components/input-color/index.jsx",
@@ -13983,7 +13983,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "180:9-18"
+          "loc": "218:9-18"
         },
         {
           "moduleId": "./src/components/input-select/index.jsx",
@@ -14100,7 +14100,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "prop-types",
-          "loc": "27:0-35"
+          "loc": "33:0-35"
         },
         {
           "moduleId": "./src/components/textbox/index.jsx",
@@ -14109,7 +14109,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "207:12-21"
+          "loc": "215:12-21"
         },
         {
           "moduleId": "./src/components/textbox/index.jsx",
@@ -14118,7 +14118,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "prop-types",
-          "loc": "208:11-20"
+          "loc": "216:11-20"
         }
       ],
       "providedExports": null,
@@ -14221,7 +14221,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "react",
-          "loc": "20:0-34"
+          "loc": "28:0-34"
         },
         {
           "moduleId": "./src/components/input-color/index.jsx",
@@ -14230,7 +14230,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "173:2-11"
+          "loc": "211:2-11"
         },
         {
           "moduleId": "./src/components/input-select/index.jsx",
@@ -14374,7 +14374,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "react",
-          "loc": "25:0-41"
+          "loc": "31:0-41"
         },
         {
           "moduleId": "./src/components/textbox/index.jsx",
@@ -14383,7 +14383,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "63:22-27"
+          "loc": "69:22-27"
         },
         {
           "moduleId": "./src/components/textbox/index.jsx",
@@ -14392,7 +14392,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "189:13-18"
+          "loc": "195:13-18"
         },
         {
           "moduleId": "./src/components/textbox/index.jsx",
@@ -14401,7 +14401,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "194:2-11"
+          "loc": "200:2-11"
         }
       ],
       "providedExports": null,
@@ -14468,7 +14468,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "react-dom",
-          "loc": "21:0-33"
+          "loc": "29:0-33"
         },
         {
           "moduleId": "./src/components/input-color/index.jsx",
@@ -14477,7 +14477,7 @@
           "moduleName": "./src/components/input-color/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "react-dom",
-          "loc": "62:19-27"
+          "loc": "87:19-27"
         },
         {
           "moduleId": "./src/components/input-select/index.jsx",
@@ -14504,7 +14504,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "react-dom",
-          "loc": "26:0-33"
+          "loc": "32:0-33"
         },
         {
           "moduleId": "./src/components/textbox/index.jsx",
@@ -14513,7 +14513,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "react-dom",
-          "loc": "123:13-21"
+          "loc": "129:13-21"
         },
         {
           "moduleId": "./src/components/textbox/index.jsx",
@@ -14522,7 +14522,7 @@
           "moduleName": "./src/components/textbox/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "react-dom",
-          "loc": "142:16-24"
+          "loc": "148:16-24"
         }
       ],
       "providedExports": null,
@@ -14553,7 +14553,7 @@
       "assets": [
         {
           "name": "index.html",
-          "size": 549699,
+          "size": 549654,
           "chunks": [
             0
           ],
@@ -14599,13 +14599,13 @@
           "rendered": false,
           "initial": true,
           "entry": true,
-          "size": 544510,
+          "size": 544465,
           "names": [
           ],
           "files": [
             "index.html"
           ],
-          "hash": "db2340c38abb92d6a4f1",
+          "hash": "f0e28e5cddcc91fcea47",
           "siblings": [
           ],
           "parents": [
@@ -14621,7 +14621,7 @@
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./public/index.html",
               "index": 0,
               "index2": 3,
-              "size": 3029,
+              "size": 2984,
               "cacheable": true,
               "built": false,
               "optional": false,
@@ -14652,7 +14652,7 @@
               "optimizationBailout": [
               ],
               "depth": 0,
-              "source": "var _ = require(\"!!../node_modules/lodash/lodash.js\");module.exports = function (templateParams) { with(templateParams) {return (function(data) {\nvar __t, __p = '';\n__p += '<!DOCTYPE html>\\n<html lang=\"en\">\\n\\n<head>\\n\t<meta charset=\"UTF-8\">\\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\\n\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\\n\t<title>Textbox</title>\\n\t<script crossorigin=\"anonymous\" src=\"https://lib.baomitu.com/react/16.9.0/umd/react.production.min.js\"></script>\\n\t<script crossorigin=\"anonymous\"\\n\t\tsrc=\"https://lib.baomitu.com/react-dom/16.9.0-alpha.0/umd/react-dom.production.min.js\"></script>\\n\t<script crossorigin=\"anonymous\" integrity=\"sha384-LYxFDCinsAkMityIwlndisTOMBM5FXNysu758VzqiuCRZmCw7aDRDVn9HlHPi80A\"\\n\t\tsrc=\"https://lib.baomitu.com/prop-types/15.7.2/prop-types.min.js\"></script>\\n\t<script crossorigin=\"anonymous\" integrity=\"sha384-aW+nY1aiG1K4u3n4AHw3qdsa1khwO2IE3bI+mBWpffP2NJ1nr5jSpj30xGo1tqHX\"\\n\t\tsrc=\"https://lib.baomitu.com/medium-editor/5.23.3/js/medium-editor.js\"></script>\\n\t<link crossorigin=\"anonymous\" integrity=\"sha384-gNiwz66InRaccEkEfCzdhoK+24vIKm9CXST7duCQQwYZl7srDrvBfs0LWf0TZs1K\"\\n\t\thref=\"https://lib.baomitu.com/medium-editor/5.23.3/css/medium-editor.css\" rel=\"stylesheet\">\\n\t<link crossorigin=\"anonymous\" integrity=\"sha384-qbe1+IVx6xE4Nob4lqpziXNCeZczDFEJgoSuNHpNqWcLEGXnDVRk66y/5rzFBETi\"\\n\t\thref=\"https://lib.baomitu.com/medium-editor/5.23.3/css/themes/default.css\" rel=\"stylesheet\">\\n\t<script crossorigin=\"anonymous\" integrity=\"sha384-JSLRmxt+roLKbENSYQdxlXq4DbLGx492b22anlRj7R5X6tw+f6MtV/jc6Cu1CCt9\"\\n\t\tsrc=\"https://lib.baomitu.com/babel-standalone/7.0.0-beta.3/babel.min.js\"></script>\\n\t<style>\\n\t\thtml,\\n\t\tbody {\\n\t\t\theight: 100%;\\n\t\t}\\n\t</style>\\n</head>\\n\\n<body>\\n\t<div contenteditable=\"true\">\\n\t\t中国制造\\n\t</div>\\n\\n\t<div id=\"root\"></div>\\n\t<script type=\"text/babel\">\\n\t\tconst { useState, useRef, useEffect, Component } = React;\\n\t\tconst { Textbox, Editor } = window[' +\n((__t = ( htmlWebpackPlugin.options.COMPONENT_NAME )) == null ? '' : __t) +\n'];\\n\\n\t\tfunction App() {\\n\t\t\t// 命名参考 ReactNative https://facebook.github.io/react-native/docs/text-style-props\\n\t\t\tconst [text, setText] = useState(\\'<p style=\"margin: 0\">中国<font color=\"#ffeedd\" size=\"5\">A</font>bc</p>\\');\\n\t\t\tconst [style, setStyle] = useState({\\n\t\t\t\tfontSize: \\'16px\\',\\n\t\t\t\twidth: \\'auto\\',\\n\t\t\t\theight: \\'auto\\',\\n\t\t\t\tlineHeight: \\'1.2\\',\\n\t\t\t\tfontWeight: \\'bold\\'\\n\t\t\t});\\n\\n\t\t\tconst textboxRef = useRef(null);\\n\\n\t\t\tfunction onContentChange(val) {\\n\t\t\t\tsetText(val);\\n\t\t\t}\\n\\n\t\t\treturn (\\n\t\t\t\t<div>\\n\t\t\t\t\t<Editor textboxDOM={textboxRef.current} textboxDOMRef={textboxRef} />\\n\t\t\t\t\t<Textbox ref={textboxRef} className=\"textbox\" style={style} text={text} onContentChange={onContentChange} onStyleChange={(style) => {\\n\t\t\t\t\t\tsetStyle(prevStyle => { return { ...prevStyle, ...style } })\\n\t\t\t\t\t}} />\\n\t\t\t\t</div>\\n\t\t\t);\\n\t\t}\\n\\n\t\tReactDOM.render(\\n\t\t\t<App />,\\n\t\t\tdocument.getElementById(\\'root\\')\\n\t\t);\\n\t</script>\\n</body>\\n\\n</html>';\nreturn __p\n})();}}"
+              "source": "var _ = require(\"!!../node_modules/lodash/lodash.js\");module.exports = function (templateParams) { with(templateParams) {return (function(data) {\nvar __t, __p = '';\n__p += '<!DOCTYPE html>\\n<html lang=\"en\">\\n\\n<head>\\n\t<meta charset=\"UTF-8\">\\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\\n\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\\n\t<title>Textbox</title>\\n\t<script crossorigin=\"anonymous\" src=\"https://lib.baomitu.com/react/16.9.0/umd/react.production.min.js\"></script>\\n\t<script crossorigin=\"anonymous\"\\n\t\tsrc=\"https://lib.baomitu.com/react-dom/16.9.0-alpha.0/umd/react-dom.production.min.js\"></script>\\n\t<script crossorigin=\"anonymous\" integrity=\"sha384-LYxFDCinsAkMityIwlndisTOMBM5FXNysu758VzqiuCRZmCw7aDRDVn9HlHPi80A\"\\n\t\tsrc=\"https://lib.baomitu.com/prop-types/15.7.2/prop-types.min.js\"></script>\\n\t<script crossorigin=\"anonymous\" integrity=\"sha384-aW+nY1aiG1K4u3n4AHw3qdsa1khwO2IE3bI+mBWpffP2NJ1nr5jSpj30xGo1tqHX\"\\n\t\tsrc=\"https://lib.baomitu.com/medium-editor/5.23.3/js/medium-editor.js\"></script>\\n\t<link crossorigin=\"anonymous\" integrity=\"sha384-gNiwz66InRaccEkEfCzdhoK+24vIKm9CXST7duCQQwYZl7srDrvBfs0LWf0TZs1K\"\\n\t\thref=\"https://lib.baomitu.com/medium-editor/5.23.3/css/medium-editor.css\" rel=\"stylesheet\">\\n\t<link crossorigin=\"anonymous\" integrity=\"sha384-qbe1+IVx6xE4Nob4lqpziXNCeZczDFEJgoSuNHpNqWcLEGXnDVRk66y/5rzFBETi\"\\n\t\thref=\"https://lib.baomitu.com/medium-editor/5.23.3/css/themes/default.css\" rel=\"stylesheet\">\\n\t<script crossorigin=\"anonymous\" integrity=\"sha384-JSLRmxt+roLKbENSYQdxlXq4DbLGx492b22anlRj7R5X6tw+f6MtV/jc6Cu1CCt9\"\\n\t\tsrc=\"https://lib.baomitu.com/babel-standalone/7.0.0-beta.3/babel.min.js\"></script>\\n\t<style>\\n\t\thtml,\\n\t\tbody {\\n\t\t\theight: 100%;\\n\t\t}\\n\t</style>\\n</head>\\n\\n<body>\\n\t<div contenteditable=\"true\">\\n\t\t中国制造\\n\t</div>\\n\\n\t<div id=\"root\"></div>\\n\t<script type=\"text/babel\">\\n\t\tconst { useState, useRef, useEffect, Component } = React;\\n\t\tconst { Textbox, Editor } = window[' +\n((__t = ( htmlWebpackPlugin.options.COMPONENT_NAME )) == null ? '' : __t) +\n'];\\n\\n\t\tfunction App() {\\n\t\t\t// 命名参考 ReactNative https://facebook.github.io/react-native/docs/text-style-props\\n\t\t\tconst [text, setText] = useState(\\'<p style=\"margin: 0\">中国<font color=\"#ffeedd\" size=\"5\">A</font>bc</p>\\');\\n\t\t\tconst [style, setStyle] = useState({\\n\t\t\t\tfontSize: \\'16px\\',\\n\t\t\t\twidth: \\'auto\\',\\n\t\t\t\theight: \\'auto\\',\\n\t\t\t\tlineHeight: \\'1.2\\',\\n\t\t\t\tfontWeight: \\'bold\\'\\n\t\t\t});\\n\\n\t\t\tconst textboxRef = useRef(null);\\n\\n\t\t\tfunction onContentChange(val) {\\n\t\t\t\tsetText(val);\\n\t\t\t}\\n\\n\t\t\treturn (\\n\t\t\t\t<div>\\n\t\t\t\t\t<Editor textboxDOM={textboxRef.current} textboxDOMRef={textboxRef} />\\n\t\t\t\t\t<Textbox ref={textboxRef} className=\"textbox\" style={style} text={text} onContentChange={onContentChange} onStyleChange={(style) => {\\n\t\t\t\t\t\tsetStyle(style)\\n\t\t\t\t\t}} />\\n\t\t\t\t</div>\\n\t\t\t);\\n\t\t}\\n\\n\t\tReactDOM.render(\\n\t\t\t<App />,\\n\t\t\tdocument.getElementById(\\'root\\')\\n\t\t);\\n\t</script>\\n</body>\\n\\n</html>';\nreturn __p\n})();}}"
             },
             {
               "id": "./node_modules/lodash/lodash.js",
@@ -14824,7 +14824,7 @@
           "name": "./node_modules/html-webpack-plugin/lib/loader.js!./public/index.html",
           "index": 0,
           "index2": 3,
-          "size": 3029,
+          "size": 2984,
           "cacheable": true,
           "built": false,
           "optional": false,
@@ -14855,7 +14855,7 @@
           "optimizationBailout": [
           ],
           "depth": 0,
-          "source": "var _ = require(\"!!../node_modules/lodash/lodash.js\");module.exports = function (templateParams) { with(templateParams) {return (function(data) {\nvar __t, __p = '';\n__p += '<!DOCTYPE html>\\n<html lang=\"en\">\\n\\n<head>\\n\t<meta charset=\"UTF-8\">\\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\\n\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\\n\t<title>Textbox</title>\\n\t<script crossorigin=\"anonymous\" src=\"https://lib.baomitu.com/react/16.9.0/umd/react.production.min.js\"></script>\\n\t<script crossorigin=\"anonymous\"\\n\t\tsrc=\"https://lib.baomitu.com/react-dom/16.9.0-alpha.0/umd/react-dom.production.min.js\"></script>\\n\t<script crossorigin=\"anonymous\" integrity=\"sha384-LYxFDCinsAkMityIwlndisTOMBM5FXNysu758VzqiuCRZmCw7aDRDVn9HlHPi80A\"\\n\t\tsrc=\"https://lib.baomitu.com/prop-types/15.7.2/prop-types.min.js\"></script>\\n\t<script crossorigin=\"anonymous\" integrity=\"sha384-aW+nY1aiG1K4u3n4AHw3qdsa1khwO2IE3bI+mBWpffP2NJ1nr5jSpj30xGo1tqHX\"\\n\t\tsrc=\"https://lib.baomitu.com/medium-editor/5.23.3/js/medium-editor.js\"></script>\\n\t<link crossorigin=\"anonymous\" integrity=\"sha384-gNiwz66InRaccEkEfCzdhoK+24vIKm9CXST7duCQQwYZl7srDrvBfs0LWf0TZs1K\"\\n\t\thref=\"https://lib.baomitu.com/medium-editor/5.23.3/css/medium-editor.css\" rel=\"stylesheet\">\\n\t<link crossorigin=\"anonymous\" integrity=\"sha384-qbe1+IVx6xE4Nob4lqpziXNCeZczDFEJgoSuNHpNqWcLEGXnDVRk66y/5rzFBETi\"\\n\t\thref=\"https://lib.baomitu.com/medium-editor/5.23.3/css/themes/default.css\" rel=\"stylesheet\">\\n\t<script crossorigin=\"anonymous\" integrity=\"sha384-JSLRmxt+roLKbENSYQdxlXq4DbLGx492b22anlRj7R5X6tw+f6MtV/jc6Cu1CCt9\"\\n\t\tsrc=\"https://lib.baomitu.com/babel-standalone/7.0.0-beta.3/babel.min.js\"></script>\\n\t<style>\\n\t\thtml,\\n\t\tbody {\\n\t\t\theight: 100%;\\n\t\t}\\n\t</style>\\n</head>\\n\\n<body>\\n\t<div contenteditable=\"true\">\\n\t\t中国制造\\n\t</div>\\n\\n\t<div id=\"root\"></div>\\n\t<script type=\"text/babel\">\\n\t\tconst { useState, useRef, useEffect, Component } = React;\\n\t\tconst { Textbox, Editor } = window[' +\n((__t = ( htmlWebpackPlugin.options.COMPONENT_NAME )) == null ? '' : __t) +\n'];\\n\\n\t\tfunction App() {\\n\t\t\t// 命名参考 ReactNative https://facebook.github.io/react-native/docs/text-style-props\\n\t\t\tconst [text, setText] = useState(\\'<p style=\"margin: 0\">中国<font color=\"#ffeedd\" size=\"5\">A</font>bc</p>\\');\\n\t\t\tconst [style, setStyle] = useState({\\n\t\t\t\tfontSize: \\'16px\\',\\n\t\t\t\twidth: \\'auto\\',\\n\t\t\t\theight: \\'auto\\',\\n\t\t\t\tlineHeight: \\'1.2\\',\\n\t\t\t\tfontWeight: \\'bold\\'\\n\t\t\t});\\n\\n\t\t\tconst textboxRef = useRef(null);\\n\\n\t\t\tfunction onContentChange(val) {\\n\t\t\t\tsetText(val);\\n\t\t\t}\\n\\n\t\t\treturn (\\n\t\t\t\t<div>\\n\t\t\t\t\t<Editor textboxDOM={textboxRef.current} textboxDOMRef={textboxRef} />\\n\t\t\t\t\t<Textbox ref={textboxRef} className=\"textbox\" style={style} text={text} onContentChange={onContentChange} onStyleChange={(style) => {\\n\t\t\t\t\t\tsetStyle(prevStyle => { return { ...prevStyle, ...style } })\\n\t\t\t\t\t}} />\\n\t\t\t\t</div>\\n\t\t\t);\\n\t\t}\\n\\n\t\tReactDOM.render(\\n\t\t\t<App />,\\n\t\t\tdocument.getElementById(\\'root\\')\\n\t\t);\\n\t</script>\\n</body>\\n\\n</html>';\nreturn __p\n})();}}"
+          "source": "var _ = require(\"!!../node_modules/lodash/lodash.js\");module.exports = function (templateParams) { with(templateParams) {return (function(data) {\nvar __t, __p = '';\n__p += '<!DOCTYPE html>\\n<html lang=\"en\">\\n\\n<head>\\n\t<meta charset=\"UTF-8\">\\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\\n\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\\n\t<title>Textbox</title>\\n\t<script crossorigin=\"anonymous\" src=\"https://lib.baomitu.com/react/16.9.0/umd/react.production.min.js\"></script>\\n\t<script crossorigin=\"anonymous\"\\n\t\tsrc=\"https://lib.baomitu.com/react-dom/16.9.0-alpha.0/umd/react-dom.production.min.js\"></script>\\n\t<script crossorigin=\"anonymous\" integrity=\"sha384-LYxFDCinsAkMityIwlndisTOMBM5FXNysu758VzqiuCRZmCw7aDRDVn9HlHPi80A\"\\n\t\tsrc=\"https://lib.baomitu.com/prop-types/15.7.2/prop-types.min.js\"></script>\\n\t<script crossorigin=\"anonymous\" integrity=\"sha384-aW+nY1aiG1K4u3n4AHw3qdsa1khwO2IE3bI+mBWpffP2NJ1nr5jSpj30xGo1tqHX\"\\n\t\tsrc=\"https://lib.baomitu.com/medium-editor/5.23.3/js/medium-editor.js\"></script>\\n\t<link crossorigin=\"anonymous\" integrity=\"sha384-gNiwz66InRaccEkEfCzdhoK+24vIKm9CXST7duCQQwYZl7srDrvBfs0LWf0TZs1K\"\\n\t\thref=\"https://lib.baomitu.com/medium-editor/5.23.3/css/medium-editor.css\" rel=\"stylesheet\">\\n\t<link crossorigin=\"anonymous\" integrity=\"sha384-qbe1+IVx6xE4Nob4lqpziXNCeZczDFEJgoSuNHpNqWcLEGXnDVRk66y/5rzFBETi\"\\n\t\thref=\"https://lib.baomitu.com/medium-editor/5.23.3/css/themes/default.css\" rel=\"stylesheet\">\\n\t<script crossorigin=\"anonymous\" integrity=\"sha384-JSLRmxt+roLKbENSYQdxlXq4DbLGx492b22anlRj7R5X6tw+f6MtV/jc6Cu1CCt9\"\\n\t\tsrc=\"https://lib.baomitu.com/babel-standalone/7.0.0-beta.3/babel.min.js\"></script>\\n\t<style>\\n\t\thtml,\\n\t\tbody {\\n\t\t\theight: 100%;\\n\t\t}\\n\t</style>\\n</head>\\n\\n<body>\\n\t<div contenteditable=\"true\">\\n\t\t中国制造\\n\t</div>\\n\\n\t<div id=\"root\"></div>\\n\t<script type=\"text/babel\">\\n\t\tconst { useState, useRef, useEffect, Component } = React;\\n\t\tconst { Textbox, Editor } = window[' +\n((__t = ( htmlWebpackPlugin.options.COMPONENT_NAME )) == null ? '' : __t) +\n'];\\n\\n\t\tfunction App() {\\n\t\t\t// 命名参考 ReactNative https://facebook.github.io/react-native/docs/text-style-props\\n\t\t\tconst [text, setText] = useState(\\'<p style=\"margin: 0\">中国<font color=\"#ffeedd\" size=\"5\">A</font>bc</p>\\');\\n\t\t\tconst [style, setStyle] = useState({\\n\t\t\t\tfontSize: \\'16px\\',\\n\t\t\t\twidth: \\'auto\\',\\n\t\t\t\theight: \\'auto\\',\\n\t\t\t\tlineHeight: \\'1.2\\',\\n\t\t\t\tfontWeight: \\'bold\\'\\n\t\t\t});\\n\\n\t\t\tconst textboxRef = useRef(null);\\n\\n\t\t\tfunction onContentChange(val) {\\n\t\t\t\tsetText(val);\\n\t\t\t}\\n\\n\t\t\treturn (\\n\t\t\t\t<div>\\n\t\t\t\t\t<Editor textboxDOM={textboxRef.current} textboxDOMRef={textboxRef} />\\n\t\t\t\t\t<Textbox ref={textboxRef} className=\"textbox\" style={style} text={text} onContentChange={onContentChange} onStyleChange={(style) => {\\n\t\t\t\t\t\tsetStyle(style)\\n\t\t\t\t\t}} />\\n\t\t\t\t</div>\\n\t\t\t);\\n\t\t}\\n\\n\t\tReactDOM.render(\\n\t\t\t<App />,\\n\t\t\tdocument.getElementById(\\'root\\')\\n\t\t);\\n\t</script>\\n</body>\\n\\n</html>';\nreturn __p\n})();}}"
         },
         {
           "id": "./node_modules/lodash/lodash.js",
