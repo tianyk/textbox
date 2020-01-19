@@ -304,7 +304,11 @@ class TextboxEditor extends Component {
 			case 'paddingBottom':
 			case 'paddingLeft':
 			case 'paddingRight':
-				medium.trigger('editableChangeStyle', { [field]: value }, textboxDOM);
+				if (field === 'paddingTop' || field === 'paddingBottom') {
+					medium.trigger('editableChangeStyle', { paddingTop: value, paddingBottom: value }, textboxDOM);
+				} else if (field === 'paddingLeft' || field === 'paddingRight') {
+					medium.trigger('editableChangeStyle', { paddingLeft: value, paddingRight: value }, textboxDOM);
+				}
 				break;
 		}
 
@@ -395,7 +399,7 @@ class TextboxEditor extends Component {
 						unit="px"
 						onChange={(padding) => {
 							this.onTextStyleChange('paddingTop', `${padding}px`);
-							this.onTextStyleChange('paddingBottom', `${padding}px`);
+							// this.onTextStyleChange('paddingBottom', `${padding}px`);
 						}}
 					></InputSelect>
 
@@ -409,7 +413,7 @@ class TextboxEditor extends Component {
 						options={[0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30]}
 						unit="px"
 						onChange={(padding) => {
-							this.onTextStyleChange('paddingLeft', `${padding}px`);
+							// this.onTextStyleChange('paddingLeft', `${padding}px`);
 							this.onTextStyleChange('paddingRight', `${padding}px`);
 						}}
 					></InputSelect>

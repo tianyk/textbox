@@ -12205,8 +12205,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _commons_utils__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @commons/utils */ "./src/commons/utils.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -12626,7 +12624,18 @@ function (_Component) {
         case 'paddingBottom':
         case 'paddingLeft':
         case 'paddingRight':
-          medium.trigger('editableChangeStyle', _defineProperty({}, field, value), textboxDOM);
+          if (field === 'paddingTop' || field === 'paddingBottom') {
+            medium.trigger('editableChangeStyle', {
+              paddingTop: value,
+              paddingBottom: value
+            }, textboxDOM);
+          } else if (field === 'paddingLeft' || field === 'paddingRight') {
+            medium.trigger('editableChangeStyle', {
+              paddingLeft: value,
+              paddingRight: value
+            }, textboxDOM);
+          }
+
           break;
       }
 
@@ -12711,9 +12720,8 @@ function (_Component) {
         options: [0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],
         unit: "px",
         onChange: function onChange(padding) {
-          _this3.onTextStyleChange('paddingTop', "".concat(padding, "px"));
+          _this3.onTextStyleChange('paddingTop', "".concat(padding, "px")); // this.onTextStyleChange('paddingBottom', `${padding}px`);
 
-          _this3.onTextStyleChange('paddingBottom', "".concat(padding, "px"));
         }
       }), React.createElement(_input_select__WEBPACK_IMPORTED_MODULE_4__["default"], {
         disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',
@@ -12724,8 +12732,7 @@ function (_Component) {
         options: [0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],
         unit: "px",
         onChange: function onChange(padding) {
-          _this3.onTextStyleChange('paddingLeft', "".concat(padding, "px"));
-
+          // this.onTextStyleChange('paddingLeft', `${padding}px`);
           _this3.onTextStyleChange('paddingRight', "".concat(padding, "px"));
         }
       })));

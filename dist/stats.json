@@ -4,9 +4,9 @@
   "warnings": [
   ],
   "version": "4.41.4",
-  "hash": "319bd8561446a30c5bef",
-  "time": 116,
-  "builtAt": 1579404895018,
+  "hash": "02040cb3e50734c94882",
+  "time": 103,
+  "builtAt": 1579419084626,
   "publicPath": "",
   "outputPath": "/Users/doog/Documents/Workspaces/node/textbox/dist",
   "assetsByChunkName": {
@@ -29,7 +29,7 @@
     },
     {
       "name": "react-textbox.js",
-      "size": 564861,
+      "size": 564979,
       "chunks": [
         "main"
       ],
@@ -42,7 +42,7 @@
     },
     {
       "name": "react-textbox.js.map",
-      "size": 603810,
+      "size": 604286,
       "chunks": [
         "main"
       ],
@@ -92,7 +92,7 @@
       "rendered": false,
       "initial": true,
       "entry": true,
-      "size": 496224,
+      "size": 496342,
       "names": [
         "main"
       ],
@@ -100,7 +100,7 @@
         "react-textbox.js",
         "react-textbox.js.map"
       ],
-      "hash": "ba1724e42b219abd5592",
+      "hash": "93ee16fff9676c66644a",
       "siblings": [
       ],
       "parents": [
@@ -358,7 +358,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/上下边距_不可点@2x.png",
-              "loc": "36:0-78"
+              "loc": "34:0-78"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -367,7 +367,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/上下边距_不可点@2x.png",
-              "loc": "504:22-54"
+              "loc": "513:22-54"
             }
           ],
           "providedExports": [
@@ -420,7 +420,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/上下边距_正常@2x.png",
-              "loc": "35:0-69"
+              "loc": "33:0-69"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -429,7 +429,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/上下边距_正常@2x.png",
-              "loc": "503:14-38"
+              "loc": "512:14-38"
             }
           ],
           "providedExports": [
@@ -1219,7 +1219,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/左右边距_不可点@2x.png",
-              "loc": "34:0-78"
+              "loc": "32:0-78"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -1228,7 +1228,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/左右边距_不可点@2x.png",
-              "loc": "517:22-54"
+              "loc": "525:22-54"
             }
           ],
           "providedExports": [
@@ -1281,7 +1281,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/左右边距_正常@2x.png",
-              "loc": "33:0-69"
+              "loc": "31:0-69"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -1290,7 +1290,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/左右边距_正常@2x.png",
-              "loc": "516:14-38"
+              "loc": "524:14-38"
             }
           ],
           "providedExports": [
@@ -1946,7 +1946,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/行间距_不可点@2x.png",
-              "loc": "32:0-68"
+              "loc": "30:0-68"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -1955,7 +1955,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/行间距_不可点@2x.png",
-              "loc": "493:22-45"
+              "loc": "502:22-45"
             }
           ],
           "providedExports": [
@@ -2008,7 +2008,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@assets/images/行间距_正常@2x.png",
-              "loc": "31:0-59"
+              "loc": "29:0-59"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -2017,7 +2017,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@assets/images/行间距_正常@2x.png",
-              "loc": "492:14-29"
+              "loc": "501:14-29"
             }
           ],
           "providedExports": [
@@ -2330,7 +2330,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "camelcase",
-              "loc": "24:0-34"
+              "loc": "22:0-34"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -2339,7 +2339,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "camelcase",
-              "loc": "265:34-43"
+              "loc": "263:34-43"
             }
           ],
           "providedExports": null,
@@ -2390,7 +2390,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "classnames",
-              "loc": "23:0-36"
+              "loc": "21:0-36"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -2399,7 +2399,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "classnames",
-              "loc": "437:22-32"
+              "loc": "446:22-32"
             },
             {
               "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -5230,7 +5230,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@commons/computed_state",
-              "loc": "37:0-66"
+              "loc": "35:0-66"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -5239,7 +5239,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@commons/computed_state",
-              "loc": "210:8-21"
+              "loc": "208:8-21"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -5248,7 +5248,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@commons/computed_state",
-              "loc": "264:29-37"
+              "loc": "262:29-37"
             }
           ],
           "providedExports": [
@@ -5311,7 +5311,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "cjs require",
               "userRequest": "@commons/debug",
-              "loc": "41:12-37"
+              "loc": "39:12-37"
             },
             {
               "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -5416,7 +5416,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@commons/throttle",
-              "loc": "38:0-41"
+              "loc": "36:0-41"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -5425,7 +5425,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@commons/throttle",
-              "loc": "65:31-39"
+              "loc": "63:31-39"
             },
             {
               "moduleId": "./src/components/input-color/index.jsx",
@@ -5496,7 +5496,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "@commons/utils",
-              "loc": "39:0-69"
+              "loc": "37:0-69"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -5505,7 +5505,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@commons/utils",
-              "loc": "233:12-36"
+              "loc": "231:12-36"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -5514,7 +5514,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "@commons/utils",
-              "loc": "235:19-28"
+              "loc": "233:19-28"
             }
           ],
           "providedExports": [
@@ -5570,7 +5570,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "./editor.less",
-              "loc": "21:0-23"
+              "loc": "19:0-23"
             }
           ],
           "providedExports": null,
@@ -5585,9 +5585,9 @@
           "name": "./src/components/editor/index.jsx",
           "index": 48,
           "index2": 98,
-          "size": 21886,
+          "size": 22004,
           "cacheable": true,
-          "built": false,
+          "built": true,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -5634,7 +5634,7 @@
           "optimizationBailout": [
           ],
           "depth": 2,
-          "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './editor.less';\nimport { Component } from 'react';\nimport classNames from 'classnames';\nimport camelCase from 'camelcase';\nimport InputSelect from '../input-select';\nimport ReactDOM from 'react-dom';\nimport InputColor from '../input-color';\nimport MediumEditor from 'medium-editor';\nimport FontStyleButtonGroup from '../font-style-button-group';\nimport FontLayoutButtonGroup from '../font-layout-button-group';\nimport ImageLineHeight from '@assets/images/行间距_正常@2x.png';\nimport ImageLineHeightDisabled from '@assets/images/行间距_不可点@2x.png';\nimport ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png';\nimport ImagePaddingLeftAndRightDisabled from '@assets/images/左右边距_不可点@2x.png';\nimport ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';\nimport ImagePaddingTopAndBottomDisabled from '@assets/images/上下边距_不可点@2x.png';\nimport { computedState, getStyle } from '@commons/computed_state';\nimport throttle from '@commons/throttle';\nimport { isReactComponentInstance, isElement } from '@commons/utils';\n\nvar debug = require('@commons/debug')('textbox:editor');\n\nvar TextboxEditor =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(TextboxEditor, _Component);\n\n  function TextboxEditor(props) {\n    var _this;\n\n    _classCallCheck(this, TextboxEditor);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(TextboxEditor).call(this, props));\n    _this.state = {\n      textStyle: {},\n      toolbarState: 'hide',\n      editState: 'blur' // blur 未选中 focus 选中\n\n    };\n    _this.onTextStyleChange = _this.onTextStyleChange.bind(_assertThisInitialized(_this));\n    _this.handleFocus = _this.handleFocus.bind(_assertThisInitialized(_this));\n    _this.handleBlur = _this.handleBlur.bind(_assertThisInitialized(_this));\n    _this.hideToolbar = _this.hideToolbar.bind(_assertThisInitialized(_this));\n    _this.showToolbar = _this.showToolbar.bind(_assertThisInitialized(_this));\n    _this.throttleCheckState = throttle(_this.checkState, 300).bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(TextboxEditor, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      if (this.getTextboxDOM() && !this.attachedEvent) {\n        // fix: 处理点击后才出现editor 问题\n        if (this.getTextboxDOM().getAttribute('data-medium-focused')) {\n          this.handleFocus();\n        }\n\n        return this.attachEventHandlers();\n      } // 循环检测 current 是否初始化完成\n\n\n      clearInterval(this.__CHECK_TEXTBOX_MOUNT_TIMER);\n      this.__CHECK_TEXTBOX_MOUNT_TIMER = setInterval(function () {\n        var dom = _this2.getTextboxDOM();\n\n        if (dom) {\n          clearInterval(_this2.__CHECK_TEXTBOX_MOUNT_TIMER);\n\n          _this2.attachEventHandlers();\n        }\n      }, 100);\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      debug('componentWillUnmount');\n      this.detachEventHandlers();\n    }\n  }, {\n    key: \"componentDidUpdate\",\n    value: function componentDidUpdate() {\n      debug('componentDidUpdate');\n      if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();\n    }\n  }, {\n    key: \"attachEventHandlers\",\n    value: function attachEventHandlers() {\n      if (!this.attachedEvent) {\n        debug('attachEventHandlers');\n        var textbox = this.getTextbox();\n        this.attachedEvent = true; // MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements\n\n        textbox.subscribe('blur', this.handleBlur);\n        textbox.subscribe('focus', this.handleFocus);\n        textbox.subscribe('positionToolbar', this.throttleCheckState);\n        textbox.subscribe('editableInput', this.throttleCheckState);\n        textbox.subscribe('hideToolbar', this.hideToolbar);\n        textbox.subscribe('showToolbar', this.showToolbar); // Updating the state of the toolbar as things change \n\n        textbox.subscribe('editableKeyup', this.throttleCheckState);\n      }\n    }\n  }, {\n    key: \"detachEventHandlers\",\n    value: function detachEventHandlers() {\n      if (this.attachedEvent) {\n        debug('detachEventHandlers');\n        var textbox = this.getTextbox();\n        this.attachedEvent = false;\n        textbox.unsubscribe('blur', this.handleBlur);\n        textbox.unsubscribe('focus', this.handleFocus);\n        textbox.unsubscribe('positionToolbar', this.throttleCheckState);\n        textbox.unsubscribe('editableInput', this.throttleCheckState);\n        textbox.unsubscribe('hideToolbar', this.hideToolbar);\n        textbox.unsubscribe('showToolbar', this.showToolbar); // Updating the state of the toolbar as things change\n\n        textbox.unsubscribe('editableKeyup', this.throttleCheckState);\n      }\n    }\n  }, {\n    key: \"handleFocus\",\n    value: function handleFocus() {\n      debug('handleFocus');\n      this.setState({\n        editState: 'focus'\n      });\n      this.throttleCheckState();\n    }\n  }, {\n    key: \"handleBlur\",\n    value: function handleBlur() {\n      debug('handleBlur');\n      this.setState({\n        editState: 'blur',\n        textStyle: {}\n      });\n    }\n  }, {\n    key: \"showToolbar\",\n    value: function showToolbar() {\n      this.setState({\n        toolbarState: 'show'\n      });\n    }\n  }, {\n    key: \"hideToolbar\",\n    value: function hideToolbar() {\n      this.setState({\n        toolbarState: 'hide'\n      });\n    }\n  }, {\n    key: \"checkState\",\n    value: function checkState() {\n      var _this$getTextbox$opti;\n\n      debug('checkState');\n      var globalStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-style', 'font-weight', 'text-decoration', 'font-size', 'color');\n      debug('globalStyle: %o', globalStyle);\n      var selectionRange = MediumEditor.selection.getSelectionRange((_this$getTextbox$opti = this.getTextbox().options) === null || _this$getTextbox$opti === void 0 ? void 0 : _this$getTextbox$opti.ownerDocument);\n      debug('selectionRange', selectionRange); // 未选择\n\n      if (!selectionRange || selectionRange.collapsed) {\n        this.setState({\n          textStyle: globalStyle\n        });\n        return;\n      } // 选择元素是编辑器\n\n\n      var parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange); // Make sure the selection parent isn't outside of the contenteditable\n\n      if (!this.getTextbox().elements.some(function (element) {\n        return MediumEditor.util.isDescendant(element, parentNode, true);\n      })) {\n        this.setState({\n          textStyle: globalStyle\n        });\n        return;\n      } // 选择的是node\n\n\n      var textStyle = {}; // Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node\n\n      while (parentNode) {\n        var _this$getTextbox$opti2;\n\n        computedState(textStyle, parentNode, (_this$getTextbox$opti2 = this.getTextbox().options) === null || _this$getTextbox$opti2 === void 0 ? void 0 : _this$getTextbox$opti2.contentWindow); // we can abort the search upwards if we leave the contentEditable element\n\n        if (MediumEditor.util.isMediumEditorElement(parentNode)) {\n          break;\n        }\n\n        parentNode = parentNode.parentNode;\n      }\n\n      debug('textStyle %o', textStyle);\n      this.setState({\n        textStyle: textStyle\n      });\n    }\n  }, {\n    key: \"getTextboxDOM\",\n    value: function getTextboxDOM() {\n      var _this$props, _this$props2, _this$props2$textboxD;\n\n      debug('getTextboxDOM', this.props.textboxDOM, this.props.textboxDOMRef);\n      var textboxDOM = ((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.textboxDOM) || ((_this$props2 = this.props) === null || _this$props2 === void 0 ? void 0 : (_this$props2$textboxD = _this$props2.textboxDOMRef) === null || _this$props2$textboxD === void 0 ? void 0 : _this$props2$textboxD.current);\n\n      if (textboxDOM) {\n        if (isReactComponentInstance(textboxDOM)) {\n          return ReactDOM.findDOMNode(textboxDOM);\n        } else if (isElement(textboxDOM)) {\n          return textboxDOM;\n        } else {\n          throw new Error('`textboxDOM` 必须是一个 HTMLElement 或者 React Component 实例');\n        }\n      }\n    }\n  }, {\n    key: \"getTextboxDOMStyle\",\n    value: function getTextboxDOMStyle() {\n      debug('getTextboxDOMStyle');\n      var dom = this.getTextboxDOM();\n      if (!dom) return null;\n      var style = {};\n\n      for (var _len = arguments.length, properties = new Array(_len), _key = 0; _key < _len; _key++) {\n        properties[_key] = arguments[_key];\n      }\n\n      if (properties.length > 0) {\n        var _iteratorNormalCompletion = true;\n        var _didIteratorError = false;\n        var _iteratorError = undefined;\n\n        try {\n          for (var _iterator = properties[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n            var _this$getTextbox$opti3;\n\n            var property = _step.value;\n            var styleValue = getStyle(dom, property, (_this$getTextbox$opti3 = this.getTextbox().options) === null || _this$getTextbox$opti3 === void 0 ? void 0 : _this$getTextbox$opti3.contentWindow);\n            if (styleValue) style[camelCase(property)] = styleValue;\n          }\n        } catch (err) {\n          _didIteratorError = true;\n          _iteratorError = err;\n        } finally {\n          try {\n            if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n              _iterator[\"return\"]();\n            }\n          } finally {\n            if (_didIteratorError) {\n              throw _iteratorError;\n            }\n          }\n        }\n      } else {\n        var _this$getTextbox$opti4;\n\n        var computedStyle = (_this$getTextbox$opti4 = this.getTextbox().options) === null || _this$getTextbox$opti4 === void 0 ? void 0 : _this$getTextbox$opti4.contentWindow.getComputedStyle(dom, null);\n\n        for (var i = 0; i < computedStyle.length; i++) {\n          style[computedStyle[i]] = computedStyle.getPropertyValue(computedStyle[i]);\n        }\n      }\n\n      return style;\n    }\n  }, {\n    key: \"triggerGlobalStyleChange\",\n    value: function triggerGlobalStyleChange(style) {\n      var medium = this.getTextbox();\n      if (!medium) return;\n      var textboxDOM = this.getTextboxDOM(); // const globalStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-style', 'font-weight', 'text-decoration', 'font-size', 'color')\n\n      medium.trigger('editableChangeStyle', style, textboxDOM);\n    }\n  }, {\n    key: \"getTextbox\",\n    value: function getTextbox() {\n      var dom = this.getTextboxDOM();\n      return dom ? MediumEditor.getEditorFromElement(dom) : null;\n    }\n  }, {\n    key: \"onTextStyleChange\",\n    value: function onTextStyleChange(field, value) {\n      debug('onTextStyleChange', field, value);\n      if (this.state.editState === 'blur') return;\n      var medium = this.getTextbox();\n      if (!medium) return;\n      var textboxDOM = this.getTextboxDOM();\n\n      switch (field) {\n        case 'fontWeight':\n          if (this.state.toolbarState === 'show') {\n            medium.execAction('bold');\n          } else {\n            medium.trigger('editableChangeStyle', {\n              fontWeight: value\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'fontStyle':\n          if (this.state.toolbarState === 'show') {\n            medium.execAction('italic');\n          } else {\n            medium.trigger('editableChangeStyle', {\n              fontStyle: value\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'textDecoration':\n          if (this.state.toolbarState === 'show') {\n            medium.execAction('underline');\n          } else {\n            medium.trigger('editableChangeStyle', {\n              textDecoration: value\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'color':\n          if (this.state.toolbarState === 'show') {\n            // fix <font color></font>\n            medium.options.ownerDocument.execCommand('styleWithCSS', false, true);\n            medium.execAction('foreColor', {\n              value: value\n            });\n            medium.options.ownerDocument.execCommand('styleWithCSS', false, false);\n          } else {\n            medium.trigger('editableChangeStyle', {\n              color: value\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'fontSize':\n          if (this.state.toolbarState === 'show') {\n            medium.execAction('fontSize', {\n              value: 7\n            });\n\n            if (textboxDOM) {\n              var nodes = textboxDOM.querySelectorAll('font[size=\"7\"]');\n              var _iteratorNormalCompletion2 = true;\n              var _didIteratorError2 = false;\n              var _iteratorError2 = undefined;\n\n              try {\n                for (var _iterator2 = nodes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {\n                  var node = _step2.value;\n                  node.removeAttribute('size');\n                  node.style.fontSize = \"\".concat(value, \"px\");\n                }\n              } catch (err) {\n                _didIteratorError2 = true;\n                _iteratorError2 = err;\n              } finally {\n                try {\n                  if (!_iteratorNormalCompletion2 && _iterator2[\"return\"] != null) {\n                    _iterator2[\"return\"]();\n                  }\n                } finally {\n                  if (_didIteratorError2) {\n                    throw _iteratorError2;\n                  }\n                }\n              }\n            }\n          } else {\n            medium.trigger('editableChangeStyle', {\n              fontSize: \"\".concat(value, \"px\")\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'textAlign':\n          medium.trigger('editableChangeStyle', {\n            textAlign: value\n          }, textboxDOM);\n          break;\n\n        case 'lineHeight':\n          medium.trigger('editableChangeStyle', {\n            lineHeight: value\n          }, textboxDOM);\n          break;\n\n        case 'paddingTop':\n        case 'paddingBottom':\n        case 'paddingLeft':\n        case 'paddingRight':\n          medium.trigger('editableChangeStyle', _defineProperty({}, field, value), textboxDOM);\n          break;\n      }\n\n      medium.trigger('editableInput', null, textboxDOM);\n      this.throttleCheckState();\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var _this3 = this,\n          _this$state$textStyle2;\n\n      var className = classNames('coursebox-editor', this.props.className);\n      var _this$state$textStyle = this.state.textStyle,\n          fontSize = _this$state$textStyle.fontSize,\n          paddingTop = _this$state$textStyle.paddingTop,\n          paddingLeft = _this$state$textStyle.paddingLeft,\n          lineHeight = _this$state$textStyle.lineHeight;\n      if (typeof fontSize === 'string' && fontSize.endsWith('px')) fontSize = parseFloat(fontSize);\n      if (typeof paddingTop === 'string' && paddingTop.endsWith('px')) paddingTop = parseFloat(paddingTop);\n      if (typeof paddingLeft === 'string' && paddingLeft.endsWith('px')) paddingLeft = parseFloat(paddingLeft);\n      if (typeof lineHeight === 'string' && lineHeight.endsWith('px')) lineHeight = (parseFloat(lineHeight) / fontSize).toFixed(1);\n      return React.createElement(\"div\", {\n        className: className\n      }, React.createElement(\"label\", {\n        htmlFor: \"font-size-style\"\n      }, \"\\u6587\\u5B57\"), React.createElement(\"div\", {\n        id: \"font-style\"\n      }, React.createElement(InputColor, {\n        disabled: this.state.editState !== 'focus',\n        className: \"__font-color\",\n        value: this.state.textStyle.color,\n        onChange: function onChange(color) {\n          return _this3.onTextStyleChange('color', color);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'focus',\n        className: \"__font-size\",\n        value: fontSize,\n        options: [12, 13, 14, 16, 18, 20, 28, 36, 48, 72],\n        unit: \"px\",\n        onChange: function onChange(fontSize) {\n          return _this3.onTextStyleChange('fontSize', fontSize);\n        }\n      }), React.createElement(FontStyleButtonGroup, {\n        disabled: this.state.editState !== 'focus',\n        className: \"__font-style\",\n        fontWeight: (_this$state$textStyle2 = this.state.textStyle) === null || _this$state$textStyle2 === void 0 ? void 0 : _this$state$textStyle2.fontWeight,\n        fontStyle: this.state.textStyle.fontStyle,\n        textDecoration: this.state.textStyle.textDecoration,\n        onFontStyleChange: function onFontStyleChange(field, val) {\n          return _this3.onTextStyleChange(field, val);\n        }\n      })), React.createElement(\"label\", {\n        htmlFor: \"font-layout-style\"\n      }, \"\\u5E03\\u5C40\"), React.createElement(\"div\", {\n        id: \"font-layout-style\"\n      }, React.createElement(\"span\", null, this.state.editState !== 'focus' || this.state.toolbarState === 'show'), React.createElement(FontLayoutButtonGroup, {\n        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',\n        className: \"__font-layout\",\n        textAlign: this.state.textStyle.textAlign,\n        onFontLayoutChange: function onFontLayoutChange(textAlign) {\n          return _this3.onTextStyleChange('textAlign', textAlign);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',\n        className: \"__font-line-height\",\n        icon: ImageLineHeight,\n        disabledIcon: ImageLineHeightDisabled,\n        value: lineHeight,\n        options: [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2, 2.4, 2.6, 2.8, 3.0],\n        unit: \"\\u500D\",\n        onChange: function onChange(lineHeight) {\n          return _this3.onTextStyleChange('lineHeight', lineHeight);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',\n        className: \"__font-padding-top-bottom\",\n        icon: ImagePaddingTopAndBottom,\n        disabledIcon: ImagePaddingTopAndBottomDisabled,\n        value: paddingTop,\n        options: [0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],\n        unit: \"px\",\n        onChange: function onChange(padding) {\n          _this3.onTextStyleChange('paddingTop', \"\".concat(padding, \"px\"));\n\n          _this3.onTextStyleChange('paddingBottom', \"\".concat(padding, \"px\"));\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',\n        className: \"__font-padding-left-right\",\n        icon: ImagePaddingLeftAndRight,\n        disabledIcon: ImagePaddingLeftAndRightDisabled,\n        value: paddingLeft,\n        options: [0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],\n        unit: \"px\",\n        onChange: function onChange(padding) {\n          _this3.onTextStyleChange('paddingLeft', \"\".concat(padding, \"px\"));\n\n          _this3.onTextStyleChange('paddingRight', \"\".concat(padding, \"px\"));\n        }\n      })));\n    }\n  }]);\n\n  return TextboxEditor;\n}(Component);\n\nexport default TextboxEditor;"
+          "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './editor.less';\nimport { Component } from 'react';\nimport classNames from 'classnames';\nimport camelCase from 'camelcase';\nimport InputSelect from '../input-select';\nimport ReactDOM from 'react-dom';\nimport InputColor from '../input-color';\nimport MediumEditor from 'medium-editor';\nimport FontStyleButtonGroup from '../font-style-button-group';\nimport FontLayoutButtonGroup from '../font-layout-button-group';\nimport ImageLineHeight from '@assets/images/行间距_正常@2x.png';\nimport ImageLineHeightDisabled from '@assets/images/行间距_不可点@2x.png';\nimport ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png';\nimport ImagePaddingLeftAndRightDisabled from '@assets/images/左右边距_不可点@2x.png';\nimport ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';\nimport ImagePaddingTopAndBottomDisabled from '@assets/images/上下边距_不可点@2x.png';\nimport { computedState, getStyle } from '@commons/computed_state';\nimport throttle from '@commons/throttle';\nimport { isReactComponentInstance, isElement } from '@commons/utils';\n\nvar debug = require('@commons/debug')('textbox:editor');\n\nvar TextboxEditor =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(TextboxEditor, _Component);\n\n  function TextboxEditor(props) {\n    var _this;\n\n    _classCallCheck(this, TextboxEditor);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(TextboxEditor).call(this, props));\n    _this.state = {\n      textStyle: {},\n      toolbarState: 'hide',\n      editState: 'blur' // blur 未选中 focus 选中\n\n    };\n    _this.onTextStyleChange = _this.onTextStyleChange.bind(_assertThisInitialized(_this));\n    _this.handleFocus = _this.handleFocus.bind(_assertThisInitialized(_this));\n    _this.handleBlur = _this.handleBlur.bind(_assertThisInitialized(_this));\n    _this.hideToolbar = _this.hideToolbar.bind(_assertThisInitialized(_this));\n    _this.showToolbar = _this.showToolbar.bind(_assertThisInitialized(_this));\n    _this.throttleCheckState = throttle(_this.checkState, 300).bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(TextboxEditor, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      if (this.getTextboxDOM() && !this.attachedEvent) {\n        // fix: 处理点击后才出现editor 问题\n        if (this.getTextboxDOM().getAttribute('data-medium-focused')) {\n          this.handleFocus();\n        }\n\n        return this.attachEventHandlers();\n      } // 循环检测 current 是否初始化完成\n\n\n      clearInterval(this.__CHECK_TEXTBOX_MOUNT_TIMER);\n      this.__CHECK_TEXTBOX_MOUNT_TIMER = setInterval(function () {\n        var dom = _this2.getTextboxDOM();\n\n        if (dom) {\n          clearInterval(_this2.__CHECK_TEXTBOX_MOUNT_TIMER);\n\n          _this2.attachEventHandlers();\n        }\n      }, 100);\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      debug('componentWillUnmount');\n      this.detachEventHandlers();\n    }\n  }, {\n    key: \"componentDidUpdate\",\n    value: function componentDidUpdate() {\n      debug('componentDidUpdate');\n      if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();\n    }\n  }, {\n    key: \"attachEventHandlers\",\n    value: function attachEventHandlers() {\n      if (!this.attachedEvent) {\n        debug('attachEventHandlers');\n        var textbox = this.getTextbox();\n        this.attachedEvent = true; // MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements\n\n        textbox.subscribe('blur', this.handleBlur);\n        textbox.subscribe('focus', this.handleFocus);\n        textbox.subscribe('positionToolbar', this.throttleCheckState);\n        textbox.subscribe('editableInput', this.throttleCheckState);\n        textbox.subscribe('hideToolbar', this.hideToolbar);\n        textbox.subscribe('showToolbar', this.showToolbar); // Updating the state of the toolbar as things change \n\n        textbox.subscribe('editableKeyup', this.throttleCheckState);\n      }\n    }\n  }, {\n    key: \"detachEventHandlers\",\n    value: function detachEventHandlers() {\n      if (this.attachedEvent) {\n        debug('detachEventHandlers');\n        var textbox = this.getTextbox();\n        this.attachedEvent = false;\n        textbox.unsubscribe('blur', this.handleBlur);\n        textbox.unsubscribe('focus', this.handleFocus);\n        textbox.unsubscribe('positionToolbar', this.throttleCheckState);\n        textbox.unsubscribe('editableInput', this.throttleCheckState);\n        textbox.unsubscribe('hideToolbar', this.hideToolbar);\n        textbox.unsubscribe('showToolbar', this.showToolbar); // Updating the state of the toolbar as things change\n\n        textbox.unsubscribe('editableKeyup', this.throttleCheckState);\n      }\n    }\n  }, {\n    key: \"handleFocus\",\n    value: function handleFocus() {\n      debug('handleFocus');\n      this.setState({\n        editState: 'focus'\n      });\n      this.throttleCheckState();\n    }\n  }, {\n    key: \"handleBlur\",\n    value: function handleBlur() {\n      debug('handleBlur');\n      this.setState({\n        editState: 'blur',\n        textStyle: {}\n      });\n    }\n  }, {\n    key: \"showToolbar\",\n    value: function showToolbar() {\n      this.setState({\n        toolbarState: 'show'\n      });\n    }\n  }, {\n    key: \"hideToolbar\",\n    value: function hideToolbar() {\n      this.setState({\n        toolbarState: 'hide'\n      });\n    }\n  }, {\n    key: \"checkState\",\n    value: function checkState() {\n      var _this$getTextbox$opti;\n\n      debug('checkState');\n      var globalStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-style', 'font-weight', 'text-decoration', 'font-size', 'color');\n      debug('globalStyle: %o', globalStyle);\n      var selectionRange = MediumEditor.selection.getSelectionRange((_this$getTextbox$opti = this.getTextbox().options) === null || _this$getTextbox$opti === void 0 ? void 0 : _this$getTextbox$opti.ownerDocument);\n      debug('selectionRange', selectionRange); // 未选择\n\n      if (!selectionRange || selectionRange.collapsed) {\n        this.setState({\n          textStyle: globalStyle\n        });\n        return;\n      } // 选择元素是编辑器\n\n\n      var parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange); // Make sure the selection parent isn't outside of the contenteditable\n\n      if (!this.getTextbox().elements.some(function (element) {\n        return MediumEditor.util.isDescendant(element, parentNode, true);\n      })) {\n        this.setState({\n          textStyle: globalStyle\n        });\n        return;\n      } // 选择的是node\n\n\n      var textStyle = {}; // Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node\n\n      while (parentNode) {\n        var _this$getTextbox$opti2;\n\n        computedState(textStyle, parentNode, (_this$getTextbox$opti2 = this.getTextbox().options) === null || _this$getTextbox$opti2 === void 0 ? void 0 : _this$getTextbox$opti2.contentWindow); // we can abort the search upwards if we leave the contentEditable element\n\n        if (MediumEditor.util.isMediumEditorElement(parentNode)) {\n          break;\n        }\n\n        parentNode = parentNode.parentNode;\n      }\n\n      debug('textStyle %o', textStyle);\n      this.setState({\n        textStyle: textStyle\n      });\n    }\n  }, {\n    key: \"getTextboxDOM\",\n    value: function getTextboxDOM() {\n      var _this$props, _this$props2, _this$props2$textboxD;\n\n      debug('getTextboxDOM', this.props.textboxDOM, this.props.textboxDOMRef);\n      var textboxDOM = ((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.textboxDOM) || ((_this$props2 = this.props) === null || _this$props2 === void 0 ? void 0 : (_this$props2$textboxD = _this$props2.textboxDOMRef) === null || _this$props2$textboxD === void 0 ? void 0 : _this$props2$textboxD.current);\n\n      if (textboxDOM) {\n        if (isReactComponentInstance(textboxDOM)) {\n          return ReactDOM.findDOMNode(textboxDOM);\n        } else if (isElement(textboxDOM)) {\n          return textboxDOM;\n        } else {\n          throw new Error('`textboxDOM` 必须是一个 HTMLElement 或者 React Component 实例');\n        }\n      }\n    }\n  }, {\n    key: \"getTextboxDOMStyle\",\n    value: function getTextboxDOMStyle() {\n      debug('getTextboxDOMStyle');\n      var dom = this.getTextboxDOM();\n      if (!dom) return null;\n      var style = {};\n\n      for (var _len = arguments.length, properties = new Array(_len), _key = 0; _key < _len; _key++) {\n        properties[_key] = arguments[_key];\n      }\n\n      if (properties.length > 0) {\n        var _iteratorNormalCompletion = true;\n        var _didIteratorError = false;\n        var _iteratorError = undefined;\n\n        try {\n          for (var _iterator = properties[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n            var _this$getTextbox$opti3;\n\n            var property = _step.value;\n            var styleValue = getStyle(dom, property, (_this$getTextbox$opti3 = this.getTextbox().options) === null || _this$getTextbox$opti3 === void 0 ? void 0 : _this$getTextbox$opti3.contentWindow);\n            if (styleValue) style[camelCase(property)] = styleValue;\n          }\n        } catch (err) {\n          _didIteratorError = true;\n          _iteratorError = err;\n        } finally {\n          try {\n            if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n              _iterator[\"return\"]();\n            }\n          } finally {\n            if (_didIteratorError) {\n              throw _iteratorError;\n            }\n          }\n        }\n      } else {\n        var _this$getTextbox$opti4;\n\n        var computedStyle = (_this$getTextbox$opti4 = this.getTextbox().options) === null || _this$getTextbox$opti4 === void 0 ? void 0 : _this$getTextbox$opti4.contentWindow.getComputedStyle(dom, null);\n\n        for (var i = 0; i < computedStyle.length; i++) {\n          style[computedStyle[i]] = computedStyle.getPropertyValue(computedStyle[i]);\n        }\n      }\n\n      return style;\n    }\n  }, {\n    key: \"triggerGlobalStyleChange\",\n    value: function triggerGlobalStyleChange(style) {\n      var medium = this.getTextbox();\n      if (!medium) return;\n      var textboxDOM = this.getTextboxDOM(); // const globalStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-style', 'font-weight', 'text-decoration', 'font-size', 'color')\n\n      medium.trigger('editableChangeStyle', style, textboxDOM);\n    }\n  }, {\n    key: \"getTextbox\",\n    value: function getTextbox() {\n      var dom = this.getTextboxDOM();\n      return dom ? MediumEditor.getEditorFromElement(dom) : null;\n    }\n  }, {\n    key: \"onTextStyleChange\",\n    value: function onTextStyleChange(field, value) {\n      debug('onTextStyleChange', field, value);\n      if (this.state.editState === 'blur') return;\n      var medium = this.getTextbox();\n      if (!medium) return;\n      var textboxDOM = this.getTextboxDOM();\n\n      switch (field) {\n        case 'fontWeight':\n          if (this.state.toolbarState === 'show') {\n            medium.execAction('bold');\n          } else {\n            medium.trigger('editableChangeStyle', {\n              fontWeight: value\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'fontStyle':\n          if (this.state.toolbarState === 'show') {\n            medium.execAction('italic');\n          } else {\n            medium.trigger('editableChangeStyle', {\n              fontStyle: value\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'textDecoration':\n          if (this.state.toolbarState === 'show') {\n            medium.execAction('underline');\n          } else {\n            medium.trigger('editableChangeStyle', {\n              textDecoration: value\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'color':\n          if (this.state.toolbarState === 'show') {\n            // fix <font color></font>\n            medium.options.ownerDocument.execCommand('styleWithCSS', false, true);\n            medium.execAction('foreColor', {\n              value: value\n            });\n            medium.options.ownerDocument.execCommand('styleWithCSS', false, false);\n          } else {\n            medium.trigger('editableChangeStyle', {\n              color: value\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'fontSize':\n          if (this.state.toolbarState === 'show') {\n            medium.execAction('fontSize', {\n              value: 7\n            });\n\n            if (textboxDOM) {\n              var nodes = textboxDOM.querySelectorAll('font[size=\"7\"]');\n              var _iteratorNormalCompletion2 = true;\n              var _didIteratorError2 = false;\n              var _iteratorError2 = undefined;\n\n              try {\n                for (var _iterator2 = nodes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {\n                  var node = _step2.value;\n                  node.removeAttribute('size');\n                  node.style.fontSize = \"\".concat(value, \"px\");\n                }\n              } catch (err) {\n                _didIteratorError2 = true;\n                _iteratorError2 = err;\n              } finally {\n                try {\n                  if (!_iteratorNormalCompletion2 && _iterator2[\"return\"] != null) {\n                    _iterator2[\"return\"]();\n                  }\n                } finally {\n                  if (_didIteratorError2) {\n                    throw _iteratorError2;\n                  }\n                }\n              }\n            }\n          } else {\n            medium.trigger('editableChangeStyle', {\n              fontSize: \"\".concat(value, \"px\")\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'textAlign':\n          medium.trigger('editableChangeStyle', {\n            textAlign: value\n          }, textboxDOM);\n          break;\n\n        case 'lineHeight':\n          medium.trigger('editableChangeStyle', {\n            lineHeight: value\n          }, textboxDOM);\n          break;\n\n        case 'paddingTop':\n        case 'paddingBottom':\n        case 'paddingLeft':\n        case 'paddingRight':\n          if (field === 'paddingTop' || field === 'paddingBottom') {\n            medium.trigger('editableChangeStyle', {\n              paddingTop: value,\n              paddingBottom: value\n            }, textboxDOM);\n          } else if (field === 'paddingLeft' || field === 'paddingRight') {\n            medium.trigger('editableChangeStyle', {\n              paddingLeft: value,\n              paddingRight: value\n            }, textboxDOM);\n          }\n\n          break;\n      }\n\n      medium.trigger('editableInput', null, textboxDOM);\n      this.throttleCheckState();\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var _this3 = this,\n          _this$state$textStyle2;\n\n      var className = classNames('coursebox-editor', this.props.className);\n      var _this$state$textStyle = this.state.textStyle,\n          fontSize = _this$state$textStyle.fontSize,\n          paddingTop = _this$state$textStyle.paddingTop,\n          paddingLeft = _this$state$textStyle.paddingLeft,\n          lineHeight = _this$state$textStyle.lineHeight;\n      if (typeof fontSize === 'string' && fontSize.endsWith('px')) fontSize = parseFloat(fontSize);\n      if (typeof paddingTop === 'string' && paddingTop.endsWith('px')) paddingTop = parseFloat(paddingTop);\n      if (typeof paddingLeft === 'string' && paddingLeft.endsWith('px')) paddingLeft = parseFloat(paddingLeft);\n      if (typeof lineHeight === 'string' && lineHeight.endsWith('px')) lineHeight = (parseFloat(lineHeight) / fontSize).toFixed(1);\n      return React.createElement(\"div\", {\n        className: className\n      }, React.createElement(\"label\", {\n        htmlFor: \"font-size-style\"\n      }, \"\\u6587\\u5B57\"), React.createElement(\"div\", {\n        id: \"font-style\"\n      }, React.createElement(InputColor, {\n        disabled: this.state.editState !== 'focus',\n        className: \"__font-color\",\n        value: this.state.textStyle.color,\n        onChange: function onChange(color) {\n          return _this3.onTextStyleChange('color', color);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'focus',\n        className: \"__font-size\",\n        value: fontSize,\n        options: [12, 13, 14, 16, 18, 20, 28, 36, 48, 72],\n        unit: \"px\",\n        onChange: function onChange(fontSize) {\n          return _this3.onTextStyleChange('fontSize', fontSize);\n        }\n      }), React.createElement(FontStyleButtonGroup, {\n        disabled: this.state.editState !== 'focus',\n        className: \"__font-style\",\n        fontWeight: (_this$state$textStyle2 = this.state.textStyle) === null || _this$state$textStyle2 === void 0 ? void 0 : _this$state$textStyle2.fontWeight,\n        fontStyle: this.state.textStyle.fontStyle,\n        textDecoration: this.state.textStyle.textDecoration,\n        onFontStyleChange: function onFontStyleChange(field, val) {\n          return _this3.onTextStyleChange(field, val);\n        }\n      })), React.createElement(\"label\", {\n        htmlFor: \"font-layout-style\"\n      }, \"\\u5E03\\u5C40\"), React.createElement(\"div\", {\n        id: \"font-layout-style\"\n      }, React.createElement(\"span\", null, this.state.editState !== 'focus' || this.state.toolbarState === 'show'), React.createElement(FontLayoutButtonGroup, {\n        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',\n        className: \"__font-layout\",\n        textAlign: this.state.textStyle.textAlign,\n        onFontLayoutChange: function onFontLayoutChange(textAlign) {\n          return _this3.onTextStyleChange('textAlign', textAlign);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',\n        className: \"__font-line-height\",\n        icon: ImageLineHeight,\n        disabledIcon: ImageLineHeightDisabled,\n        value: lineHeight,\n        options: [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2, 2.4, 2.6, 2.8, 3.0],\n        unit: \"\\u500D\",\n        onChange: function onChange(lineHeight) {\n          return _this3.onTextStyleChange('lineHeight', lineHeight);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',\n        className: \"__font-padding-top-bottom\",\n        icon: ImagePaddingTopAndBottom,\n        disabledIcon: ImagePaddingTopAndBottomDisabled,\n        value: paddingTop,\n        options: [0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],\n        unit: \"px\",\n        onChange: function onChange(padding) {\n          _this3.onTextStyleChange('paddingTop', \"\".concat(padding, \"px\")); // this.onTextStyleChange('paddingBottom', `${padding}px`);\n\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',\n        className: \"__font-padding-left-right\",\n        icon: ImagePaddingLeftAndRight,\n        disabledIcon: ImagePaddingLeftAndRightDisabled,\n        value: paddingLeft,\n        options: [0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],\n        unit: \"px\",\n        onChange: function onChange(padding) {\n          // this.onTextStyleChange('paddingLeft', `${padding}px`);\n          _this3.onTextStyleChange('paddingRight', \"\".concat(padding, \"px\"));\n        }\n      })));\n    }\n  }]);\n\n  return TextboxEditor;\n}(Component);\n\nexport default TextboxEditor;"
         },
         {
           "id": "./src/components/font-layout-button-group/font-layout-button-group.less",
@@ -5734,7 +5734,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "../font-layout-button-group",
-              "loc": "30:0-64"
+              "loc": "28:0-64"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -5743,7 +5743,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../font-layout-button-group",
-              "loc": "482:136-157"
+              "loc": "491:136-157"
             }
           ],
           "providedExports": [
@@ -5852,7 +5852,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "../font-style-button-group",
-              "loc": "29:0-62"
+              "loc": "27:0-62"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -5861,7 +5861,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../font-style-button-group",
-              "loc": "469:30-50"
+              "loc": "478:30-50"
             }
           ],
           "providedExports": [
@@ -5932,7 +5932,7 @@
           "index2": 62,
           "size": 9133,
           "cacheable": true,
-          "built": true,
+          "built": false,
           "optional": false,
           "prefetched": false,
           "chunks": [
@@ -5966,7 +5966,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "../input-color",
-              "loc": "27:0-40"
+              "loc": "25:0-40"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -5975,7 +5975,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../input-color",
-              "loc": "453:29-39"
+              "loc": "462:29-39"
             }
           ],
           "providedExports": [
@@ -6084,7 +6084,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "../input-select",
-              "loc": "25:0-42"
+              "loc": "23:0-42"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -6093,7 +6093,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../input-select",
-              "loc": "460:30-41"
+              "loc": "469:30-41"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -6102,7 +6102,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../input-select",
-              "loc": "489:30-41"
+              "loc": "498:30-41"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -6111,7 +6111,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../input-select",
-              "loc": "500:30-41"
+              "loc": "509:30-41"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -6120,7 +6120,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "../input-select",
-              "loc": "513:30-41"
+              "loc": "521:30-41"
             }
           ],
           "providedExports": [
@@ -6527,7 +6527,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "medium-editor",
-              "loc": "28:0-41"
+              "loc": "26:0-41"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -6536,7 +6536,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "medium-editor",
-              "loc": "182:27-39"
+              "loc": "180:27-39"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -6545,7 +6545,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "medium-editor",
-              "loc": "193:23-35"
+              "loc": "191:23-35"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -6554,7 +6554,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "medium-editor",
-              "loc": "196:15-27"
+              "loc": "194:15-27"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -6563,7 +6563,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "medium-editor",
-              "loc": "212:12-24"
+              "loc": "210:12-24"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -6572,7 +6572,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "medium-editor",
-              "loc": "306:19-31"
+              "loc": "304:19-31"
             },
             {
               "moduleId": "./src/components/textbox/index.jsx",
@@ -6949,7 +6949,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "react",
-              "loc": "22:0-34"
+              "loc": "20:0-34"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -6958,7 +6958,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "react",
-              "loc": "531:2-11"
+              "loc": "538:2-11"
             },
             {
               "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -7232,7 +7232,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony side effect evaluation",
               "userRequest": "react-dom",
-              "loc": "26:0-33"
+              "loc": "24:0-33"
             },
             {
               "moduleId": "./src/components/editor/index.jsx",
@@ -7241,7 +7241,7 @@
               "moduleName": "./src/components/editor/index.jsx",
               "type": "harmony import specifier",
               "userRequest": "react-dom",
-              "loc": "234:17-25"
+              "loc": "232:17-25"
             },
             {
               "moduleId": "./src/components/input-color/index.jsx",
@@ -7576,7 +7576,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/上下边距_不可点@2x.png",
-          "loc": "36:0-78"
+          "loc": "34:0-78"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -7585,7 +7585,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/上下边距_不可点@2x.png",
-          "loc": "504:22-54"
+          "loc": "513:22-54"
         }
       ],
       "providedExports": [
@@ -7638,7 +7638,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/上下边距_正常@2x.png",
-          "loc": "35:0-69"
+          "loc": "33:0-69"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -7647,7 +7647,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/上下边距_正常@2x.png",
-          "loc": "503:14-38"
+          "loc": "512:14-38"
         }
       ],
       "providedExports": [
@@ -8437,7 +8437,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/左右边距_不可点@2x.png",
-          "loc": "34:0-78"
+          "loc": "32:0-78"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -8446,7 +8446,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/左右边距_不可点@2x.png",
-          "loc": "517:22-54"
+          "loc": "525:22-54"
         }
       ],
       "providedExports": [
@@ -8499,7 +8499,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/左右边距_正常@2x.png",
-          "loc": "33:0-69"
+          "loc": "31:0-69"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -8508,7 +8508,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/左右边距_正常@2x.png",
-          "loc": "516:14-38"
+          "loc": "524:14-38"
         }
       ],
       "providedExports": [
@@ -9164,7 +9164,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/行间距_不可点@2x.png",
-          "loc": "32:0-68"
+          "loc": "30:0-68"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -9173,7 +9173,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/行间距_不可点@2x.png",
-          "loc": "493:22-45"
+          "loc": "502:22-45"
         }
       ],
       "providedExports": [
@@ -9226,7 +9226,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@assets/images/行间距_正常@2x.png",
-          "loc": "31:0-59"
+          "loc": "29:0-59"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -9235,7 +9235,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@assets/images/行间距_正常@2x.png",
-          "loc": "492:14-29"
+          "loc": "501:14-29"
         }
       ],
       "providedExports": [
@@ -9548,7 +9548,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "camelcase",
-          "loc": "24:0-34"
+          "loc": "22:0-34"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -9557,7 +9557,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "camelcase",
-          "loc": "265:34-43"
+          "loc": "263:34-43"
         }
       ],
       "providedExports": null,
@@ -9608,7 +9608,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "classnames",
-          "loc": "23:0-36"
+          "loc": "21:0-36"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -9617,7 +9617,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "classnames",
-          "loc": "437:22-32"
+          "loc": "446:22-32"
         },
         {
           "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -12448,7 +12448,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@commons/computed_state",
-          "loc": "37:0-66"
+          "loc": "35:0-66"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -12457,7 +12457,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@commons/computed_state",
-          "loc": "210:8-21"
+          "loc": "208:8-21"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -12466,7 +12466,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@commons/computed_state",
-          "loc": "264:29-37"
+          "loc": "262:29-37"
         }
       ],
       "providedExports": [
@@ -12529,7 +12529,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "cjs require",
           "userRequest": "@commons/debug",
-          "loc": "41:12-37"
+          "loc": "39:12-37"
         },
         {
           "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -12634,7 +12634,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@commons/throttle",
-          "loc": "38:0-41"
+          "loc": "36:0-41"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -12643,7 +12643,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@commons/throttle",
-          "loc": "65:31-39"
+          "loc": "63:31-39"
         },
         {
           "moduleId": "./src/components/input-color/index.jsx",
@@ -12714,7 +12714,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "@commons/utils",
-          "loc": "39:0-69"
+          "loc": "37:0-69"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -12723,7 +12723,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@commons/utils",
-          "loc": "233:12-36"
+          "loc": "231:12-36"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -12732,7 +12732,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "@commons/utils",
-          "loc": "235:19-28"
+          "loc": "233:19-28"
         }
       ],
       "providedExports": [
@@ -12788,7 +12788,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "./editor.less",
-          "loc": "21:0-23"
+          "loc": "19:0-23"
         }
       ],
       "providedExports": null,
@@ -12803,9 +12803,9 @@
       "name": "./src/components/editor/index.jsx",
       "index": 48,
       "index2": 98,
-      "size": 21886,
+      "size": 22004,
       "cacheable": true,
-      "built": false,
+      "built": true,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -12852,7 +12852,7 @@
       "optimizationBailout": [
       ],
       "depth": 2,
-      "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './editor.less';\nimport { Component } from 'react';\nimport classNames from 'classnames';\nimport camelCase from 'camelcase';\nimport InputSelect from '../input-select';\nimport ReactDOM from 'react-dom';\nimport InputColor from '../input-color';\nimport MediumEditor from 'medium-editor';\nimport FontStyleButtonGroup from '../font-style-button-group';\nimport FontLayoutButtonGroup from '../font-layout-button-group';\nimport ImageLineHeight from '@assets/images/行间距_正常@2x.png';\nimport ImageLineHeightDisabled from '@assets/images/行间距_不可点@2x.png';\nimport ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png';\nimport ImagePaddingLeftAndRightDisabled from '@assets/images/左右边距_不可点@2x.png';\nimport ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';\nimport ImagePaddingTopAndBottomDisabled from '@assets/images/上下边距_不可点@2x.png';\nimport { computedState, getStyle } from '@commons/computed_state';\nimport throttle from '@commons/throttle';\nimport { isReactComponentInstance, isElement } from '@commons/utils';\n\nvar debug = require('@commons/debug')('textbox:editor');\n\nvar TextboxEditor =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(TextboxEditor, _Component);\n\n  function TextboxEditor(props) {\n    var _this;\n\n    _classCallCheck(this, TextboxEditor);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(TextboxEditor).call(this, props));\n    _this.state = {\n      textStyle: {},\n      toolbarState: 'hide',\n      editState: 'blur' // blur 未选中 focus 选中\n\n    };\n    _this.onTextStyleChange = _this.onTextStyleChange.bind(_assertThisInitialized(_this));\n    _this.handleFocus = _this.handleFocus.bind(_assertThisInitialized(_this));\n    _this.handleBlur = _this.handleBlur.bind(_assertThisInitialized(_this));\n    _this.hideToolbar = _this.hideToolbar.bind(_assertThisInitialized(_this));\n    _this.showToolbar = _this.showToolbar.bind(_assertThisInitialized(_this));\n    _this.throttleCheckState = throttle(_this.checkState, 300).bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(TextboxEditor, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      if (this.getTextboxDOM() && !this.attachedEvent) {\n        // fix: 处理点击后才出现editor 问题\n        if (this.getTextboxDOM().getAttribute('data-medium-focused')) {\n          this.handleFocus();\n        }\n\n        return this.attachEventHandlers();\n      } // 循环检测 current 是否初始化完成\n\n\n      clearInterval(this.__CHECK_TEXTBOX_MOUNT_TIMER);\n      this.__CHECK_TEXTBOX_MOUNT_TIMER = setInterval(function () {\n        var dom = _this2.getTextboxDOM();\n\n        if (dom) {\n          clearInterval(_this2.__CHECK_TEXTBOX_MOUNT_TIMER);\n\n          _this2.attachEventHandlers();\n        }\n      }, 100);\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      debug('componentWillUnmount');\n      this.detachEventHandlers();\n    }\n  }, {\n    key: \"componentDidUpdate\",\n    value: function componentDidUpdate() {\n      debug('componentDidUpdate');\n      if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();\n    }\n  }, {\n    key: \"attachEventHandlers\",\n    value: function attachEventHandlers() {\n      if (!this.attachedEvent) {\n        debug('attachEventHandlers');\n        var textbox = this.getTextbox();\n        this.attachedEvent = true; // MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements\n\n        textbox.subscribe('blur', this.handleBlur);\n        textbox.subscribe('focus', this.handleFocus);\n        textbox.subscribe('positionToolbar', this.throttleCheckState);\n        textbox.subscribe('editableInput', this.throttleCheckState);\n        textbox.subscribe('hideToolbar', this.hideToolbar);\n        textbox.subscribe('showToolbar', this.showToolbar); // Updating the state of the toolbar as things change \n\n        textbox.subscribe('editableKeyup', this.throttleCheckState);\n      }\n    }\n  }, {\n    key: \"detachEventHandlers\",\n    value: function detachEventHandlers() {\n      if (this.attachedEvent) {\n        debug('detachEventHandlers');\n        var textbox = this.getTextbox();\n        this.attachedEvent = false;\n        textbox.unsubscribe('blur', this.handleBlur);\n        textbox.unsubscribe('focus', this.handleFocus);\n        textbox.unsubscribe('positionToolbar', this.throttleCheckState);\n        textbox.unsubscribe('editableInput', this.throttleCheckState);\n        textbox.unsubscribe('hideToolbar', this.hideToolbar);\n        textbox.unsubscribe('showToolbar', this.showToolbar); // Updating the state of the toolbar as things change\n\n        textbox.unsubscribe('editableKeyup', this.throttleCheckState);\n      }\n    }\n  }, {\n    key: \"handleFocus\",\n    value: function handleFocus() {\n      debug('handleFocus');\n      this.setState({\n        editState: 'focus'\n      });\n      this.throttleCheckState();\n    }\n  }, {\n    key: \"handleBlur\",\n    value: function handleBlur() {\n      debug('handleBlur');\n      this.setState({\n        editState: 'blur',\n        textStyle: {}\n      });\n    }\n  }, {\n    key: \"showToolbar\",\n    value: function showToolbar() {\n      this.setState({\n        toolbarState: 'show'\n      });\n    }\n  }, {\n    key: \"hideToolbar\",\n    value: function hideToolbar() {\n      this.setState({\n        toolbarState: 'hide'\n      });\n    }\n  }, {\n    key: \"checkState\",\n    value: function checkState() {\n      var _this$getTextbox$opti;\n\n      debug('checkState');\n      var globalStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-style', 'font-weight', 'text-decoration', 'font-size', 'color');\n      debug('globalStyle: %o', globalStyle);\n      var selectionRange = MediumEditor.selection.getSelectionRange((_this$getTextbox$opti = this.getTextbox().options) === null || _this$getTextbox$opti === void 0 ? void 0 : _this$getTextbox$opti.ownerDocument);\n      debug('selectionRange', selectionRange); // 未选择\n\n      if (!selectionRange || selectionRange.collapsed) {\n        this.setState({\n          textStyle: globalStyle\n        });\n        return;\n      } // 选择元素是编辑器\n\n\n      var parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange); // Make sure the selection parent isn't outside of the contenteditable\n\n      if (!this.getTextbox().elements.some(function (element) {\n        return MediumEditor.util.isDescendant(element, parentNode, true);\n      })) {\n        this.setState({\n          textStyle: globalStyle\n        });\n        return;\n      } // 选择的是node\n\n\n      var textStyle = {}; // Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node\n\n      while (parentNode) {\n        var _this$getTextbox$opti2;\n\n        computedState(textStyle, parentNode, (_this$getTextbox$opti2 = this.getTextbox().options) === null || _this$getTextbox$opti2 === void 0 ? void 0 : _this$getTextbox$opti2.contentWindow); // we can abort the search upwards if we leave the contentEditable element\n\n        if (MediumEditor.util.isMediumEditorElement(parentNode)) {\n          break;\n        }\n\n        parentNode = parentNode.parentNode;\n      }\n\n      debug('textStyle %o', textStyle);\n      this.setState({\n        textStyle: textStyle\n      });\n    }\n  }, {\n    key: \"getTextboxDOM\",\n    value: function getTextboxDOM() {\n      var _this$props, _this$props2, _this$props2$textboxD;\n\n      debug('getTextboxDOM', this.props.textboxDOM, this.props.textboxDOMRef);\n      var textboxDOM = ((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.textboxDOM) || ((_this$props2 = this.props) === null || _this$props2 === void 0 ? void 0 : (_this$props2$textboxD = _this$props2.textboxDOMRef) === null || _this$props2$textboxD === void 0 ? void 0 : _this$props2$textboxD.current);\n\n      if (textboxDOM) {\n        if (isReactComponentInstance(textboxDOM)) {\n          return ReactDOM.findDOMNode(textboxDOM);\n        } else if (isElement(textboxDOM)) {\n          return textboxDOM;\n        } else {\n          throw new Error('`textboxDOM` 必须是一个 HTMLElement 或者 React Component 实例');\n        }\n      }\n    }\n  }, {\n    key: \"getTextboxDOMStyle\",\n    value: function getTextboxDOMStyle() {\n      debug('getTextboxDOMStyle');\n      var dom = this.getTextboxDOM();\n      if (!dom) return null;\n      var style = {};\n\n      for (var _len = arguments.length, properties = new Array(_len), _key = 0; _key < _len; _key++) {\n        properties[_key] = arguments[_key];\n      }\n\n      if (properties.length > 0) {\n        var _iteratorNormalCompletion = true;\n        var _didIteratorError = false;\n        var _iteratorError = undefined;\n\n        try {\n          for (var _iterator = properties[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n            var _this$getTextbox$opti3;\n\n            var property = _step.value;\n            var styleValue = getStyle(dom, property, (_this$getTextbox$opti3 = this.getTextbox().options) === null || _this$getTextbox$opti3 === void 0 ? void 0 : _this$getTextbox$opti3.contentWindow);\n            if (styleValue) style[camelCase(property)] = styleValue;\n          }\n        } catch (err) {\n          _didIteratorError = true;\n          _iteratorError = err;\n        } finally {\n          try {\n            if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n              _iterator[\"return\"]();\n            }\n          } finally {\n            if (_didIteratorError) {\n              throw _iteratorError;\n            }\n          }\n        }\n      } else {\n        var _this$getTextbox$opti4;\n\n        var computedStyle = (_this$getTextbox$opti4 = this.getTextbox().options) === null || _this$getTextbox$opti4 === void 0 ? void 0 : _this$getTextbox$opti4.contentWindow.getComputedStyle(dom, null);\n\n        for (var i = 0; i < computedStyle.length; i++) {\n          style[computedStyle[i]] = computedStyle.getPropertyValue(computedStyle[i]);\n        }\n      }\n\n      return style;\n    }\n  }, {\n    key: \"triggerGlobalStyleChange\",\n    value: function triggerGlobalStyleChange(style) {\n      var medium = this.getTextbox();\n      if (!medium) return;\n      var textboxDOM = this.getTextboxDOM(); // const globalStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-style', 'font-weight', 'text-decoration', 'font-size', 'color')\n\n      medium.trigger('editableChangeStyle', style, textboxDOM);\n    }\n  }, {\n    key: \"getTextbox\",\n    value: function getTextbox() {\n      var dom = this.getTextboxDOM();\n      return dom ? MediumEditor.getEditorFromElement(dom) : null;\n    }\n  }, {\n    key: \"onTextStyleChange\",\n    value: function onTextStyleChange(field, value) {\n      debug('onTextStyleChange', field, value);\n      if (this.state.editState === 'blur') return;\n      var medium = this.getTextbox();\n      if (!medium) return;\n      var textboxDOM = this.getTextboxDOM();\n\n      switch (field) {\n        case 'fontWeight':\n          if (this.state.toolbarState === 'show') {\n            medium.execAction('bold');\n          } else {\n            medium.trigger('editableChangeStyle', {\n              fontWeight: value\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'fontStyle':\n          if (this.state.toolbarState === 'show') {\n            medium.execAction('italic');\n          } else {\n            medium.trigger('editableChangeStyle', {\n              fontStyle: value\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'textDecoration':\n          if (this.state.toolbarState === 'show') {\n            medium.execAction('underline');\n          } else {\n            medium.trigger('editableChangeStyle', {\n              textDecoration: value\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'color':\n          if (this.state.toolbarState === 'show') {\n            // fix <font color></font>\n            medium.options.ownerDocument.execCommand('styleWithCSS', false, true);\n            medium.execAction('foreColor', {\n              value: value\n            });\n            medium.options.ownerDocument.execCommand('styleWithCSS', false, false);\n          } else {\n            medium.trigger('editableChangeStyle', {\n              color: value\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'fontSize':\n          if (this.state.toolbarState === 'show') {\n            medium.execAction('fontSize', {\n              value: 7\n            });\n\n            if (textboxDOM) {\n              var nodes = textboxDOM.querySelectorAll('font[size=\"7\"]');\n              var _iteratorNormalCompletion2 = true;\n              var _didIteratorError2 = false;\n              var _iteratorError2 = undefined;\n\n              try {\n                for (var _iterator2 = nodes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {\n                  var node = _step2.value;\n                  node.removeAttribute('size');\n                  node.style.fontSize = \"\".concat(value, \"px\");\n                }\n              } catch (err) {\n                _didIteratorError2 = true;\n                _iteratorError2 = err;\n              } finally {\n                try {\n                  if (!_iteratorNormalCompletion2 && _iterator2[\"return\"] != null) {\n                    _iterator2[\"return\"]();\n                  }\n                } finally {\n                  if (_didIteratorError2) {\n                    throw _iteratorError2;\n                  }\n                }\n              }\n            }\n          } else {\n            medium.trigger('editableChangeStyle', {\n              fontSize: \"\".concat(value, \"px\")\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'textAlign':\n          medium.trigger('editableChangeStyle', {\n            textAlign: value\n          }, textboxDOM);\n          break;\n\n        case 'lineHeight':\n          medium.trigger('editableChangeStyle', {\n            lineHeight: value\n          }, textboxDOM);\n          break;\n\n        case 'paddingTop':\n        case 'paddingBottom':\n        case 'paddingLeft':\n        case 'paddingRight':\n          medium.trigger('editableChangeStyle', _defineProperty({}, field, value), textboxDOM);\n          break;\n      }\n\n      medium.trigger('editableInput', null, textboxDOM);\n      this.throttleCheckState();\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var _this3 = this,\n          _this$state$textStyle2;\n\n      var className = classNames('coursebox-editor', this.props.className);\n      var _this$state$textStyle = this.state.textStyle,\n          fontSize = _this$state$textStyle.fontSize,\n          paddingTop = _this$state$textStyle.paddingTop,\n          paddingLeft = _this$state$textStyle.paddingLeft,\n          lineHeight = _this$state$textStyle.lineHeight;\n      if (typeof fontSize === 'string' && fontSize.endsWith('px')) fontSize = parseFloat(fontSize);\n      if (typeof paddingTop === 'string' && paddingTop.endsWith('px')) paddingTop = parseFloat(paddingTop);\n      if (typeof paddingLeft === 'string' && paddingLeft.endsWith('px')) paddingLeft = parseFloat(paddingLeft);\n      if (typeof lineHeight === 'string' && lineHeight.endsWith('px')) lineHeight = (parseFloat(lineHeight) / fontSize).toFixed(1);\n      return React.createElement(\"div\", {\n        className: className\n      }, React.createElement(\"label\", {\n        htmlFor: \"font-size-style\"\n      }, \"\\u6587\\u5B57\"), React.createElement(\"div\", {\n        id: \"font-style\"\n      }, React.createElement(InputColor, {\n        disabled: this.state.editState !== 'focus',\n        className: \"__font-color\",\n        value: this.state.textStyle.color,\n        onChange: function onChange(color) {\n          return _this3.onTextStyleChange('color', color);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'focus',\n        className: \"__font-size\",\n        value: fontSize,\n        options: [12, 13, 14, 16, 18, 20, 28, 36, 48, 72],\n        unit: \"px\",\n        onChange: function onChange(fontSize) {\n          return _this3.onTextStyleChange('fontSize', fontSize);\n        }\n      }), React.createElement(FontStyleButtonGroup, {\n        disabled: this.state.editState !== 'focus',\n        className: \"__font-style\",\n        fontWeight: (_this$state$textStyle2 = this.state.textStyle) === null || _this$state$textStyle2 === void 0 ? void 0 : _this$state$textStyle2.fontWeight,\n        fontStyle: this.state.textStyle.fontStyle,\n        textDecoration: this.state.textStyle.textDecoration,\n        onFontStyleChange: function onFontStyleChange(field, val) {\n          return _this3.onTextStyleChange(field, val);\n        }\n      })), React.createElement(\"label\", {\n        htmlFor: \"font-layout-style\"\n      }, \"\\u5E03\\u5C40\"), React.createElement(\"div\", {\n        id: \"font-layout-style\"\n      }, React.createElement(\"span\", null, this.state.editState !== 'focus' || this.state.toolbarState === 'show'), React.createElement(FontLayoutButtonGroup, {\n        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',\n        className: \"__font-layout\",\n        textAlign: this.state.textStyle.textAlign,\n        onFontLayoutChange: function onFontLayoutChange(textAlign) {\n          return _this3.onTextStyleChange('textAlign', textAlign);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',\n        className: \"__font-line-height\",\n        icon: ImageLineHeight,\n        disabledIcon: ImageLineHeightDisabled,\n        value: lineHeight,\n        options: [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2, 2.4, 2.6, 2.8, 3.0],\n        unit: \"\\u500D\",\n        onChange: function onChange(lineHeight) {\n          return _this3.onTextStyleChange('lineHeight', lineHeight);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',\n        className: \"__font-padding-top-bottom\",\n        icon: ImagePaddingTopAndBottom,\n        disabledIcon: ImagePaddingTopAndBottomDisabled,\n        value: paddingTop,\n        options: [0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],\n        unit: \"px\",\n        onChange: function onChange(padding) {\n          _this3.onTextStyleChange('paddingTop', \"\".concat(padding, \"px\"));\n\n          _this3.onTextStyleChange('paddingBottom', \"\".concat(padding, \"px\"));\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',\n        className: \"__font-padding-left-right\",\n        icon: ImagePaddingLeftAndRight,\n        disabledIcon: ImagePaddingLeftAndRightDisabled,\n        value: paddingLeft,\n        options: [0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],\n        unit: \"px\",\n        onChange: function onChange(padding) {\n          _this3.onTextStyleChange('paddingLeft', \"\".concat(padding, \"px\"));\n\n          _this3.onTextStyleChange('paddingRight', \"\".concat(padding, \"px\"));\n        }\n      })));\n    }\n  }]);\n\n  return TextboxEditor;\n}(Component);\n\nexport default TextboxEditor;"
+      "source": "function _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nimport './editor.less';\nimport { Component } from 'react';\nimport classNames from 'classnames';\nimport camelCase from 'camelcase';\nimport InputSelect from '../input-select';\nimport ReactDOM from 'react-dom';\nimport InputColor from '../input-color';\nimport MediumEditor from 'medium-editor';\nimport FontStyleButtonGroup from '../font-style-button-group';\nimport FontLayoutButtonGroup from '../font-layout-button-group';\nimport ImageLineHeight from '@assets/images/行间距_正常@2x.png';\nimport ImageLineHeightDisabled from '@assets/images/行间距_不可点@2x.png';\nimport ImagePaddingLeftAndRight from '@assets/images/左右边距_正常@2x.png';\nimport ImagePaddingLeftAndRightDisabled from '@assets/images/左右边距_不可点@2x.png';\nimport ImagePaddingTopAndBottom from '@assets/images/上下边距_正常@2x.png';\nimport ImagePaddingTopAndBottomDisabled from '@assets/images/上下边距_不可点@2x.png';\nimport { computedState, getStyle } from '@commons/computed_state';\nimport throttle from '@commons/throttle';\nimport { isReactComponentInstance, isElement } from '@commons/utils';\n\nvar debug = require('@commons/debug')('textbox:editor');\n\nvar TextboxEditor =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(TextboxEditor, _Component);\n\n  function TextboxEditor(props) {\n    var _this;\n\n    _classCallCheck(this, TextboxEditor);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(TextboxEditor).call(this, props));\n    _this.state = {\n      textStyle: {},\n      toolbarState: 'hide',\n      editState: 'blur' // blur 未选中 focus 选中\n\n    };\n    _this.onTextStyleChange = _this.onTextStyleChange.bind(_assertThisInitialized(_this));\n    _this.handleFocus = _this.handleFocus.bind(_assertThisInitialized(_this));\n    _this.handleBlur = _this.handleBlur.bind(_assertThisInitialized(_this));\n    _this.hideToolbar = _this.hideToolbar.bind(_assertThisInitialized(_this));\n    _this.showToolbar = _this.showToolbar.bind(_assertThisInitialized(_this));\n    _this.throttleCheckState = throttle(_this.checkState, 300).bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(TextboxEditor, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var _this2 = this;\n\n      if (this.getTextboxDOM() && !this.attachedEvent) {\n        // fix: 处理点击后才出现editor 问题\n        if (this.getTextboxDOM().getAttribute('data-medium-focused')) {\n          this.handleFocus();\n        }\n\n        return this.attachEventHandlers();\n      } // 循环检测 current 是否初始化完成\n\n\n      clearInterval(this.__CHECK_TEXTBOX_MOUNT_TIMER);\n      this.__CHECK_TEXTBOX_MOUNT_TIMER = setInterval(function () {\n        var dom = _this2.getTextboxDOM();\n\n        if (dom) {\n          clearInterval(_this2.__CHECK_TEXTBOX_MOUNT_TIMER);\n\n          _this2.attachEventHandlers();\n        }\n      }, 100);\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      debug('componentWillUnmount');\n      this.detachEventHandlers();\n    }\n  }, {\n    key: \"componentDidUpdate\",\n    value: function componentDidUpdate() {\n      debug('componentDidUpdate');\n      if (this.getTextbox() && !this.attachedEvent) this.attachEventHandlers();\n    }\n  }, {\n    key: \"attachEventHandlers\",\n    value: function attachEventHandlers() {\n      if (!this.attachedEvent) {\n        debug('attachEventHandlers');\n        var textbox = this.getTextbox();\n        this.attachedEvent = true; // MediumEditor custom events for when user beings and ends interaction with a contenteditable and its elements\n\n        textbox.subscribe('blur', this.handleBlur);\n        textbox.subscribe('focus', this.handleFocus);\n        textbox.subscribe('positionToolbar', this.throttleCheckState);\n        textbox.subscribe('editableInput', this.throttleCheckState);\n        textbox.subscribe('hideToolbar', this.hideToolbar);\n        textbox.subscribe('showToolbar', this.showToolbar); // Updating the state of the toolbar as things change \n\n        textbox.subscribe('editableKeyup', this.throttleCheckState);\n      }\n    }\n  }, {\n    key: \"detachEventHandlers\",\n    value: function detachEventHandlers() {\n      if (this.attachedEvent) {\n        debug('detachEventHandlers');\n        var textbox = this.getTextbox();\n        this.attachedEvent = false;\n        textbox.unsubscribe('blur', this.handleBlur);\n        textbox.unsubscribe('focus', this.handleFocus);\n        textbox.unsubscribe('positionToolbar', this.throttleCheckState);\n        textbox.unsubscribe('editableInput', this.throttleCheckState);\n        textbox.unsubscribe('hideToolbar', this.hideToolbar);\n        textbox.unsubscribe('showToolbar', this.showToolbar); // Updating the state of the toolbar as things change\n\n        textbox.unsubscribe('editableKeyup', this.throttleCheckState);\n      }\n    }\n  }, {\n    key: \"handleFocus\",\n    value: function handleFocus() {\n      debug('handleFocus');\n      this.setState({\n        editState: 'focus'\n      });\n      this.throttleCheckState();\n    }\n  }, {\n    key: \"handleBlur\",\n    value: function handleBlur() {\n      debug('handleBlur');\n      this.setState({\n        editState: 'blur',\n        textStyle: {}\n      });\n    }\n  }, {\n    key: \"showToolbar\",\n    value: function showToolbar() {\n      this.setState({\n        toolbarState: 'show'\n      });\n    }\n  }, {\n    key: \"hideToolbar\",\n    value: function hideToolbar() {\n      this.setState({\n        toolbarState: 'hide'\n      });\n    }\n  }, {\n    key: \"checkState\",\n    value: function checkState() {\n      var _this$getTextbox$opti;\n\n      debug('checkState');\n      var globalStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-style', 'font-weight', 'text-decoration', 'font-size', 'color');\n      debug('globalStyle: %o', globalStyle);\n      var selectionRange = MediumEditor.selection.getSelectionRange((_this$getTextbox$opti = this.getTextbox().options) === null || _this$getTextbox$opti === void 0 ? void 0 : _this$getTextbox$opti.ownerDocument);\n      debug('selectionRange', selectionRange); // 未选择\n\n      if (!selectionRange || selectionRange.collapsed) {\n        this.setState({\n          textStyle: globalStyle\n        });\n        return;\n      } // 选择元素是编辑器\n\n\n      var parentNode = MediumEditor.selection.getSelectedParentElement(selectionRange); // Make sure the selection parent isn't outside of the contenteditable\n\n      if (!this.getTextbox().elements.some(function (element) {\n        return MediumEditor.util.isDescendant(element, parentNode, true);\n      })) {\n        this.setState({\n          textStyle: globalStyle\n        });\n        return;\n      } // 选择的是node\n\n\n      var textStyle = {}; // Climb up the DOM and do manual checks for whether a certain extension is currently enabled for this node\n\n      while (parentNode) {\n        var _this$getTextbox$opti2;\n\n        computedState(textStyle, parentNode, (_this$getTextbox$opti2 = this.getTextbox().options) === null || _this$getTextbox$opti2 === void 0 ? void 0 : _this$getTextbox$opti2.contentWindow); // we can abort the search upwards if we leave the contentEditable element\n\n        if (MediumEditor.util.isMediumEditorElement(parentNode)) {\n          break;\n        }\n\n        parentNode = parentNode.parentNode;\n      }\n\n      debug('textStyle %o', textStyle);\n      this.setState({\n        textStyle: textStyle\n      });\n    }\n  }, {\n    key: \"getTextboxDOM\",\n    value: function getTextboxDOM() {\n      var _this$props, _this$props2, _this$props2$textboxD;\n\n      debug('getTextboxDOM', this.props.textboxDOM, this.props.textboxDOMRef);\n      var textboxDOM = ((_this$props = this.props) === null || _this$props === void 0 ? void 0 : _this$props.textboxDOM) || ((_this$props2 = this.props) === null || _this$props2 === void 0 ? void 0 : (_this$props2$textboxD = _this$props2.textboxDOMRef) === null || _this$props2$textboxD === void 0 ? void 0 : _this$props2$textboxD.current);\n\n      if (textboxDOM) {\n        if (isReactComponentInstance(textboxDOM)) {\n          return ReactDOM.findDOMNode(textboxDOM);\n        } else if (isElement(textboxDOM)) {\n          return textboxDOM;\n        } else {\n          throw new Error('`textboxDOM` 必须是一个 HTMLElement 或者 React Component 实例');\n        }\n      }\n    }\n  }, {\n    key: \"getTextboxDOMStyle\",\n    value: function getTextboxDOMStyle() {\n      debug('getTextboxDOMStyle');\n      var dom = this.getTextboxDOM();\n      if (!dom) return null;\n      var style = {};\n\n      for (var _len = arguments.length, properties = new Array(_len), _key = 0; _key < _len; _key++) {\n        properties[_key] = arguments[_key];\n      }\n\n      if (properties.length > 0) {\n        var _iteratorNormalCompletion = true;\n        var _didIteratorError = false;\n        var _iteratorError = undefined;\n\n        try {\n          for (var _iterator = properties[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n            var _this$getTextbox$opti3;\n\n            var property = _step.value;\n            var styleValue = getStyle(dom, property, (_this$getTextbox$opti3 = this.getTextbox().options) === null || _this$getTextbox$opti3 === void 0 ? void 0 : _this$getTextbox$opti3.contentWindow);\n            if (styleValue) style[camelCase(property)] = styleValue;\n          }\n        } catch (err) {\n          _didIteratorError = true;\n          _iteratorError = err;\n        } finally {\n          try {\n            if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n              _iterator[\"return\"]();\n            }\n          } finally {\n            if (_didIteratorError) {\n              throw _iteratorError;\n            }\n          }\n        }\n      } else {\n        var _this$getTextbox$opti4;\n\n        var computedStyle = (_this$getTextbox$opti4 = this.getTextbox().options) === null || _this$getTextbox$opti4 === void 0 ? void 0 : _this$getTextbox$opti4.contentWindow.getComputedStyle(dom, null);\n\n        for (var i = 0; i < computedStyle.length; i++) {\n          style[computedStyle[i]] = computedStyle.getPropertyValue(computedStyle[i]);\n        }\n      }\n\n      return style;\n    }\n  }, {\n    key: \"triggerGlobalStyleChange\",\n    value: function triggerGlobalStyleChange(style) {\n      var medium = this.getTextbox();\n      if (!medium) return;\n      var textboxDOM = this.getTextboxDOM(); // const globalStyle = this.getTextboxDOMStyle('line-height', 'padding-top', 'padding-left', 'text-align', 'font-style', 'font-weight', 'text-decoration', 'font-size', 'color')\n\n      medium.trigger('editableChangeStyle', style, textboxDOM);\n    }\n  }, {\n    key: \"getTextbox\",\n    value: function getTextbox() {\n      var dom = this.getTextboxDOM();\n      return dom ? MediumEditor.getEditorFromElement(dom) : null;\n    }\n  }, {\n    key: \"onTextStyleChange\",\n    value: function onTextStyleChange(field, value) {\n      debug('onTextStyleChange', field, value);\n      if (this.state.editState === 'blur') return;\n      var medium = this.getTextbox();\n      if (!medium) return;\n      var textboxDOM = this.getTextboxDOM();\n\n      switch (field) {\n        case 'fontWeight':\n          if (this.state.toolbarState === 'show') {\n            medium.execAction('bold');\n          } else {\n            medium.trigger('editableChangeStyle', {\n              fontWeight: value\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'fontStyle':\n          if (this.state.toolbarState === 'show') {\n            medium.execAction('italic');\n          } else {\n            medium.trigger('editableChangeStyle', {\n              fontStyle: value\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'textDecoration':\n          if (this.state.toolbarState === 'show') {\n            medium.execAction('underline');\n          } else {\n            medium.trigger('editableChangeStyle', {\n              textDecoration: value\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'color':\n          if (this.state.toolbarState === 'show') {\n            // fix <font color></font>\n            medium.options.ownerDocument.execCommand('styleWithCSS', false, true);\n            medium.execAction('foreColor', {\n              value: value\n            });\n            medium.options.ownerDocument.execCommand('styleWithCSS', false, false);\n          } else {\n            medium.trigger('editableChangeStyle', {\n              color: value\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'fontSize':\n          if (this.state.toolbarState === 'show') {\n            medium.execAction('fontSize', {\n              value: 7\n            });\n\n            if (textboxDOM) {\n              var nodes = textboxDOM.querySelectorAll('font[size=\"7\"]');\n              var _iteratorNormalCompletion2 = true;\n              var _didIteratorError2 = false;\n              var _iteratorError2 = undefined;\n\n              try {\n                for (var _iterator2 = nodes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {\n                  var node = _step2.value;\n                  node.removeAttribute('size');\n                  node.style.fontSize = \"\".concat(value, \"px\");\n                }\n              } catch (err) {\n                _didIteratorError2 = true;\n                _iteratorError2 = err;\n              } finally {\n                try {\n                  if (!_iteratorNormalCompletion2 && _iterator2[\"return\"] != null) {\n                    _iterator2[\"return\"]();\n                  }\n                } finally {\n                  if (_didIteratorError2) {\n                    throw _iteratorError2;\n                  }\n                }\n              }\n            }\n          } else {\n            medium.trigger('editableChangeStyle', {\n              fontSize: \"\".concat(value, \"px\")\n            }, textboxDOM);\n          }\n\n          break;\n\n        case 'textAlign':\n          medium.trigger('editableChangeStyle', {\n            textAlign: value\n          }, textboxDOM);\n          break;\n\n        case 'lineHeight':\n          medium.trigger('editableChangeStyle', {\n            lineHeight: value\n          }, textboxDOM);\n          break;\n\n        case 'paddingTop':\n        case 'paddingBottom':\n        case 'paddingLeft':\n        case 'paddingRight':\n          if (field === 'paddingTop' || field === 'paddingBottom') {\n            medium.trigger('editableChangeStyle', {\n              paddingTop: value,\n              paddingBottom: value\n            }, textboxDOM);\n          } else if (field === 'paddingLeft' || field === 'paddingRight') {\n            medium.trigger('editableChangeStyle', {\n              paddingLeft: value,\n              paddingRight: value\n            }, textboxDOM);\n          }\n\n          break;\n      }\n\n      medium.trigger('editableInput', null, textboxDOM);\n      this.throttleCheckState();\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var _this3 = this,\n          _this$state$textStyle2;\n\n      var className = classNames('coursebox-editor', this.props.className);\n      var _this$state$textStyle = this.state.textStyle,\n          fontSize = _this$state$textStyle.fontSize,\n          paddingTop = _this$state$textStyle.paddingTop,\n          paddingLeft = _this$state$textStyle.paddingLeft,\n          lineHeight = _this$state$textStyle.lineHeight;\n      if (typeof fontSize === 'string' && fontSize.endsWith('px')) fontSize = parseFloat(fontSize);\n      if (typeof paddingTop === 'string' && paddingTop.endsWith('px')) paddingTop = parseFloat(paddingTop);\n      if (typeof paddingLeft === 'string' && paddingLeft.endsWith('px')) paddingLeft = parseFloat(paddingLeft);\n      if (typeof lineHeight === 'string' && lineHeight.endsWith('px')) lineHeight = (parseFloat(lineHeight) / fontSize).toFixed(1);\n      return React.createElement(\"div\", {\n        className: className\n      }, React.createElement(\"label\", {\n        htmlFor: \"font-size-style\"\n      }, \"\\u6587\\u5B57\"), React.createElement(\"div\", {\n        id: \"font-style\"\n      }, React.createElement(InputColor, {\n        disabled: this.state.editState !== 'focus',\n        className: \"__font-color\",\n        value: this.state.textStyle.color,\n        onChange: function onChange(color) {\n          return _this3.onTextStyleChange('color', color);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'focus',\n        className: \"__font-size\",\n        value: fontSize,\n        options: [12, 13, 14, 16, 18, 20, 28, 36, 48, 72],\n        unit: \"px\",\n        onChange: function onChange(fontSize) {\n          return _this3.onTextStyleChange('fontSize', fontSize);\n        }\n      }), React.createElement(FontStyleButtonGroup, {\n        disabled: this.state.editState !== 'focus',\n        className: \"__font-style\",\n        fontWeight: (_this$state$textStyle2 = this.state.textStyle) === null || _this$state$textStyle2 === void 0 ? void 0 : _this$state$textStyle2.fontWeight,\n        fontStyle: this.state.textStyle.fontStyle,\n        textDecoration: this.state.textStyle.textDecoration,\n        onFontStyleChange: function onFontStyleChange(field, val) {\n          return _this3.onTextStyleChange(field, val);\n        }\n      })), React.createElement(\"label\", {\n        htmlFor: \"font-layout-style\"\n      }, \"\\u5E03\\u5C40\"), React.createElement(\"div\", {\n        id: \"font-layout-style\"\n      }, React.createElement(\"span\", null, this.state.editState !== 'focus' || this.state.toolbarState === 'show'), React.createElement(FontLayoutButtonGroup, {\n        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',\n        className: \"__font-layout\",\n        textAlign: this.state.textStyle.textAlign,\n        onFontLayoutChange: function onFontLayoutChange(textAlign) {\n          return _this3.onTextStyleChange('textAlign', textAlign);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',\n        className: \"__font-line-height\",\n        icon: ImageLineHeight,\n        disabledIcon: ImageLineHeightDisabled,\n        value: lineHeight,\n        options: [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.2, 2.4, 2.6, 2.8, 3.0],\n        unit: \"\\u500D\",\n        onChange: function onChange(lineHeight) {\n          return _this3.onTextStyleChange('lineHeight', lineHeight);\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',\n        className: \"__font-padding-top-bottom\",\n        icon: ImagePaddingTopAndBottom,\n        disabledIcon: ImagePaddingTopAndBottomDisabled,\n        value: paddingTop,\n        options: [0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],\n        unit: \"px\",\n        onChange: function onChange(padding) {\n          _this3.onTextStyleChange('paddingTop', \"\".concat(padding, \"px\")); // this.onTextStyleChange('paddingBottom', `${padding}px`);\n\n        }\n      }), React.createElement(InputSelect, {\n        disabled: this.state.editState !== 'focus' || this.state.toolbarState === 'show',\n        className: \"__font-padding-left-right\",\n        icon: ImagePaddingLeftAndRight,\n        disabledIcon: ImagePaddingLeftAndRightDisabled,\n        value: paddingLeft,\n        options: [0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 26, 28, 30],\n        unit: \"px\",\n        onChange: function onChange(padding) {\n          // this.onTextStyleChange('paddingLeft', `${padding}px`);\n          _this3.onTextStyleChange('paddingRight', \"\".concat(padding, \"px\"));\n        }\n      })));\n    }\n  }]);\n\n  return TextboxEditor;\n}(Component);\n\nexport default TextboxEditor;"
     },
     {
       "id": "./src/components/font-layout-button-group/font-layout-button-group.less",
@@ -12952,7 +12952,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "../font-layout-button-group",
-          "loc": "30:0-64"
+          "loc": "28:0-64"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -12961,7 +12961,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../font-layout-button-group",
-          "loc": "482:136-157"
+          "loc": "491:136-157"
         }
       ],
       "providedExports": [
@@ -13070,7 +13070,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "../font-style-button-group",
-          "loc": "29:0-62"
+          "loc": "27:0-62"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13079,7 +13079,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../font-style-button-group",
-          "loc": "469:30-50"
+          "loc": "478:30-50"
         }
       ],
       "providedExports": [
@@ -13150,7 +13150,7 @@
       "index2": 62,
       "size": 9133,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -13184,7 +13184,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "../input-color",
-          "loc": "27:0-40"
+          "loc": "25:0-40"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13193,7 +13193,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../input-color",
-          "loc": "453:29-39"
+          "loc": "462:29-39"
         }
       ],
       "providedExports": [
@@ -13302,7 +13302,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "../input-select",
-          "loc": "25:0-42"
+          "loc": "23:0-42"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13311,7 +13311,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../input-select",
-          "loc": "460:30-41"
+          "loc": "469:30-41"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13320,7 +13320,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../input-select",
-          "loc": "489:30-41"
+          "loc": "498:30-41"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13329,7 +13329,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../input-select",
-          "loc": "500:30-41"
+          "loc": "509:30-41"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13338,7 +13338,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "../input-select",
-          "loc": "513:30-41"
+          "loc": "521:30-41"
         }
       ],
       "providedExports": [
@@ -13745,7 +13745,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "medium-editor",
-          "loc": "28:0-41"
+          "loc": "26:0-41"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13754,7 +13754,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "medium-editor",
-          "loc": "182:27-39"
+          "loc": "180:27-39"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13763,7 +13763,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "medium-editor",
-          "loc": "193:23-35"
+          "loc": "191:23-35"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13772,7 +13772,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "medium-editor",
-          "loc": "196:15-27"
+          "loc": "194:15-27"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13781,7 +13781,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "medium-editor",
-          "loc": "212:12-24"
+          "loc": "210:12-24"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -13790,7 +13790,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "medium-editor",
-          "loc": "306:19-31"
+          "loc": "304:19-31"
         },
         {
           "moduleId": "./src/components/textbox/index.jsx",
@@ -14167,7 +14167,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "react",
-          "loc": "22:0-34"
+          "loc": "20:0-34"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -14176,7 +14176,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "react",
-          "loc": "531:2-11"
+          "loc": "538:2-11"
         },
         {
           "moduleId": "./src/components/font-layout-button-group/index.jsx",
@@ -14450,7 +14450,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony side effect evaluation",
           "userRequest": "react-dom",
-          "loc": "26:0-33"
+          "loc": "24:0-33"
         },
         {
           "moduleId": "./src/components/editor/index.jsx",
@@ -14459,7 +14459,7 @@
           "moduleName": "./src/components/editor/index.jsx",
           "type": "harmony import specifier",
           "userRequest": "react-dom",
-          "loc": "234:17-25"
+          "loc": "232:17-25"
         },
         {
           "moduleId": "./src/components/input-color/index.jsx",
@@ -14555,7 +14555,7 @@
           "name": "index.html",
           "size": 549654,
           "chunks": [
-            0
+            1
           ],
           "chunkNames": [
           ],
@@ -14568,7 +14568,7 @@
       "entrypoints": {
         "undefined": {
           "chunks": [
-            0
+            1
           ],
           "assets": [
             "index.html"
@@ -14582,7 +14582,7 @@
       "namedChunkGroups": {
         "undefined": {
           "chunks": [
-            0
+            1
           ],
           "assets": [
             "index.html"
@@ -14595,7 +14595,7 @@
       },
       "chunks": [
         {
-          "id": 0,
+          "id": 1,
           "rendered": false,
           "initial": true,
           "entry": true,
@@ -14605,7 +14605,7 @@
           "files": [
             "index.html"
           ],
-          "hash": "f0e28e5cddcc91fcea47",
+          "hash": "815c4b1542ef43958efb",
           "siblings": [
           ],
           "parents": [
@@ -14627,7 +14627,7 @@
               "optional": false,
               "prefetched": false,
               "chunks": [
-                0
+                1
               ],
               "issuer": null,
               "issuerId": null,
@@ -14666,7 +14666,7 @@
               "optional": false,
               "prefetched": false,
               "chunks": [
-                0
+                1
               ],
               "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/html-webpack-plugin/lib/loader.js!/Users/doog/Documents/Workspaces/node/textbox/public/index.html",
               "issuerId": "./node_modules/html-webpack-plugin/lib/loader.js!./public/index.html",
@@ -14712,7 +14712,7 @@
               "optional": false,
               "prefetched": false,
               "chunks": [
-                0
+                1
               ],
               "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/lodash/lodash.js",
               "issuerId": "./node_modules/lodash/lodash.js",
@@ -14763,7 +14763,7 @@
               "optional": false,
               "prefetched": false,
               "chunks": [
-                0
+                1
               ],
               "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/lodash/lodash.js",
               "issuerId": "./node_modules/lodash/lodash.js",
@@ -14830,7 +14830,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            0
+            1
           ],
           "issuer": null,
           "issuerId": null,
@@ -14869,7 +14869,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            0
+            1
           ],
           "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/html-webpack-plugin/lib/loader.js!/Users/doog/Documents/Workspaces/node/textbox/public/index.html",
           "issuerId": "./node_modules/html-webpack-plugin/lib/loader.js!./public/index.html",
@@ -14915,7 +14915,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            0
+            1
           ],
           "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/lodash/lodash.js",
           "issuerId": "./node_modules/lodash/lodash.js",
@@ -14966,7 +14966,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            0
+            1
           ],
           "issuer": "/Users/doog/Documents/Workspaces/node/textbox/node_modules/lodash/lodash.js",
           "issuerId": "./node_modules/lodash/lodash.js",
