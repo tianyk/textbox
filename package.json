@@ -1,6 +1,6 @@
 {
   "name": "react-textbox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "dev": "npx webpack-dev-server --display-modules",
     "ws": "npx nodemon ws.js",

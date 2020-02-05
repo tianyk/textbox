@@ -340,7 +340,7 @@ class TextboxEditor extends Component {
 						disabled={this.state.editState !== 'focus'}
 						className="__font-size"
 						value={fontSize}
-						options={[12, 13, 14, 16, 18, 20, 28, 36, 48, 72]}
+						options={[12, 13, 14, 16, 18, 20, 24, 28, 32, 36, 48, 72]}
 						unit="px"
 						onChange={(fontSize) => this.onTextStyleChange('fontSize', fontSize)}
 					></InputSelect>
