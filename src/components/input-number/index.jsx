@@ -70,17 +70,24 @@ class InputNumber extends Component {
 }
 
 InputNumber.defaultProps = {
+	disabled: false,
 	min: -Infinity,
 	max: Infinity,
 	step: 1
 }
 
 InputNumber.propTypes = {
+	// 是否禁用
+	disabled: PropTypes.bool,
+	// 值更新回调函数
 	onChange: PropTypes.func.isRequired,
+	// 最小值
 	min: PropTypes.number,
+	// 最大值
 	max: PropTypes.number,
+	// 步长
 	setp: PropTypes.number,
-	// 值
+	// 当前值
 	value: PropTypes.number,
 	// 图标
 	icon: PropTypes.string,

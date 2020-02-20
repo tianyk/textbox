@@ -173,7 +173,11 @@ InputColor.defaultProps = {
 };
 
 InputColor.propTypes = {
+	// 是否禁用
 	disabled: PropTypes.bool,
+	// 值更新回调函数
+	onChange: PropTypes.func.isRequired,
+	// 初始颜色值
 	value: PropTypes.string
 }
 
