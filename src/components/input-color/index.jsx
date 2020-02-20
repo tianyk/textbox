@@ -52,8 +52,6 @@ class InputColor extends Component {
 			}
 		} catch (ignored) { }
 
-		console.log(colors);
-
 		const pickr = this.pickr = Pickr.create({
 			el: '.coursebox-input-color .color-picker',
 			useAsButton: true,

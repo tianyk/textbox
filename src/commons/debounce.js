@@ -18,7 +18,7 @@ function debounce(func, delay) {
 		timer = setTimeout(() => {
 			func.apply(ctx, args);
 		}, delay);
-	}
+	};
 }
 
 export default debounce;

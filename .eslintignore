@@ -1,0 +1,10 @@
+node_modules
+public/text
+public/javascripts/
+public/assets
+public/jquery-2.1.1.min.js
+logs/
+data/
+test.js
+public/
+queues/queue.js

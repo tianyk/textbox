@@ -4,7 +4,7 @@ const debug = require('./debug')('textbox:commons:computed_state');
 function rgba2hex(orig) {
 	let a = '',
 		rgb = orig.replace(/\s/g, '').match(/^rgba?\((\d+),(\d+),(\d+),?([^,\s)]+)?/i),
-		alpha = (rgb && rgb[4] || "").trim(),
+		alpha = (rgb && rgb[4] || '').trim(),
 		hex = rgb ?
 			(rgb[1] | 1 << 8).toString(16).slice(1) +
 			(rgb[2] | 1 << 8).toString(16).slice(1) +
@@ -20,9 +20,10 @@ function rgba2hex(orig) {
 
 
 function getStyle(node, styleProp, currentWindow = window) {
+	/* eslint  no-case-declarations:0 */
 	const nodeName = node.nodeName.toLowerCase();
 	const computedStyle = currentWindow.getComputedStyle(node, null);
-
+	
 	let styleValue;
 	switch (styleProp) {
 		case 'font-size':
@@ -93,7 +94,7 @@ function getStyle(node, styleProp, currentWindow = window) {
 			styleValue = computedStyle.getPropertyValue(styleProp);
 	}
 
-	debug(nodeName, styleProp, styleValue)
+	debug(nodeName, styleProp, styleValue);
 	return styleValue;
 }
 

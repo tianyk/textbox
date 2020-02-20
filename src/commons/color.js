@@ -233,7 +233,7 @@ export function parseToHSVA(str) {
 		hexa: /^#?(([\dA-Fa-f]{3,4})|([\dA-Fa-f]{6})|([\dA-Fa-f]{8}))$/i
 	};
 
-    /**
+	/**
      * Takes an Array of any type, convert strings which represents
      * a number to a number an anything else to undefined.
      * @param array
