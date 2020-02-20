@@ -3,7 +3,6 @@
   "version": "1.0.1",
   "scripts": {
     "dev": "npx webpack-dev-server --display-modules",
-    "ws": "npx nodemon ws.js",
     "build:dev": "npx webpack --mode=development --display-modules",
     "build:prod": "npx webpack --mode=production",
     "build": "npm run build:prod"
